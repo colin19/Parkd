@@ -45,12 +45,14 @@ function addCards() {
 // Get the html of a card
 function getTruckCard(truckName, description, img) {
     var html = '';
-    html += '<div class=\"shadowCard card\"  style=\"width:auto\">';
+    html += '<div class=\"shadowCard card\">';
     html += '<img class=\"shadowImg card-img-top img-fluid\" src=\"' + img + '\" alt=\"' + truckName + '\">';
     html += '<div class=\"card-body\">';
-    html += '<h4 class=\"card-title\">' + truckName + '</h4>';
-    html += '<p class=\"card-text\">'+ description + '</p>';
-    html += '<a href=\"#\" class=\"btn btn-primary\">See Profile</a>';
+    html += '<h4 class=\"truckCardTitle card-title\">' + truckName + '</h4>';
+    html += '<p class=\"truckCardText card-text\">'+ description + '</p>';
+    html += '<div class=\"truckCardBtnContainer text-center\">';
+    html += '<a href=\"#\" class=\"btn btn-info truckCardBtn\">More Info</a>';
+    html += '</div>';
     html += '</div>\n' + '</div>';
 
     return html;
