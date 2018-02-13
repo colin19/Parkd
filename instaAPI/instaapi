@@ -1,0 +1,26 @@
+
+import requests
+import json
+
+
+#id/secret from instagram site, code gotten from user loging in
+def exchange_code_for_access_token():
+    url = u'https://api.instagram.com/oauth/access_token'
+    data = {
+        u'client_id': u'4dd46f90fa2d4362a6a673cfe0747373',
+        u'client_secret': u'81c745239b174117b2ef6c72f346d64a',
+        u'code': u'',
+        u'grant_type': u'authorization_code',
+        u'redirect_uri': u'http://parkd.us'
+    }
+    #Will return a response with our access token
+    response = requests.post(url, data=data)
+
+    account_data = json.loads(response.content.decode('utf-8'))
+
+    print (account_data)
+
+#requests.post(u'https://api.instagram.com/oauth/authorize/?client_id=4dd46f90fa2d4362a6a673cfe0747373&redirect_uri=http://parkd.us&response_type=code&scope=basic+likes+comments+relationships+public_content')
+exchange_code_for_access_token()
+#7094391272.4dd46f9.71cca59a895b4d7c8b89a17cd8f28839 - access token
+
