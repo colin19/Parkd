@@ -17,5 +17,9 @@ def splash_page():
 def truck_page():
 	return render_template("trucks.html")
 
+@app.route("/truckDetail.html")
+def truck_detail:
+	return render_template("truckDetail.html")
+
 if __name__ == "__main__":
 	app.run(host='0.0.0.0', debug=True, port=80)
