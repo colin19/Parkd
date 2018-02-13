@@ -18,7 +18,7 @@ def truck_page():
 	return render_template("trucks.html")
 
 @app.route("/truckDetail.html")
-def truck_detail:
+def truck_detail():
 	return render_template("truckDetail.html")
 
 if __name__ == "__main__":
