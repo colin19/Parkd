@@ -9,5 +9,9 @@ app = Flask(__name__)
 def splash_page():
 	return render_template('index.html')
 
+@app.route("/trucks.html")
+def truck_page():
+	return render_template("trucks.html")
+
 if __name__ == "__main__":
 	app.run(host='0.0.0.0', debug=True, port=80)
