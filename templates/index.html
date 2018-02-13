@@ -14,13 +14,14 @@
     <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="{{ url_for('static', filename='css/splash.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/transparentNavbar.css') }}" rel="stylesheet">
 
 </head>
 
 <body>
     <div class="header">
         <!-- Navigation -->
-        <nav class="splashNav navbar navbar-expand-lg navbar-dark sticky-top">
+        <nav class="transparentNav navbar navbar-expand-lg navbar-dark sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="#">Parkd.US</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,8 +64,7 @@
 
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
-                    <!-- <img class="d-block img-fluid" src="{{ url_for('static', filename='img/splash/trucks.jpg') }}"  alt="First slide">-->
-                    <img class="d-block img-fluid" src="../static/img/splash/food-trucks-1.jpg"  alt="First slide">
+                    <img class="d-block img-fluid" src="{{ url_for('static', filename='img/splash/trucks.jpg') }}"  alt="First slide">
 
                     <div class="container">
                         <div class="caption carousel-caption">

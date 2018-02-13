@@ -2,33 +2,8 @@
  * Author: Lin Guan
  */
 
-.splashNav{
-    position: absolute;
-    width: 100%;
+.transparentNav{
     z-index: 15;
-}
-
-.splashNav {
-    background-color:transparent !important;
-    border-color:transparent;
-    background-image:none;
-    box-shadow:none;
-}
-
-.splashNav>div>a {
-    font-size: 30px;
-    color:#fff;
-}
-
-.splashNav .navbar-nav>li>a {
-    font-size: 20px;
-    color:#fff;
-}
-
-.navbar-toggle {
-    margin:10px 0;
-    background: #000000;
-    color: #ffffff;
 }
 
 .splashCarousel{
