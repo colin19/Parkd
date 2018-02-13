@@ -5,6 +5,10 @@ import os
 # the all-important app variable:
 app = Flask(__name__)
 
+@app.route("/index.html")
+def index():
+	return render_template('index.html')
+
 @app.route("/")
 def splash_page():
 	return render_template('index.html')
