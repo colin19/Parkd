@@ -1,0 +1,883 @@
+{
+    "html_attributions": [],
+    "next_page_token": "CoQC-gAAAEopqCIdriVTxu6b5eEIMgtsXEbnxAhhGTNxT84RC_Xv-hdmdY4OQuIHSuSolOXEwa1CJZjxpheDrLSeYR7aKAbP14IC1tEiO-Cy5m0plKUx1UNIWmyQX0rs-LzQXcyISvrpg_puGVXI2DmBP7nKue-8VGDCr9_eN36TybT7nQPME5aslJJQAZo2bTLsV79uRlqjkW8CvwmAUoXJR6q0vd0xi-3Mazh11I8KXNsSw7DPjblA5Ys-l0UzGovT78G-CXh8sFoz3MH5H02nX54Qt7ieFGcH4Q0Ti-hRQqyqDv4-zhatEOgfKDpU8YfqoD-rceLmC4U2AzpcyJ94TqAM_d8SEFN38VEsSG4PDvNqz3RjJ1kaFCo9OiKbFmDaR8BCpZHJj26T-v4Y",
+    "results": [
+        {
+            "formatted_address": "New York, NY, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.7828647,
+                    "lng": -73.9653551
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.81804399999999,
+                        "lng": -73.9339825
+                    },
+                    "southwest": {
+                        "lat": 40.7473416,
+                        "lng": -73.9970305
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "c9bcef33f0cc85eda31f1c7444e9b1a3b82c9a9f",
+            "name": "Central Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 427,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA3lFar5WTpITjAsXbWdGe3G96oNoykZo9o56a9TonLdsR6uvXCyWiFQPfPQ1YDgC8xd5-ki7AmKgykg9um2WX8A8ug8QhbJcRGMBSR4ZsivztRMA1t1R9qCDX7Qzh6Z_OEhAcZbplBpRHSvjCGrbtX1nFGhT2beViUz1sCdOOGcgWAAPTUlCsXA",
+                    "width": 640
+                }
+            ],
+            "place_id": "ChIJ4zGFAZpYwokRGUGph3Mf37k",
+            "rating": 4.8,
+            "reference": "CmRbAAAAF5kVZk6mHye2VAjPZvp7BHUcZ9BtrGnGzljpjphjMNifyh54qvPR5Z6p4KJW5enmaQs5gN22uQHQhkcCMGO9_ZO1n_a5C4plYW0zeQJncoJ7VCD1YJ8aRMIunrC6CC9qEhDvJtKUOFxOZo1gW_Ix89OXGhS-OD-wfMAL7jpbist6nCqceLY7xA",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "New York, NY 10018, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.7535965,
+                    "lng": -73.9832326
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.755549,
+                        "lng": -73.98135400000001
+                    },
+                    "southwest": {
+                        "lat": 40.75198299999999,
+                        "lng": -73.9857532
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "f450a4290a3af961748f0eb93931479d2898e990",
+            "name": "Bryant Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 1080,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAXSiIgz5sGhm7IvacCp8RB_O4T7hzSsj74XpMNYfezhlxtYgHYaqIv5N996QvPHfZJwkTU8-37d1KDh6LOrFzIQopfLwKxe3OqmrnshpU83jYCxFqNudy5OhRqM2j-gNqEhC4hENg-lPgFFQzSMHa2M-bGhTtAyZpS2WkZ4Hfi6TAiT-p518WYA",
+                    "width": 1620
+                }
+            ],
+            "place_id": "ChIJvbGg56pZwokRp_E3JbivnLQ",
+            "rating": 4.6,
+            "reference": "CmRbAAAAY6Q8uFA8-fdOAOAooKV5E_zw_JGsJGhoflJor51TR1_t5PV-2i2XQAQPM-0atSAITtlxSJy08PjizXygtRZosICOFYXOMO1eaL95jALseD-2bens7lDAk5VNuU3dD9QvEhDjzDRSdG0n9xlinwbdtAPWGhQhff42oiWuQflffDgF1r8n-Kws3w",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "New York, NY, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.8012339,
+                    "lng": -73.9723096
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.83677995,
+                        "lng": -73.94689559999999
+                    },
+                    "southwest": {
+                        "lat": 40.76173295,
+                        "lng": -74.00177000000002
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "20a7fef51e1c17598e54bbc01afcdac90246caec",
+            "name": "Riverside Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3120,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAw8ArXZI10Ej_v7p1B60pm0HR8k8-1EPav--QzF0IpTAjP-MOCufRylDWCt_Gys7PwEGGnjL9jBJPj8XjVW2SCcsiOEFxiWkpbzto6VEh-9QveD_JL4-cZZzKF8n0ETcPEhBhnE_hBYLoU1Tm_BOId9rxGhQohuaW09c4Qr5pCJ7x48DkMEa5Ww",
+                    "width": 4208
+                }
+            ],
+            "place_id": "ChIJL1DP2C72wokRh3Lfn4T0Z3w",
+            "rating": 4.6,
+            "reference": "CmRbAAAAVu0ZAJBV1k3nrRi9NLgMoYjLU0SLCxEa4k6JTmie-plGDoXSWJa8eth5ZqQMU1p07R309TsP73sialOlB9L7ykODOQ8uPGx7mgvdroAi5YkemHN4_I8Fafdmiq_2BAqbEhBJ53KJTWU4nhq723e1sjY_GhSNquL8hFDbV69M-E1_m_h9Vedb-w",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "New York, NY 10012, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.7308228,
+                    "lng": -73.997332
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.7333674,
+                        "lng": -73.99379465
+                    },
+                    "southwest": {
+                        "lat": 40.72847220000001,
+                        "lng": -74.00132525
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "b0df149329a0f6a4006cc5328e3d42acadaf1b4f",
+            "name": "Washington Square Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3036,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAumjuLlNxEpu-wqVaIQWW5bK47XMLWPW3v8OiyS3_CKgJQK360NavpCyvNEtzvqXCk3QFE6qOiqRBo6N6U1PwOI8KWgco-xUBOZUZt8E_l0rcPMJYvMWy8yxkKtUl_5i9EhDjhA4ALcwnbTNbe0grccoYGhQqpw248UNaDJ1KsrZJXspQwyJAFg",
+                    "width": 4048
+                }
+            ],
+            "place_id": "ChIJjX494pBZwokRGH620d9eYfo",
+            "rating": 4.6,
+            "reference": "CmRbAAAAA_rCqmINyONfcyI88TNTsK22yrgtSXY38fhJCuB7UA3UBEt6ux3gn0dlJ8g0htQdM9KA3Z2j7-ud5lirDEbMoyT2-r2t8dLfhwa66erDjpwbna3TACrnT56qRJBKtfvmEhBFYlTUDBkEKqqevB6cNZ8oGhR0JmC8LhO1PiQ2RodY01T9yzEyRw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Dyckman St, New York, NY 10452, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.87234480000001,
+                    "lng": -73.924384
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.87369462989273,
+                        "lng": -73.92303417010729
+                    },
+                    "southwest": {
+                        "lat": 40.87099497010728,
+                        "lng": -73.92573382989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "eeec542848892712b9623fe25be5598b50ff73ca",
+            "name": "Inwood Hill Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3036,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAllJz8Bmbi5SqfctdD1UGpeEZwQ7NE8YgWHed-ctFtwOLnPljyN6XCbZ9xARURMLaost6RSg-W_1Qx0g9YKGWuEgYBp0rakEl6MkodBQDboYtfg8_ZQJAA1xxig9QQu5TEhDsj1BiophXnzKYCnJdHHynGhT1Ul8wW4nzhMKeZwcMCPHurmSBjA",
+                    "width": 4048
+                }
+            ],
+            "place_id": "ChIJpUOPMe7zwokRJUQfPbEU1CI",
+            "rating": 4.6,
+            "reference": "CmRbAAAAHcRtZQqgCORzuDXbJ7hoZ_bGxpWYwsVfLDcmtBotBPYI79j-z2AUgE--PN1sjMRJ2CrfTJNJx50aeU9TjbLMhPrwki5MSoKRKtuv6xcgkQtuFLWu2A18w8_I70Sca6snEhB0ibTa0JdepuZDDRHw4A5JGhQ2zC9wyRMAmM9LUqxuXvLah_E4_A",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "18 Mt Morris Park W, New York, NY 10027, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.8044301,
+                    "lng": -73.9435833
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.80613782989273,
+                        "lng": -73.94273020000001
+                    },
+                    "southwest": {
+                        "lat": 40.80343817010728,
+                        "lng": -73.9461426
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "14a6e204f19e3b6235c88535f89afb25a0a16d2c",
+            "name": "Marcus Garvey Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3464,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA7URk5dSo7-zuxxY1Ma679McYfDXw5C4y9DTWzE7-YA3cZBFjW8mkmNWk9W_GVL8TxwVdh8rAMCObbQ5DdCywtWUgFOMk5oEKMZtu4EPLj9fcGutEW39PfHR9sIgb3NFHEhD7If281vQiCpWHfSr1zKOOGhQxX2fydh9dKhK87MbNOvOxz0NYSA",
+                    "width": 4618
+                }
+            ],
+            "place_id": "ChIJHa6lPAz2wokRlRyxNExaJbQ",
+            "rating": 4.1,
+            "reference": "CmRbAAAAkvWKL4bqQfkO4gOIcWpplP35BnB0KcVxlrpB8L_Gip8CvGvm_Rj5ryDyvDBgUGIlpX9PkDq_mUw-kxJVPI7AUijOJc1yR8lN6ppxVmHDHARViygljMj4C-erE2AYJqHdEhBOZFOPGkIvyt6UJYFVPNgbGhRmOAk2jOQmfME93WcWBJreGJPDpA",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "New York, NY 10011, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.7479925,
+                    "lng": -74.0047649
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.7588822,
+                        "lng": -73.9986873
+                    },
+                    "southwest": {
+                        "lat": 40.73290899999999,
+                        "lng": -74.01141530000002
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "72dc79d023feec77725d7336e7c46fee27805319",
+            "name": "The High Line",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3648,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAxrO4ZFw0eRsIPUG9_gSYl2Gx4LxyvFhf3_sNxGl8oHG6UEdJ833ZocU098IR4kfmfgEh_NSu_iyOhyWtXBccbzbi8AYI4QE3aXbAVXC6WF-Nmus0CxVDcY0WmGQMXFOGEhCpMFAN8gEdq5a_Xw1pbKtPGhRFvVTbCQtuxkdEtjdYYwC1BOifKQ",
+                    "width": 5472
+                }
+            ],
+            "place_id": "ChIJ5bQPhMdZwokRkTwKhVxhP1g",
+            "rating": 4.7,
+            "reference": "CmRbAAAAxUICur2458qL4yhH2AOP4W3sVy7I2J1tijFnCmXueN--lVHTKWDppHiWSncQHWkUdzXME7E9uCzCkbygqLsNmxRQ8BGCJljrixo88t5aYs-dUBKZP0H8RhpxfDsAI7iKEhAMTIYzRRHTCRjM5OUhsST6GhTdQAqg8-M-PxdAHIJjQLFg7lUpfg",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Queens, NY, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.73971359999999,
+                    "lng": -73.840785
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.767982,
+                        "lng": -73.81444355
+                    },
+                    "southwest": {
+                        "lat": 40.7067832,
+                        "lng": -73.86537014999999
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "45542707aa19f452cae27cc2254f5362ec558ce9",
+            "name": "Flushing Meadows Corona Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3265,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAApdp2cwifpIDYUINCDvOQ-nxouEExj9Vo7e0IIa7owFC5lLoT6iQv98MMO8jdjf14rnhWLqakkgGIX9Tj6wYzwuzY-ZtimSc3jmDRkNr0fE-DvN7Iw8w1N4ij_dpgqwWnEhD276eduQgYRLIdgWlE0BoqGhTT2ff8PO9oThehzVlAmEKnCTosDw",
+                    "width": 4898
+                }
+            ],
+            "place_id": "ChIJ-2Yhwn9gwokR4Wwy6GgsPRM",
+            "rating": 4.5,
+            "reference": "CmRbAAAA_I_KT7dQo9mn5eq3VZG3u3gpUDBjuRw5q_IYSB3GFxIDn1STHxR1Eau-QfdLvcy2U7_x3fSFtpaQm86_9uPmYiTzhnf4DPPyGKKIFFFjUy3i5vlNgCsJ2nxK_zZXDuPSEhCmC7yjfaAF_COlYJtTpyguGhRIqL5a8fGnGEW9h7ZG3c25Ky5jIg",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "New York, NY 10004, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.7032775,
+                    "lng": -74.0170279
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.7065562,
+                        "lng": -74.01239500000001
+                    },
+                    "southwest": {
+                        "lat": 40.6995454,
+                        "lng": -74.0186978
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "58fc4a0c3ef0ffc426a52c0ea131e1bd7b8d7084",
+            "name": "Battery Park",
+            "photos": [
+                {
+                    "height": 1371,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAeaI--zwsnVpOjX0JlBXgKJH_bczGoJQK4GeZK7RchmbGdQPwUoF_dk2HC7zS8OL3GwOgITTgJ38caJXL21KfGw52Hf7pHPoOliLC07LZx4M7K-dAFYudjX5BHhVfusUKEhD2npq8ZqkRNrJyHrDiWkRXGhQ8HzEsbZGb1An89Bgx-LB4yHvvlQ",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJraKL-BJawokREpxDmF5GcL4",
+            "rating": 4.4,
+            "reference": "CmRbAAAAr-ukjEPG5xgDmIEa61IZ_ucGkVDY2M8TWfxQYmkVJBWNKA8UqYMXEzBeaj034ldEiLEAbZgBsRnlm7hvWoQRUynp5aAO0JSO9IptCa6ZpU3Fg6tyBtC28o2EerrWcmZ_EhAbMoaH0p7jt4gfjqGCz99aGhTZoxUIMgf4_FzymR7ow-VdbkZh1A",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "67 Mulberry St, New York, NY 10013, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.7156618,
+                    "lng": -73.9999961
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.71721115,
+                        "lng": -73.99876707010728
+                    },
+                    "southwest": {
+                        "lat": 40.71299334999999,
+                        "lng": -74.00146672989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "e447eef7610ff9b20f12fc5c4d9f5b888ee84552",
+            "name": "Columbus Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2015,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAXVmJ10lORA8QeBygoqVz3Azns0aXERW_kZUYXGUT706iD7_zR6rJ7R5W9RZVpZwxRe1B8EemOUoNS38evA97_I1yENrm2ew4A6GTNK6laeXtep9p1qxNyPKK7E60rgslEhAGoebp2k04nkBTp2MMJlZqGhTL9OguJAZWyxPklEUd2Hw9GzkXdw",
+                    "width": 3583
+                }
+            ],
+            "place_id": "ChIJZQD10CZawokRCuvDW1oLE-Y",
+            "rating": 4.1,
+            "reference": "CmRbAAAAW3j5Tu-fsHBjdF2yM_mQjw7EleyBdb44Z8mRwrzANKWGqSWeVSpnFD9yRz3FAvs7L7EOyfM8d9aormcbtwSwdEGzAj1lADW3y0i2frLFKLusfQEtEkQtf0hReXamF_keEhATEHsVFaBZuVrJC3YSHwd8GhR0WsakSteJml17z-5q0leV5bF6Aw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Riverside Dr To Broadway, New York, NY 10040, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.8625608,
+                    "lng": -73.9312995
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.86391062989272,
+                        "lng": -73.92994967010728
+                    },
+                    "southwest": {
+                        "lat": 40.86121097010728,
+                        "lng": -73.93264932989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "3be27507240fd2843d3a9fbb6dde4b0f70b2b64d",
+            "name": "Fort Tryon Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 1200,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA7fTim0Mvx6i9yXTX1v_MzsYC6qWjQk9RhuYuqW_1yM3b71vD1qd42ZBQ9NyXIKI3YraAWs4QKrWZWCLGxAliJga1iZv_wG5GpP2cKg7UEYMTzePrYaHdff_nEx6U4lNXEhAF2V93GATcq18YBwulDMKxGhQu1uvQN9GYk-drTVlXTGG9ooiE6Q",
+                    "width": 1600
+                }
+            ],
+            "place_id": "ChIJTZ18cAH0wokR1HfVR86mzEA",
+            "rating": 4.7,
+            "reference": "CmRbAAAA8ciSlg6U4Ob5Fn73JtagyKJPZQ5P65HwvTqFqKoIByOGwsVpUr5jFprbZnf0HudV4Zss0wtcIjQK6upOxrzgXUOnnltZ2eKMZr5nlU8e1iKIVkyAQO0pf7ORtn0L3lRGEhB9RnvwCI8z60n9ohtE8Z33GhRD58ooIiHFLqi-2sNNCgpJqgRmcA",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "W 173rd St & Haven Ave, New York, NY 10033, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.8463679,
+                    "lng": -73.941493
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.84750112989271,
+                        "lng": -73.94030102010727
+                    },
+                    "southwest": {
+                        "lat": 40.84480147010727,
+                        "lng": -73.94300067989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "4a65ca9e6d802003613fd21832fa4e5c9cd6efc8",
+            "name": "J. Hood Wright Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAARiTLd3DIOTZbfrmUsEqQrddHTUe1xzXb3DRwvBrkYpSb2oJGizidW24hYHbOSEXT_pqDpi2aQ_HLdRNuYc8MicOIjagF6_0sNvk73ozyTeEIAdfqSl-xAkEjWcgZjokFEhDsYCeOU57sw9FjuabXaaR9GhQB9mrVguO7H7Nwq4cabvGqn8wtNA",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJW8Q_N5_2wokREfZXoLWHIEA",
+            "rating": 4.5,
+            "reference": "CmRbAAAATzUU6S1qizl_cj7a8MZ-qnk3_Jd1PrMRiKELoIyxKausg6U5YIWQk0zhUJGslc9dv0rTV0cvo3FTt_EnZaC7L1qjUfXVrKFm3eXcsM5heVA8iWCH9blLEWdR8G9dqcwQEhBIBPv4rNEDhTf28RPe020yGhRYtXdNtGTnuU86-dBZZL88xGbQsw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "450 St Ann's Ave, Bronx, NY 10455, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.8117387,
+                    "lng": -73.9120243
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.81342502989272,
+                        "lng": -73.91101065000001
+                    },
+                    "southwest": {
+                        "lat": 40.81072537010728,
+                        "lng": -73.91506525
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "115f4eb0af4bc880c099f4912c940ff984382dbf",
+            "name": "Saint Mary's Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAArEbQZRmpF9HKWtlrhMTx3OI57jO2RJmOxa6F00yaHAvnfv4Wc44g9keu1zgL6m9sKDy1za0t86w_syx57SUxyLbKEHk2sdefRb1uhYhsUD27tKVEIWy-y9x3R71cBCJKEhDRhSeYKw90uNHv9uS55g15GhSHNTvuWfhcFusTful6DQhQ5xtwKw",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJ2WRPfsf1wokRIMcB__ZIV1A",
+            "rating": 4,
+            "reference": "CmRbAAAAqvTz30ozCVeEBxymyJXHlghcZX-jMOb9t3BIzF0tYWQTMbbGjQnaxt99Ys_8O4-wZo2669XbIL1ASIgRN800LSwCREz2fPnAO0KQ6klu628Q2dt7E7XExf1lS09C_SrZEhCZJ-7ZuxtcChZFYIBtCU-XGhSFavwIuugCO1CPYIwTdRFewuDPbw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "New York, NY 10034, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.8697267,
+                    "lng": -73.9194486
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.87107652989273,
+                        "lng": -73.91809877010728
+                    },
+                    "southwest": {
+                        "lat": 40.86837687010729,
+                        "lng": -73.92079842989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "119a317917cfbc726b4901bbb55fec7b14c87bac",
+            "name": "Isham Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3120,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAYI_x4veTmiwVa0RUksuqEEtKQWcZMOsM5EGbSZa98rPLv3Kava1N2MfCj99rzFIpgf-cfuBWbHyDbZNFaMC9ZwVBQYnO0bO1oVMYyhEp-DBhsCg2PsaMz-bxl5Ooe63wEhAoX9DKb92eWwylWDIZtyThGhS3TF0M2OzHVtpBET5n-mfc_bvSSg",
+                    "width": 4160
+                }
+            ],
+            "place_id": "ChIJUd0DUvHzwokRNi67kK2aMP0",
+            "rating": 4.5,
+            "reference": "CmRbAAAAXCvV5qmux6jmJAM-7Oyfgzf8jA6WfrgpWUZImH-yM74YW1gP_UJtWxEc3tubchP9XY2reA36_kfNb78ErdlpfEUKgOPi3wcgYff9gWIH372bXNT_e5s3z0Gmxquf9ywTEhDbsXMC5wXekv_wTcVdMlNMGhSq1lwsVZH5bYrWSSw9damMo-gubQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "128 Pitt St, New York, NY 10002, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.7199859,
+                    "lng": -73.98146249999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.72136722989271,
+                        "lng": -73.98022132010728
+                    },
+                    "southwest": {
+                        "lat": 40.71866757010727,
+                        "lng": -73.98292097989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "71ea2ed59f0429f6a2a65469d26cdb9ed76e1212",
+            "name": "NYC Department of Parks & Recreation: Hamilton Fish Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAlzn0Qkh5QGPlKBCKgnQZZ-40oSvWDGbQheqWiBckXxsTSoOUNHT_AL543NCSZEH3CqlDMNAiSUlXugpmihquNHcxpOBHq3lHuHwZ9NCdOiwOyG9f9uaiiYmtf8i3kTlEEhCvfloZHl3vRsgFq4W3TOz6GhTUceRhzTyoLQjkytKdFV1ZkSdsgg",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJhZ8ASn9ZwokR4OPfJ0Gswhs",
+            "rating": 4.1,
+            "reference": "CmRbAAAAq1JytKqM0mKZfPHQnvexSmwdf78bzCL42bg0OJir4sJKJPpNz15xMisgQtyWMNhDRO_Iph5G8VVRvbWkwcz4vyGZwSs27NfDWRhagI2wcs94TsSVZE6fAU3OtXQ9a06YEhBV54ElGcceK0OEIsCHzxTOGhQ7iaA3-jWATBDyrX0V8Pn_cYc7Bw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Columbus Ave & W 63rd St, New York, NY 10023, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.7718311,
+                    "lng": -73.9825585
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.77323362989272,
+                        "lng": -73.98133437010726
+                    },
+                    "southwest": {
+                        "lat": 40.77053397010728,
+                        "lng": -73.98403402989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "ea177c3d5f14a5199eff81aa7756266c917885db",
+            "name": "Dante Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 4032,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAApq1mN3sAJJsbgYXIITHkJUANkB2IFqHk0t7opPZaCoc0ELFcbKGQmXatnSd1gqTOOsOGuI5zYUn32wU0Hb1VeaYIMUsT-SoLzl7PVnsEqpqSHNhsiUUU8KNbQaVC70eHEhDuFPEMxU848pHJQ1uLT6ozGhQJG7kbtugoRl_WulPOidkO9_nKig",
+                    "width": 3024
+                }
+            ],
+            "place_id": "ChIJw_slhPVYwokRAhJIBocvn_I",
+            "rating": 4.1,
+            "reference": "CmRbAAAA5p_zNA7CLVy3je3dvqiWlQq5RBNxU4mjCnt0NbJVkVjDe_YG-vmWh5QDFqY-qykEQuwxdrGZP2MiNJ4d1c8B8PrBFjW5fAaTNYYJSCeX450hdOe5Rl7lbYM-utpxBVUpEhAg5NsnPRpWlHULXay6NSwOGhTmiV1tWyvEn0i0yJUhUNadsC6lqQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "2301 Amsterdam Ave, New York, NY 10033, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.8446296,
+                    "lng": -73.9329638
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.84651582989272,
+                        "lng": -73.930736
+                    },
+                    "southwest": {
+                        "lat": 40.84381617010728,
+                        "lng": -73.93370639999999
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "1b32f3ca390c069d2accb8fd003e8ec8d252fbdd",
+            "name": "Highbridge Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2976,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAUN3TfZkBTdweJvlC687lhK64_k5O6Wumk8wc4XAxlCBpcxTl9GTTaFyyLyAnLaYeuAxcSiyvGel5SZvufM7Khr0bV1JCb0gvwKf-RWeZZkCZ8kvG1aJ7vi4m0Q4KbTDJEhCm7wITj6LqlQPNi9xNhyOWGhSv-htufZTYYbSUS4EMEqYBJCLngQ",
+                    "width": 3968
+                }
+            ],
+            "place_id": "ChIJI45ivSf0wokRMw68yH4_DEo",
+            "rating": 4.2,
+            "reference": "CmRbAAAATn2fTw7XgVTO6ItJ07p1Z67u8pfj8brhAitsOvb22doblClc17VQWMLeiFRY0uej_0fqOxRycJAvOfN01-gjBb3CA1VK5eaN_wxMsM0-N4gvQc9nZhH-mESgifHpSeWZEhCrdTE0zSWVRRRtOeZOhIpnGhRI3V7kLw9WQE0mcs06owxLPT5Vmw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Brooklyn, NY 11225, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.6602037,
+                    "lng": -73.9689558
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.68326850000001,
+                        "lng": -73.9533333
+                    },
+                    "southwest": {
+                        "lat": 40.6406205,
+                        "lng": -73.9882237
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "4a94c7dcb6fa8e242c2e232acadaf1f05a0d4536",
+            "name": "Prospect Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3456,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAAnYN3MBQvTF9yC8XQ2tfYPyVu5sM2VRdjdfZ_8lzncigXknbHTi8C0etIqeom2xj2yRdubLhLoztaH6Hb06JZayhh0whNgBHNpnewvQClz3-z_UWW1G4Ko9yG1--nhNSEhAhe04XzbEVK2AX2VfUaIuAGhQ-GmXqDUXZSFmMIDl7YXU6_CsgGQ",
+                    "width": 5184
+                }
+            ],
+            "place_id": "ChIJQwRohxBbwokRmHrfAMb3ixc",
+            "rating": 4.7,
+            "reference": "CmRbAAAA1Tw7ztD3aCH1m6mH634tr27n5BaRn7hjloNx6zyKY8vYsmVSHLlwOwRVQ_qjIU-sImwZXl6jf_yD86WugSqbdIU8Ofjx0amZaF7nmjSz6ns66V0EvAlOkPpmFX4b5S-CEhBOQJug_6wuNKIwozvK7ukUGhRHVh7uEXXY-0FXr1YyE0wlNdsneg",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "W 183rd St & Fort Washington Avenue, New York, NY 10033, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.8528053,
+                    "lng": -73.93800279999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.85415512989272,
+                        "lng": -73.93665297010726
+                    },
+                    "southwest": {
+                        "lat": 40.85145547010728,
+                        "lng": -73.93935262989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "dd7956dfa9079598e9b010696ef74dc39df6eccb",
+            "name": "Bennett Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 949,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAu5lCtcDRLWfiIdWxybYu8N8-qw7ZcrBc-89hInWVvYm2BmTH_T05g-hycWwBWf7r8pcn6xS-eoHwR15PdRwNEwDcPMD_Onj_u1aO5lcKP6ZiuA6IS4TG8741pvlUEYKDEhD2n-L56lxVlRDoON9AehcbGhTLfXpW7aKQBAPQehG5eqp4k3XmTw",
+                    "width": 1265
+                }
+            ],
+            "place_id": "ChIJTbE1MKf2wokRmmwnWT7_t4c",
+            "rating": 4.3,
+            "reference": "CmRbAAAA4-1Q0B5gOrsmkCbrsX1jYWzJILe26r7owOBeR5YRYF-iYDUesMzS3pDK3W5F1QCQYBKshKxfLhTzg9mFVNvG8zbu86MiS45j7fGmwSjwDGSmEAjWObsDVmNG7E6LCp-ZEhDOjUXuFcGufcHG-dYQQD_RGhQZ3ywbAqpCaQQZcEly8PIXadl1Qw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "11 Madison Ave, New York, NY 10010, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.7420371,
+                    "lng": -73.9875635
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.74462870000001,
+                        "lng": -73.98541829999999
+                    },
+                    "southwest": {
+                        "lat": 40.7397163,
+                        "lng": -73.99029910000002
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "abd931421034043d086a5e1ad376a68b064a5f57",
+            "name": "Madison Square Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAJRUS1bMWPn8omoaRaviK5K6KMFYNxQivG2A8JYafnEiTmH4KVp4AH-l2vrOe7bJ3Tl6GhO1hVXNgXXRW72IzWcSkZ06_NUctytBd9wfqEHuOSLJiIrwwu-RddPlSZD4jEhA3RCKyDBYhnawKCGYMaT2RGhTFu0pG-h4H0WmMl5ZsiZnoEwfyBQ",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJp32RvaZZwokRfH0Zgzl9mXk",
+            "rating": 4.5,
+            "reference": "CmRbAAAA79Sre-6lpej1xX9swTeiYotBKs9kb4CT_DW_zpUzz3W_5RanYXG__yeatg2YVWIQ_fSvz32ZKe9CLBS23h3vi0anynxkaETTl5xwLX4lJhbY1Js4CPLBU3PB_Zf6kw8CEhD_aIm-HbQ1mzglA88y3C8LGhRLBRdhrDfaEs-9GEm7CF-HvPMkjA",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        }
+    ],
+    "status": "OK"
+}
