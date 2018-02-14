@@ -51,7 +51,7 @@ function getTruckCard(truckName, description, img) {
     html += '<h4 class=\"truckCardTitle card-title\">' + truckName + '</h4>';
     html += '<p class=\"truckCardText card-text\">'+ description + '</p>';
     html += '<div class=\"truckCardBtnContainer text-center\">';
-    html += '<a href=\"truckDetail.html\" class=\"btn btn-info truckCardBtn\">More Info</a>';
+    html += '<a href=\"truckDetail\" class=\"btn btn-info truckCardBtn\">More Info</a>';
     html += '</div>';
     html += '</div>\n' + '</div>';
 
