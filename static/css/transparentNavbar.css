@@ -2,14 +2,6 @@
  * Author: Parkd
  */
 
-
-.transparentNavbar{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 20;
-}
-
 .transparentNav {
     background-color:transparent !important;
     border-color:transparent;

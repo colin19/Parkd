@@ -2,6 +2,12 @@
  * Author: Parkd
  */
 
+.toTheTop{
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
 .header{
     position: relative;
     top: 0;
@@ -9,8 +15,14 @@
     height: auto;
 }
 
+.bodyTruck{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
 .intro{
-    position: absolute;
+    position: relative;
     top: 0;
     width: 100%;
     height: auto;
@@ -23,9 +35,14 @@
     background-size: cover;
 }
 
-.introEmptySpace{
+.emptySpace{
     width: 100%;
-    height: 160px;
+    height: 120px;
+}
+
+.sectionDivider{
+    width: 100%;
+    height: 80px;
 }
 
 .intro h1 {
@@ -34,8 +51,8 @@
     position: relative;
     left: 0;
     top: 30%;
-    width: 80%;
-    margin-left: 10%;
+    width: 66%;
+    margin-left: 20%;
 }
 
 .intro p {
@@ -44,16 +61,15 @@
     position: relative;
     left: 0;
     top: 38%;
-    width: 80%;
-    margin-left: 10%;
+    width: 66%;
+    margin-left: 20%;
 }
 
 .info{
     position: relative;
-    top: 500px;
+    top: 0;
     width: 100%;
     height: auto;
-    max-height: 580px;
 }
 
 .basicDescription{
@@ -85,21 +101,28 @@
     font-size: 18px;
 }
 
+.carousel-container{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
 .foodCarousel{
     position: relative;
-    top: 580px;
+    top: 0;
     width: 100%;
     height: auto;
 }
 
 .carousel-inner, .carousel-item{
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .carousel-item>img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .menu-grid{
@@ -117,15 +140,15 @@
 
 .menu-grid{
     position: relative;
-    top: 660px;
+    top: 0;
     width: 100%;
     height: auto;
 }
 
 .footer {
-    position: absolute;
+    position: relative;
     left: 0;
-    top: 2600px;
+    top: 120px;
     width: 100%;
     height: 100px;
     background-color: #212F3C;

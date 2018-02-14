@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -18,8 +17,19 @@
 </head>
 
 <div class="header">
+    <div class="intro">
+        <div class="emptySpace">
+            <br>
+        </div>
+        <h1>Pinch</h1>
+        <p>"I got the fried octopus bento and would recommend this food truck to anyone venturing in the area. The prices and customer service were great."</p>
+        <div class="emptySpace">
+            <br>
+        </div>
+    </div> <!-- intro -->
+
     <!-- Navigation -->
-    <nav class="transparentNav navbar navbar-expand-lg navbar-dark sticky-top">
+    <nav class="toTheTop transparentNav navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#">Parkd.US</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,16 +59,15 @@
         </div>  <!-- container -->
     </nav> <!-- navbar -->
 
-    <div class="intro">
-        <h1>Pinch</h1>
-        <p>"I got the fried octopus bento and would recommend this food truck to anyone venturing in the area. The prices and customer service were great."</p>
-        <div class="introEmptySpace">
-            <br>
-        </div>
-    </div> <!-- intro -->
 </div>  <!-- header -->
 
-<body>
+
+
+
+<body class="bodyTruck">
+    <div class="sectionDivider">
+        <br>
+    </div>
     <div class="info container-fluid">
         <div class="row">
             <!-- Description -->
@@ -84,27 +93,34 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 
+    <div class="sectionDivider">
+        <br>
+    </div>
+
     <!-- carousel -->
+    <div class="carousel-container container-fluid">
+        <div id="carouselExampleIndicators" class="foodCarousel carousel slide" data-ride="carousel">
 
-    <div id="carouselExampleIndicators" class="foodCarousel carousel slide" data-ride="carousel">
+            <div id="carousel-list" class="carousel-inner" role="listbox">
+            </div>
 
-        <div id="carousel-list" class="carousel-inner" role="listbox">
-        </div>
+            <a class="carousel-control carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>  <!-- carousel -->
+    </div>
 
-        <a class="carousel-control carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>  <!-- carousel -->
-
+    <div class="sectionDivider">
+        <br>
+    </div>
 
     <!-- menu -->
     <div class="menu-grid">
@@ -131,7 +147,8 @@
     </div>
 
 
-<!-- Bootstrap core JavaScript -->
+
+    <!-- Bootstrap core JavaScript -->
     <script src="../static/jquery/jquery.min.js"></script>
     <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../static/javascript/trucks/truckDetail.js"></script>
