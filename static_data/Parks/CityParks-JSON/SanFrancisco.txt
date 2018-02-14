@@ -1,0 +1,883 @@
+{
+    "html_attributions": [],
+    "next_page_token": "CoQC_wAAALQm5QXMkjkvwaDWDJx6iry0HgXa_D3ON3Q7Zqx-2YIX_-290Dn2xMUCs199I0NGYgbB5JnTHB3z8n6AjfC3iFNfM0QG7J_bZqOg3Seia0G2HWBvIciwd5BEE3fA452Xbz9VOaCIN8NK0WG6NKC_zHGfjwfyqJLgC0du3kq_xFfvlCPbw_gdrz2ZQDT3dP2xyBInnAyI_1_jXD7sRll_bDq0Q2ctNXwwnKYw3ryk21kS77EdGoGItQy2i5KHbiFTcYzYY-sn9jgGN-kfmXYYrjoMkVHOgLd6QbaVnnhnk46Cc_TMDIi92-AC03YNzUbDa3II-_Bmr6T1kdJ9gkpF9Y8SEGX8SWqDNQVv6LQg0Hdd-QcaFNW3Da5CkQ7Dv59eq2KVBl7DBSoV",
+    "results": [
+        {
+            "formatted_address": "San Francisco, CA, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7694208,
+                    "lng": -122.4862138
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.77971579999999,
+                        "lng": -122.42049265
+                    },
+                    "southwest": {
+                        "lat": 37.75784740000001,
+                        "lng": -122.54138605
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "26542c7c02ab2795925b9cec81f7bac6047fd102",
+            "name": "Golden Gate Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 1366,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAjFxigcCf89c7naL1OKaCsAF5k47BSK3YgjQk6BbMKcUmsR3glH2u-UN7GzDRcEQ0RXhA3Ncru88Md-NkuhS5NOcpSbMwiFheNscDnmubnKf-akTyP0JIz1g3KZwL1zw1EhCvAGgC-By2zw34h0zCXhKqGhT4hmvpv0GqXA6o-9r-P4ZAAPBgDg",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJY_dFYHKHhYARMKc772iLvnE",
+            "rating": 4.7,
+            "reference": "CmRbAAAArhgGqJxqDih9C9-wscRZ8pUGzypa1MMF26zKps6FVRn1YogF-TtfunsUJlw78NrgLuHlZq02rjXuh9D394YMLzH0OXq3yzS3e3dA_lejE8GDPOXWWapGhx4GYpPhoDszEhAqQeQBpIGCmutCPXmdH4QvGhQWCQGNI0bu8f_mw4zPZiyK2vdfbQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Dolores St & 19th St, San Francisco, CA 94114, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7596168,
+                    "lng": -122.4269038
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.76295734999999,
+                        "lng": -122.4249049000001
+                    },
+                    "southwest": {
+                        "lat": 37.75657275,
+                        "lng": -122.4293717
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "6fd9eeb537502ab6100d97b07fc2e68f38383656",
+            "name": "Mission Dolores Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3265,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAl0vfEMiu1SlLYCYfGUkQIWmmdZAkVVn_BNXOLbefNBlrnI3Y4EW588M_mr61l2TJaKjXx50K5gXjBsrX_cI0skPb9_onqnI2HoUtMpl0AikFmAWRzIN6WG_GmKI7ZgQPEhBgaUudRBkwgRZe7eXGMF7AGhR-AU4J83q4_v7KCkXnUAsQ0hlCRA",
+                    "width": 4898
+                }
+            ],
+            "place_id": "ChIJp3CqeRd-j4ARYI0i8e_kGKY",
+            "rating": 4.6,
+            "reference": "CmRbAAAALDEwXOaXr0QsNftFcPwzNU223ZxRcsoW2_IdcD_eOon_TB98_hPuKX5ua1Im0naOeNEzx_h5g1Ol-RNW0d60WXOko_iv1w7Jot28Z7f6fOUPClhW2O6i0u5FMROG8xeQEhCZLEDjx2fyXgH_XhFUnRBwGhSd0Uo2d5T5-FN61GJiyMs_SzcQ9Q",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Jackson St. & Steiner St., San Francisco, CA 94115, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7911417,
+                    "lng": -122.4376241
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.7930274,
+                        "lng": -122.43430325
+                    },
+                    "southwest": {
+                        "lat": 37.7895074,
+                        "lng": -122.44107785
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "ac6bffe7be1c116bece4b2f442ed60d4251c68d5",
+            "name": "Alta Plaza Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2268,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA_8TG9FoZ9-CTdtVo80G_F5a8Uj9gs4CTYbzWkqElDS1DlNDAEVShskCJbJ4Ccp6ovdcL8KjWKspBYf2RGXi7blLFFYDFg7qsIoqTqykl1KQBB1boUDg7qNlRTpXPOg1JEhBjn0DywEZImIDppbuGyWlDGhRretIbFhtihAh59NT2-kEWdutM2A",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJnS-EJM-AhYARYX4zAkEVsP8",
+            "rating": 4.6,
+            "reference": "CmRbAAAAv6WvhNsFAAGIvj6Yx3uQQhY6q_WSCtdqG3z2HRwJOKFJ3UF7lCYwKggjCFGGsPhUebOfCNBQpFkU5Ue4yWIbUbnsV3rrVLm36Eq9aaOe4BbZxw3gPWF5HR0OvX7ErU_rEhApCU1H2OyQ-zyiCLyv9lqzGhRnlBVGzZEbQ75GR4SIPOUxN4NZkw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Filbert St & Stockton St, San Francisco, CA 94133, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.8008473,
+                    "lng": -122.4099791
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.80241802989273,
+                        "lng": -122.4087322701073
+                    },
+                    "southwest": {
+                        "lat": 37.79971837010728,
+                        "lng": -122.4114319298927
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "5967d9115d5608c356b76e4cc2316d0e7dfee297",
+            "name": "Washington Square",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 1504,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAhFbVAZDPlLfrrW2XIo3rBNtJZ4NbnDgXu70x79lyqG5Uvquy6otFK4CH1mSn9XTooK26RxEtB6msvFQu4htxecxkXekqvAo2Z9t8gDX2t3Zrjnz_SDnUbqsYSit0yp_xEhBR_rbBYUPHa0X5jja9_BTBGhR88AHC6VsVHaSG2Ol7UVaF16tT4w",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJoYiOqfGAhYAR8J-KiogVyCQ",
+            "rating": 4.4,
+            "reference": "CmRbAAAAhRWfAEEwa1QezLVsPMtmhb_8-yjo4nzWxfieXNeSrYcNFBqYQWJWB3cwrEOcQ-Lg88frHwrZ9Z9rXbZzeusd7xlX-M4QP38BycYEnJowqNtIALR7A6D5JLbC2okcOwKIEhCkWe2FXpoljAhUncWtKpUkGhToMJM4f6MTkBs6xlJ3SFNIbPROXg",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Gough St. & Washington St, San Francisco, CA 94109, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7916146,
+                    "lng": -122.4276133
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.79296442989271,
+                        "lng": -122.4262634701073
+                    },
+                    "southwest": {
+                        "lat": 37.79026477010727,
+                        "lng": -122.4289631298927
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "2430da79ed38e747218a7edd967fa4dec601e55b",
+            "name": "Lafayette Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 1155,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAWeEp8n12mgG5bjqIihDCIZYmomJPmOXN-Imd6rmelD26Rz6ZSlz1CGEgQcll4W42cJRysA59jXrcvjFzOtH7T9WRAQcMSOpHuxoZeEq47vAMJuIJkjzE5AoNjAIuONYBEhCxq9NYI1rh9LSwOXu4lM0SGhRC-2YSSv-Np4sEU2e1FOaFvZzE_A",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJC3O0GsGAhYAR4JK4ut4xPsM",
+            "rating": 4.7,
+            "reference": "CmRbAAAA_gIQW2cQXAGZyk4c51nj5RuHqU9YGMY4xW1QlxxNofBZ-3YfddPw4YEOqOscrG5yqRZr1hOYAYqBqT2hwA4oFLnQNoS4B5_r5o7C-EbUoazaPlEDuR0813vXNmdgjOSfEhBc9y6dhX9kUSn_60XvJKLwGhSMGfmQZkxpwPvji5jMwqNYJ71wVA",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "501 Twin Peaks Blvd, San Francisco, CA 94114, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7525098,
+                    "lng": -122.4475683
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.7613498,
+                        "lng": -122.4456015
+                    },
+                    "southwest": {
+                        "lat": 37.74175899999997,
+                        "lng": -122.4507411
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "ba3189748cf73e152169d6e439f92a60a5dbbaa0",
+            "name": "Twin Peaks",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAZX_ChjFUHjSMkc3IEke6qLwcI3Vh1IFbvHngts1Jqyg7gPtTYpE27GtA7yog1iI2MGzAwAczwnyF32NTJy2M3f_sIkiCyubmGIuSERSN-PMYVPAA3A812HnPmyVKuHwOEhCS1jqQLq3kUt22ChpwhVgIGhQg5DHu21UhSDlijZbiJ8aQnupnxg",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJt3HwrOJ9j4ARbW6uAcmhz7I",
+            "rating": 4.7,
+            "reference": "CmRbAAAAyA81R3w7aF6sY7OJ4miAa8iJC7dvYcKvZWG4qf8VU4ZM0gCNFMKiNdUzjZOhQCXCn6Mft-l4YrfJnsUXA_C0KMcc-CvjE41UYudk5-hoRDKx53gq09z1nGZaa7YJMANLEhDyaNhLqlt3twDNmDGU8J4BGhQCK5rqwm6kqjInyYnkn79OfKuzpw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "1705 14th Ave, San Francisco, CA 94122, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7564084,
+                    "lng": -122.4717396
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.75774572989272,
+                        "lng": -122.4700377201073
+                    },
+                    "southwest": {
+                        "lat": 37.75504607010728,
+                        "lng": -122.4727373798927
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "a3514231700736a96dabbc818dc8e1fb80ff3837",
+            "name": "Grandview Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2160,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAANFHzEAq7W8uDo-4jLXrjR4kqv8kJ_QAVCToPLlJqoGZzGmj0gpqNYcwA2cWKUhbCjdMWgg-2Q5iHpebbZYUYoVo1_xgcz0OlIUgq084JmFxZg4VWWTuhqMPYFmceoaiaEhCEhEE6OjBjOF53XMAYPhAIGhR-cj6GT4sht2QUAwekDTLEGuXYRw",
+                    "width": 3840
+                }
+            ],
+            "place_id": "ChIJFS16LmCHhYAR9-5CGavbV2k",
+            "rating": 4.8,
+            "reference": "CmRbAAAASQJkMCjoJ79Hf_2hdCGFV0UN7-0OP8b8PY5zGHpEjggLjGVkjjAGGrfuG8okiXCmiWUb_DaZhCziNykvnsv9MZl9x1f33GZjKXY1rM9xjDiVOhMURVxBsk5vVJvCctACEhCWLRmRk8egrajY5mAwggKYGhSIPDBwaXlxv5Tx7WgRMtqNqdd9iw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "San Francisco, CA 94109, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.80774299999999,
+                    "lng": -122.42415
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.80845642989272,
+                        "lng": -122.4190675500001
+                    },
+                    "southwest": {
+                        "lat": 37.80575677010728,
+                        "lng": -122.42584415
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "1d877a3b010893aa8c3b55040d3a716016f81cfa",
+            "name": "San Francisco Maritime National Historical Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2448,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA6uudsKv1NB2BwSXzL_1Wgfi28UUi9NJIHxtKUNX-WR7jyLBIcx62NzH210_rTm_3ntQVjkCpqAIb_QT9hXFhy_CXLl9HvxgT2P3MZWfcUM68u9Ddzpg7186c5wBOL-6rEhDCP2SuTBSZgVIxurNo8bydGhSOmPy3dufZ3R9TasFa5u4z_1mTSg",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJ7bPtqOGAhYARlc1YRlOfGrc",
+            "rating": 4.5,
+            "reference": "CmRbAAAArdnxHkE8j4MyDqAlXsuRkANXsiUoOKu1YpB9qtgr_gvzrzRUqH0_cWuO1ipAyoHbKXyybA798_QWCPb5ONHqMnnXPrODZqRqoFlhg4YvwGGiLF-j4JCSleCGS9TD-VRDEhDuUXZH7bl0_qILg7P0vUlVGhRzKkWATDJe6fgOxptC5JWeooZIRA",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Elk St and Chenery Street, San Francisco, CA 94127, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7415588,
+                    "lng": -122.4431851
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.74290862989272,
+                        "lng": -122.4418352701073
+                    },
+                    "southwest": {
+                        "lat": 37.74020897010728,
+                        "lng": -122.4445349298928
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "e2848d45811610341dda8a99fb48a1a6317e09ae",
+            "name": "Glen Canyon Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2268,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAMw7Qsb4vpQBSqnxMHGl7U8xTL0QMx-u0kQNAUzpq9j5mvML3eefZCukoOsw0PgKCmYDgmi5ODOKxgM_E6GOKOM_1elHjDogLfN_cgtIWkuXgN1-URZ7RBS3VT62wTPa2EhAHI0D29VQWyHXotxXoW9IIGhRXfrhYciOBjRMdqkQNz9O_D8ntgQ",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJ9SlCdnZ-j4AR86EzE6c9NY8",
+            "rating": 4.7,
+            "reference": "CmRbAAAAxjgaDeB9IfvB7XhN8wfYwrDvPRIg3paxeVqx258b4-vmIQsqsEqU3lQbF2DklifhNmBeAWzkZoofUKGaxVxcalvyrDXWjE5YRaay-eD3hu5608AFX18x59aY1v5MJj_JEhACjRS0jdBC76E6DMUdFvhDGhRJ-1qeeO9LZjseMlNKWtlsGsdc4A",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Roosevelt Way & Museum Way, San Francisco, CA 94114, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7653122,
+                    "lng": -122.4385846
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.76710832989272,
+                        "lng": -122.4370510201073
+                    },
+                    "southwest": {
+                        "lat": 37.76440867010728,
+                        "lng": -122.4397506798927
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "3af852d3fb71ce0a460be7e5842bc9bc4e3b9efb",
+            "name": "Corona Heights Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2268,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA8x0xl2LjIchLAOFrhjTWa_40flGCR8pTM2d4fC86-1Lkamiu6Xfg61Efoc-6Y_haApTrKsgFVpQxzuH6EhhiIVIl_pJm-5RL6yDBfmKUpa4OD8Xg9xCicCrVi87h-00YEhAKI8TwFPTUvTkaaUUvMiFUGhTFu_bY7E15Y2nUywtNWBO62gyfnA",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJX3DWQgJ-j4ARxWqSTDOy_CU",
+            "rating": 4.7,
+            "reference": "CmRbAAAADKzAUF5l9c0HYla24-RpiDXPwHeV1I_nKcesP4DEXPmJUc58Y5X-U3VwixoiBdVY0mWbxJbSSF3dYroQ9ebtzC8SfXJJmRhPdbTpYJaW-xSQbzmH3wsjYXI7yFfAG_7-EhD8a1IGsDqVMbnEJWvRzk-JGhTYQMfPhl16N84mznbEVfFPhSVWsg",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "100 John F Shelley Dr, San Francisco, CA 94134, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.719309,
+                    "lng": -122.4193742
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.72065882989272,
+                        "lng": -122.4180243701073
+                    },
+                    "southwest": {
+                        "lat": 37.71795917010728,
+                        "lng": -122.4207240298927
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "ce0d34b4c27acbab3d6608ace987c8b031dc21e7",
+            "name": "John McLaren Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3088,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAYXv0lWkhTfKZuG0a4Y2vVAknM638NI-ki2ET5NZoLb5VE1W_bCTu0EWEXcI1ftDpF_wUCyXWXU2yo4S8v0obsxD745R-WI4CUCnPIQA1J7mKG2nUBbz6fJcPm9PhFaFzEhDYv4B3XToVH_QMysyZfzu7GhSl6SJLSXOumchSVZ7aNhJKquAdSA",
+                    "width": 4160
+                }
+            ],
+            "place_id": "ChIJ67-gn-5-j4ARcyjzTqE8ZdU",
+            "rating": 4.5,
+            "reference": "CmRbAAAA4raWr7H3wgUoaoG9oVHhnfilRkCjCAihQrrulKx7qF-ezoIgqp1rTsKZ_1RcFZ_Fv5Z0pEiVuJZlduTdqyLkjijcZ6Wz9Wce1zf1hSoAMHqQRrsLGUlzlFYo5xwwRmjfEhCnPC4Z1v-fiHv0SkQVYxGkGhRPt4v9VZLDJu9JvV3_z1wqt4dUTQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "98 Funston Ave, San Francisco, CA 94118, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7872822,
+                    "lng": -122.4697225
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.78863202989272,
+                        "lng": -122.4683726701073
+                    },
+                    "southwest": {
+                        "lat": 37.78593237010728,
+                        "lng": -122.4710723298927
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "45a132ca35bb1baa1cd154358fa4382d9d458ece",
+            "name": "Mountain Lake Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3036,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA1awA-FYWEASHu9RWlhy-LLvRMjPMcAsFbRTgeDqnUhcgV5gHzv3tCG-RZPS7WS415htig4K4GcHcuZ0AmCp-KcbbAsNfF4G2tQCUvAEMHGOPn8oG4yo-qXjcce_gJy-kEhCIKZB4IstuZcJbPYj6EfGnGhTS7gLg24e3fj-DlVs6rMDB6HXNWw",
+                    "width": 4048
+                }
+            ],
+            "place_id": "ChIJqfCTeBiHhYARt_0t7D65SWU",
+            "rating": 4.5,
+            "reference": "CmRbAAAA0CTa1vgHbvDMyGbf6_yIyqWQzfD6ydmiQuUpSdv02P3J2spROb4lM34H-Hq1Ggq1dnXTl2KmugvHtqJ8mEoiUHeYFnWAK4omp9l53hZoevbjfRQ535aZ2mvZsmPDf0HSEhBvoLWvigneNkuaBGLizjQmGhSJaNCHPshlL9Z4qM-vsQIxWByruQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "The Embarcadero & Folsom St, San Francisco, CA 94105, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7915675,
+                    "lng": -122.3899424
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.79285202989273,
+                        "lng": -122.3887798201072
+                    },
+                    "southwest": {
+                        "lat": 37.79015237010728,
+                        "lng": -122.3914794798927
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "19ef171c05a6d61b724c5f3086a96f7dea4177e6",
+            "name": "Rincon Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2268,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAISqz3jJFF8sG0Q6wVquW088an-ydOQUNoGay88W9HxgV0RdhYT5BUE8wejt8-oTdOc8Hv79LG5JhhRuYyC5LEqESS4ltcPo04eYFj6qEOSNZEDCoC-5Xf0kaO86d0r4SEhCEmF3s_xImUhuPoOoRLlJjGhRGMek144NcophBcVMwax2QViDxOw",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJkZyW-2-AhYARzCwWSe3qHMQ",
+            "rating": 4.4,
+            "reference": "CmRbAAAAAi0mc_fLG1hkxql6b7-d_5kVwrr0V6Ihcmfmq2ZxMGljayjyvLtoUroGr-peq55Gu-RXe8vh3g-LkQdFVp4S7acmW3h-1imcSU5mDejOzHJMzy3TWdlGiZij2PFZCD7CEhAtUS90V9EPTMrI3S8NJUTHGhQ1MG5WAKA2_n8cr5OXH5WpZjYg4w",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "625 Holly Park Cir, San Francisco, CA 94110, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7372115,
+                    "lng": -122.4199353
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.73834047989273,
+                        "lng": -122.4181343201073
+                    },
+                    "southwest": {
+                        "lat": 37.73564082010729,
+                        "lng": -122.4208339798927
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "9e23a50b50cf965f8d448538129eaef6e4fde6d0",
+            "name": "Holly Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3120,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAhOHsbZ4cP5Q4jRBmcAGALNzc4WlL5jDWTml5kdr7TNU1wLqr8dpgRXdFX6iPogM25o9x67wn7pP6vr5G2sRBLP5TvN-VHrluJojlJUigsBDFHpINAMAAqtIV6tzoCkmQEhAhqFUhM_8vRpre6KO10FxlGhTd3xSMKh0N-yap1ByKck1-y0AOrg",
+                    "width": 4160
+                }
+            ],
+            "place_id": "ChIJa8VE6l5-j4ARbpOdYYKv888",
+            "rating": 4.4,
+            "reference": "CmRbAAAA037QNLO_BtxJafCsUpOrhaZp0Ep4u_ftxmKLFLh6XA-HhialEHZ0HFPgx6W_kOEQMzU99g4xzuOr8yDEwsY-R9-DEU-QJsVUat5u4cqQ-YdqBXbQc0Ndq11Fa4ORKdEfEhBWQ9P1-dxCe89mTVVS0dDWGhR7YoF8PRRG16_updb6jMs2Xz9mnw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Fort Funston Rd, San Francisco, CA 94132, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7195436,
+                    "lng": -122.5028052
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.72246085,
+                        "lng": -122.49628545
+                    },
+                    "southwest": {
+                        "lat": 37.71079184999999,
+                        "lng": -122.50497845
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "e8eb9b430b553afc37a69d870793d01c38f97a6a",
+            "name": "Fort Funston",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAYCmJIy2Wa09p0x_WEnf0SOZ48iWjDKn9qXZaY8WfW3MTNf5VFpr1T7GkYwGi5GdR6bbmfLZShqU-IAvhWHeZ-NWfmv_uPNI9UDTdlz6uCdqcbbGV4CDRdDOQQnIOsfquEhDu4MDPAWvHsOHTH-pCC0XoGhTTF3N28_c7zcRmVeTD-aEU1Q1hcQ",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJazyNlAR9j4ARzE6pzUtJWyw",
+            "rating": 4.8,
+            "reference": "CmRbAAAAgBiaXPANnakbRzEiKUzmoJTF-Lj5NnFQ0vrhMWxAmZW66v41nCSQVknGXTn0nnTaR7i6u8jU9S8LIUuW5aaVTYLD6YcrdtDmoO2U0Xmj0nW8NP6-82FeM0oeP6Zc8GJ7EhCbpYBUeGTijBZIfFOI5g6LGhRVN77EDp6Vi6NWePAcTPYFrud24A",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "California St & Taylor St, San Francisco, CA 94108, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7921814,
+                    "lng": -122.4121737
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.79328192989272,
+                        "lng": -122.4107765701073
+                    },
+                    "southwest": {
+                        "lat": 37.79058227010728,
+                        "lng": -122.4134762298927
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "a22e80c8cfd5c238bdd94b40a8575976a3207fec",
+            "name": "Huntington Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAe41mzoF9wtEy2x1vQFj8vHumFY0zVukeiDmqOhm5roIHA0O7lSmhZYCbXZOVdKHA29HD8KhlMUiCHYeJgVe8qzR7blOxc8l5zqA0zqpn70BWBoYCKiD3kvRi0oZpSBHYEhBVMGFAPachH4VnKZfkY6pNGhRAiWAGxG-cyt_87HYzVbI9hDJQHw",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJzYeZZ42AhYAR7fxkTExkME4",
+            "rating": 4.4,
+            "reference": "CmRbAAAAc2bN47nD0gRanwEbhqorv9DZ9YWuxgNfM-0oUOYhoAZhQPitE_gt5awf-IwNH4qCw-rqxohZmnoXpvGgAOyP5j4T4YdsHrqm64Xn-sOHLW9HTli_jO6JSsPKxLJjASHuEhAenT7K3RFKSoWpv_p0vmjVGhSszrCEBYi356fQa2kKt1UlezeJFA",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "680 Point Lobos Ave, San Francisco, CA 94121, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7848836,
+                    "lng": -122.50751
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.78632045,
+                        "lng": -122.50583115
+                    },
+                    "southwest": {
+                        "lat": 37.78057305,
+                        "lng": -122.51239335
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "d208434c09cb1196bc71f5459e33bd4bc08fafa0",
+            "name": "Lands End",
+            "photos": [
+                {
+                    "height": 1365,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAopSNwyl6Uk1D4TKhlLB3VFM6AG4q0LUgtLGQVyHRCWvbrWIVL4UUWt8Wq5naLd5vv_jHe6S2DnEbv2b8hy1LljJ8vaJa68DFTzOl_zHF_mJJFySV5H9ub3zaDl7KOj4-EhB4ccNvSb2vNwdBQWJHKLJ5GhRKTEqek94Q9fFLA1_TGbwi8V4zmw",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJud4Rs7KHhYARZX7u45tQsjA",
+            "rating": 4.8,
+            "reference": "CmRbAAAA1NPDhSy8bbBXYPnK3Z0T4Z0G82_BLeka_d2W0vfrVpFa7a4vInrnT5oJnzGUMMLwW1X6Qw4SgcptDIZc0rv24VDmg7GEWLPW2bvfMzgyxVA-1f42jeRtp3TdQR_YOaFPEhBkOcc_wM1cI4-ve0JgKbU5GhTCCES_g9SisLAjeh07W5X2viJKRg",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "846 Point Lobos Ave, San Francisco, CA 94121, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7777942,
+                    "lng": -122.5111075
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.78086789999999,
+                        "lng": -122.5077127
+                    },
+                    "southwest": {
+                        "lat": 37.77331070000001,
+                        "lng": -122.5139395
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "b7fc33e426621bc54defc714b363ca5dfa26a48d",
+            "name": "Sutro Heights Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRZAAAAhKgSqkwg-mOIBuyZ14XJ8S0EhNxqzOkLEcBenlqCz598Vdy0XV_T7VHY6o4BHbhrcw1VIxPpZzfCulmw1a9GSd8j0ETmFkmTP3bEsbzQbnrhqKb-WqLOn5hizf4UQLyMEhDSy5wtPBf6GsG0QIHGH-HnGhRVchNyRNbjFoLIujGbGLm1PfkI1g",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJ-U68LrSHhYARWgGKnK3Bc14",
+            "rating": 4.6,
+            "reference": "CmRbAAAAFm_wX2m4nWHLcmYI4KNfrpYT1zqz0fhF9QvWH-Xxz8Ex8ecjxw_Ylo81lKCjNffI5XZgXCeINdEOcL8zWdu_fJzqVxpCjPec8kvuXk9MsDe2NpnDqNJp5C-ckCnbps6gEhAqIihgx8psbm1Zx_2baZP9GhS77fi2Mr9jyfBG7PWeY7ReEjQENA",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "750 Howard St, San Francisco, CA 94103, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7850153,
+                    "lng": -122.4023464
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.78599952989272,
+                        "lng": -122.4005440201073
+                    },
+                    "southwest": {
+                        "lat": 37.78329987010728,
+                        "lng": -122.4032436798927
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "caa054208dbc19c6a4d6d3b0a70b9488bd0c2290",
+            "name": "Yerba Buena Gardens",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3036,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAlIuF-IRgkydjBe0t3lyLnKifGTOGfO_Dt2ZGS9hhzNObZhM76JpT28-r7ZDZgpnGmZp7H4jJ9f5cu37jFpav5kCCMiLyISvub8Ca99MAX1ZICsKBJcS1uQQnWg1cQ-WbEhDuGzM6QzEhSezdJdiJzLLuGhRyX4ZRx5s2gyFxHYg2uGx5T5j7YQ",
+                    "width": 4048
+                }
+            ],
+            "place_id": "ChIJCUsDnIeAhYARWCBpPTrHJpQ",
+            "rating": 4.5,
+            "reference": "CmRbAAAAjpvq_KNF4E6i6DwyZbjBO03ppJx2qsqnoO5gNQIQUo7DW7rq9TvIGIjCU_6RSjnEqPTHYt_I__R20MZQABD55YPu8evGubixtnt-t50YiN6yk-HSJKidc23OQdWM2rl9EhCMUBjgEVixoKhYv4nPuMkyGhTvoBGw1U8yKHb6bUll_gE-6ueghQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Cargo Way & Jennings Street, San Francisco, CA 94124, USA",
+            "geometry": {
+                "location": {
+                    "lat": 37.7382002,
+                    "lng": -122.3731081
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 37.73955002989273,
+                        "lng": -122.3717582701073
+                    },
+                    "southwest": {
+                        "lat": 37.73685037010728,
+                        "lng": -122.3744579298927
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "bedb89b7b369084b45f12e4d25e97c015fa50bf8",
+            "name": "Heron's Head Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 1152,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAY_ORogitYIsOBZwZBeXB4iq7RAiz8xOl4IornRI_pVj21EPm-Mv358AzH_ll-UF8P6NMKF5nIb29vH5tZX7ZqK1xNPNm4IUNXBI0SJ6Izwm8dAE9uWM56Ef0aU89xl-vEhDF8nIINQRDK7bddJ4CyhLYGhQzEae32t2IgFAK5boiEdB-O9WSUQ",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJa4eXHW5_j4ARp5FU2c0UZXQ",
+            "rating": 4.3,
+            "reference": "CmRbAAAA2cr-K6wnVF1VI1za01puu7qbPx42s4vMr9Pzgw_X4C96fi6wxLUoQHU27hiOlW3XonaFcKIaz4RzKk-60-xXBbewWgG1qlGXL19v6SboWJFYxnOh08MY2nEFC8toHMCxEhCtLoEQMdJg36eozk-6xs4HGhQGv0btXdCqCOi_vUJ2K1YGslyQPg",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        }
+    ],
+    "status": "OK"
+}

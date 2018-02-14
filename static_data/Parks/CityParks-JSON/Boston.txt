@@ -1,0 +1,874 @@
+{
+    "html_attributions": [],
+    "next_page_token": "CoQC-AAAAI5jA0fIok2yrBeeL6chcnZU3lzrwTAnS2NdqeepnD5PKVhnSA_gb02dNO2y3SW_2Fmx9TPHPOrpybsrUckA9vob6yBAKz-wbXD7FGozgaV9X8nB9XDYzfF-PxdQFHlvomFEXPO-uZRVK_u1Ig4q_uL8LMkCcxTgam5k8i4ajBmRjbJOWGtrFKeItoElZxCKR-NyYF9TvaWb1VY8sVSwfzEh4XYbxNfh4pyXKj9_OPSGfqLtyS9SlkEu8hE6VYXINwSp8iyIzEeogegSD9j0LtLsuaMQ1BJ24otebXvTQmVrKJ8T3g1gr8opJV3b4dAdurcQkmM7ve2VWaIp8HDopoMSEC6h-8NO4hoHenXmD1gUZekaFMfBXBJMewI2JZdFjEbq0HUXABFY",
+    "results": [
+        {
+            "formatted_address": "139 Tremont St, Boston, MA 02111, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.3549544,
+                    "lng": -71.0654886
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.36029765,
+                        "lng": -71.0585358
+                    },
+                    "southwest": {
+                        "lat": 42.34974545,
+                        "lng": -71.0728062
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "da321966bc1defbadaafc0ea04c96ea6621b6674",
+            "name": "Boston Common",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA9rku_v4sZ2sYu-hDcYzf8eDer4eSLq5ZMl1SmqMiNk5OJT3jENMsOClfWl-tZS5_4nVI1_wzRlRLA6mhcm6Mf2ObCjLua8jempY35aK481Y5SoWhG9wH_EG5tS8E1YLFEhCvS3_3RAOGMvrBoYO01FwdGhTYKdm8YAqWkUALF8Lu7OYKq7jJDA",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJKyNuvJ1w44kRBE-pe_yDhj8",
+            "rating": 4.6,
+            "reference": "CmRbAAAAdNF-wifGQitPihX4tOG-07Nk-JA1i9wUm3cJ_xXv8OgH-GbvEV8UGSO-4XiTr1FZnzuv03T6jsgyiQuN2-yRZcpZrPrgr4nlmxloJobnd9Z0gBhnq4yBIl80sOgQK0KhEhCTS4kCs-dfc87WzjM5y_B3GhQ4oHjxyBEmDZ81mjVwFMWk2R9_ug",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "95 Marginal St, Boston, MA 02128, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.3649297,
+                    "lng": -71.0362458
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.36647587989272,
+                        "lng": -71.03474017010728
+                    },
+                    "southwest": {
+                        "lat": 42.36377622010728,
+                        "lng": -71.03743982989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "16cb4a26fde423b59f4bb321e1558f10fcf39ece",
+            "name": "Piers Park Sailing Center",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 1333,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAywGmsaf4XUZ46I9KoBgLgL_yqX2FUqb1qoLtTZWocIx2ylmEawAnZMpKSlMlUhw5KZi3a2y-EWGSM5Wc_4HRgwwnI4uBz6j68OCHuW5Rya30UHjHg-A7RXP4RQC4T0BIEhAUs0qmqcgGgcclB710tsrMGhSRQYXb1y60t36ZtGyWUhCjp0RG4Q",
+                    "width": 1999
+                }
+            ],
+            "place_id": "ChIJc4qflWhw44kRChZpVxrY5c0",
+            "rating": 4.7,
+            "reference": "CmRbAAAAMuPktqAi-rf_LqdTrih2yNzWrZvNZ7P-2iZzD56xCKr44S10cZ8oLkwEhnJZn9ln1v-2LZysaUiZwflYdTw1cVn2pFlvaIgWz-LxjMW9hOMg2TaEg9uSRFKyFV2OEYBIEhAC56I6E7rdW0YN5PW2q3yVGhQ1QILXnfCq1pEWW7P9Ho4bUgMbvw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "2010 William J Day Blvd, Boston, MA 02127, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.3378699,
+                    "lng": -71.0125206
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.33921972989273,
+                        "lng": -71.01117077010728
+                    },
+                    "southwest": {
+                        "lat": 42.33652007010728,
+                        "lng": -71.01387042989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "4541f24281ec6824d1f1c033c76f1501f055d473",
+            "name": "Castle Island",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAANeLkxlDyI2UUBdq5WqOQaT7GBCvtzpkMOnGdqJiFVjHWQ5C1DP06d9eEcaROXv4ko6uMP17c4fLcuE296oK6k4wV01uV5Uk-nhwnSd39ax4yi4JRxXU_g08lrBrK_6z8EhADwGqqOPAgEUrJe8K1de9KGhQD8vB_ak_kXEko8pP1_u5aAOi_Uw",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJ7-GJrK9644kRInm_7z6TAFc",
+            "rating": 4.7,
+            "reference": "CmRbAAAALjSKyeyzy6db6gP8rz_Fc2kTJhy3gGbEQlvo0B1gNv-yGYfD4Ft7nOX5-CJ3n1nXGWrMUeE98XLmTsbbrTN0n0wJmACsdwwoHOe7AW8Evs_mBrwlcDGytd9IVD7IOIzXEhCG45WeFlavZdDciaubCh-NGhT7kVyaTeXo76Tg6VRmC1WfhfqYRw",
+            "types": [
+                "natural_feature",
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Boston, MA 02110, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.3609921,
+                    "lng": -71.0516339
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.36314919999998,
+                        "lng": -71.0494877
+                    },
+                    "southwest": {
+                        "lat": 42.35934400000001,
+                        "lng": -71.0537705
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "de2675000a2f921fc4a5986c60b21b0eac9df8a8",
+            "name": "Christopher Columbus Waterfront Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAxOdbVNsg-SNV8-cxOp5P6Po6lFjGzivx4Ld6bIk9REAFh9gZilsVV_SrfzrZXcc3EZ7A8mfCzgThJsixUJ5PNzB03p648H5Z3T5IycGYN8TMcjNqmREb7Q4nh8WdNLMzEhAL8aeDCJyu94bGgpa-10tIGhSibEK4tA3TfCdhiTe0A69ygkPaBQ",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJj_zwcYhw44kRnACtdwYYGDI",
+            "rating": 4.5,
+            "reference": "CmRbAAAAIhN9q3SzbV6i56X4sXgHGn3jVRGSikoyA8eRTqu6ZxBzWL0M2hn5PUE6GxDSA7WGOg0tLqYGYmC9bKM915-m29zrYC02wDC_BHOruSjUWX7PoOPQJEfxlpiH2lfwPDQKEhBnrNIfEP9c9qXNrhbHMSbiGhQOcsdTNh16EvSh7l-OLsljzD46Ag",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Building 5, Charlestown Navy Yard, Boston, MA 02109, United States",
+            "geometry": {
+                "location": {
+                    "lat": 42.373162,
+                    "lng": -71.056834
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.37458307989272,
+                        "lng": -71.05603032010727
+                    },
+                    "southwest": {
+                        "lat": 42.37188342010727,
+                        "lng": -71.0587299798927
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "c24523c2d750ad772e41efd0acc2061042b47fab",
+            "name": "Boston National Historical Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3120,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAcJdXyhVfzBAhRHMCjMYLxL2YixiUlAvYQ_ssW7Y0jCNP739yTvR8YHCUZi6JMgcJ03u4AVRvXU5Q2L53xyRn90xSa_kXViVJm9jYiUtEKjhyv6YZ_qrATvfPAJj7RRV-EhA8JxSejkynpBc7g-R0k5LGGhToHbY5Z2FuZ3pQwJWP6NQqEALNuw",
+                    "width": 4160
+                }
+            ],
+            "place_id": "ChIJm1PrHPJw44kRDcBCdZT3MUM",
+            "rating": 4.6,
+            "reference": "CmRbAAAAuQw_LLQ8toZE-gNWddhvav3LnPyg5RbK2S2irG4ypOl1na_y6hhHACzJT2KkttvWWuI2sc-V6LPelWKZYFrPr5HylLwoJ1PvEorzGBOZu1AUEzLmH3ItzBKN56tp5wZ6EhCROJ8G0yEW5ir2UOZhfS4dGhR0ioWKdr5amG5D4Bik-XNustv-3g",
+            "types": [
+                "museum",
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "1 Franklin Park Rd, Boston, MA 02121, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.3030738,
+                    "lng": -71.0868152
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.30426822989272,
+                        "lng": -71.08530207010728
+                    },
+                    "southwest": {
+                        "lat": 42.30156857010728,
+                        "lng": -71.08800172989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "d34393fe7eafb772f89c0b580c25861d50c7522e",
+            "name": "Franklin Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAASYdTzBoMlOQN08ERQwuBRg5lyEf4A-I_2QkbhzOE0CA6BsW6vnc2GjJ3V8AJlC6K_80xQ9AA0v6BNSTCTHq6gm9FGlJx3gVoNoISqWUSe5Wgtb05ofARwzSsqyadHXoBEhBk2RDId-HTBCfvuK28bGWoGhT1TPzdvbooNfXAZ9tbOHRPsbfvRw",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJg2jTvd9744kR1g5elowqJeU",
+            "rating": 4.5,
+            "reference": "CmRbAAAAGbq8iDrWD_yxwMkCiMLa6A9xBIQFE1q-Ch71ZIEQjIwR2FaMm43rY9GzBbyQbC57YtRAqpl1f1RyjJ0kG1DpqXZ1uh8hcK9AMtElPDW1jvbe1putYLenGG5Tw-loUVKrEhBxdVt4JCK-QetUUJjvlD_iGhQPBz3-nx0yFO-XotwD6NkC8Ogjpg",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "1277 Washington St, Boston, MA 02118, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.3429565,
+                    "lng": -71.06750459999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.34419137989273,
+                        "lng": -71.06598707010728
+                    },
+                    "southwest": {
+                        "lat": 42.34149172010729,
+                        "lng": -71.06868672989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "4050d0237144007e290def40f146076528eaffff",
+            "name": "Peters Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 4000,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAFKlEzdCrKI7Tnj5jDIKL9HFvZVPh5oHabK9lkNj2UqrSAadmf0d3IP2cXlU2BGktLz9H3VTuSuco1l7HGRYTYTe08NyPpj9hc82_m7jZ3V2-0lKIuF-fNP0bGtIBKy4sEhB0sf_nED2n6ibk_aAQoyFNGhR3fet72cXzumKWP-chXlBX_484TQ",
+                    "width": 6000
+                }
+            ],
+            "place_id": "ChIJFzxGC25644kRwUUIDN7Qi50",
+            "rating": 4.3,
+            "reference": "CmRbAAAAViFyWIN5mh5YgJmhrn29b-0-2_FoLlT9gvgdgPz8pL_WQckZUGncprdLEvCr1WR2FKfbPUgMiDD8zXlNqTY6pcllZsjr2kXxoDwB20Bi-6QJCdarS_oNFZTifOOVvm7YEhDej9P6Bx1ai0JFtc1F6rztGhRqRr2nxOCUIIB5lzFPhMLIibpHLA",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "100 Park Dr, Boston, MA 02215, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.3434795,
+                    "lng": -71.094564
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.34483267989271,
+                        "lng": -71.09319072010727
+                    },
+                    "southwest": {
+                        "lat": 42.34213302010727,
+                        "lng": -71.09589037989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "04e9f3da526329e1ffe4fac30b014161ec83f28e",
+            "name": "BACK BAY FENS",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 768,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAN9hKLVbggweiWv5ZaWqdC9hSM-Ja7md0TC_VnsPxjeMVzVwxj9Up3IjW8C6qPPas0s7Lurl9vUsk27F0--g1-JnKVEqJ1SouEjy3ms2KhzoOlnU56u2ISJ5HM8fXrWl-EhDaxvWVNEecfE1L3al0fhYfGhRBl1YmmyviQrKzk-7spdjR8WPEVg",
+                    "width": 1024
+                }
+            ],
+            "place_id": "ChIJ3XyYKR5644kRad_7oDpJVm4",
+            "rating": 4.3,
+            "reference": "CmRbAAAAXrjmnfq_qVzsGAEbDLKBP7YPKGLJ0DHf6Qfj1FXFa4TLg_sG8fxw6nSFlIy9fIviplXJLdOuGGNcdnfegL7xbrXbud6duOyIIzxUxRj5x3RZXSGU1_DM21bj_WZT3m34EhCNJ7aUmSPLsxhrBm5WChWzGhQgJGJJ4a3QIk-dWywtAPWI-lvl9A",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "143 Porter St, Boston, MA 02128, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.3720445,
+                    "lng": -71.03120489999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.37286747989272,
+                        "lng": -71.03047202010728
+                    },
+                    "southwest": {
+                        "lat": 42.37016782010728,
+                        "lng": -71.03317167989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "b73c2de1da1a395de01726eb246f606af0b16741",
+            "name": "East Boston Memorial Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2336,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAdBpE3ChufEYb2YkaHHe92XaVB_Bx5aCOkUSFsy8o4e0byq-3RhihV0BLAQyM28Pq2JdIvuufa2t7iDUGsc4XZsQPzaYhL6eFgxQ4JjRPAKPEgn0M51K_NPyzG53vkchHEhBcNy-UanoDM4oXznJi8O5UGhRX_x7wrVeRTtal10kox0GaywJWtg",
+                    "width": 4160
+                }
+            ],
+            "place_id": "ChIJsU5KtkZw44kRF00BQtx0R2g",
+            "rating": 4.4,
+            "reference": "CmRbAAAA1F7hXj_nvgq0A1Ovv6_w8e08SAC143s8KPXWYlnh3z2sFizM1K2jbpk8T2_97gSZKtVIOtn27JjqFVBju2t3cWaGsUHoGK4w63324wH8K_KiroSVY7KHVvFnW-UBc8m1EhB1v1df5spHfQ3Hx6AK9xH3GhQxUVdkXO-4DYXnhUrls0swj5wKfA",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "217 Jamaicaway, Boston, MA 02130, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.3258562,
+                    "lng": -71.1148667
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.32653257989272,
+                        "lng": -71.11345722010726
+                    },
+                    "southwest": {
+                        "lat": 42.32383292010728,
+                        "lng": -71.11615687989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "83751738fb68f79294d65f840709f6d25cb44cfb",
+            "name": "Olmsted Park",
+            "photos": [
+                {
+                    "height": 1836,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAnduuE4FXwZ3Hs5SKKHgEvPBmYNkjSaSY1BkIKc4sU03tJGJNMprxNShIcoUvsdKExB229yrw9R0Ibb8_xelM1AVhUwcXmWN_E8yLId2MHJsdS6G1q5jQJ4o9Oo3tgTUoEhBcQtE_r-EBTCFS0J-QMZ-SGhRsSUQm8z-gopI7PwgFUMuVKi0xWw",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJB4_sfJ5544kRHxi7EfeXpSM",
+            "rating": 4.6,
+            "reference": "CmRbAAAAseUy6YJkAzOEPv5BgApbp0NLQo6n_OWNWos12JHMsLUBsKuG9hanSO-5e8kypUQUyAeRfRLC-IpsAK04TyJ7I4-uriieYWlvmxV2-scSyJw9KYF0wrtlRqKYrAx-rUKhEhCdHBr7rEtZr0lDXHAImR9LGhSyPugYX5sgKZsH6cOb-mGS42-kSw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "185 Kneeland St & High St, Boston, MA 02111, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.3487989,
+                    "lng": -71.0578962
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.35014872989272,
+                        "lng": -71.05654637010728
+                    },
+                    "southwest": {
+                        "lat": 42.34744907010727,
+                        "lng": -71.05924602989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "32ed249c59c7691b54fd39f2eee973b3cd28900a",
+            "name": "Rose Fitzgerald Kennedy Greenway",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 1536,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAzhdowXTqiVYL5iwHfETNq135cJgixHCN-5-mFPHn8HQlDltZDrobhIA3pNWTActVARyqKfK_y2b3xtli5CZgAP0lK5bba1fyKAUBDjqSrYPDz9SU3Jz86eEmFS46ipNrEhBoadObIZ4atVBXMtvl5kaBGhTeYjl1nnDNMvLTZKw93kcDgq4_gQ",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJ54PwEnl644kRGvDv282gpmc",
+            "rating": 4.6,
+            "reference": "CmRbAAAAohgI2ljB3sD9eyJlPkkPa3SKIZqbS0H6MmK_jLerFZuHttBJkYvgoKF1uzkhPcRgscYYpC5P7YTEhGd2BWTjM7sN0EIHCzJ3DgV-Bp-ukPrQLyjmbyKilo2A6WWidGZ3EhBZQj9MBEm21TIUozhgReIrGhQYLIxS-Sjm5nBl4Jm97fZ3jWpsqA",
+            "types": [
+                "park",
+                "local_government_office",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "930 Blue Hill Avenue, Boston, MA 02124, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.2920598,
+                    "lng": -71.0846897
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.29340962989273,
+                        "lng": -71.08333987010727
+                    },
+                    "southwest": {
+                        "lat": 42.29070997010728,
+                        "lng": -71.08603952989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "a148896d56a4155eb240313b5dddb3adc7f42911",
+            "name": "Harambee Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3118,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAPq0o-AxkvsMwMhz8q9eNS4IdNWwrvtqw3riERQ15ynvfyjkHgq5KegU0WUlKodC4zzGvdQPiUGXIPYb0I0cXD_jS1u3-eQVHyamt5EVTPH7ZvTN6DI6caw1dKNOxxtuoEhC2C4zIcACGCn3HDBBJpXPjGhSuF9e1Y7T3HTHkDPA1poMctjtnmQ",
+                    "width": 4160
+                }
+            ],
+            "place_id": "ChIJs7n5eO9744kRD1UWgeoF6ho",
+            "rating": 4,
+            "reference": "CmRbAAAAXLb9sdTGgsZQy9OjMcSXCvjM4FNym-U26xtgdVJ9aSEVlmzJzvjO9wv1lbnWZX27kC0ghua1WGujYJrTxE4Ju7ahy94bHtMT3R8JPHCFaJJfmx6exJrzB85B62F0SvAVEhDQXzXre2t2eAvP8jXD9BHJGhQdgx5ZLuQQZJ5Q6PHjd0N3G0zlSg",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Boston, MA 02118, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.3390049,
+                    "lng": -71.0724333
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.34035472989272,
+                        "lng": -71.07108347010728
+                    },
+                    "southwest": {
+                        "lat": 42.33765507010727,
+                        "lng": -71.07378312989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "36c6436087b4aff9dbe94da7af3eb38118042bb5",
+            "name": "Franklin Square",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 1836,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAvdL4s-2kCkxm_vbXtAEtmWNZe9EP-x2UCr6wXuqYLiVtzoM25bLrPztPB8DK-4nflQFjZSG_4m9JEhYAGwnkhZmcedYzaL_PgZUFxjPv5vP86-F9JPENgSw6Kf0Wo91_EhA1gRMhYxxMw-mer9__F0YcGhRjG1gt5mLuKhJ94hAD8PGBZw5s-w",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJFWkDO2t644kRPDG_MjPPcMo",
+            "rating": 4,
+            "reference": "CmRbAAAAN0R2HYYd5780dmtnGrj-tKaAJwktBrtQDKHml3f13iGAeEw2ZkJn3YfjUm6RMQjSesnIW9CFgCRIHeCW4btKeJzdTMBPvjGJv0yHIGZR62kBPzwovGU2FPfhs3Yp2YeyEhA0f2IeCQI2zYg6efGa92FZGhRKj_5Clfv1_n0xiRMkBDS-lt0Xpw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "50 Federal St, Boston, MA 02110, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.356446,
+                    "lng": -71.0557924
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.35779582989272,
+                        "lng": -71.05444257010728
+                    },
+                    "southwest": {
+                        "lat": 42.35509617010727,
+                        "lng": -71.05714222989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "11b7a5862484519776053ceaeb3915f0225a6f58",
+            "name": "Norman B. Leventhal Park",
+            "photos": [
+                {
+                    "height": 3464,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA3TyLqc_t95vxIA6z6U6Bm31iM--qpCj0VonKMJupveAsfoeVz0au0P9riSl7WQyC8_qSyGyYaNtXVqRytJEPxk8t-cH9BW8Em3fdv8VCRtVNWG2SbQZ4Iq0uZDNEQL-fEhCASk_1hmHJy7MqFBiUQVl2GhQkwnqmgP41ILH4ryka2MvAFBH4Sg",
+                    "width": 4618
+                }
+            ],
+            "place_id": "ChIJXT2-5YNw44kRWxIW8XwPxCo",
+            "rating": 5,
+            "reference": "CmRbAAAAZnqKyc-rltDq1tHCRl_E1wEFnr4ji0F-Plz4HtVtb27lzumXk5jfV9UgdHmwPBM_9MfgTN3LBoMAj0FhxZMyoSjd3CcoCiTsLn2vaCWL0bnKYR1CtQPSGXK5kaUmiu56EhCwPc948CZyG-Xc5p-WrPU4GhRODT3NYbvydGgP4AaEUUVVbfAXPQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "200 W Newton St, Boston, MA 02118, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.3434613,
+                    "lng": -71.07896509999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.34479937989271,
+                        "lng": -71.07762987010727
+                    },
+                    "southwest": {
+                        "lat": 42.34209972010727,
+                        "lng": -71.08032952989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "cb2f50f10d696b758055e845bf384b349dcc1880",
+            "name": "Titus Sparrow Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3000,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAACMF1lU9jZfVX30OxWMVZppbj8zUk8Ez59uJV4veBsMPdGccv21t-U_b05aQIgmHvLrRyAn9bnX9CA-ovyvwSCAQtY2X5lfPHF51CktFu_2fjDdloLZN7GS3v7AIncen3EhCls-yGrK5wxjgJbeY51-SkGhQpRBvdjVFe1ZMppR7jM2M57ptKHA",
+                    "width": 4000
+                }
+            ],
+            "place_id": "ChIJoS5PexF644kRgNAaf-V1WY8",
+            "rating": 4.6,
+            "reference": "CmRbAAAAE1mO9Vh_C-JQsu08rAKlBWd_pyTgyx3cmr6PbQzj0YpJZsSDVrJoTPAWAD30HV5UTS2FJmLsB4H5OttsAhuZbIl_m6e-EwiwS5NsMWsD6ygt-TZKPPVM_9LwH0CqPViVEhAh5kxFrFRZImX2IHUaOsC9GhRNWGJAmcIo1v5uCLvuNl2rpBPEZA",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "1399 Bennington St, Boston, MA 02128, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.3925131,
+                    "lng": -70.9949524
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.39384927989271,
+                        "lng": -70.99356417010728
+                    },
+                    "southwest": {
+                        "lat": 42.39114962010727,
+                        "lng": -70.99626382989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "d23e423658c539c1e6b34ed64ad82b053e006050",
+            "name": "Belle Isle Marsh Reservation",
+            "opening_hours": {
+                "open_now": false,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3456,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAANsJKCNzNJI9sklTU6vZ28CfqJ33dIwmUXrblKGmrl0nL3fxIaMCU5zGvg5ansd_g0Q68JRqIQdua9FYC1eArEsIV_N6HTW5sySS_nlub3_f308AYAE6ZCOIh4-il0BIAEhDY_Jmt1vN4yAREc2Kvhi13GhQCLPlt3o8hOarFoaAZWeWmqUPTWw",
+                    "width": 4608
+                }
+            ],
+            "place_id": "ChIJPyGMcS9u44kRja36dM05hEQ",
+            "rating": 4.3,
+            "reference": "CmRbAAAAcnbv0Gq-LBmmvly8hZiG0ZBpC_Ba6ukz5wJihuLKVKLrKl4U38BpJOPSdOWfgLtCsTkLu7v3FX3ysPtRqRWKC3In92IIhplWo4LbxIZR2U0p0dWaz_nLrsEDCKc2J8R2EhBLQlqAB45fjNlVXCr2sX_dGhR16aPjxfbnoVo7yXRHbj3HFCqfpw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "85 Harold St, Boston, MA 02119, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.3186911,
+                    "lng": -71.09007489999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.31994947989271,
+                        "lng": -71.08834122010727
+                    },
+                    "southwest": {
+                        "lat": 42.31724982010727,
+                        "lng": -71.09104087989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "ff9d25417ec1771a2f505faca0b3435875ab2d1e",
+            "name": "Horatio Harris Park",
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAM0lujSMmUuvsF32wzQd_1ivwtC016PHXsgrc0wcYn5ESWK2QR9GDqDAh1YnrN9Pk6eQZAtBeAdq1eJdIF9yPg0WWJKieVbE6AGxlBx7DfXaUd41KE6G0mCQ-v1kUxNxSEhASw4tVMhxG9oEYxY4GlwMLGhQtGUaqB14Q4ETbziD_wWewlkiPmA",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJe0g0QNN744kRwr4ZxJjbHmM",
+            "rating": 4.1,
+            "reference": "CmRbAAAARKsCObOobq1N_njg_Gyyf_Kpd4qu8mj4PRBiLhqG3xKqoc2G-heMceRtP9-68a2jACI0WcOabuPEEv1BSEZoOlrDtodQZ5YJSBFBM6Om3glmk6SC1eCg5o45n9k8-3jMEhBAdnfwOUSjatPBCeUOIeTgGhSfISlkjnnCqp6U89C3kJsWvg_mmQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Boston, MA 02129, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.3698946,
+                    "lng": -71.0620338
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.37124442989272,
+                        "lng": -71.06068397010728
+                    },
+                    "southwest": {
+                        "lat": 42.36854477010728,
+                        "lng": -71.06338362989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "65860ef18e5cd7e3e92da1a742d3924b9cab29bb",
+            "name": "Paul Revere Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2340,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAW2jiR-MYRLs-Ym9efOt3NEPloZwHiEoWff66WSgMumoBuxycEaONvxiN37Op0NXENSub6meUvKZqICSCXLA6aXPZULHep1XdiMgyUN_h6AdW0N9QKL5hswRLQvd8aWejEhDWIxrVBqcihpiNE0iJ1iWpGhQJYGwvMPcmsnkSPykkxecVlvlmgA",
+                    "width": 4160
+                }
+            ],
+            "place_id": "ChIJm0inj5Jw44kRjY4vaOivnog",
+            "rating": 4.5,
+            "reference": "CmRbAAAAWPG4ArgSQNaQFyV5BeuHLOqb8pLDUaTjDOFA7cdtMy-JqF4Z4VCS762pK2HpI8N55nOTnYRdbtRbNV-q_taswGOa3s8SIU25F6SVIwYm7YCWnrcV13DN9DgNhGZqUiTyEhCigibWzLt9Q6ztkpWPLmRmGhTGuDHDwzRzJR5COW3GLEEJCj0pDQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "43 Juliette St, Boston, MA 02122, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.304811,
+                    "lng": -71.0633606
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.30633542989272,
+                        "lng": -71.06149357010729
+                    },
+                    "southwest": {
+                        "lat": 42.30363577010728,
+                        "lng": -71.06419322989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "c1050b5f658b645b546780af7aaf7fcae98f42d4",
+            "name": "Ronan Park",
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAAZ78fj9HUZRgYkzsFhWyV93r2u3GEtcyQG-hYbMsrfHsUWpsNNCK34E_eibYp-CrxFCUekIuv3tpPauRl5QHW4LUeTmerErGYEUcAZzpMmlyUGsxc_gQSBC_xuGR_iaAEhC-KdXLPmHfZ2ELyRRrFKv_GhThbktPlBY5FIJ3VuDMmLK9JVQ7_A",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJoYCbuLp744kRWendEzCyz_U",
+            "rating": 4.1,
+            "reference": "CmRbAAAA9jI147eTlkDIci5uC3YHLEvFRG8PY52DOAmTORCtEiW4y4SU4rJDVkT9Tx_Shg1MfYcr4VQm9Ed5BfL9074399YTJOd6C355BW1wLR-DZibonzt7LpgGTWoXDWpD82MsEhDJH_Yp54oZqXsL7AoZ4EnXGhTFAqV8HMR4uU9EA7J6ud3t1vN_uQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "484 Commonwealth Avenue, Boston, MA 02116, USA",
+            "geometry": {
+                "location": {
+                    "lat": 42.3506815,
+                    "lng": -71.0830836
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 42.35162027989272,
+                        "lng": -71.0815344
+                    },
+                    "southwest": {
+                        "lat": 42.34892062010728,
+                        "lng": -71.0877312
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "63b9e25d10240fbb6317a4481b6a4a8faced5c48",
+            "name": "Commonwealth Avenue Mall",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 4032,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAKe8UCnkm-Ye-3HgzKs0OMV_zxRw4U4e7JXjDPQ4SkU2OqFO_ynRZlB0uCDlxfK43h_1t24LlWOGNK53i8ab9sO_JDuVSvK3-k6hkRw5N8-Vs7JfHKE9-kL85TuJ75s2YEhBxP90FSY-9s9qvISR6c5kiGhRe5ew4Ec2A9a9ilLc1rRg8iKpU9Q",
+                    "width": 3024
+                }
+            ],
+            "place_id": "ChIJ7WAYMA9644kRatCfTRfbjps",
+            "rating": 4.7,
+            "reference": "CmRbAAAA7OroEJbJwe1GnK_XXjlIN39p-QTE8DR5WvAZkvfbKR-KVmrcuLYsBh4_7Hx2WA8n0mj9JVD-BTIIfvbK4ZFuY6UoBfBjf1y97e2PWIkU0sma8c8O3aYPIx-QkW2FnfhfEhDgNYFXpJq26J_lCW-z3O5EGhTP2izmSbAcogNv2w-0adfVy4EtxQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        }
+    ],
+    "status": "OK"
+}
