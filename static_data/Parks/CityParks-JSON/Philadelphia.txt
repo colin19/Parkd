@@ -1,0 +1,868 @@
+{
+    "html_attributions": [],
+    "next_page_token": "CoQC_gAAAKRfuD6s-Xh_ffDkgwSMD1JG4DWvOP4CKpqNnJr0io551W6Qp5Hf49DkBS9qOYZg-Uvt4msAcfU6H_DCzOFOwgbsdkmqU4eOxNiuKzXHJi123quxyABqYmgaTnuYB6sSI93I7hiisnY7380DA3Y8aMOt5yHpXACNMxevhPXvprdeMlXXswmGDqTvRKomBfe1c1s6V-2-X7I1kt2jzk71CvHtIJjoYYnKof2USjlbOE9QCGIwPz9-YXUOI_ERedMYfNhPMdhqhnWr_8ZLp3piVip-K7f-jDjggdsNfUyWdiBlGlzyTGMJv6ldCmsEa3nsR4RErmW5Qntfse_ZM-q9sdwSEH1w8ps162D2hF91_PbOiA8aFN6OuySH0NUXp_XSqB8teDLM3s4W",
+    "results": [
+        {
+            "formatted_address": "Reservoir Dr, Philadelphia, PA 19119, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9881142,
+                    "lng": -75.1971204
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.01342030000001,
+                        "lng": -75.16706025
+                    },
+                    "southwest": {
+                        "lat": 39.9519171,
+                        "lng": -75.24292645000001
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "178889325fe3d3633bb25c1eeb33b996d101e69d",
+            "name": "Fairmount Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 1836,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAALg-YjVeIaWJFtsP3EkZLxMVgTNSa15IAAbuFnoM4JAP6_dXP-1DhaGy_yOQ-gDZWkp9sNgYwBShE1X7ZUuR8eEsmmzv_rmCKpNArWt9hlUS_UnfSljPEymUrt-vHGuLDEhAwxtyuXemMyvAY75e19kfBGhTlUJj6HbhdPnZkcAr11Z2iswesBQ",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJUyEPZwO5xokRfaREsFG789k",
+            "rating": 4.6,
+            "reference": "CmRbAAAAWNCEMLyiRRbNjqIrp5Sq1NmwjCzpQ2uSeTf23rNqZN9W5_-2-OovQl3mU07-D1m-C-HSbiU32V6YYZZzceJyEHmA4Kqs4lNra5IrwBVfY2yofYIvnufLCGjbiClzVbh2EhDvWq9aLWWxLR4lpa-Tyq82GhSxTQAuE6Rnch1C7H26b8mKzLtoAQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "1 S 15th St, Philadelphia, PA 19102, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9530357,
+                    "lng": -75.16468429999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.95415277989272,
+                        "lng": -75.16359272010727
+                    },
+                    "southwest": {
+                        "lat": 39.95145312010727,
+                        "lng": -75.16629237989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "810e4857e06129a6a83bd93b58d7e0721685f48b",
+            "name": "Dilworth Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAP26Z3toizG8B78GzAipsFD98XMkV7mlefYMuFd0J5K5vu4bj-4ZQogG5t989qId8lledjJTfdV2fYpq8zskvEdob4EvOYGLwvpy_wZRmy-6s9jnkTDgPDRHe0WKaZi2REhAAnfKi4oui32uc44kLpSMGGhROclMGc49o3HlVMz4Uzx8TA8yJmg",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJh7CgRy7GxokRJ1eaM21VO48",
+            "rating": 4.5,
+            "reference": "CmRbAAAAGOoCzLfvn1y2nQdSQ5mez8hRhMHD8BmCBMXeGdZAolG0hpgaWVhe4ugonOxaq5Ta_HOcm9mvEsOaUXsmRAUvRThzNX93AOCcD2EatMVToKdoNkxY0-siQzsRKU1h0VPXEhAXiIiCwi7KxsT1JD_Z4oR3GhTr_P2sAD4u6B857RVn3N2wl8fS8Q",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "210 W Washington Square, Philadelphia, PA 19106, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9470381,
+                    "lng": -75.1523959
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.94845367989273,
+                        "lng": -75.15152187010729
+                    },
+                    "southwest": {
+                        "lat": 39.94575402010728,
+                        "lng": -75.15422152989274
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "b4f2ccc1d6b3fc668207c127d84044e2724fafe7",
+            "name": "Washington Square",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2268,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA0e76QEofuoS-ytnzcoR9pMoGuisfDG6o9RxUQoAaAVSClKje555-xl6DNnSfB6XCoR5GHOY_3v7E00UU7DAlG6vCZfZPOStLFbSNBhgXya1NzidBBGQ-gHIQq37qh5SNEhCRWv2q9xnSwQFaFusiSx5pGhR6bCG5Mm8voK5mcBAJ4wfnhfkGmA",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJd0Q2JZ3IxokRHlfq0byPcV4",
+            "price_level": 2,
+            "rating": 4.6,
+            "reference": "CmRbAAAAPOQbjv9cCQbRcsiE0fwrdEWq14qVc244T-4-WOFfFW6t3c07bBik9lWH5PvszsuuD3QwMGw_M_I-eYpT3ERPJf7ZZ0hz5Wiig9TEzV_bShbQ4itj18CZ_qtYDYuWRGUaEhDB72zGW2dKtmvNDLzt9M1FGhSd2ieuCT8jEh_6PowxkGrfQ1snlA",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "210 N 18th St, Philadelphia, PA 19103, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9579459,
+                    "lng": -75.16931290000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.95927132989272,
+                        "lng": -75.16779532010727
+                    },
+                    "southwest": {
+                        "lat": 39.95657167010728,
+                        "lng": -75.17049497989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "c857f835a73cc1e678dda4b94f13d20c531adb74",
+            "name": "Sister Cities Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3096,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAyRx7ukfpOP9AyW0bjwkFQHUJJV-t3g1q49rfKvIsiaybBTvBYSurBGs1c_iRvuquzVNHCkUoVcqCYdiunOKPu-z7UT3UNg6ottbX-aZi21kAS8S_pPnZGHxmcVTtDnJ-EhC8c9p0BO3KlIU_tNirciykGhSmYQ1bHVV6i2UJWR_OCPeqRsgYzw",
+                    "width": 4128
+                }
+            ],
+            "place_id": "ChIJK6SVAzPGxokRaNqldb6kA9I",
+            "rating": 4.7,
+            "reference": "CmRbAAAAaZ6Q9_pNvQpIMengaIEo0KQ_HOEbP5tcjOLVKinefaWbX-qihXWiSL6i60pemzMqqPy_pm-LlU313QF9175iKdGJN24IOp3nZd3uanbEnKsG6eiuNgVdjo5p1aSGT-OGEhDxyX2eJS-z2QxvwqXIzxG9GhT1WTAT_zm7O_C_gKN5JSgw9wx2OQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "1500 Pattison Avenue & South Broad Street, Philadelphia, PA 19145, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9032631,
+                    "lng": -75.1838868
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.90461292989272,
+                        "lng": -75.18253697010728
+                    },
+                    "southwest": {
+                        "lat": 39.90191327010728,
+                        "lng": -75.18523662989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "cc94cd980c56c75705e2231b94e3bc3eb9aa3ee4",
+            "name": "FDR Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3036,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAQVu13hlcF6TnY3oJr0NXKLcH8724PzbRJbvLU-LVe2xTE5Z2ohfTtoWI-XShSY8dxdEaQveJzKyjIDSeShNBCeEC3ZRSOvAmN6Rom6r8JwNLfSjT4pQfvm-oN8j1IuC6EhBMYoDquOOeA7y25yvnd0gSGhSN24s6UqSQrHcTKo0mqIJTfeUWWA",
+                    "width": 4048
+                }
+            ],
+            "place_id": "ChIJie9v2DbBxokRHylCIW7ceSA",
+            "rating": 4.3,
+            "reference": "CmRbAAAAJULi6p9T6eekOTnDvB5JqrM0bLzM-odZ-lZ0wt-FLNFqxxNAJBmbUvOKolcRMegzmXMo4_ZpaYRx3ZWayovHeW301wt5osri8yLjgXjwuiIfHITx3psA-mSnYJruaspUEhBHKZ3jUZ_4RJDO5Sx_jOv8GhRykh1_RpGUvu0ESWJ8lms8cMM9lQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "301 S Christopher Columbus Blvd, Philadelphia, PA 19106, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.94438239999999,
+                    "lng": -75.1414901
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.94556202989271,
+                        "lng": -75.14038937010727
+                    },
+                    "southwest": {
+                        "lat": 39.94286237010727,
+                        "lng": -75.14308902989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "e6b24db0ef0a70cc238aa4273b48183293e62815",
+            "name": "Spruce Street Harbor Park",
+            "photos": [
+                {
+                    "height": 1215,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAATEAkTr8KpC7lZfvFzz70unUxKHpi1Kn6H_HzHWhRMIGgyZFU5UJ94aZsmCZUKTYjRgpgwbl3V7qNsKWIUmtPKXzg70XfS00iatj2asmLU6iJmSIBDQxHa-E_jO557pRIEhBuNC2Xvby-Elfj0CLOTneDGhSl8qWiO59m2l7DYx6927TWfN_vtw",
+                    "width": 2160
+                }
+            ],
+            "place_id": "ChIJv2tKaJDIxokRNjXcij0s6U4",
+            "rating": 4.6,
+            "reference": "CmRbAAAAZeB5PZkBmgVGhOtRz3n7oNgTnEWVcXtkL2T8qunPFTIp4ciwzIdi5GoQMYWbWSbWn99ZAL_0D3w8shDkIdgBrcn9GK7epidlVNv5A7I9DakS3HE_ZFg7_Mmxknhfj5mfEhCmb1_dKsrJre4JWOfBuZjjGhQITV6SJ9YqXccsYU5zFXAxF3tzsw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "1301 N Beach St, Philadelphia, PA 19125, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9662739,
+                    "lng": -75.1284795
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.96793337989272,
+                        "lng": -75.12734207010728
+                    },
+                    "southwest": {
+                        "lat": 39.96523372010727,
+                        "lng": -75.13004172989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "b3c826ab03d31ea5e962e484d945a9688ec1e0cc",
+            "name": "Penn Treaty Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2340,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA5aOEEdGiS9tJ2r2FnAJnnJaLNPsGjurigiRzJcdOv-pC8VdAq5-HXOaWiyJwTvCBZls6ZYg93DNjCqQej8nHFUySCfcD95rYSd03XuTaMZwB_midND2Ybmd9ex0Q6m-rEhBdesrXHClbEHKhHBHZyAqLGhThzK8oKNL_iEZvn7TacHak_dm7Gg",
+                    "width": 4160
+                }
+            ],
+            "place_id": "ChIJRycq6ELIxokRqyoKN58WSZk",
+            "rating": 4.4,
+            "reference": "CmRbAAAACIPYqOx8lnO25mVZzsrVm4TLueIswDZ-J_WJFtOkIfP_tBI1Fk9F9HPk6v4FFLx9dc_i1BtKyJqtC702cBMg7n_a2ASI3usJOJEH3ePmwsXZrX-VpwRLwmWKNipZgqOqEhDyLa2DY5__TdL1UIQRB5UIGhRj-vqlQdDta2NUNuD4qhmmj9L7Ig",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "200 N 6th St, Philadelphia, PA 19106, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9558087,
+                    "lng": -75.15041099999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.95708737989273,
+                        "lng": -75.14847387010727
+                    },
+                    "southwest": {
+                        "lat": 39.95438772010728,
+                        "lng": -75.15117352989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "c9b0ff5918f982948bb3f6a34b028524c5c309c1",
+            "name": "Franklin Square",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 1365,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAmMfxtcpARgDtM-RlrVCkTcE-wg_qwai6aFQ-AVDGciNqG5NHhqAc4GhqJNxxxoPNg4XI1fFrqbTE49X-20BRzf_Et4HqHfvigMdpdTTmNoICPhQ-8WCEiH9gbX_cHL6XEhCyryxg2dc6wGk_5lwx9-QkGhRj3sBntuNE_mAkezvIdPAPCKVPHg",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJ1U-L54DIxokRcoW6JtzjcDM",
+            "rating": 4.5,
+            "reference": "CmRbAAAAIEuPeQ2CfuZ9X1Cj9PJeemLOziD96hEyEzQAYDeBV5Bn8RdBhHgdxQEzspf4Oh-C6p7kVWtHkMtYgmvWtEtFyApNn_yz0i5B4Y4CkFKRYlzJmdG5gEFV9Wd42AD4iXBKEhBB8c9LzRBULD72uuz5-0geGhTIY5UKEOn2Bbugb0Vdgw7Bfh-FMA",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Valley Green Rd, Philadelphia, PA 19128, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.0562108,
+                    "lng": -75.21733100000002
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.05742507989272,
+                        "lng": -75.21572712010729
+                    },
+                    "southwest": {
+                        "lat": 40.05472542010727,
+                        "lng": -75.21842677989274
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "63a3b08d440e47946097c807097682cbb9846504",
+            "name": "Wissahickon Valley Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAnJLgArEVHh7su-f4ndpi37ted--lCrETQoi_TG3e_ZovTUp4pXDTv8mWBEaZ4jXMOtEsWoPR9918YJfpBOW1c4QC61ES8jiRz-JI4e8IMa9KtBwF-LTXd__C6CHqiIEWEhBGnMnTf1heT53Ej-95aArBGhS1pnVUeb6lBCQXE7A2dd64xEXqsA",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJIcPcqf64xokRSPxypSWNWic",
+            "rating": 4.8,
+            "reference": "CmRbAAAA5PfG48qRu7_AUJMEhCsB8Q-UpcWbOsLRMCv-YpYrfYxFx06APeLH35AlvfK-10zc6wxNWBusRZ1pn8gpmGkqn-R-O3Ii9cZRhXcjPY4XhCRx8yolIxK3Sc0OArteMB2TEhDtrPB3BBx8icThosERevW_GhQABb3H7QieAdYRAPRrXtpjp7zs4g",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "210 W Rittenhouse Square, Philadelphia, PA 19103, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9494818,
+                    "lng": -75.17188349999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.95088942989272,
+                        "lng": -75.17105347010728
+                    },
+                    "southwest": {
+                        "lat": 39.94818977010728,
+                        "lng": -75.17375312989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "e38577d83bc356fe9a9b88d5c1febc0263d23313",
+            "name": "Rittenhouse Square",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2121,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAATIwvDE9rreJTuz4fkrmro3_ndqy0WA0AHiFPTtMZJbhp77OpXPFIUWvO_XNCOXLtv3AERivgtJmQ3ihET_AD7O-V29W8BT1Tt7Dc8k03diNLLFB-Ua8lEACRJT0bvfWSEhDBxqMPNrqaP7VP6WUncc0qGhRryXy5yNYomLSK_kZGPbq5VTQTaw",
+                    "width": 7544
+                }
+            ],
+            "place_id": "ChIJIQGrHTrGxokRofc6nBBJrRU",
+            "rating": 4.6,
+            "reference": "CmRbAAAAmDMXxEoF3LOO7vvU-MdOzFSHSXeab8_f0ecxxW0IqbZSoq-ImUD1-YwhyzeLCKTu0mb2YVFttMsEvGGxtD8d5NzIzGB2aNWRDNa0jUYDTPTVFr416Yzwwnm_hSvavF31EhBiq_8sIh--Ag2BZOE1Mys2GhSMAf0bOIXm1qlz5QbMmwmsNynTAQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "1707 Chestnut St, Philadelphia, PA 19103, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9518002,
+                    "lng": -75.1690348
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.95300682989272,
+                        "lng": -75.16771457010728
+                    },
+                    "southwest": {
+                        "lat": 39.95030717010728,
+                        "lng": -75.17041422989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "ac90eae6f2c1b28cca56311b9f5058b47ebfab4d",
+            "name": "John F. Collins Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 4000,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAGWp3bZf03ZGZWmzhaQLjucZ-iEWzbow8_ht0gest8VRoBi3et2ma-AUWTGYF45bOtNlxBeMKEi653mufQBJdygKdHdebjL5RDNv5ISV_HBIMRu9-G9h7AyeTvczykebQEhA8jkJ5qy7wQ38qxpXs5QErGhQLDusgoPvi6otIz8ZaWhVccpR2fA",
+                    "width": 6000
+                }
+            ],
+            "place_id": "ChIJwwYiWDDGxokR3MkOxiHPvbA",
+            "rating": 4.7,
+            "reference": "CmRbAAAAWURxCDf95Mz-Z1yJ3I2d-wFEtXlVSCEdV4-dALObTz79z7G2wrDPW7FFkfzD-L9XWiuK3jrB4cSWt5y6Ja15SLyHEXM6RsE3qDtYKObOgrdpyVfpRN34oE-rO0F8_q5KEhCZC-RZuhDig6ch-SuNczgQGhTZDKzBOZ8JHCZifzL4j-huI-KO9A",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "15001 Roosevelt Blvd, Philadelphia, PA 19154, USA",
+            "geometry": {
+                "location": {
+                    "lat": 40.1127313,
+                    "lng": -74.98623769999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 40.11408112989272,
+                        "lng": -74.98488787010727
+                    },
+                    "southwest": {
+                        "lat": 40.11138147010728,
+                        "lng": -74.98758752989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "37b37229bd7652026898a2eb616ddd0459125e16",
+            "name": "Benjamin Rush State Park",
+            "photos": [
+                {
+                    "height": 2268,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAb8Huvc8Y21Gb8rNLEaBDKHTmaNqJAmpR5Pj8jDxdhDOS1dIXJBRgLZok-PL_ZlbY21JS5cKLiX0uMEzx97bbeTb9Pwiwpzm0rUDoqmPJcKjH9K86Y0GQ8TOXo5G8KStzEhDL_jPdHST66dHOLM2pukLYGhQ4vMCI2tCWtHRQEV1qvcyTBGnwzw",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJC8xwwLeyxokR3_tCZatFrVM",
+            "rating": 4.3,
+            "reference": "CmRbAAAAIEPfM_v_JdKHZk95yjjiX5oBqE57c8BpyoR90pqi52gbVvViS5BY71Atl_VoA1Ja28zX36os-3CPXXV8F4DtSYyKVRQACyWn3qURxlr2Fz1ScOdED6USp3dkCOZBOcsUEhBYG5q9Q5mlUEwbd3OYjQqtGhRbKhJfMxtkjCrYqFP6bvKUhpjDGQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "4300-4398 Baltimore Ave, Philadelphia, PA 19104, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9488973,
+                    "lng": -75.2104142
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.95046612989272,
+                        "lng": -75.20912787010728
+                    },
+                    "southwest": {
+                        "lat": 39.94776647010728,
+                        "lng": -75.21182752989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "6d9ec761df66d0601665f00d7090a77acdb2e421",
+            "name": "Clark Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAlAcFYKVo-ApWWu4CpGMKdU25Nsa99LGQRiFbc1Vh65PE9oWP1VOKb4hN68iEPQPWiic85HkADNTddohWbJp8jsTdcH08Ashw05pKG_G3HKfsw2VjzQJofvLAZDEEQTyLEhAo77t5glIiHpQW5gy6KHLtGhSDxBKECzZgMP3jXmsLIjYkHLEyaA",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJbyyRSfLGxokRDJARJE7eV9o",
+            "rating": 4.5,
+            "reference": "CmRbAAAA0g6sxj-k2AmI5jaKve_OPf8K5HRjkezoMTBjE7EX2WaUtrOtgfEEt5kUp9FMjWCSTRKjwV2y0v7-UL_I1zBeSFXp9eZmYRYOEFH7eGKxuOrHWqQuQ_KPtY_hdsO0281aEhD7eZcPk4TQD8zJ7my1rlmiGhRZOEKSez2OV6t_2Q6g75iQKEWMgw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Philadelphia, PA 19106, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9495312,
+                    "lng": -75.14973189999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.95357010000001,
+                        "lng": -75.14841687010727
+                    },
+                    "southwest": {
+                        "lat": 39.94818489999999,
+                        "lng": -75.15111652989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "44ae1117a4a61d4ea40455f28566ac9f45fc4a7d",
+            "name": "Independence National Historical Park",
+            "photos": [
+                {
+                    "height": 3265,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAsPsaRAg2xeJ2MGZ1OR_sNVHgC3AWJD1PNiBkwmFYXyTZcohyOSdGie8eKWEE4cLwVI3OojNrBylqsOEF8UT09dQ1AsLMhSuB7flOkJ4J-tiB912ncrN7NEIT_he3qLV0EhCeZkNla3LRwr5k0svYVJ1AGhQWxeyF1YTx2ozaaughPr3ahfvnSg",
+                    "width": 4898
+                }
+            ],
+            "place_id": "ChIJGVDvkoTIxokRIQNxPpqAR4Y",
+            "rating": 4.6,
+            "reference": "CmRbAAAAgfbEUGwm0AJEqrp7vtWd0hoVHUWwzx5OzMxpVEfvqKV_aN-q0M36Xj5KuZJv9-qkpIcPXGvo83LS1qbh8nxwLjV-Duu0W2jyt5cRUL33o8sGr71tAAV1rdUhtytJAlzPEhA9wQV1ak94hQHqo90QX4k_GhSLx55mwmkwyEIi6WXq6ceFBzgWAg",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Race St & N. Columbus Blvd, Philadelphia, PA 19106, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9531479,
+                    "lng": -75.1388015
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.95465937989272,
+                        "lng": -75.13795282010727
+                    },
+                    "southwest": {
+                        "lat": 39.95195972010728,
+                        "lng": -75.14065247989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "ad9c38bfec33837a4000835a2db29ef61ce59522",
+            "name": "Race Street Pier",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3464,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA8XH_S9QCOaAh2RqsOgBgZDu9vs8Lks-QGAA7U5RWCJr3k1G_O8_qSkDKwMVbZXjVUPUg3v8vDE4ibONfQeUFOgyMXXC8vp7XcZJR3k69aY03b3YXkHzx0XH4AYHc4GsvEhDN1plElhKij96ifoZhZYTfGhRrk78k9ykA-TpSswMqKQhUupdMKA",
+                    "width": 4618
+                }
+            ],
+            "place_id": "ChIJWUUUDInIxokRiSVlw-fAI54",
+            "rating": 4.6,
+            "reference": "CmRbAAAAcNeaiAB_8PwOef70QImTySc6x1pC_OAnrfbRISv5QLLf3jUksle6IXkmliVnmXwYgEy0wX-4p0BntIW-v7BxpDj0VuFrAfMNXphjQ0yN2nrv-CFF4M1ZU-bHFqWX7Y9sEhAq4dJoJ8RALtkr1_u0Ng1fGhSRyChEWa1w9VWuOHVukHmzjlJV_g",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "3000 Walnut St, Philadelphia, PA 19104, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9500579,
+                    "lng": -75.1859058
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.95140772989271,
+                        "lng": -75.18455597010728
+                    },
+                    "southwest": {
+                        "lat": 39.94870807010727,
+                        "lng": -75.18725562989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "5c604e4c64c091ea6fcc723720c58e38146226bc",
+            "name": "Penn Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3464,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAUbVChwku4eXNioaY_dAUif9RPwgOFgubLQlcuvYOiGc8emgcLi8V4KkFrp1gXDK9ednloHcHJysSlHcFafDsfk5RaGM5vBM1sEpzlh43NT5zGhIC-7LuEd34CNg7O1LPEhABkzVRsR82iendBp81nAcEGhRutM76-NuCgF_Di8dUC-kF1V_Nww",
+                    "width": 4618
+                }
+            ],
+            "place_id": "ChIJS2d8qkXGxokRzE_k29GbF3s",
+            "rating": 4.6,
+            "reference": "CmRbAAAAwUWOTBr1LdkquwAX00Hve81EMBJqSXOr9DpB0D4uEn-8AAJWDjORW-qiWg8vPFjXeFlhWIHteityd5N7014Rm1qnkNYwmctwbdGq4FupqxHE4gmFfzHd4A3vkCY0dZsmEhAxIq_nve3mT7E2j_oZJ30kGhSjfMrG1UDRKpKS9h2QlQWobjDVGg",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "2451 Benjamin Franklin Pkwy, Philadelphia, PA 19130, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9637587,
+                    "lng": -75.1785115
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.96463962989272,
+                        "lng": -75.17702357010728
+                    },
+                    "southwest": {
+                        "lat": 39.96193997010728,
+                        "lng": -75.17972322989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "9068a6cca66c0501a898f43e6530cc8cf7482637",
+            "name": "The Oval",
+            "photos": [
+                {
+                    "height": 1440,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAARFMFqTuTBxs65A5yglrgA9_NkYS3sH0GvxCyYpyew1YZxaXYkgKh--hryivrGKh_Io453Wu9jSuIrsfJkdR3yt0-jt5bRkzsSv8UvfDrV2Nqo3JI2d_Fqj61t0pDF-TQEhDNIcFGqi8iwlwon0xxY1rKGhS2-IaBLSJmaf6UxLuv2XvX2AV8NQ",
+                    "width": 2560
+                }
+            ],
+            "place_id": "ChIJrwDdgrXHxokRZ8Q-XV4tloc",
+            "rating": 4.5,
+            "reference": "CmRbAAAAu-4C4mQiQzJEFTlGxiUtXn4T83c_ePNvVQsDXBcPv09k5wnF72XjorA-wIsV1dWQR9K6sV_euPeEeVugd8thh0oc6eMyX-JDZea3toQzPTUsITXuOJF8WElhmLaq2GRHEhAt8DhTXAru96Emy7rylHCQGhQKhncFzo7-kRoM9-A4g900737xWQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "300 S 25th St, Philadelphia, PA 19103, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9488762,
+                    "lng": -75.1817784
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.95018997989271,
+                        "lng": -75.18013367010727
+                    },
+                    "southwest": {
+                        "lat": 39.94749032010727,
+                        "lng": -75.18283332989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "b33ed4814dda10c1a9db1fca97fc5f5819fa349b",
+            "name": "Schuylkill River Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAy21q4bW39HsiQF7LT8VBtek7WyCRPi5X6ZRrKzHoOCC68pfIr6Yqaryj8ilH5n0S79-CXpBEJaC2ReQvE6qd2Kl03iD2W8nMUz5gTLJ73b7YiWQKILQBVoN99rXzdGH3EhD2m7olFXtAUzNAc9hL8WJrGhQwQKivOseVicXNGQR7Ef-1TQTpug",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJ487CtO3HxokRpQTcjx2xLNM",
+            "rating": 4.7,
+            "reference": "CmRbAAAApKVY8SrmIlx15OMxBIg4xUHyZvdw-UKZz9gKYP_BZSmHTyLl1jyXJW2NVn0lz-4NRQtTkMd5-AHae3-ZJlBkj1WbLz7gQYDZhDVhknosDLr3sNGam-2CUzb0M_DMFHrpEhAG9n197uFB6umKa0-95l0eGhQEL_BDebA7hvCQ9GAT9oEbns3WVw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Frankford Ave & East Palmer Street, Philadelphia, PA 19125, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9748662,
+                    "lng": -75.1325315
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.97627332989272,
+                        "lng": -75.13134592010728
+                    },
+                    "southwest": {
+                        "lat": 39.97357367010728,
+                        "lng": -75.13404557989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "8433cdb5326943f7e8ed32363dd839ed400c7bd1",
+            "name": "Palmer Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 4128,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA6UsabBlnWwtijdZ_sjH6NKZI5PBh26FhgWHsKKP3BbwtomtLUX2VDnwSL5XjilxXw4scmIbvDw4fiC0WmCeoWtJtq2nYoHZEVFJuGI2Y4GNjwLM0hJS3h4VyqUVGk5AEEhD-QXrgNbxFHU1JMU0GlrRPGhQMXqbNGOANGRKHoD_tCAS3CODW6w",
+                    "width": 3096
+                }
+            ],
+            "place_id": "ChIJ0cFmtmrIxokRPX_t7cF9wWM",
+            "rating": 4.3,
+            "reference": "CmRbAAAAWefIIkfkul9o85fWW0KXaiGUf8Gqv538oGbrUwU3I4-3ljJV1NVEEIzn9knYK3hQiprbSURDxZqwWTN3I0lgXaNsl5qFp2OCuLZkqjH6vjaLBKioeRUcie2_3WsuW7IxEhCkPDc530WQ_2K8zKkH3jHUGhT0TytW-5Qjlp-5rr38DaRAdB_HgQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Pier 70 Blvd, Philadelphia, PA 19148, USA",
+            "geometry": {
+                "location": {
+                    "lat": 39.9251776,
+                    "lng": -75.1385789
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 39.92642092989272,
+                        "lng": -75.13763672010727
+                    },
+                    "southwest": {
+                        "lat": 39.92372127010727,
+                        "lng": -75.14033637989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "4057cf476a60b941fc6b7f6b47bbd94ad1234463",
+            "name": "Pier 68",
+            "photos": [
+                {
+                    "height": 1836,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAxORgiEA7sot09lCYu4mmhQYCQ75SvBm_j8pUwc5QnIT6h4ih7hmoE9bdcanhOhguL99yDnIgMz5nUU09o3t0Sv-cVGvtq9rmlLASfM8u1zG2xQNaxFOxn12U8Wf5ZbGwEhCJC2nYudj36UzANa92klwHGhTcKoDESPyjdc13bp0vjhTNe6sayw",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJr_K3mrDIxokRU5_kDDMGcc4",
+            "rating": 4.6,
+            "reference": "CmRbAAAAr0Q4wtKl6TwK-dXIubQxd_8t2ACl0jTR8XwF3CQyk2UshJ8M_2nJN6w2dy39cH3h6rOeSU9QHo7jvuUvQN26j4vhMtRuct8iLKr2UMspketKeVW2Zl1o6tGckpWiMKKeEhBHzrRsbIxAyFpMsU0wWdiTGhRr-LX718_i_o9rcbyQZPtbd-Z0bw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        }
+    ],
+    "status": "OK"
+}
