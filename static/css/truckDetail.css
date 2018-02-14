@@ -21,6 +21,22 @@
     height: auto;
 }
 
+.transparentNav>div>a {
+    font-size: 30px;
+    color:#fff;
+}
+
+.transparentNav .navbar-nav>li>a {
+    font-size: 20px;
+    color:#fff;
+}
+
+.navbar-toggle {
+    margin:10px 0;
+    background: #000000;
+    color: #ffffff;
+}
+
 .intro{
     position: relative;
     top: 0;
