@@ -20,6 +20,8 @@ var trucksInfo = [
             , ['food7', 'rye whisky, sweet vermouth, bitters' , '$5']
             , ['food8', 'rye whisky, sweet vermouth, bitters' , '$5']
         ]
+        , ['video_link 1', 'video_link 2']
+        , 'external_link'
     ]
 ];
 
