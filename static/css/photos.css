@@ -20,6 +20,13 @@
     top: 0;
     width: 100%;
     height: auto;
+    background:
+            linear-gradient(
+                    rgba(0, 0, 0, 0.6),
+                    rgba(0, 0, 0, 0.6)
+            ),
+            url(../img/food/food4.png);
+    background-size: cover;
 }
 
 .intro h1 {
@@ -86,16 +93,16 @@
     border-radius: 5px;
 }
 
-.pictureCardTitle{
+.photoCardTitle{
     text-align: center;
     font-family: "Verdana";
 }
 
-.pictureCardText{
+.photoCardText{
     color: #a9a9a9;
 }
 
-.pictureCardBtn{
+.photoCardBtn{
     border-radius: 28px;
 }
 
