@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93661dad-6193-4528-9ecf-7e412f8d6e30" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/static/javascript/trucks/grindsTruckDetail.js" afterPath="$PROJECT_DIR$/static/javascript/trucks/grindsTruckDetail.js" />
+      <change beforePath="$PROJECT_DIR$/static/javascript/trucks/mightyConeTruckDetail.js" afterPath="$PROJECT_DIR$/static/javascript/trucks/mightyConeTruckDetail.js" />
+      <change beforePath="$PROJECT_DIR$/static/javascript/trucks/pinchTruckDetail.js" afterPath="$PROJECT_DIR$/static/javascript/trucks/pinchTruckDetail.js" />
+      <change beforePath="$PROJECT_DIR$/static/javascript/trucks/truckDetail.js" afterPath="$PROJECT_DIR$/static/javascript/trucks/truckDetail.js" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
       <change beforePath="$PROJECT_DIR$/templates/parks.html" afterPath="$PROJECT_DIR$/templates/parks.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -16,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="grinds2.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/javascript/photos/grinds2.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+            <state relative-caret-position="528">
+              <caret line="48" column="65" lean-forward="false" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -29,8 +34,38 @@
       <file leaf-file-name="grinds1.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/javascript/photos/grinds1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
+            <state relative-caret-position="-76">
               <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grindsTruckDetail.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/javascript/trucks/grindsTruckDetail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mightyConeTruckDetail.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/javascript/trucks/mightyConeTruckDetail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="309">
+              <caret line="85" column="38" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="174" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pinchTruckDetail.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/javascript/trucks/pinchTruckDetail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="48" column="29" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="182" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -46,6 +81,26 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="truckDetail.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/javascript/trucks/truckDetail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3520">
+              <caret line="160" column="37" lean-forward="false" selection-start-line="160" selection-start-column="37" selection-end-line="160" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pinch.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/trucks/pinch.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="99" column="23" lean-forward="true" selection-start-line="99" selection-start-column="23" selection-end-line="99" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="photos.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/photos.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -56,61 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parks.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="parks.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/parks.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="55" column="65" lean-forward="true" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="themightycone3.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/photos/themightycone3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="47" column="54" lean-forward="false" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="grinds3.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/javascript/photos/grinds3.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pinch1.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/javascript/photos/pinch1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="photoDetail.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/javascript/photos/photoDetail.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="50" column="16" lean-forward="false" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="themightycone1.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/javascript/photos/themightycone1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+            <state relative-caret-position="245">
+              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -159,7 +164,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/truckDetail.html" />
-        <option value="$PROJECT_DIR$/static/javascript/trucks/truckDetail.js" />
         <option value="$PROJECT_DIR$/static/javascript/trucks/truckCards.js" />
         <option value="$PROJECT_DIR$/static/javascript/parks/parkCards.js" />
         <option value="$PROJECT_DIR$/templates/parkDetail.html" />
@@ -171,9 +175,6 @@
         <option value="$PROJECT_DIR$/static/javascript/parks/albertaParkDetail.js" />
         <option value="$PROJECT_DIR$/static/css/parkDetail.css" />
         <option value="$PROJECT_DIR$/static/css/truckDetail.css" />
-        <option value="$PROJECT_DIR$/static/javascript/trucks/mightyConeTruckDetail.js" />
-        <option value="$PROJECT_DIR$/static/javascript/trucks/pinchTruckDetail.js" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/trucks.html" />
         <option value="$PROJECT_DIR$/static/css/parks.css" />
         <option value="$PROJECT_DIR$/static/css/trucks.css" />
@@ -198,7 +199,6 @@
         <option value="$PROJECT_DIR$/static/javascript/photos/grainds1.js" />
         <option value="$PROJECT_DIR$/templates/photos/grinds3.html" />
         <option value="$PROJECT_DIR$/templates/photos/grinds2.html" />
-        <option value="$PROJECT_DIR$/static/javascript/trucks/grindsTruckDetail.js" />
         <option value="$PROJECT_DIR$/templates/photos/pinch1.html" />
         <option value="$PROJECT_DIR$/static/javascript/photos/themightycone3.js" />
         <option value="$PROJECT_DIR$/static/javascript/photos/themightycone2.js" />
@@ -209,6 +209,11 @@
         <option value="$PROJECT_DIR$/static/javascript/photos/grinds2.js" />
         <option value="$PROJECT_DIR$/static/javascript/photos/grinds1.js" />
         <option value="$PROJECT_DIR$/templates/parks.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/javascript/trucks/grindsTruckDetail.js" />
+        <option value="$PROJECT_DIR$/static/javascript/trucks/mightyConeTruckDetail.js" />
+        <option value="$PROJECT_DIR$/static/javascript/trucks/pinchTruckDetail.js" />
+        <option value="$PROJECT_DIR$/static/javascript/trucks/truckDetail.js" />
       </list>
     </option>
   </component>
@@ -384,12 +389,12 @@
       <option name="presentableId" value="Default" />
       <updated>1518474750173</updated>
       <workItem from="1518474752187" duration="18953000" />
-      <workItem from="1518562766833" duration="45022000" />
+      <workItem from="1518562766833" duration="46029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63975000" />
+    <option name="totallyTimeSpent" value="64982000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="15" y="35" width="1596" height="929" extended-state="0" />
@@ -508,14 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/trucks/pinch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="54" column="64" lean-forward="false" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/transparentNavbar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
@@ -556,14 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/javascript/trucks/truckDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="25" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="169" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/truckDetail.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -584,14 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1188">
           <caret line="54" column="64" lean-forward="false" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="70" column="45" lean-forward="false" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -660,34 +641,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/javascript/trucks/pinchTruckDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="43" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/javascript/parks/directorParkDetail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="52" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/javascript/trucks/mightyConeTruckDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/javascript/trucks/grindsTruckDetail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="52" lean-forward="false" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -788,14 +745,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/javascript/photos/grinds1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/javascript/photos/pinch1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="638">
@@ -830,8 +779,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/parks.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="55" column="65" lean-forward="true" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
+        <state relative-caret-position="245">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="48" column="65" lean-forward="false" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/javascript/photos/grinds1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-76">
+          <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/javascript/trucks/grindsTruckDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="89" column="28" lean-forward="false" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/javascript/trucks/pinchTruckDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="48" column="29" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="182" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/javascript/trucks/mightyConeTruckDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="85" column="38" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="174" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/javascript/trucks/truckDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3520">
+          <caret line="160" column="37" lean-forward="false" selection-start-line="160" selection-start-column="37" selection-end-line="160" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/trucks/pinch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="99" column="23" lean-forward="true" selection-start-line="99" selection-start-column="23" selection-end-line="99" selection-end-column="23" />
           <folding />
         </state>
       </provider>

@@ -36,6 +36,16 @@ function getTruckDescription(){
     return html;
 }
 
+function getParkInfo(){
+    var html = '';
+    var parkName = trucksInfo[0][11][0];
+    var parkLink = trucksInfo[0][11][1];
+
+    html += '<h1>Nearby Park</h1>';
+    html += '<a href="' + parkLink + '">' + parkName + '</a>';
+    return html;
+}
+
 function getTruckPhoneInfo(){
     var html = '';
     html += '<h1>Phone</h1>';

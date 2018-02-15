@@ -85,7 +85,7 @@ function getParkInfo(){
     var parkName = trucksInfo[0][11][0];
     var parkLink = trucksInfo[0][11][1];
 
-    html += '<h1>Park</h1>';
+    html += '<h1>Nearby Park</h1>';
     html += '<a href="' + parkLink + '">' + parkName + '</a>';
     return html;
 }
