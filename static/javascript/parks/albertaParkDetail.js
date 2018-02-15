@@ -7,11 +7,11 @@ var parksInfo = [
         , 'Open Now'
         , ['../../static/img/parks/albert-1.png', '../../static/img/parks/albert-2.png']
         , [
-        ['The Grilled Cheese Grill', 'Sandwiches' , '$', '../trucks/grinds.html']
-        , ['The Grilled Cheese Grill', 'Sandwiches' , '$', '../trucks/grinds.html']
-        , ['The Grilled Cheese Grill', 'Sandwiches' , '$', '../trucks/grinds.html']
-        , ['The Grilled Cheese Grill', 'Sandwiches' , '$', '../trucks/grinds.html']
-        , ['The Grilled Cheese Grill', 'Sandwiches' , '$', '../trucks/grinds.html']
+        ['808 Grinds', 'Hawaiian' , '$', '../trucks/grinds.html']
+        , ['808 Grinds', 'Hawaiian' , '$', '../trucks/grinds.html']
+        , ['808 Grinds', 'Hawaiian' , '$', '../trucks/grinds.html']
+        , ['808 Grinds', 'Hawaiian' , '$', '../trucks/grinds.html']
+        , ['808 Grinds', 'Hawaiian' , '$', '../trucks/grinds.html']
     ]
         , ['video_link 1', 'video_link 2']
         , 'external_link'
