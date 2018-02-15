@@ -1,14 +1,14 @@
 var photosInfo = [
     [
-        '# the mighty cone'
-        , 'Yumm! #austin #themightycone'
-        , '../../static/img/food/themightycone1.png'
-        , '2100 Barton Springs Rd, Austin, TX 78704, USA'
-        , [30.2669624, -97.77285930000001]
-        , 'https://www.facebook.com/TheMightyCone/'
+        '# 808 grinds'
+        , 'I don\'t just eat cookies all day! This heap of meat is the kalua pig from @808grinds and it\'s delicious! their habanero teriyaki sauce is delicious too! '
+        , '../../static/img/food/grinds2.png'
+        , '815 SW Park Ave, Portland, OR 97205, USA'
+        , [45.5186898, -122.6814688]
+        , 'https://www.facebook.com/808GrindsPdx/?ref=br_rs'
         , 'M - F<br>11:30 am - 2:00 pm<br>5:00 pm - 9:00 pm<br>SA - SU<br>5:00 pm - 9:00 pm'
-        , ['The Mighty Cone', '../trucks/mightyCone.html']
-        , ['Zilker Metropolitan Park', '../parks/zilker.html']
+        , ['808 Grinds', '../trucks/grinds.html']
+        , ['Director Park', '../parks/director.html']
     ]
 ];
 
