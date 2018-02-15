@@ -1,23 +1,22 @@
 var parksInfo = [
     [
-        'Zilker Metropolitan Park is...'
-        , '<br>Zilker Metropolitan Park is considered "Austin\'s most-loved park." ' +
-    'This 351-acre metropolitan park is home to a variety of recreation opportunities, ' +
-    'facilities and special events for individuals and families.'
+        'Director Park is...'
+        , '<br>Director Park is a city park in Portland in the U.S. state of Oregon. Opened in 2009 at a cost of $9.5 million, it covers a 700-space underground parking garage, which connects underground to the Fox Tower and the Park Avenue West Tower. Located in downtown on Southwest Park Avenue, the nearly half-acre urban park lacks any natural areas and contains little vegetation.'
         , 'missing phone #'
-        , '2100 Barton Springs Rd, Austin, TX 78704, USA'
+        , '815 SW Park Ave, Portland, OR 97205, USA'
         , 'Open Now'
-        , ['../../static/img/parks/zilker-1.png', '../../static/img/parks/zilker-2.png', '../../static/img/parks/zilker-3.png']
-        , [['The Mighty Cone', 'American & tacos' , '$', '../trucks/mightyCone.html']
-        , ['Pinch', 'Fried Chicken Bento' , '$$', '../trucks/pinch.html']
-        , ['The Mighty Cone', 'American & tacos' , '$', '../trucks/mightyCone.html']
-        , ['Pinch', 'Fried Chicken Bento' , '$$', '../trucks/pinch.html']
-        , ['The Mighty Cone', 'American & tacos' , '$', '../trucks/mightyCone.html']
-    ]
+        , ['../../static/img/parks/director-1.png', '../../static/img/parks/director-2.png']
+        , [
+            ['808 Grinds', 'Hawaiian' , '$', '../trucks/grinds.html']
+            , ['808 Grinds', 'Hawaiian' , '$', '../trucks/grinds.html']
+            , ['808 Grinds', 'Hawaiian' , '$', '../trucks/grinds.html']
+            , ['808 Grinds', 'Hawaiian' , '$', '../trucks/grinds.html']
+            , ['808 Grinds', 'Hawaiian' , '$', '../trucks/grinds.html']
+        ]
         , ['video_link 1', 'video_link 2']
         , 'external_link'
-        , [30.2669624, -97.77285930000001]
-        , 'https://www.facebook.com/zilkerparkaustin360/'
+        , [45.5186898, -122.6814688]
+        , 'https://www.facebook.com/gardenbardirectorpark/'
     ]
 ];
 
