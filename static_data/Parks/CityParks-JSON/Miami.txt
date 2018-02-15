@@ -1,0 +1,871 @@
+{
+    "html_attributions": [],
+    "next_page_token": "CoQC9wAAAHgUlzecX-2nYJny2nLYfgadsOLFmZltWARGAO9ZgwE7I8hxkUa3Jg6KTTgOhjmqV_GtC-cIHB2LnTPOePeDfE-Z13x6gqbbVfC0gUMqzNAkVh6pxolFCSNMIrzoGObGuUhq6zkVNzsEy-aPshuUh6G_1ChX0pCLek1UkQCgEfcOCQGgkqdS0KNYQFBMsgDDDXWbHECFmqLmLwoiL4LE-nfhbjSLMwNBtl8p9tp55pKJR8xiHswhtoYf1wQcifM1BJ5mZBPjbWXERHtc2Vg_LnbYUrm4YKtTF_tlmuUEXkZ62BhyYi8sZ1oz2UMOHGMgdctXWiBGa8Rijh0OM8Ka85USEIfUWooc1oOu1GwEjsPKBVIaFEnHkRL58ZggAEVBCqIbuFHn3rwO",
+    "results": [
+        {
+            "formatted_address": "5 SW 17th Rd, Miami, FL 33129, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.7581438,
+                    "lng": -80.1969778
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.75946777989272,
+                        "lng": -80.19566597010727
+                    },
+                    "southwest": {
+                        "lat": 25.75676812010728,
+                        "lng": -80.19836562989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "97dc4375e0e22c4053a2d74d4e0b204aa8de79df",
+            "name": "Simpson Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3120,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAVnvqHYtg0jNHn3cKrrcXBB8FBw4Q4yYUWMmgBnjXnecZL0Kde3HEAoFyW7OkUa5wSxdgy0TLk3kwacvykDVdHClpG692dFXax5qTT_HyhxOLuFKjS5MF1FIHX0gmspezEhB12JVlI6c6ZcR9DlIjGhh2GhQehoYo9FLS-ZGfdETMtGMnne2J9w",
+                    "width": 4160
+                }
+            ],
+            "place_id": "ChIJjxgHoIe22YgRWDaoVeZ-I3U",
+            "rating": 4.4,
+            "reference": "CmRbAAAAyuBaV_lh2AsZo1luff5ILHJxroNDsUScasIXf68VLU_UD_ezGIvD5Ohepk7zsOL1F8GV1Mj-iv0AmnyyA6duLcH26uw-n3helZagBjyJgsFHv1_UH6qZcU0RX7UklxGrEhBqZNCg0aoXSg_-31q-fDifGhTwU_RbponRKuBy_yt03wM9LTru-Q",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "750 NE 55th Terrace, Miami, FL 33137, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.8269636,
+                    "lng": -80.181285
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.82829887989272,
+                        "lng": -80.17993442010727
+                    },
+                    "southwest": {
+                        "lat": 25.82559922010728,
+                        "lng": -80.18263407989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "7bc77bb432d170ba3f1c9e6e7d55241b0c3f25e2",
+            "name": "Morningside Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3120,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAOiroCN8gLdd2wV9gb8eQDrrs3W8LQsBSeFfI4nPRVTm-WCHKkZLARPRXrnexfrlEw1Zk2yopp9CcYvcFfJlshbzvpyhRTX1yfbMaGNTOynNzTNnSYADzP_HKDsY3BbhbEhB444wDLz6xqoCI83Ppvh5ZGhScDebuD1q0oIlCYtaTQ8FVYwOkjg",
+                    "width": 4160
+                }
+            ],
+            "place_id": "ChIJl8IPEeez2YgRsL_ca1_Oky4",
+            "rating": 4.6,
+            "reference": "CmRbAAAABuWRe-vuAS-CRYJg9a2HH-bI4bImlRWw4ijF6bAGTy-FbG4II6Fhi8rMIwx2mJnb-sUty7AwhKmAxV1_Pf9RCCweFac2bSiE6uRozxcnSRW3lXoIiHDH3_tLzpcpkv5REhA3x6NshFo-b3ymSBxrgv1hGhR757oVGYygUxLO5yoNuT3hlNY46w",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Miami, FL 33132, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.7942628,
+                    "lng": -80.1857629
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.79561262989272,
+                        "lng": -80.18441307010728
+                    },
+                    "southwest": {
+                        "lat": 25.79291297010728,
+                        "lng": -80.18711272989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "ee0e036057bcda79ffbdb63915b35872c6132f91",
+            "name": "Margaret Pace Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA--QFdP_y-kypWI6cXzLX5nKvWWpGrI3r-wQITsPHZfH5S6nNOOoniz-9e00B8JFZxmXz_WemSuB9uf4FZc9VEzT1_W91_p44QevOTEfAgKdhigOL30ZAyFmqcYrHrf6QEhCXzio8bklV04ikWAmrFK05GhT-4m4l8V09fZRW8edK4p4MGAqKtg",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJYTggjQK02YgR5-xr4KOLS5s",
+            "rating": 4.6,
+            "reference": "CmRbAAAATa4qTwO5niISpksLCKP_TsyZWn6ISdN6V7FMrzz0uW25ERrjET85s9N_KTIrDiHgewtw6Qpyw9V1DAGiLs9DtjjNsYty6c-QivoQeWgxUv-OWGL8wXgEloGwAsILGTHNEhBIuphvSmgpKV9qY_QdFONQGhRS_Cb6S7PZDipE4Ve63OReI1lncQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "3485 Main Hwy, Miami, FL 33133, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.725306,
+                    "lng": -80.242525
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.72728777989272,
+                        "lng": -80.24182870000001
+                    },
+                    "southwest": {
+                        "lat": 25.72458812010728,
+                        "lng": -80.2446139
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "0d95e0ebf051542ee2ca4d3c6cdd460082259d27",
+            "name": "The Barnacle Historic State Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3120,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAATWyvdIm_oTqohWqEpiRih7tZrzVFHnGlUhFDNj3zFzkEpEbiD49GJY9aOdeinR0SXxCZX38u5_9VKK-eKIVkuejyibuzmO66tnfZs13Fr_ZZmKOWKiLaj6CIJG1HcCY1EhAxiCy46xcxq_WZzvci0ZVxGhQmbX3OFfhMH_PEkrH5ADyLxin-VQ",
+                    "width": 4160
+                }
+            ],
+            "place_id": "ChIJWUrQV8W32YgRsIjdBURU4_Q",
+            "rating": 4.2,
+            "reference": "CmRbAAAAv1nJeY-WhLOaFaJHoR0UmBDTDS_eRqKdfiBG607UAO6_vkWSO-v2usnc4G67iZbJ4C5cvzfkfPX8MNO5fhup1-MMd0FbltiGT6_gmyYRf7UIEIegCPgpDoTKZ4N8Au1hEhAd8cisHycT2ZuUthSP9iorGhTFgqQLFsUCwf16HL_mu2xtaB9OdA",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "2400 S Bayshore Dr, Miami, FL 33133, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.7348489,
+                    "lng": -80.2287444
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.73650197989272,
+                        "lng": -80.22765992010727
+                    },
+                    "southwest": {
+                        "lat": 25.73380232010728,
+                        "lng": -80.23035957989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "9dffe595d8955ba70151dc9de72ab654ec818be6",
+            "name": "David T. Kennedy Park",
+            "photos": [
+                {
+                    "height": 2160,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAyIr-myZw6Meu3IM9joyFCAK_2D_Z9iUTY3yvy_mH8M4TZPGuCnFXAE_ev1AJF2aImb24TTEPO5gVtD0ZWV-8UF07BBkf4N1GoA-uy3q6B9J12qyH4yFoMtvqLu59_JWXEhC7GHtMv6p5ivN5KiCn0dWaGhQdEwVKts2jYksAhVtcuQkOaVDZ6A",
+                    "width": 2880
+                }
+            ],
+            "place_id": "ChIJ7cSMoTW22YgRgR1BQSV5Q1Y",
+            "rating": 4.6,
+            "reference": "CmRbAAAAvJ-rBaiz4HKj6BKh_lH7G1d5sZvGgQXD3_v2Lw0EXJ9RjXPmAg1lB9OS_tQgrNdumWQSaWG8kftHM6uJAEEmRReI7WJqmv_pUviPLZde1t8wMzFjiRaZxAPJLztaPsb0EhBb_4NLaIaTxFTE5KMGnhL_GhTw4n6B37hzygg2B1SxicX-qY5eIw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "301 North Biscayne Blvd, Miami, FL 33132, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.7744088,
+                    "lng": -80.1859095
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.77575862989272,
+                        "lng": -80.18455967010728
+                    },
+                    "southwest": {
+                        "lat": 25.77305897010728,
+                        "lng": -80.18725932989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "35ecd5576bb8eb4b9eed669e5c432c6268f41236",
+            "name": "Bayfront Park",
+            "photos": [
+                {
+                    "height": 2448,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAHfeD0qJEbrETMAueXoMGUa_6sa2uu1PpPgWpGSzsVO7mK9mUkJ3bfVQuvADL7Se0fI0hJA1jaGy9C_tTzBwZ4j3gO-cgYxvabAgGx_iDAkrVFwPi5IxXY4Fch0IqRi2jEhDKM6oCW5bPdEs4y9pk4ixrGhQvsnkWOW9w1yS5_kl_n71Q4xvyQQ",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJd9nFxyC02YgRVdtnh8Obwp8",
+            "rating": 4.6,
+            "reference": "CmRbAAAAMw_flb-q504MEe61u89CbHh-JsuxLVkdZSNfcdnTWIgLt7vUNVY0zCc_Dn3xXgALoQZBIhNpNcRu6mUdh2AEqs9xNm6cbepP8NlwtfHQPxMsvzcPtcQ6j2cSdHcYuEC9EhAslCGmaeed4BnfQkWQgLfUGhTxhPFRn3aaD3xjgTbFvcBs761Odw",
+            "types": [
+                "park",
+                "amusement_park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "1 Washington Ave, Miami Beach, FL 33139, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.7637824,
+                    "lng": -80.1301802
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.76513222989272,
+                        "lng": -80.12883037010728
+                    },
+                    "southwest": {
+                        "lat": 25.76243257010728,
+                        "lng": -80.13153002989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
+            "id": "865e711c1187eb59f193b4035331ac50b759699c",
+            "name": "South Pointe Park Pier",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2632,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAATe8MBlTUl2lMuePxf8nrinJMKzw1C0KBg_4FVHjrvoODImuFbCbdIBb6awyXE3j9QhSq8Ht_Tw6IZbOajaHnbithILqeY9htt8MiON52nh7HMFNAGE_pYZbYgICDfUbaEhAK7gYIbWBYn6-d4vXkiQvJGhRY15UE1wIlBnn4JsrRrYI98QfmCg",
+                    "width": 4160
+                }
+            ],
+            "place_id": "ChIJf2LdW-W02YgR4q0vx7_GK18",
+            "rating": 4.7,
+            "reference": "CmRbAAAA9eNsvNK_aL2xgADX7NsFrgdycVNx9WwwtkEqNVzLF7L8SqVPpo_D7o-KGv46Ntl0FHjTryrtbPjyaIxNAyy8cAXdwnCDjYip_bzP1lf7wx1UjPuWPDKZO61BhnMF8FYxEhBL3PZxlfQ9iNyZA6jL1KFBGhQ3wrgDXYiak8JK21UTMYIS8kmSAw",
+            "types": [
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "801 SW 15th Ave, Miami, FL 33135, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.7655785,
+                    "lng": -80.2193748
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.76692832989272,
+                        "lng": -80.21802497010728
+                    },
+                    "southwest": {
+                        "lat": 25.76422867010728,
+                        "lng": -80.22072462989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "84b392dbbd3db46b9b217889e3dcfc6e57554c89",
+            "name": "Maximo Gomez Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAEWBHWJWJZSGZ2k-m3xoN0ynlnmjSleYyvY8z6lqt_fzaHCIwKIjrnYGEbj_IDaYFTjFGPaWLWUcezq2alTNt56dfmzxmt0zd4MZLnvMWnL1n1thwLLbvvpEElsT5aMZ8EhBTFJ_g09A5Z4pgWT3oYwM-GhTnyA1u27r0wwkVWNn5BfWJwkd_qw",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJkzjGz_C22YgRoeU-SVGaTRU",
+            "rating": 4.1,
+            "reference": "CmRbAAAAjXJxdCuNuEzrG_YCOkS0d83DNueQYsrXKjZbNzh6rvS-t_eAEfUubv3QmotvMxb0DiD7W_5xbkPIDbdu3i47lAyJVhJGUtPyImdHZxi4ri6umq_S40rNr8BZWJVacag2EhCDqTBgR8B8YeF3zpT1vYQNGhT1sz35c_zntwWqDpUT8K2KUqtZYw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "1075 Biscayne Blvd, Miami, FL 33132, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.7843583,
+                    "lng": -80.1871918
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.78570812989272,
+                        "lng": -80.18584197010728
+                    },
+                    "southwest": {
+                        "lat": 25.78300847010728,
+                        "lng": -80.18854162989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "0a1c5b288f8b38f720f4df470f9b59cad993792a",
+            "name": "Museum Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2448,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAARcnWf2nfu0AEnpUazOyy_kVC92PQANASfgQNpUPxaxh2bAMFwyti89DTwfwTNNEwD0At8WNGvOsxmTGoAu63mcPudFgsPk2WWkHwHMamEo5qjER6m_Za5ptGzvWE1_CREhDhvHxzPQyTymhVH-HUb_Y_GhR7W1TY0b-lzaW-2f13nnt29K2GxQ",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJtaM_HB602YgRWEIQVSrIQnY",
+            "rating": 4.6,
+            "reference": "CmRbAAAAxFeC64oxEr4JQZ6Mh0hiPJ033hyt-TkMs61W_cr01BkOtVDTzMukSyJE0d5SSMGnbEPeCSARGI2lWHd9XvAwGeRlAYB8FbAWYWey3x_fIEDbMUH32JAkgejtMatxIM9hEhDrhdsjXSCwKZLLInkGcrs-GhRYxWypnFOzI1tNLGmwdZmLtKnrNw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "Brickell Key Dr, Miami, FL 33131, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.7647587,
+                    "lng": -80.1844514
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.76624107989272,
+                        "lng": -80.18326122010728
+                    },
+                    "southwest": {
+                        "lat": 25.76354142010727,
+                        "lng": -80.18596087989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "3594476095cc839254d0d792f33a570209cfb3ba",
+            "name": "Brickell Key Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAT2soV5uKzZ5W9uMMtckm50dQbDfD0qi2gt8pa4JQZ1dCgJxARTwBMWZhTgnP-unnOfC094H4fNq1h-n1okRaGp2nfgYkG72nTqTze1dFh40k0yNifm6PcMFbT9B0-WA-EhCNr4VAGh1aiVIkAVeoWTSIGhSqWydEIPROuLjZkr7umVWNhP_UnQ",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJl4zRCSm02YgRfp7btGKTaJc",
+            "rating": 4.6,
+            "reference": "CmRbAAAAKshg4GmDKdOC6A7Orrk5-vLlk3PkCv4-3SbP9P1eecOFMAmbIOMaW7jbaB0X4L8dQsrxjfj55lpuv9siRRaXaSbHltolVUF1H_qwZwX_MkUIiIkwajD2x78XWUGcy2l6EhDsJbAdmpQhMUyygEc-cryPGhQglbuKrZ_Zylz5ZjiSAocD3z9-Cw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "2845 Brickell Ave, Miami, FL 33129, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.7486782,
+                    "lng": -80.2061315
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.75001647989273,
+                        "lng": -80.20477187010728
+                    },
+                    "southwest": {
+                        "lat": 25.74731682010728,
+                        "lng": -80.20747152989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "b29735ccbb870fd915001432b1e2431b99a7e59f",
+            "name": "Alice Wainwright Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAJVlKSsdGJJKWnnO1TR65ViPR22moziuWKVEDlahtK-zjPwTXDxL3R20Q8ZFeXgInW39LhvlPQEtEgTBX-Od5Id75FWUMdAMr-C5QOPSTq5lvTFUnREj9lPB-PUiuistiEhB-crG2GmrW3eoT6uPkR5KoGhSVh4XmiiZByhn_Y3YB29eO0EQTvw",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJH5F-eWa22YgRZ8sgHaATJww",
+            "rating": 4.5,
+            "reference": "CmRbAAAAW1sJh7yJUVS4Rse6Ovk93pJmFlh--ZKHJ9OP_4ZeT6_UlKVBK2re8g1ERu5Gr5M0N6K1yYEEyNggbqPRr-Z_fnQ_w3pfb6OyAob6_65zlitKBENeIKsmY2uo0iuBVUAoEhDiMpPYhB2hCpsvZpMTolEfGhQ8oyGjDZQHGrNXflRisdQvZqMZAA",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "1415 SW 32nd Ave, Miami, FL 33145, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.7580575,
+                    "lng": -80.246222
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.75940332989273,
+                        "lng": -80.24514927010728
+                    },
+                    "southwest": {
+                        "lat": 25.75670367010728,
+                        "lng": -80.24784892989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "6ef6ff72b1b53546993282a584d50327716897dc",
+            "name": "Coral Gate Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2448,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA_oM9ZAop4nrP6OxPWaT1MrFKRUfQ05JfLl1EaKonaUc0lgu8kxNM5zjP4nC1sjo_jvvP7hw5BbsLpPnrUFW_GWmsIZGOm6xp8-18MvuwHtGpwnrwfXaLSqjedRKGK2NmEhCvphfgYa1WfM8_aUgOb0ntGhTbek6mvXyCBkR383Hyt8LfNiPYSA",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJr6XIAKe32YgR06AfYpkn63s",
+            "rating": 4.5,
+            "reference": "CmRbAAAAGVwA5fmCTU0NNxJM1UI1KaqsXmT_iu0FZxVtEdagI_klJCSqp0fNOJefEqJ-MannuGiTXqJpUGz22pIfngClbJYXxCWrkzGY05OU41zboSr46RGKXtICnOlOa4P1qK-QEhALYO_K3GTbw0qKdtgL7tgfGhRsu5TpPrO2Hd1bcm_iYC65FDS27g",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "2301 SW 13th St, Miami, FL 33145, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.7608041,
+                    "lng": -80.2326607
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.76194602989272,
+                        "lng": -80.23130452010727
+                    },
+                    "southwest": {
+                        "lat": 25.75924637010727,
+                        "lng": -80.23400417989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "d222cf45f25974db5de11fa6f410311176f3caed",
+            "name": "Bryan Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAoZgtKvIkmrSe73IY-rctdAKoX9KNnPUglfDwy4txQvzPzIOVI_swE1MxbFq0QX27Jc0AnBlPGSY6ZPLIOXGRurJegPZrSthh_nytuWH0DeUnozgbo3xalt2D0LMT3k9LEhBW4BFNshJg8xJErsTZkgBmGhQ16CTH4dBriZR0IRizsTCkE4jHhw",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJndXdGwC32YgRZaJDl7tWyn0",
+            "rating": 4.2,
+            "reference": "CmRbAAAAaNnns2MLNJwYUX2Nwh0HB7sqqQvsv60q_8LhM6kP3ixvQxRXiTohQsA5sBQ4dhni0txKXizQQ5m_6f9Iw5VDLFyyV4nqrXEonf6N6wFtEN_aBLHDErH52dDOBX2jvhVPEhDns_TphMfNAWIqsR4zi3GEGhQrFIyQrcogbBwfnF3WHrJ5td_kcA",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "101 NW 34th St, Miami, FL 33127, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.8087876,
+                    "lng": -80.19849620000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.80979812989272,
+                        "lng": -80.19713362010728
+                    },
+                    "southwest": {
+                        "lat": 25.80709847010727,
+                        "lng": -80.19983327989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "e897861a2e6247140ed8c5645303745fe568a635",
+            "name": "Roberto Clemente Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAyZQEigsnN1U09RQTxYbc4hfxa8cPFGz3Sapvbg9zgQVYDjdxHerZkmHEihl1TwReLJ3CFNkBerNHINtnRWv7d0scqlkkvGpdkN1zZQKXjyX2dixalHlZgXreCRqArPXoEhDPQXh5M9ap61XLpbHJv3AZGhQuFtgp8XicK8M3-OqLNghfC666RA",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJYadOC1Kx2YgRLQub_duy9NQ",
+            "rating": 4.3,
+            "reference": "CmRbAAAAt8LWtdRNSP42JnkWfRxkvj-0c5MTydwaZAEVzq_DzMm2d7NfO7ffNfWv8BJpp3DmXImNDkFtD-5OgPhMAY4Flmkq4gRGRzno3kz70-3mfwBPzsT7HpU3rwPJgW5L0RK7EhDA3KzoNfudZfuZegl4aaA1GhTibDVCAjybi78TOJRQDR7klRId8A",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "1801 NW S River Dr, Miami, FL 33125, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.7851453,
+                    "lng": -80.2241145
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.78614597989272,
+                        "lng": -80.22300412010728
+                    },
+                    "southwest": {
+                        "lat": 25.78344632010728,
+                        "lng": -80.22570377989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "7332c20758c03f46d30aa828d25d9b907a20e71a",
+            "name": "Sewell Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2160,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA1eeCC5HYHTzfz0r0Q9ugQiTBGthFbrWthR_95Gb9kfliF0qWkEUIxCwSGlmm2Dw78KNPYd_nBsNB-qFgjU4MKsqYp2BaqVBWp282MP5-0aclIJAx8dMtcWjwY1gY1f5uEhB71lEDoNTX70lkm_1HF0_WGhTF00343M5nz9JWh3Q5lyKQhFhWDA",
+                    "width": 3840
+                }
+            ],
+            "place_id": "ChIJDU5gr9222YgRm335OCMGtYo",
+            "rating": 4.1,
+            "reference": "CmRbAAAAqXeVU3y1mpzHRIb2aHzZDvyjB3SNeXTVjwVPgW0zWI9CF1yVIxrc2p_RBtkIo5rBIUlK7hKs7MBBZR4bKpTYJREmnRxbW0JrI-30dbyLvDB_z-_IOE3Kn7lqJNUGtji9EhCYxnFnWzwdqYfhIFSLlzZMGhSYXDgGtU5_98I2NEEoInz4G6JhXg",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "4020 Virginia Beach Dr, Miami, FL 33149, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.7361041,
+                    "lng": -80.1559039
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.73745392989272,
+                        "lng": -80.15455407010728
+                    },
+                    "southwest": {
+                        "lat": 25.73475427010728,
+                        "lng": -80.15725372989273
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "2f7633a10556ecc0d35682385a39192059601902",
+            "name": "Historic Virginia Key Beach Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAV9bgShQH3FzlPHq-cEzp__hQd45EDL3TNDr_kuSNS5y6uKq1qhu2ZsgFEO8eO7X9NMukSTWobf-fpOqx-CLY4yaa8TDO-Mp77WZi1UGDHwI45gW2-ybUPnZFrR3PMLmcEhB_Q8NMf-PGujVEc1oFloGoGhS2OHX8sJ-2uD7kQbH1RnpF28Ky8A",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJW3QVPLe12YgR0KU7s72boRI",
+            "rating": 4.5,
+            "reference": "CmRbAAAAQ7e9JRG1JfX8GO1KAjQtOcPg-MVxbezCWZKLFvE4IxCGIHmfCMGzsPgF-cCMEHYTNOOn5g0JZIVxObJBzw77osU5Mj53HYX2m89Ch1f79BqSYs6XKUrQKrRfPGYO3ChlEhBmWkWZDLdJ-wi9gLvV-i76GhQetL5K1q4jY6Q90gxAxWshPOFDsw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "1717 NW 5 Ave, Miami, FL 33136, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.792259,
+                    "lng": -80.20228999999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.79360427989272,
+                        "lng": -80.20138927010728
+                    },
+                    "southwest": {
+                        "lat": 25.79090462010728,
+                        "lng": -80.20408892989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "266970cc077346446469d29afe01e84604829cfb",
+            "name": "Williams Park",
+            "opening_hours": {
+                "open_now": true,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAxeCQHMIsxebR3Q2KF656bnpMNhggeCq5pBy3QdkcgtBatvZeRJ5uuSBlzPWxGB94DmSYWWltr7HBdEg_gkhY4OhicqAIlbn0OMgtXlCkRZhoGNRUY_QzPZDqKfDmz4ZoEhBlF8XKmXUHKRXggqVjKFmqGhTIYHHHpSPUmUpgdEdGVF96cMGrWw",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJX0upfbq22YgRvxgWjd6YMSg",
+            "rating": 4.4,
+            "reference": "CmRbAAAAGOjnEKLvTAPDovzTGDtFeWbmyVV3gvhOnIuS0BSrjlH4sBoeFjxdUod-jCX1Y0g4viVOsq-JlZ6l5xBzPUAqkVGSYB0PF5dkSjOyJHxsw-EK5mM5EHzIPPqAcImxRmR9EhD65l20WoK0V0f_BHmy5ZikGhRQGP0B5CV4MdW0TPz-KDn7o06fDw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "4355 SW 42nd Ave, Miami, FL 33133, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.7113711,
+                    "lng": -80.2599012
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.71270422989272,
+                        "lng": -80.25912832010728
+                    },
+                    "southwest": {
+                        "lat": 25.71000457010727,
+                        "lng": -80.26182797989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "c19d21d71eefc925126633ab635a22533174181c",
+            "name": "Merrie Christmas Park",
+            "photos": [
+                {
+                    "height": 2988,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAndQQlTPaYNlbFx5GhAQdKiEAskwBLuPFRSm0NVcSHDLGtpLb8uGVEK2BLK5QY-K05_Z5VKpc7QBR8zkCbxGu1uN5REtzMvfvElCYBemOvxv1Yq1BwoOFu17gUyZMxODEEhA2a0Mq-l3Zxea4uOYpK6aLGhS6JDVUFI4Ke7AFfGcxOTwUujS6KQ",
+                    "width": 5312
+                }
+            ],
+            "place_id": "ChIJrSv8KRzI2YgRLXdgp_-6fSU",
+            "rating": 4.4,
+            "reference": "CmRbAAAA0BhTmUWtSJBNgjzeDU4fIlS9fZLUGCD92B8RtHQhQEcl38AUX8kRnEwheMGt7YR4aOJsiOYOVEhH6dYwxWfXHAMZacJzNMnJQQmsPk-vIrljbEhYK1KbwyLGcVVbMIqpEhD23plWEcwAw6c1Ihn6IOSwGhSg2AMhPC2X7fAT6tnMsVydHRrJqQ",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "6731 SW 33rd St, Miami, FL 33155, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.7406943,
+                    "lng": -80.30916309999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.74204412989272,
+                        "lng": -80.30781327010726
+                    },
+                    "southwest": {
+                        "lat": 25.73934447010728,
+                        "lng": -80.31051292989271
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "96fd6851a6bef0587ecbf5e2d6e6f3dd15eb3678",
+            "name": "AD Barnes Park",
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAA7D09QZrrRtUqmlPr9p5Lrts9vJ_bdvY7v81y-cT62dpOXehwMQGMrc0_Z8eJBlNs3sWRiqW9ccGhAKKKAa6kh8Hx14o89f7N-pTQY_N9Luz6gco-jagaL-dJ4ngKmasDEhDDzPpPn3NAd6cdvDEXlBC6GhQvdWE7s4VyVtYHmmmO6UXvzgK9qA",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJG4qoEGi42YgRYJkPByxzpio",
+            "rating": 4.2,
+            "reference": "CmRbAAAA4r70M4U0ZOXJVyjp5HM3_yCsWzJmTLfbaqvr3Ri6fJ5a6TqB0_uBeuUMY7U5GqfsGIaTK0dE7RTLn1CKTYzXaxwvNWvdiCV8RuEe59reYd2sV_5UXWA-vIMAKhy7v2XVEhBVK33jvHvOy91PuaM6x2dzGhR2_9kXpKpmMfAtkcFqxv-nt6OA7A",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        },
+        {
+            "formatted_address": "2820 McFarlane Rd, Miami, FL 33133, USA",
+            "geometry": {
+                "location": {
+                    "lat": 25.7256603,
+                    "lng": -80.2405536
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 25.72720537989272,
+                        "lng": -80.23894062010729
+                    },
+                    "southwest": {
+                        "lat": 25.72450572010728,
+                        "lng": -80.24164027989272
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+            "id": "37dbe411088778210332fd4a229f71d4ef3cb75d",
+            "name": "Peacock Park",
+            "opening_hours": {
+                "open_now": false,
+                "weekday_text": []
+            },
+            "photos": [
+                {
+                    "height": 2448,
+                    "html_attributions": [
+                        "Photos are copyrighted by their owners"
+                    ],
+                    "photo_reference": "CmRaAAAAxEs6ypooGNhkboWvzGmaclGFsrW8rGcHrZHBNL5YZN5GVKoLZRmri9OfFe9UCXV-Uw5CoxCLUkara1fqGDerGVpXy6D3v3PCX8lmSxcOyPUPZF4tpMgqsxmQUA4EVScfEhCbNPtQZ6CScAL_A3ZCP73HGhQbMtRJvpUQrwR3fRf9qNgoXVGPyQ",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJFyRo08-32YgR4OA0XWmeGl8",
+            "rating": 4.5,
+            "reference": "CmRbAAAAKBKL6qzlDcPS6g4aB5uZ5sqepKwcxcq0j1ZHUggXafkiMifn6RdX-ef34rIYqFZvDOV60hJlp-A4bP0DUrFb7QqYEm2BrIWNv8r77sNRhIFXKYtFzif7Js2N-lnikf8pEhDNQvWUdeSmttv9-8ZnXc4ZGhSomb94CFdilKuOO-NuKPKvjZqKXw",
+            "types": [
+                "park",
+                "point_of_interest",
+                "establishment"
+            ]
+        }
+    ],
+    "status": "OK"
+}
