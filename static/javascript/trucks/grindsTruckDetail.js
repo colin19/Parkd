@@ -1,23 +1,25 @@
 var trucksInfo = [
     [
-        'The Mighty Cone is...'
-        , '<br>...THIS PLACE IS DELICIOUS!!! Recommend the chicken cone and the cheese sticks. Mmm!'
+        '808 Grinds is...'
+        , '<br>...Awesome place to eat in Downtown Portland! I got a cheesus (think colossus but with cheese) which is a hamburger with grilled cheese sandwiches replacing the buns. It\'s a lot but it\'s super delicious. Highly recommend for the times you do go to Portland\'s downtown.'
         , '(512) - 820 - 6611'
-        , '2100 Barton Springs Rd, Austin, TX 78704'
+        , '815 SW Park Ave, Portland, OR 97205, USA'
         , 'M - F<br>11:30 am - 2:00 pm<br>5:00 pm - 9:00 pm<br>SA - SU<br>5:00 pm - 9:00 pm'
         , ['../../static/img/food/food1.png', '../../static/img/food/food2.png', '../../static/img/food/food3.png']
-        , [
-        ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
-        , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
-        , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
-        , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
-        , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
-    ]
+        , [['Spam Musubi', 'Seared marinated spam over rice, wrapped in nori (seaweed).' , '$3']
+            , ['Spam Musubi', 'Seared marinated spam over rice, wrapped in nori (seaweed).' , '$3']
+            , ['Spam Musubi', 'Seared marinated spam over rice, wrapped in nori (seaweed).' , '$3']
+            , ['Spam Musubi', 'Seared marinated spam over rice, wrapped in nori (seaweed).' , '$3']
+            , ['Kalua Pig', 'Hawaiian-Style pulled pork served naked.' , '$9']
+            , ['Kalua Pig', 'Hawaiian-Style pulled pork served naked.' , '$9']
+            , ['Kalua Pig', 'Hawaiian-Style pulled pork served naked.' , '$9']
+            , ['Kalua Pig', 'Hawaiian-Style pulled pork served naked.' , '$9']
+        ]
         , ['video_link 1', 'video_link 2']
         , 'external_link'
-        , [30.2669624, -97.77285930000001]
-        , 'https://www.facebook.com/TheMightyCone/'
-        , ['Zilker Metropolitan Park', '../parks/zilker.html']
+        , [45.5186898, -122.6814688]
+        , 'https://www.facebook.com/808GrindsPdx/?ref=br_rs'
+        , ['Director Park', '../parks/director.html']
     ]
 ];
 
