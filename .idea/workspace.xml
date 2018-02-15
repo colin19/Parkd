@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93661dad-6193-4528-9ecf-7e412f8d6e30" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/static/css/pictures.css" afterPath="$PROJECT_DIR$/static/css/photos.css" />
-      <change beforePath="$PROJECT_DIR$/templates/pictures.html" afterPath="$PROJECT_DIR$/templates/photos.html" />
+      <change beforePath="$PROJECT_DIR$/templates/parks/alberta.html" afterPath="$PROJECT_DIR$/templates/parks/alberta.html" />
+      <change beforePath="$PROJECT_DIR$/templates/parks/director.html" afterPath="$PROJECT_DIR$/templates/parks/director.html" />
+      <change beforePath="$PROJECT_DIR$/templates/parks/parkDetail.html" afterPath="$PROJECT_DIR$/templates/parks/parkDetail.html" />
+      <change beforePath="$PROJECT_DIR$/templates/parks/zilker.html" afterPath="$PROJECT_DIR$/templates/parks/zilker.html" />
+      <change beforePath="$PROJECT_DIR$/templates/trucks/grinds.html" afterPath="$PROJECT_DIR$/templates/trucks/grinds.html" />
+      <change beforePath="$PROJECT_DIR$/templates/trucks/mightyCone.html" afterPath="$PROJECT_DIR$/templates/trucks/mightyCone.html" />
+      <change beforePath="$PROJECT_DIR$/templates/trucks/pinch.html" afterPath="$PROJECT_DIR$/templates/trucks/pinch.html" />
+      <change beforePath="$PROJECT_DIR$/templates/trucks/truckDetail.html" afterPath="$PROJECT_DIR$/templates/trucks/truckDetail.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,46 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1212">
-              <caret line="87" column="140" lean-forward="false" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="140" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parks.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/parks.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1231">
-              <caret line="56" column="33" lean-forward="false" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="trucks.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/trucks.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="65" column="26" lean-forward="false" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="trucks.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/trucks.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="58" column="15" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="117" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="photos.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/photos.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,40 +33,91 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="photos.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/photos.html">
+      <file leaf-file-name="alberta.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/parks/alberta.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="34" column="88" lean-forward="true" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
-              <folding>
-                <element signature="e#2743#2749#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="photoCards.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/javascript/photos/photoCards.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="527">
+              <caret line="54" column="64" lean-forward="true" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="themightycone2.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/img/food/themightycone2.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="director.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/parks/director.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="54" column="64" lean-forward="false" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="64" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parkCards.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/javascript/parks/parkCards.js">
+      <file leaf-file-name="parkDetail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/parks/parkDetail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="16" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+            <state relative-caret-position="440">
+              <caret line="54" column="72" lean-forward="false" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="truckDetail.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/trucks/truckDetail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-50">
+              <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zilker.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/parks/zilker.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="53" column="41" lean-forward="true" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="themightycone1.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/photos/themightycone1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grinds.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/trucks/grinds.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mightyCone.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/trucks/mightyCone.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="54" column="64" lean-forward="false" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pinch.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/trucks/pinch.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="54" column="64" lean-forward="false" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -112,9 +128,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -156,19 +172,13 @@
         <option value="$PROJECT_DIR$/static/javascript/trucks/truckCards.js" />
         <option value="$PROJECT_DIR$/static/javascript/parks/parkCards.js" />
         <option value="$PROJECT_DIR$/templates/parkDetail.html" />
-        <option value="$PROJECT_DIR$/templates/parks/zilker.html" />
         <option value="$PROJECT_DIR$/static/javascript/parks/parkDetail.js" />
         <option value="$PROJECT_DIR$/static/javascript/parks/zilkerParkDetail.js" />
-        <option value="$PROJECT_DIR$/templates/parks/director.html" />
         <option value="$PROJECT_DIR$/templates/parks/albert.html" />
         <option value="$PROJECT_DIR$/static/javascript/parks/directorParkDetail.js" />
         <option value="$PROJECT_DIR$/static/javascript/parks/mightyConeTruckDetail.js" />
         <option value="$PROJECT_DIR$/static/javascript/parks/albertaParkDetail.js" />
-        <option value="$PROJECT_DIR$/templates/trucks/grinds.html" />
-        <option value="$PROJECT_DIR$/templates/trucks/mightyCone.html" />
-        <option value="$PROJECT_DIR$/templates/trucks/pinch.html" />
         <option value="$PROJECT_DIR$/static/css/parkDetail.css" />
-        <option value="$PROJECT_DIR$/templates/parks/alberta.html" />
         <option value="$PROJECT_DIR$/static/css/truckDetail.css" />
         <option value="$PROJECT_DIR$/static/javascript/trucks/mightyConeTruckDetail.js" />
         <option value="$PROJECT_DIR$/static/javascript/trucks/grindsTruckDetail.js" />
@@ -184,6 +194,16 @@
         <option value="$PROJECT_DIR$/templates/photos.html" />
         <option value="$PROJECT_DIR$/static/css/photos.css" />
         <option value="$PROJECT_DIR$/static/javascript/photos/photoCards.js" />
+        <option value="$PROJECT_DIR$/static/css/photoDetail.css" />
+        <option value="$PROJECT_DIR$/static/javascript/photos/photoDetail.js" />
+        <option value="$PROJECT_DIR$/templates/parks/alberta.html" />
+        <option value="$PROJECT_DIR$/templates/parks/director.html" />
+        <option value="$PROJECT_DIR$/templates/parks/parkDetail.html" />
+        <option value="$PROJECT_DIR$/templates/parks/zilker.html" />
+        <option value="$PROJECT_DIR$/templates/trucks/grinds.html" />
+        <option value="$PROJECT_DIR$/templates/trucks/mightyCone.html" />
+        <option value="$PROJECT_DIR$/templates/trucks/pinch.html" />
+        <option value="$PROJECT_DIR$/templates/trucks/truckDetail.html" />
       </list>
     </option>
   </component>
@@ -236,12 +256,6 @@
               <item name="Parkd" type="b2602c69:ProjectViewProjectNode" />
               <item name="Parkd" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Parkd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -274,36 +288,12 @@
             <path>
               <item name="Parkd" type="b2602c69:ProjectViewProjectNode" />
               <item name="Parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="jquery" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Parkd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Parkd" type="462c0819:PsiDirectoryNode" />
               <item name="static_data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Parkd" type="b2602c69:ProjectViewProjectNode" />
               <item name="Parkd" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Parkd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="parks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Parkd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="photos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Parkd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="trucks" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -354,17 +344,18 @@
       <option name="presentableId" value="Default" />
       <updated>1518474750173</updated>
       <workItem from="1518474752187" duration="18953000" />
-      <workItem from="1518562766833" duration="38908000" />
+      <workItem from="1518562766833" duration="39312000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57861000" />
+    <option name="totallyTimeSpent" value="58265000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="15" y="35" width="1596" height="929" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -534,16 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/parks/director.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="54" column="63" lean-forward="false" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
-          <folding>
-            <element signature="e#5360#5366#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/javascript/parks/directorParkDetail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
@@ -560,42 +541,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/parks/parkDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="54" column="61" lean-forward="false" selection-start-line="54" selection-start-column="53" selection-end-line="54" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/parks/zilker.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="23" column="26" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/trucks/pinch.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-645">
-          <caret line="92" column="18" lean-forward="true" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/javascript/parks/albertaParkDetail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/parks/alberta.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="100" column="18" lean-forward="false" selection-start-line="100" selection-start-column="18" selection-end-line="100" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -608,34 +557,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/trucks/mightyCone.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1215">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/javascript/trucks/pinchTruckDetail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="27" column="62" lean-forward="false" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/trucks/grinds.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="84" column="25" lean-forward="true" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/trucks/truckDetail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="168" column="10" lean-forward="true" selection-start-line="163" selection-start-column="4" selection-end-line="168" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -693,14 +618,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/javascript/parks/parkCards.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="16" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/trucks.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -717,28 +634,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/photos/themightycone1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/img/food/themightycone3.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/img/food/themightycone2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/photos.css">
+    <entry file="file://$PROJECT_DIR$/static/css/photoDetail.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -751,13 +655,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/img/food/themightycone2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/javascript/parks/parkCards.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="16" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/javascript/photos/photoDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/photos.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
+        <state relative-caret-position="307">
           <caret line="34" column="88" lean-forward="true" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
           <folding>
-            <element signature="e#2743#2749#0" expanded="true" />
+            <element signature="e#2743#2749#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/photos.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/parks/alberta.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="54" column="64" lean-forward="true" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/parks/director.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="54" column="64" lean-forward="false" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/parks/parkDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="54" column="72" lean-forward="false" selection-start-line="54" selection-start-column="72" selection-end-line="54" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/parks/zilker.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="53" column="41" lean-forward="true" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/photos/themightycone1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/trucks/grinds.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/trucks/mightyCone.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="54" column="64" lean-forward="false" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/trucks/pinch.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="54" column="64" lean-forward="false" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/trucks/truckDetail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
