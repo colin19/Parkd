@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Instance: Truck</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../static/css/truckDetail.css" rel="stylesheet">
+    <link href="../../static/css/transparentNavbar.css">
+</head>
+
+<div class="header">
+    <div class="intro">
+        <div class="emptySpace">
+            <br>
+        </div>
+        <h1>The Mighty Cone</h1>
+        <p>Permanent stop of a celebrated food truck doling out spicy, fried meats & veggies in tortilla cones</p>
+        <div class="emptySpace">
+            <br>
+        </div>
+    </div> <!-- intro -->
+
+    <!-- Navigation -->
+    <nav class="toTheTop transparentNav navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">Parkd.US</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Collapse navbar items -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../trucks.html">Trucks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../parks.html">Parks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../photos.html">Photos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>  <!-- container -->
+    </nav> <!-- navbar -->
+
+</div>  <!-- header -->
+
+
+
+
+<body class="bodyTruck">
+<!-- facebook sdk -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div class="sectionDivider"></div>
+<div class="info container-fluid">
+    <div class="row">
+        <!-- Description -->
+        <div class="col-8">
+            <div id="basicDescription" class="basicInfo basicDescription">
+                <h1></h1>
+                <p></p>
+            </div>
+            <br>
+            <br>
+            <div id="phoneInfo" class="basicInfo phoneInfo basicDescription">
+                <h1></h1>
+                <p></p>
+            </div>
+            <div id="hourInfo" class="basicInfo hourInfo basicDescription">
+                <h1></h1>
+                <p></p>
+            </div>
+            <div id="parkInfo" class="basicInfo parkInfo basicDescription">
+                <h1></h1>
+                <p></p>
+            </div>
+        </div>
+
+        <div class="col-4">
+            <div class="basicInfoCol">
+                <!-- Social Media -->
+                <div id='mediaFeeds' class="mediaFeeds basicInfo">
+                </div>
+                <br>
+                <div id="locationInfo" class="locationInfo basicInfo">
+                    <h1></h1>
+                    <p></p>
+                </div>
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="sectionDivider">
+    <br>
+</div>
+<!-- carousel -->
+<div class="carousel-container container-fluid">
+    <div class="sectionTitle">
+        <h1 class="text-center">Photos</h1>
+        <br>
+    </div>
+    <div id="carouselExampleIndicators" class="foodCarousel carousel slide" data-ride="carousel">
+
+        <div id="carousel-list" class="carousel-inner" role="listbox">
+        </div>
+
+        <a class="carousel-control carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>  <!-- carousel -->
+</div>
+
+<div class="sectionDivider">
+    <br>
+</div>
+
+<!-- menu -->
+<div class="menu-grid">
+    <div class="menu-content">
+        <div class="sectionTitle">
+            <h1 class="text-center">Menu</h1>
+            <br>
+            <br>
+        </div>
+        <div id="menuGrid">
+        </div>
+        <div class="space">
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+</div> <!-- end of grid -->
+
+<!-- Footer -->
+<div class="footer">
+    <br>
+    <p class="footerText text-center text-white">Parkd.US &copy; 2018</p>
+    <br>
+</div>
+
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="../../static/jquery/jquery.min.js"></script>
+<script src="../../static/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../static/javascript/trucks/mightyConeTruckDetail.js"></script>
+
+<!-- Google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDAr3AbkaYlYX_BXWDQulywnMX0SXM1v4&callback=initMap" async defer>
+</script>
+
+</body>
+
+</html>

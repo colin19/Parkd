@@ -15,18 +15,35 @@
     height: auto;
 }
 
-.bodyTruck{
+#photoImg{
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.headerPhoto{
+    width: 100%;
+    height: auto;
+}
+
+.bodyPhoto{
     position: relative;
     width: 100%;
     height: auto;
 }
 
-.transparentNav>div>a {
+.tintNav {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    background-image:none;
+    box-shadow:none;
+}
+
+.tintNav>div>a {
     font-size: 30px;
     color:#fff;
 }
 
-.transparentNav .navbar-nav>li>a {
+.tintNav .navbar-nav>li>a {
     font-size: 20px;
     color:#fff;
 }
@@ -35,20 +52,6 @@
     margin:10px 0;
     background: #000000;
     color: #ffffff;
-}
-
-.intro{
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: auto;
-    background:
-            linear-gradient(
-                    rgba(0, 0, 0, 0.6),
-                    rgba(0, 0, 0, 0.6)
-            ),
-            url(../img/trucks/food-trucks-7.jpg);
-    background-size: cover;
 }
 
 .emptySpace{
@@ -109,63 +112,21 @@
     width: 90%;
 }
 
-.phoneInfo h1, .hourInfo h1, .parkInfo h1{
+.truckInfo h1, .hourInfo h1, .parkInfo h1{
     font-size: 22px;
 }
 
-.phoneInfo p, .hourInfo p, .locationInfo p, .mediaFeeds p, .parkInfo p{
+.truckInfo p, .hourInfo p, .locationInfo p, .mediaFeeds p, .parkInfo p{
     font-size: 18px;
 }
 
-.carousel-container{
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: auto;
-}
-
-.foodCarousel{
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: auto;
-}
-
-.carousel-inner, .carousel-item{
-    width: 100%;
-    height: auto;
-}
-
-.carousel-item>img {
-    width: 100%;
-    height: auto;
-}
 
 #map {
-     height: 250px;
-     width: 300px;
+    height: 250px;
+    width: 300px;
 }
 
-.menu-card{
-    background-color:transparent !important;
-    border-color:transparent;
-    background-image:none;
-    box-shadow:none;
-}
 
-.menu-grid{
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: auto;
-}
-
-.menu-content{
-    position: relative;
-    left: 10%;
-    width: 86%;
-    height: auto;
-}
 
 .footer {
     position: relative;
