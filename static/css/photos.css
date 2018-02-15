@@ -25,7 +25,7 @@
                     rgba(0, 0, 0, 0.6),
                     rgba(0, 0, 0, 0.6)
             ),
-            url(../img/trucks/food-trucks-1.jpg);
+            url(../img/food/food4.png);
     background-size: cover;
 }
 
@@ -93,16 +93,16 @@
     border-radius: 5px;
 }
 
-.truckCardTitle{
+.photoCardTitle{
     text-align: center;
     font-family: "Verdana";
 }
 
-.truckCardText{
+.photoCardText{
     color: #a9a9a9;
 }
 
-.truckCardBtn{
+.photoCardBtn{
     border-radius: 28px;
 }
 
