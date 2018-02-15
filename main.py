@@ -39,8 +39,9 @@ def park_page():
 def park(name):
 	return render_template("/parks/%s" % name)
 
+@app.route("/photos")
 @app.route("/photos.html")
-def photos:
+def photos():
 	return render_template("photos.html")
 
 
