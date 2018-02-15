@@ -20,13 +20,6 @@
     top: 0;
     width: 100%;
     height: auto;
-    background:
-            linear-gradient(
-                    rgba(0, 0, 0, 0.6),
-                    rgba(0, 0, 0, 0.6)
-            ),
-            url(../img/parks/park1.png);
-    background-size: cover;
 }
 
 .intro h1 {
@@ -93,16 +86,16 @@
     border-radius: 5px;
 }
 
-.parkCardTitle{
+.pictureCardTitle{
     text-align: center;
     font-family: "Verdana";
 }
 
-.parkCardText{
+.pictureCardText{
     color: #a9a9a9;
 }
 
-.parkCardBtn{
+.pictureCardBtn{
     border-radius: 28px;
 }
 

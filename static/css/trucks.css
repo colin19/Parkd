@@ -74,11 +74,11 @@
     position: relative;
     width: 100%;
     height: auto;
-    background-color: #F8F8FF;
+    background-color: white;
 }
 
 .card-container{
-    background-color: #F8F8FF;
+    background-color: white;
 }
 
 .shadowCard {
@@ -104,4 +104,15 @@
 
 .truckCardBtn{
     border-radius: 28px;
+}
+
+.footer {
+    position: relative;
+    left: 0;
+    top: 120px;
+    width: 100%;
+    height: 100px;
+    background-color: #212F3C;
+    color: white;
+    text-align: center;
 }
