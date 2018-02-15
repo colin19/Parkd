@@ -39,6 +39,10 @@ def park_page():
 def park(name):
 	return render_template("/parks/%s" % name)
 
+@app.route("/photos.html")
+def photos:
+	return render_template("photos.html")
+
 
 if __name__ == "__main__":
 	app.run(host='0.0.0.0', debug=True, port=80)
