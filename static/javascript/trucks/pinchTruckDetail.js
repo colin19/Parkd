@@ -1,22 +1,30 @@
 var trucksInfo = [
     [
-        'The Mighty Cone is...'
-        , '<br>...THIS PLACE IS DELICIOUS!!! Recommend the chicken cone and the cheese sticks. Mmm!'
+        'Pinch is...'
+        , '<br>...an urban food lab established in winter 2016 by Yuzhuo Liu ' +
+    'and Phoebe Cheng, a young Asian couple and UT Austin alumni. Raised in a Chinese ' +
+    'family with restaurant industry background, Yuzhuo inherited the skills of home-style ' +
+    'cooking from his father. He also applies his degree in Mathematics in cooking to ' +
+    'exercise precision and to ensure quality standard of each dish served simulating ' +
+    'a lab experiment. Pinch provides food items suitable in a modern, urbanized, and ' +
+    'diverse city-setting at a college-friendly price range.'
         , '(512) - 820 - 6611'
-        , '2100 Barton Springs Rd, Austin, TX 78704'
+        , '518 W 24th St, Austin, TX 78703'
         , 'M - F<br>11:30 am - 2:00 pm<br>5:00 pm - 9:00 pm<br>SA - SU<br>5:00 pm - 9:00 pm'
         , ['../../static/img/food/food1.png', '../../static/img/food/food2.png', '../../static/img/food/food3.png']
-        , [
-        ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
-        , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
-        , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
-        , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
-        , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
+        , [['food1', 'rye whisky, sweet vermouth, bitters' , '$5']
+        , ['food2', 'rye whisky, sweet vermouth, bitters' , '$5']
+        , ['food3', 'rye whisky, sweet vermouth, bitters' , '$5']
+        , ['food4', 'rye whisky, sweet vermouth, bitters' , '$5']
+        , ['food5', 'rye whisky, sweet vermouth, bitters' , '$5']
+        , ['food6', 'rye whisky, sweet vermouth, bitters' , '$5']
+        , ['food7', 'rye whisky, sweet vermouth, bitters' , '$5']
+        , ['food8', 'rye whisky, sweet vermouth, bitters' , '$5']
     ]
         , ['video_link 1', 'video_link 2']
         , 'external_link'
-        , [30.2669624, -97.77285930000001]
-        , 'https://www.facebook.com/TheMightyCone/'
+        , [30.287736, -97.742705]
+        , 'https://www.facebook.com/pinchthefoodtrailer/'
         , ['Zilker Metropolitan Park', '../parks/zilker.html']
     ]
 ];
@@ -25,6 +33,16 @@ function getTruckDescription(){
     var html = '';
     html += '<h1>' + trucksInfo[0][0] + '</h1>';
     html += '<p>' + trucksInfo[0][1] + '</p>';
+    return html;
+}
+
+function getParkInfo(){
+    var html = '';
+    var parkName = trucksInfo[0][11][0];
+    var parkLink = trucksInfo[0][11][1];
+
+    html += '<h1>Nearby Park</h1>';
+    html += '<a href="' + parkLink + '">' + parkName + '</a>';
     return html;
 }
 
@@ -77,16 +95,6 @@ function getTruckFacebookFeeds(){
     html += '<a href="' + facebookLink + '">Pinch</a>';
     html += '</blockquote></div>';
 
-    return html;
-}
-
-function getParkInfo(){
-    var html = '';
-    var parkName = trucksInfo[0][11][0];
-    var parkLink = trucksInfo[0][11][1];
-
-    html += '<h1>Nearby Park</h1>';
-    html += '<a href="' + parkLink + '">' + parkName + '</a>';
     return html;
 }
 

@@ -7,12 +7,12 @@ var trucksInfo = [
         , 'M - F<br>11:30 am - 2:00 pm<br>5:00 pm - 9:00 pm<br>SA - SU<br>5:00 pm - 9:00 pm'
         , ['../../static/img/food/food1.png', '../../static/img/food/food2.png', '../../static/img/food/food3.png']
         , [
-        ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
-        , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
-        , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
-        , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
-        , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
-    ]
+            ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
+            , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
+            , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
+            , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
+            , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
+        ]
         , ['video_link 1', 'video_link 2']
         , 'external_link'
         , [30.2669624, -97.77285930000001]
