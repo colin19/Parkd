@@ -47,7 +47,7 @@
                     rgba(0, 0, 0, 0.6),
                     rgba(0, 0, 0, 0.6)
             ),
-            url(../img/parks/zilker-2.png);
+            url(../img/parks/park1.png);
     background-size: cover;
 }
 
@@ -176,4 +176,8 @@
     background-color: #212F3C;
     color: white;
     text-align: center;
+}
+
+.card-title a:link, .card-title a:visited, .card-title a:hover, .card-title a:active{
+    color: black;
 }

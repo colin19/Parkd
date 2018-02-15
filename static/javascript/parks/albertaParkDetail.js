@@ -1,23 +1,22 @@
 var parksInfo = [
     [
-        'Zilker Metropolitan Park is...'
-        , '<br>Zilker Metropolitan Park is considered "Austin\'s most-loved park." ' +
-    'This 351-acre metropolitan park is home to a variety of recreation opportunities, ' +
-    'facilities and special events for individuals and families.'
+        'Alberta Park is...'
+        , '<br>Alberta Park is a park located in northeast Portland, Oregon. Acquired in 1921, the park includes a basketball court, dog off-leash area, playground, soccer field, softball field and tennis court.'
         , 'missing phone #'
-        , '2100 Barton Springs Rd, Austin, TX 78704, USA'
+        , '1905 NE Killingsworth St, Portland, OR 97211, USA'
         , 'Open Now'
-        , ['../../static/img/parks/zilker-1.png', '../../static/img/parks/zilker-2.png', '../../static/img/parks/zilker-3.png']
-        , [['The Mighty Cone', 'American & tacos' , '$', '../trucks/mightyCone.html']
-        , ['Pinch', 'Fried Chicken Bento' , '$$', '../trucks/pinch.html']
-        , ['The Mighty Cone', 'American & tacos' , '$', '../trucks/mightyCone.html']
-        , ['Pinch', 'Fried Chicken Bento' , '$$', '../trucks/pinch.html']
-        , ['The Mighty Cone', 'American & tacos' , '$', '../trucks/mightyCone.html']
+        , ['../../static/img/parks/albert-1.png', '../../static/img/parks/albert-2.png']
+        , [
+        ['The Grilled Cheese Grill', 'Sandwiches' , '$', '../trucks/grill.html']
+        , ['The Grilled Cheese Grill', 'Sandwiches' , '$', '../trucks/grill.html']
+        , ['The Grilled Cheese Grill', 'Sandwiches' , '$', '../trucks/grill.html']
+        , ['The Grilled Cheese Grill', 'Sandwiches' , '$', '../trucks/grill.html']
+        , ['The Grilled Cheese Grill', 'Sandwiches' , '$', '../trucks/grill.html']
     ]
         , ['video_link 1', 'video_link 2']
         , 'external_link'
-        , [30.2669624, -97.77285930000001]
-        , 'https://www.facebook.com/zilkerparkaustin360/'
+        , [45.5644753, -122.6451045]
+        , 'https://www.facebook.com/PortlandParks/'
     ]
 ];
 
