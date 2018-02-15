@@ -31,7 +31,7 @@
     <!-- Navigation -->
     <nav class="toTheTop transparentNav navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Parkd.US</a>
+            <a class="navbar-brand" href="/">Parkd.US</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,13 +40,13 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="trucks.html">Trucks</a>
+                        <a class="nav-link" href="/trucks">Trucks</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Model #2</a>
@@ -65,32 +65,49 @@
 
 
 <body class="bodyTruck">
-    <div class="sectionDivider">
-        <br>
-    </div>
+    <!-- facebook sdk -->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <div class="sectionDivider"></div>
     <div class="info container-fluid">
         <div class="row">
             <!-- Description -->
-            <div class="col-9">
+            <div class="col-8">
                 <div id="basicDescription" class="basicInfo basicDescription">
                     <h1></h1>
                     <p></p>
                 </div>
+                <br>
+                <br>
+                <div id="phoneInfo" class="basicInfo phoneInfo basicDescription">
+                    <h1></h1>
+                    <p></p>
+                </div>
+                <div id="hourInfo" class="basicInfo hourInfo basicDescription">
+                    <h1></h1>
+                    <p></p>
+                </div>
             </div>
-            <div class="col-3">
+
+            <div class="col-4">
                 <div class="basicInfoCol">
-                    <div id="phoneInfo" class="basicInfo phoneInfo">
+                    <!-- Social Media -->
+                    <div id='mediaFeeds' class="mediaFeeds basicInfo">
+                    </div>
+                    <br>
+                    <div id="locationInfo" class="locationInfo basicInfo">
                         <h1></h1>
                         <p></p>
                     </div>
-                    <div id="hourInfo" class="basicInfo hourInfo">
-                        <h1></h1>
-                        <p></p>
-                    </div>
-                    <div id="locationInfo" class="basicInfo locationInfo">
-                        <h1></h1>
-                        <p></p>
-                    </div>
+                    <div id="map"></div>
                 </div>
             </div>
         </div>
@@ -99,9 +116,12 @@
     <div class="sectionDivider">
         <br>
     </div>
-
     <!-- carousel -->
     <div class="carousel-container container-fluid">
+        <div class="sectionTitle">
+            <h1 class="text-center">Photos</h1>
+            <br>
+        </div>
         <div id="carouselExampleIndicators" class="foodCarousel carousel slide" data-ride="carousel">
 
             <div id="carousel-list" class="carousel-inner" role="listbox">
@@ -124,18 +144,20 @@
 
     <!-- menu -->
     <div class="menu-grid">
-        <div class="menuTitle">
-            <h1 class="text-center">Menu</h1>
-            <br>
-            <br>
-        </div>
-        <div id="menuGrid">
-        </div>
-        <div class="space">
-            <br>
-            <br>
-            <br>
-            <br>
+        <div class="menu-content">
+            <div class="sectionTitle">
+                <h1 class="text-center">Menu</h1>
+                <br>
+                <br>
+            </div>
+            <div id="menuGrid">
+            </div>
+            <div class="space">
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
         </div>
     </div> <!-- end of grid -->
 
@@ -152,6 +174,10 @@
     <script src="../static/jquery/jquery.min.js"></script>
     <script src="../static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../static/javascript/trucks/truckDetail.js"></script>
+
+    <!-- Google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDAr3AbkaYlYX_BXWDQulywnMX0SXM1v4&callback=initMap" async defer>
+    </script>
 
 </body>
 
