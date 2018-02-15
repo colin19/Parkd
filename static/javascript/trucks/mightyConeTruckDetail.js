@@ -1,56 +1,57 @@
-var parksInfo = [
+var trucksInfo = [
     [
-        'Alberta Park is...'
-        , '<br>Alberta Park is a park located in northeast Portland, Oregon. Acquired in 1921, the park includes a basketball court, dog off-leash area, playground, soccer field, softball field and tennis court.'
-        , 'missing phone #'
-        , '1905 NE Killingsworth St, Portland, OR 97211, USA'
-        , 'Open Now'
-        , ['../../static/img/parks/albert-1.png', '../../static/img/parks/albert-2.png']
+        'The Mighty Cone is...'
+        , '<br>...THIS PLACE IS DELICIOUS!!! Recommend the chicken cone and the cheese sticks. Mmm!'
+        , '(512) - 820 - 6611'
+        , '2100 Barton Springs Rd, Austin, TX 78704'
+        , 'M - F<br>11:30 am - 2:00 pm<br>5:00 pm - 9:00 pm<br>SA - SU<br>5:00 pm - 9:00 pm'
+        , ['../../static/img/food/food1.png', '../../static/img/food/food2.png', '../../static/img/food/food3.png']
         , [
-        ['The Grilled Cheese Grill', 'Sandwiches' , '$', '../trucks/grinds.html']
-        , ['The Grilled Cheese Grill', 'Sandwiches' , '$', '../trucks/grinds.html']
-        , ['The Grilled Cheese Grill', 'Sandwiches' , '$', '../trucks/grinds.html']
-        , ['The Grilled Cheese Grill', 'Sandwiches' , '$', '../trucks/grinds.html']
-        , ['The Grilled Cheese Grill', 'Sandwiches' , '$', '../trucks/grinds.html']
-    ]
+            ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
+            , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
+            , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
+            , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
+            , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
+        ]
         , ['video_link 1', 'video_link 2']
         , 'external_link'
-        , [45.5644753, -122.6451045]
-        , 'https://www.facebook.com/PortlandParks/'
+        , [30.2669624, -97.77285930000001]
+        , 'https://www.facebook.com/TheMightyCone/'
+        , ['Zilker Metropolitan Park', '../parks/zilker.html']
     ]
 ];
 
-function getParkDescription(){
+function getTruckDescription(){
     var html = '';
-    html += '<h1>' + parksInfo[0][0] + '</h1>';
-    html += '<p>' + parksInfo[0][1] + '</p>';
+    html += '<h1>' + trucksInfo[0][0] + '</h1>';
+    html += '<p>' + trucksInfo[0][1] + '</p>';
     return html;
 }
 
-function getParkPhoneInfo(){
+function getTruckPhoneInfo(){
     var html = '';
     html += '<h1>Phone</h1>';
-    html += '<p>' + parksInfo[0][2] + '</p>';
+    html += '<p>' + trucksInfo[0][2] + '</p>';
     return html;
 }
 
-function getParkLocationInfo(){
+function getTruckLocationInfo(){
     var html = '';
     html += '<h3>Location</h3>';
-    html += '<p>' + parksInfo[0][3] + '</p>';
+    html += '<p>' + trucksInfo[0][3] + '</p>';
     return html;
 }
 
-function getParkHourInfo(){
+function getTruckHourInfo(){
     var html = '';
     html += '<h1>Hours</h1>';
-    html += '<p>' + parksInfo[0][4] + '</p>';
+    html += '<p>' + trucksInfo[0][4] + '</p>';
     return html;
 }
 
-function getParkImages(){
+function getTruckImages(){
     var html = '';
-    var pictureList = parksInfo[0][5];
+    var pictureList = trucksInfo[0][5];
 
     var i;
     for(i=0; i<pictureList.length; i++){
@@ -65,9 +66,9 @@ function getParkImages(){
     return html;
 }
 
-function getParkFacebookFeeds(){
+function getTruckFacebookFeeds(){
     var html = '';
-    var facebookLink = parksInfo[0][10];
+    var facebookLink = trucksInfo[0][10];
 
     html += '<h3>Media Feeds</h3>';
     html += '<br>';
@@ -79,15 +80,25 @@ function getParkFacebookFeeds(){
     return html;
 }
 
+function getParkInfo(){
+    var html = '';
+    var parkName = trucksInfo[0][11][0];
+    var parkLink = trucksInfo[0][11][1];
+
+    html += '<h1>Park</h1>';
+    html += '<a href="' + parkLink + '">' + parkName + '</a>';
+    return html;
+}
+
 // Get the html of the menu item
-function getMenuItem(name, subtitle, price, link) {
+function getMenuItem(name, subtitle, price) {
     var html = '';
     html += '<div class="menu-card card">';
     html += '<div class="container-fluid">';
     html += '<div class="row">';
     html += '<div class="col-6">';
     html += '<div class="food-name">';
-    html += '<h5 class="card-title">' + '<a href="' + link + '">' + name + '</a>' +'</h5>';
+    html += '<h5 class="card-title">' + name +'</h5>';
     html += '<h6 class="card-subtitle mb-2 text-muted">' + subtitle + '<br><br></h6>';
     html += '</div></div>';
     html += '<div class="col-6">';
@@ -98,13 +109,13 @@ function getMenuItem(name, subtitle, price, link) {
 
 // Get html of the menu
 function getMenu(){
-    var menuList = parksInfo[0][6];
+    var menuList = trucksInfo[0][6];
 
     var html = '';
     html += '<div class="card-group">';
     var i;
     for(i = 0; i < menuList.length; i++){
-        html += getMenuItem(menuList[i][0], menuList[i][1], menuList[i][2], menuList[i][3]);
+        html += getMenuItem(menuList[i][0], menuList[i][1], menuList[i][2]);
         if(i%3 === 2){
             html += '</div><div class="card-group">';
         }
@@ -129,7 +140,7 @@ function insertHTML(id, html) {
 }
 
 function initMap() {
-    var uluru = {lat: parksInfo[0][9][0], lng: parksInfo[0][9][1]};
+    var uluru = {lat: trucksInfo[0][9][0], lng: trucksInfo[0][9][1]};
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 15,
         center: uluru
@@ -141,21 +152,24 @@ function initMap() {
 }
 
 // This function loads the card view
-function loadParkInfo() {
-    var htmlDescription = getParkDescription();
+function loadTruckInfo() {
+    var htmlDescription = getTruckDescription();
     insertHTML('basicDescription', htmlDescription);
-
-    var htmlLocation = getParkLocationInfo();
+    var htmlPhone = getTruckPhoneInfo();
+    insertHTML('phoneInfo', htmlPhone);
+    var htmlLocation = getTruckLocationInfo();
     insertHTML('locationInfo', htmlLocation);
-    var htmlHours = getParkHourInfo();
+    var htmlHours = getTruckHourInfo();
     insertHTML('hourInfo', htmlHours);
-    var parkImage = getParkImages();
-    insertHTML('carousel-list', parkImage);
-    var parkMenu = getMenu();
-    insertHTML('menuGrid', parkMenu);
-    var parkFacebookFeed = getParkFacebookFeeds();
-    insertHTML('mediaFeeds', parkFacebookFeed);
+    var truckImage = getTruckImages();
+    insertHTML('carousel-list', truckImage);
+    var truckMenu = getMenu();
+    insertHTML('menuGrid', truckMenu);
+    var truckFacebookFeed = getTruckFacebookFeeds();
+    insertHTML('mediaFeeds', truckFacebookFeed);
+    var truckParkInfo = getParkInfo();
+    insertHTML('parkInfo', truckParkInfo);
 }
 
 // Run everything when the document loads.
-window.onload = loadParkInfo;
+window.onload = loadTruckInfo;

@@ -1,31 +1,25 @@
 var trucksInfo = [
     [
-        'Pinch is...'
-        , '<br>...an urban food lab established in winter 2016 by Yuzhuo Liu ' +
-    'and Phoebe Cheng, a young Asian couple and UT Austin alumni. Raised in a Chinese ' +
-    'family with restaurant industry background, Yuzhuo inherited the skills of home-style ' +
-    'cooking from his father. He also applies his degree in Mathematics in cooking to ' +
-    'exercise precision and to ensure quality standard of each dish served simulating ' +
-    'a lab experiment. Pinch provides food items suitable in a modern, urbanized, and ' +
-    'diverse city-setting at a college-friendly price range.'
+        '808 Grinds is...'
+        , '<br>...Awesome place to eat in Downtown Portland! I got a cheesus (think colossus but with cheese) which is a hamburger with grilled cheese sandwiches replacing the buns. It\'s a lot but it\'s super delicious. Highly recommend for the times you do go to Portland\'s downtown.'
         , '(512) - 820 - 6611'
         , '518 W 24th St, Austin, TX 78703'
         , 'M - F<br>11:30 am - 2:00 pm<br>5:00 pm - 9:00 pm<br>SA - SU<br>5:00 pm - 9:00 pm'
         , ['../../static/img/food/food1.png', '../../static/img/food/food2.png', '../../static/img/food/food3.png']
-        , [['food1', 'rye whisky, sweet vermouth, bitters' , '$5']
-        , ['food2', 'rye whisky, sweet vermouth, bitters' , '$5']
-        , ['food3', 'rye whisky, sweet vermouth, bitters' , '$5']
-        , ['food4', 'rye whisky, sweet vermouth, bitters' , '$5']
-        , ['food5', 'rye whisky, sweet vermouth, bitters' , '$5']
-        , ['food6', 'rye whisky, sweet vermouth, bitters' , '$5']
-        , ['food7', 'rye whisky, sweet vermouth, bitters' , '$5']
-        , ['food8', 'rye whisky, sweet vermouth, bitters' , '$5']
-    ]
+        , [['Spam Musubi', 'Seared marinated spam over rice, wrapped in nori (seaweed).' , '$3']
+            , ['Spam Musubi', 'Seared marinated spam over rice, wrapped in nori (seaweed).' , '$3']
+            , ['Spam Musubi', 'Seared marinated spam over rice, wrapped in nori (seaweed).' , '$3']
+            , ['Spam Musubi', 'Seared marinated spam over rice, wrapped in nori (seaweed).' , '$3']
+            , ['Kalua Pig', 'Hawaiian-Style pulled pork served naked.' , '$9']
+            , ['Kalua Pig', 'Hawaiian-Style pulled pork served naked.' , '$9']
+            , ['Kalua Pig', 'Hawaiian-Style pulled pork served naked.' , '$9']
+            , ['Kalua Pig', 'Hawaiian-Style pulled pork served naked.' , '$9']
+        ]
         , ['video_link 1', 'video_link 2']
         , 'external_link'
-        , [30.287736, -97.742705]
-        , 'https://www.facebook.com/pinchthefoodtrailer/'
-        , ['Zilker Metropolitan Park', '../parks/zilker.html']
+        , [45.5186898, -122.6814688]
+        , 'https://www.facebook.com/808GrindsPdx/?ref=br_rs'
+        , ['Director Park', '../parks/director.html']
     ]
 ];
 
@@ -85,6 +79,16 @@ function getTruckFacebookFeeds(){
     html += '<a href="' + facebookLink + '">Pinch</a>';
     html += '</blockquote></div>';
 
+    return html;
+}
+
+function getParkInfo(){
+    var html = '';
+    var parkName = trucksInfo[0][11][0];
+    var parkLink = trucksInfo[0][11][1];
+
+    html += '<h1>Park</h1>';
+    html += '<a href="' + parkLink + '">' + parkName + '</a>';
     return html;
 }
 

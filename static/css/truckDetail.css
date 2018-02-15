@@ -47,7 +47,7 @@
                     rgba(0, 0, 0, 0.6),
                     rgba(0, 0, 0, 0.6)
             ),
-            url(../img/trucks/food-trucks-10.jpg);
+            url(../img/trucks/food-trucks-7.jpg);
     background-size: cover;
 }
 
@@ -109,11 +109,11 @@
     width: 90%;
 }
 
-.phoneInfo h1, .hourInfo h1{
+.phoneInfo h1, .hourInfo h1, .parkInfo h1{
     font-size: 22px;
 }
 
-.phoneInfo p, .hourInfo p, .locationInfo p, .mediaFeeds p{
+.phoneInfo p, .hourInfo p, .locationInfo p, .mediaFeeds p, .parkInfo p{
     font-size: 18px;
 }
 
