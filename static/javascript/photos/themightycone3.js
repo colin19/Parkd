@@ -1,8 +1,8 @@
 var photosInfo = [
     [
         '# the mighty cone'
-        , 'Yumm! #austin #themightycone'
-        , '../../static/img/food/themightycone1.png'
+        , 'The Might Cone was calling our name this afternoon and what better way to eat but besides on Barton Springs on a cool day.'
+        , '../../static/img/food/themightycone3.png'
         , '2100 Barton Springs Rd, Austin, TX 78704, USA'
         , [30.2669624, -97.77285930000001]
         , 'https://www.facebook.com/TheMightyCone/'

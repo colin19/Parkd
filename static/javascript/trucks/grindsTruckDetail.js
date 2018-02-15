@@ -3,7 +3,7 @@ var trucksInfo = [
         '808 Grinds is...'
         , '<br>...Awesome place to eat in Downtown Portland! I got a cheesus (think colossus but with cheese) which is a hamburger with grilled cheese sandwiches replacing the buns. It\'s a lot but it\'s super delicious. Highly recommend for the times you do go to Portland\'s downtown.'
         , '(512) - 820 - 6611'
-        , '518 W 24th St, Austin, TX 78703'
+        , '815 SW Park Ave, Portland, OR 97205, USA'
         , 'M - F<br>11:30 am - 2:00 pm<br>5:00 pm - 9:00 pm<br>SA - SU<br>5:00 pm - 9:00 pm'
         , ['../../static/img/food/food1.png', '../../static/img/food/food2.png', '../../static/img/food/food3.png']
         , [['Spam Musubi', 'Seared marinated spam over rice, wrapped in nori (seaweed).' , '$3']
