@@ -1,5 +1,6 @@
 var trucksInfo = [
-    ['Pinch is...'
+    [
+        'Pinch is...'
         , '<br>...an urban food lab established in winter 2016 by Yuzhuo Liu ' +
             'and Phoebe Cheng, a young Asian couple and UT Austin alumni. Raised in a Chinese ' +
             'family with restaurant industry background, Yuzhuo inherited the skills of home-style ' +
@@ -22,12 +23,14 @@ var trucksInfo = [
         ]
         , ['video_link 1', 'video_link 2']
         , 'external_link'
+        , [30.287736, -97.742705]
+        , 'https://www.facebook.com/pinchthefoodtrailer/'
     ]
 ];
 
 function getTruckDescription(){
     var html = '';
-    html += '<h1>' + trucksInfo[0][0] + '</h1><br>';
+    html += '<h1>' + trucksInfo[0][0] + '</h1>';
     html += '<p>' + trucksInfo[0][1] + '</p>';
     return html;
 }
@@ -41,7 +44,7 @@ function getTruckPhoneInfo(){
 
 function getTruckLocationInfo(){
     var html = '';
-    html += '<h1>Location</h1>';
+    html += '<h3>Location</h3>';
     html += '<p>' + trucksInfo[0][3] + '</p>';
     return html;
 }
@@ -66,6 +69,20 @@ function getTruckImages(){
         }
         html += '<img class=\"d-block img-fluid\" src=\"' + pictureList[i] + '\" alt=\"image\"></div>';
     }
+
+    return html;
+}
+
+function getTruckFacebookFeeds(){
+    var html = '';
+    var facebookLink = trucksInfo[0][10];
+
+    html += '<h3>Media Feeds</h3>';
+    html += '<br>';
+    html += '<div class="fb-page" data-href="' + facebookLink + '" data-tabs="timeline" data-width="300" data-height="280" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">';
+    html += '<blockquote cite="' + facebookLink + '" class="fb-xfbml-parse-ignore">';
+    html += '<a href="' + facebookLink + '">Pinch</a>';
+    html += '</blockquote></div>';
 
     return html;
 }
@@ -119,6 +136,18 @@ function insertHTML(id, html) {
     el.innerHTML = html;
 }
 
+function initMap() {
+    var uluru = {lat: trucksInfo[0][9][0], lng: trucksInfo[0][9][1]};
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 18,
+        center: uluru
+    });
+    var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+    });
+}
+
 // This function loads the card view
 function loadTruckInfo() {
     var htmlDescription = getTruckDescription();
@@ -126,14 +155,15 @@ function loadTruckInfo() {
     var htmlPhone = getTruckPhoneInfo();
     insertHTML('phoneInfo', htmlPhone);
     var htmlLocation = getTruckLocationInfo();
-    insertHTML('hourInfo', htmlLocation);
+    insertHTML('locationInfo', htmlLocation);
     var htmlHours = getTruckHourInfo();
-    insertHTML('locationInfo', htmlHours);
+    insertHTML('hourInfo', htmlHours);
     var truckImage = getTruckImages();
     insertHTML('carousel-list', truckImage);
     var truckMenu = getMenu();
     insertHTML('menuGrid', truckMenu);
-
+    var truckFacebookFeed = getTruckFacebookFeeds();
+    insertHTML('mediaFeeds', truckFacebookFeed);
 }
 
 // Run everything when the document loads.

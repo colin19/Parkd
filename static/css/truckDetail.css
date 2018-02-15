@@ -58,7 +58,7 @@
 
 .sectionDivider{
     width: 100%;
-    height: 80px;
+    height: 42px;
 }
 
 .intro h1 {
@@ -66,7 +66,7 @@
     color:#fff;
     position: relative;
     left: 0;
-    top: 30%;
+    top: 0;
     width: 66%;
     margin-left: 20%;
 }
@@ -76,7 +76,7 @@
     color:#fff;
     position: relative;
     left: 0;
-    top: 38%;
+    top: 0;
     width: 66%;
     margin-left: 20%;
 }
@@ -91,7 +91,7 @@
 .basicDescription{
     position: relative;
     left: 8%;
-    top: 3.6%;
+    top: 0;
     right: 8%;
     width: 83.6%;
 }
@@ -103,17 +103,17 @@
 
 .basicInfoCol{
     position: relative;
+    top: 0;
     left: 3.6%;
-    top: 3.6%;
-    right: 3.6%;
-    width: 92.8%;
+    right: 4.6%;
+    width: 90%;
 }
 
-.phoneInfo h1, .hourInfo h1, .locationInfo h1{
+.phoneInfo h1, .hourInfo h1{
     font-size: 22px;
 }
 
-.phoneInfo p, .hourInfo p, .locationInfo p{
+.phoneInfo p, .hourInfo p, .locationInfo p, .mediaFeeds p{
     font-size: 18px;
 }
 
@@ -141,10 +141,9 @@
     height: auto;
 }
 
-.menu-grid{
-    position: relative;
-    left: 5%;
-    width: 90%;
+#map {
+     height: 250px;
+     width: 300px;
 }
 
 .menu-card{
@@ -158,6 +157,13 @@
     position: relative;
     top: 0;
     width: 100%;
+    height: auto;
+}
+
+.menu-content{
+    position: relative;
+    left: 10%;
+    width: 86%;
     height: auto;
 }
 
