@@ -15,23 +15,30 @@ def splash_page():
 def truck_page():
 	return render_template("trucks.html")
 
+@app.route("/trucks/<name>")
+def truck_details(name):
+	return render_template("/trucks/%s" % name)
+
 @app.route("/truckDetail.html")
 @app.route("/truckDetail")
 def truck_detail():
-	return render_template("truckDetail.html")
+	return render_template("/trucks/truckDetail.html")
 
-"""
+
 @app.route("/about")
-@app.route("/about.html)
+@app.route("/about.html")
 def about_page():
 	return render_template("about.html")
 
-@app.route(/parks)
-@app.route(/parks.html)
+@app.route("/parks")
+@app.route("/parks.html")
 def park_page():
 	return render_template("parks.html")
 
-"""
+@app.route("/parks/<name>")
+def park(name):
+	return render_template("/parks/%s" % name)
+
 
 if __name__ == "__main__":
 	app.run(host='0.0.0.0', debug=True, port=80)
