@@ -1,30 +1,23 @@
 var trucksInfo = [
     [
-        'Pinch is...'
-        , '<br>...an urban food lab established in winter 2016 by Yuzhuo Liu ' +
-            'and Phoebe Cheng, a young Asian couple and UT Austin alumni. Raised in a Chinese ' +
-            'family with restaurant industry background, Yuzhuo inherited the skills of home-style ' +
-            'cooking from his father. He also applies his degree in Mathematics in cooking to ' +
-            'exercise precision and to ensure quality standard of each dish served simulating ' +
-            'a lab experiment. Pinch provides food items suitable in a modern, urbanized, and ' +
-            'diverse city-setting at a college-friendly price range.'
+        'The Mighty Cone is...'
+        , '<br>...THIS PLACE IS DELICIOUS!!! Recommend the chicken cone and the cheese sticks. Mmm!'
         , '(512) - 820 - 6611'
-        , '518 W 24th St, Austin, TX 78703'
+        , '2100 Barton Springs Rd, Austin, TX 78704'
         , 'M - F<br>11:30 am - 2:00 pm<br>5:00 pm - 9:00 pm<br>SA - SU<br>5:00 pm - 9:00 pm'
-        , ['../static/img/food/food1.png', '../static/img/food/food2.png', '../static/img/food/food3.png']
-        , [['food1', 'rye whisky, sweet vermouth, bitters' , '$5']
-            , ['food2', 'rye whisky, sweet vermouth, bitters' , '$5']
-            , ['food3', 'rye whisky, sweet vermouth, bitters' , '$5']
-            , ['food4', 'rye whisky, sweet vermouth, bitters' , '$5']
-            , ['food5', 'rye whisky, sweet vermouth, bitters' , '$5']
-            , ['food6', 'rye whisky, sweet vermouth, bitters' , '$5']
-            , ['food7', 'rye whisky, sweet vermouth, bitters' , '$5']
-            , ['food8', 'rye whisky, sweet vermouth, bitters' , '$5']
-        ]
+        , ['../../static/img/food/food1.png', '../../static/img/food/food2.png', '../../static/img/food/food3.png']
+        , [
+        ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
+        , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
+        , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
+        , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
+        , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
+    ]
         , ['video_link 1', 'video_link 2']
         , 'external_link'
-        , [30.287736, -97.742705]
-        , 'https://www.facebook.com/pinchthefoodtrailer/'
+        , [30.2669624, -97.77285930000001]
+        , 'https://www.facebook.com/TheMightyCone/'
+        , ['Zilker Metropolitan Park', '../parks/zilker.html']
     ]
 ];
 
@@ -87,6 +80,16 @@ function getTruckFacebookFeeds(){
     return html;
 }
 
+function getParkInfo(){
+    var html = '';
+    var parkName = trucksInfo[0][11][0];
+    var parkLink = trucksInfo[0][11][1];
+
+    html += '<h1>Nearby Park</h1>';
+    html += '<a href="' + parkLink + '">' + parkName + '</a>';
+    return html;
+}
+
 // Get the html of the menu item
 function getMenuItem(name, subtitle, price) {
     var html = '';
@@ -139,7 +142,7 @@ function insertHTML(id, html) {
 function initMap() {
     var uluru = {lat: trucksInfo[0][9][0], lng: trucksInfo[0][9][1]};
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 18,
+        zoom: 15,
         center: uluru
     });
     var marker = new google.maps.Marker({
@@ -164,6 +167,8 @@ function loadTruckInfo() {
     insertHTML('menuGrid', truckMenu);
     var truckFacebookFeed = getTruckFacebookFeeds();
     insertHTML('mediaFeeds', truckFacebookFeed);
+    var truckParkInfo = getParkInfo();
+    insertHTML('parkInfo', truckParkInfo);
 }
 
 // Run everything when the document loads.
