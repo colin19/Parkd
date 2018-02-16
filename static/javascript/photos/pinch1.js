@@ -1,7 +1,7 @@
 var photosInfo = [
     [
         '# pinch'
-        , 'I don\'t just eat cookies all day! This heap of meat is the kalua pig from @808grinds and it\'s delicious! their habanero teriyaki sauce is delicious too! '
+        , 'Really like this place! Have eaten here several times and it has always been a great experience. So happy that these guys are in my neighbourhood. Try the pork sliders or the avocado salad. Keep up the good work guys.'
         , '../../static/img/food/pinch1.png'
         , '518 W 24th St, Austin, TX 78703'
         , [30.287736, -97.742705]

@@ -5,7 +5,7 @@ var trucksInfo = [
         , '(512) - 820 - 6611'
         , '2100 Barton Springs Rd, Austin, TX 78704'
         , 'M - F<br>11:30 am - 2:00 pm<br>5:00 pm - 9:00 pm<br>SA - SU<br>5:00 pm - 9:00 pm'
-        , ['../../static/img/food/food1.png', '../../static/img/food/food2.png', '../../static/img/food/food3.png']
+        , ['../../static/img/food/themightycone1.png', '../../static/img/food/themightycone2.png', '../../static/img/food/themightycone3.png']
         , [
             ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
             , ['Chicken-Avocado', 'Combine the chicken or shrimp with the avocado' , '$6.75']
