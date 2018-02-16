@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93661dad-6193-4528-9ecf-7e412f8d6e30" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/static/css/about.css" afterPath="$PROJECT_DIR$/static/css/about.css" />
-      <change beforePath="$PROJECT_DIR$/static/javascript/about/teamInfo.js" afterPath="$PROJECT_DIR$/static/javascript/about/teamInfo.js" />
-      <change beforePath="$PROJECT_DIR$/static/javascript/parks/parkCards.js" afterPath="$PROJECT_DIR$/static/javascript/parks/parkCards.js" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html" afterPath="$PROJECT_DIR$/templates/about.html" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change beforePath="$PROJECT_DIR$/templates/parks/director.html" afterPath="$PROJECT_DIR$/templates/parks/director.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/static/img/about/austen.png" afterPath="$PROJECT_DIR$/static/img/about/austen.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/about/colin.png" afterPath="$PROJECT_DIR$/static/img/about/colin.png" />
+      <change beforePath="$PROJECT_DIR$/static/img/about/diego.png" afterPath="$PROJECT_DIR$/static/img/about/diego.png" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,11 +19,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="about.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="59" column="94" lean-forward="false" selection-start-line="59" selection-start-column="94" selection-end-line="59" selection-end-column="94" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-516">
-              <caret line="97" column="12" lean-forward="true" selection-start-line="97" selection-start-column="12" selection-end-line="97" selection-end-column="12" />
+            <state relative-caret-position="308">
+              <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -71,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zilker.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="zilker.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/parks/zilker.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="45" column="63" lean-forward="false" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
+            <state relative-caret-position="506">
+              <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -218,8 +226,8 @@
     <handled-path value="$PROJECT_DIR$/static/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="39" />
-    <option name="y" value="25" />
+    <option name="x" value="5" />
+    <option name="y" value="23" />
     <option name="width" value="1596" />
     <option name="height" value="929" />
   </component>
@@ -368,15 +376,15 @@
       <option name="presentableId" value="Default" />
       <updated>1518474750173</updated>
       <workItem from="1518474752187" duration="18953000" />
-      <workItem from="1518562766833" duration="63586000" />
+      <workItem from="1518562766833" duration="64663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82539000" />
+    <option name="totallyTimeSpent" value="83616000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="39" y="25" width="1596" height="929" extended-state="0" />
+    <frame x="5" y="23" width="1596" height="929" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2495238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -748,14 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-167">
-          <caret line="66" column="44" lean-forward="false" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/photos.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="422">
@@ -767,14 +767,6 @@
     <entry file="file://$PROJECT_DIR$/templates/parks/parkDetail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="771">
-          <caret line="45" column="63" lean-forward="false" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/parks/zilker.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
           <caret line="45" column="63" lean-forward="false" selection-start-line="45" selection-start-column="63" selection-end-line="45" selection-end-column="63" />
           <folding />
         </state>
@@ -828,10 +820,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="59" column="94" lean-forward="false" selection-start-line="59" selection-start-column="94" selection-end-line="59" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-516">
-          <caret line="97" column="12" lean-forward="true" selection-start-line="97" selection-start-column="12" selection-end-line="97" selection-end-column="12" />
+        <state relative-caret-position="308">
+          <caret line="14" column="44" lean-forward="true" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/parks/zilker.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
           <folding />
         </state>
       </provider>
