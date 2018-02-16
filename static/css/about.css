@@ -97,6 +97,33 @@
     height: 200px;
 }
 
+.websiteDescription h1{
+    margin-left: 7%;
+}
+
+.websiteDescription p{
+    color: #515A5A ;
+    font-size: 20px;
+    width: 86%;
+    margin-left: 7%;
+}
+
+.websiteDescription li{
+    color: #515A5A ;
+    font-size: 20px;
+    width: 90%;
+    margin-left: 7%;
+}
+
+.team-info p{
+    color: #515A5A ;
+    font-size: 16px;
+}
+
+.team-photo-header{
+    text-align: center;
+}
+
 .footer {
     position: relative;
     left: 0;
