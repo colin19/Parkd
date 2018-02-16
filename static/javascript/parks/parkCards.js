@@ -16,7 +16,7 @@ var data = [
         'Director Park'
         , '../static/img/parks/director-1.png'
         , 'Rating: 4.3<br>815 SW Park Ave, Portland, OR 97205, USA'
-        , 'parks/alberta.html'
+        , 'parks/director.html'
     ]
 ];
 
