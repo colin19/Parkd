@@ -11,7 +11,7 @@ var trucksInfo = [
         , '(512) - 820 - 6611'
         , '518 W 24th St, Austin, TX 78703'
         , 'M - F<br>11:30 am - 2:00 pm<br>5:00 pm - 9:00 pm<br>SA - SU<br>5:00 pm - 9:00 pm'
-        , ['../../static/img/food/food1.png', '../../static/img/food/food2.png', '../../static/img/food/food3.png']
+        , ['../../static/img/food/pinch1.png']
         , [['food1', 'rye whisky, sweet vermouth, bitters' , '$5']
         , ['food2', 'rye whisky, sweet vermouth, bitters' , '$5']
         , ['food3', 'rye whisky, sweet vermouth, bitters' , '$5']

@@ -1,27 +1,20 @@
 // pictures and description for the food trucks
 var data = [
-    ['Don Japanese Kitchen', '../static/img/trucks/food-trucks-1.jpg'
-        , 'Japanese craft your own donburi spot with hefty portions'
-    + ', creative toppings & novelty beverages.<br>'
-    + '2716 Guadalupe St <br>' +
-    + 'Comfort food · Quick bite · Fast service'],
-    ['Song La', '../static/img/trucks/food-trucks-2.jpg'
-        , 'Hip food truck offering pork belly buns, bubble tea & other'
-    + ' traditional Taiwanese snack foods.<br>'
-    + '411 W 23rd St'],
-    ['Food Truck 3', '../static/img/trucks/food-trucks-3.jpg', 'This is Food Truck 3<br>Simple trailer with picnic tables for tacos with spit-grilled meats or veggie options, plus migas.<br>' +
-    '1704 E Cesar Chavez St'],
-    ['Food Truck 4', '../static/img/trucks/food-trucks-4.jpg', 'This is Food Truck 4<br>This food truck outside the Vortex theater dishes up old-school Italian standards & housemade pasta.<br>' +
-    '2307 Manor Rd'],
-    ['Food Truck 5', '../static/img/trucks/food-trucks-5.jpg', 'This is Food Truck 5<br> Asian Fusion Restaurant<br>' +
-    'Casual eatery with retro flair known for banh mi tacos & other Asian-fusion fare & a whiskey menu.<br>' +
-    '5520 Burnet Rd #100<br>'],
-    ['Food Truck 6', '../static/img/trucks/food-trucks-6.jpg', 'This is Food Truck 6. Unit HP, 2806, 502 W 30th St<br>' +
-    'Late-night food · Comfort food · Small plates'],
-    ['Food Truck 7', '../static/img/trucks/food-trucks-7.jpg', 'This is Food Truck 7<br>Quirky hot-pink food trailer doling our Southern Louisiana-style street eats amid picnic tables.<br>' +
-    '1016 E 6th St'],
-    ['Food Truck 8', '../static/img/trucks/food-trucks-8.jpg', 'This is Food Truck 8.<br>Unit HP, 2806, 502 W 30th St'],
-    ['Food Truck 9', '../static/img/trucks/food-trucks-9.jpg', 'This is Food Truck 9.<br>Unit HP, 2806, 502 W 30th St']
+    [
+        '808 Grinds', '../static/img/trucks/grinds1.png'
+        , 'Awesome place to eat in Downtown Portland! <br>815 SW Park Ave, Portland, OR 97205, USA'
+        , 'trucks/grinds.html'
+    ],
+    [
+        'The Mighty Cone', '../static/img/trucks/themightycone1.png'
+        , 'THIS PLACE IS DELICIOUS!!! Recommend the chicken cone and the cheese sticks. Mmm! <br>2100 Barton Springs Rd, Austin, TX 78704'
+        , 'trucks/mightyCone.html'
+    ],
+    [
+        'Pinch', '../static/img/trucks/pinch1.png'
+        , 'an urban food lab established in winter 2016 by Yuzhuo Liu <br>518 W 24th St, Austin, TX 78703'
+        , 'trucks/pinch.html'
+    ]
 ];
 
 // number of cards
@@ -35,7 +28,7 @@ function addCards() {
     for(i = 0; i < nCard; i++){
         var randomTruck = Math.floor(Math.random() * data.length);
         var truckInfo = data[randomTruck];
-        html += getTruckCard(truckInfo[0], truckInfo[2], truckInfo[1]) + '\n';
+        html += getTruckCard(truckInfo[0], truckInfo[2], truckInfo[1], truckInfo[3]) + '\n';
     }
 
     return html;
@@ -43,7 +36,7 @@ function addCards() {
 
 
 // Get the html of a card
-function getTruckCard(truckName, description, img) {
+function getTruckCard(truckName, description, img, link) {
     var html = '';
     html += '<div class=\"shadowCard card\">';
     html += '<img class=\"shadowImg card-img-top img-fluid\" src=\"' + img + '\" alt=\"' + truckName + '\">';
@@ -51,7 +44,7 @@ function getTruckCard(truckName, description, img) {
     html += '<h4 class=\"truckCardTitle card-title\">' + truckName + '</h4>';
     html += '<p class=\"truckCardText card-text\">'+ description + '</p>';
     html += '<div class=\"truckCardBtnContainer text-center\">';
-    html += '<a href=\"truckDetail\" class=\"btn btn-info truckCardBtn\">More Info</a>';
+    html += '<a href=\"' + link + '\" class=\"btn btn-info truckCardBtn\">More Info</a>';
     html += '</div>';
     html += '</div>\n' + '</div>';
 

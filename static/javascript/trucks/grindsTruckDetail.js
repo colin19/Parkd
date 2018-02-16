@@ -5,7 +5,7 @@ var trucksInfo = [
         , '(512) - 820 - 6611'
         , '815 SW Park Ave, Portland, OR 97205, USA'
         , 'M - F<br>11:30 am - 2:00 pm<br>5:00 pm - 9:00 pm<br>SA - SU<br>5:00 pm - 9:00 pm'
-        , ['../../static/img/food/food1.png', '../../static/img/food/food2.png', '../../static/img/food/food3.png']
+        , ['../../static/img/food/grinds1.png', '../../static/img/food/grinds2.png', '../../static/img/food/grinds3.png']
         , [['Spam Musubi', 'Seared marinated spam over rice, wrapped in nori (seaweed).' , '$3']
             , ['Spam Musubi', 'Seared marinated spam over rice, wrapped in nori (seaweed).' , '$3']
             , ['Spam Musubi', 'Seared marinated spam over rice, wrapped in nori (seaweed).' , '$3']
