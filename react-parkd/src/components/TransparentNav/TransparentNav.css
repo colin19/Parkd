@@ -2,6 +2,12 @@
  * Author: Parkd
  */
 
+.toTheTop{
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
 .transparentNav {
     background-color:transparent !important;
     border-color:transparent;

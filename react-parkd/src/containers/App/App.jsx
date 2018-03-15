@@ -3,7 +3,9 @@ import logo from '../../logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
-import TransparentNav from '../../components/TransparentNav/TransparentNav';
+import IntroHeader from '../../components/intro-header/IntroHeader';
+import '../../components/intro-header/IntroHeader.css';
+
 import Footer from '../../components/Footer/Footer';
 
 
@@ -12,7 +14,7 @@ class App extends Component {
         return (
             <Router>
                 <div className="App">
-                    <TransparentNav/>
+                    <IntroHeader/>
                     <header className="App-header">
                         <img src={logo} className="App-logo" alt="logo" />
                         <h1 className="App-title">Welcome to React</h1>
@@ -21,6 +23,11 @@ class App extends Component {
                         To get started, edit <code>src/App.js</code> and save to reload.
                     </p>
                     <Footer/>
+                </div>
+
+                <div>
+                    <Route exact path={"/"} component={App}/>
+                    <Route exact path="about" component={About}/>
                 </div>
             </Router>
         );
