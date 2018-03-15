@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import {Navbar, Nav, NavItem} from 'react-bootstrap';
 import {LinkContainer, IndexLinkContainer} from 'react-router-bootstrap';
 
-
 import './TransparentNav.css';
 
 export default class TransparentNav extends Component{
