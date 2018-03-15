@@ -4,6 +4,7 @@ import './App.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import TransparentNav from '../../components/TransparentNav/TransparentNav';
+import Footer from '../../components/Footer/Footer';
 
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
                     <p className="App-intro">
                         To get started, edit <code>src/App.js</code> and save to reload.
                     </p>
+                    <Footer/>
                 </div>
             </Router>
         );
