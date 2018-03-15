@@ -1,0 +1,26 @@
+/*!
+ * Author: Parkd
+ */
+
+.transparentNav {
+    background-color:transparent !important;
+    border-color:transparent;
+    background-image:none;
+    box-shadow:none;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    color:#fff;
+}
+
+.navbar-item {
+    font-size: 20px;
+    color:#fff;
+}
+
+.navbar-toggle {
+    margin:10px 0;
+    background: #000000;
+    color: #ffffff;
+}
