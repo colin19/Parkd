@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93661dad-6193-4528-9ecf-7e412f8d6e30" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/components/intro-header/IntroHeader.jsx" afterPath="$PROJECT_DIR$/react-parkd/src/components/intro-header/IntroHeader.jsx" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/react-parkd/src/containers/About/About.css" afterPath="$PROJECT_DIR$/react-parkd/src/containers/About/About.css" />
       <change beforePath="$PROJECT_DIR$/react-parkd/src/containers/About/About.jsx" afterPath="$PROJECT_DIR$/react-parkd/src/containers/About/About.jsx" />
     </list>
@@ -52,38 +52,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="About.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="About.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/About/About.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="140" column="35" lean-forward="false" selection-start-line="140" selection-start-column="35" selection-end-line="140" selection-end-column="35" />
+            <state relative-caret-position="-121">
+              <caret line="80" column="38" lean-forward="true" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <marker date="1521169656102" expanded="true" signature="6505:7023" ph="..." />
-                <marker date="1521169656102" expanded="true" signature="6628:7000" ph="..." />
-                <marker date="1521169656102" expanded="true" signature="7564:7817" ph="..." />
-                <marker date="1521169656102" expanded="true" signature="7627:7681" ph="..." />
-                <marker date="1521169656102" expanded="true" signature="7744:7798" ph="..." />
-                <marker date="1521169656102" expanded="true" signature="7884:10802" ph="..." />
-                <marker date="1521169656102" expanded="true" signature="7928:7995" ph="..." />
-                <marker date="1521169656102" expanded="true" signature="8097:8146" ph="..." />
-                <marker date="1521169656102" expanded="true" signature="8200:10453" ph="..." />
-                <marker date="1521169656102" expanded="true" signature="8560:9100" ph="..." />
-                <marker date="1521169656102" expanded="true" signature="9280:9480" ph="..." />
-                <marker date="1521169656102" expanded="true" signature="9566:9807" ph="..." />
-                <marker date="1521169656102" expanded="true" signature="9956:10319" ph="..." />
-                <marker date="1521169656102" expanded="true" signature="10373:10430" ph="..." />
-                <marker date="1521169656102" expanded="true" signature="10503:10552" ph="..." />
+                <marker date="1521170266720" expanded="true" signature="6750:7268" ph="..." />
+                <marker date="1521170266720" expanded="true" signature="6873:7245" ph="..." />
+                <marker date="1521170266720" expanded="true" signature="7809:8062" ph="..." />
+                <marker date="1521170266720" expanded="true" signature="7872:7926" ph="..." />
+                <marker date="1521170266720" expanded="true" signature="7989:8043" ph="..." />
+                <marker date="1521170266720" expanded="true" signature="8129:11092" ph="..." />
+                <marker date="1521170266720" expanded="true" signature="8173:8240" ph="..." />
+                <marker date="1521170266720" expanded="true" signature="8342:8391" ph="..." />
+                <marker date="1521170266720" expanded="true" signature="8445:10743" ph="..." />
+                <marker date="1521170266720" expanded="true" signature="8805:9345" ph="..." />
+                <marker date="1521170266720" expanded="true" signature="9525:9770" ph="..." />
+                <marker date="1521170266720" expanded="true" signature="9856:10097" ph="..." />
+                <marker date="1521170266720" expanded="true" signature="10246:10609" ph="..." />
+                <marker date="1521170266720" expanded="true" signature="10663:10720" ph="..." />
+                <marker date="1521170266720" expanded="true" signature="10793:10842" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="About.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="About.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/About/About.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="56" column="22" lean-forward="false" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+            <state relative-caret-position="444">
+              <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -206,8 +206,8 @@
         <option value="$PROJECT_DIR$/react-parkd/src/components/intro-header/intro-header.jsx" />
         <option value="$PROJECT_DIR$/react-parkd/src/containers/App/App.jsx" />
         <option value="$PROJECT_DIR$/react-parkd/src/components/intro-header/IntroHeader.jsx" />
-        <option value="$PROJECT_DIR$/react-parkd/src/containers/About/About.jsx" />
         <option value="$PROJECT_DIR$/react-parkd/src/containers/About/About.css" />
+        <option value="$PROJECT_DIR$/react-parkd/src/containers/About/About.jsx" />
       </list>
     </option>
   </component>
@@ -425,12 +425,12 @@
       <updated>1518474750173</updated>
       <workItem from="1518474752187" duration="18953000" />
       <workItem from="1518562766833" duration="64691000" />
-      <workItem from="1521138705173" duration="21045000" />
+      <workItem from="1521138705173" duration="21505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104689000" />
+    <option name="totallyTimeSpent" value="105149000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="23" width="1596" height="929" extended-state="0" />
@@ -864,36 +864,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/About/About.jsx">
+    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/About/About.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="140" column="35" lean-forward="false" selection-start-line="140" selection-start-column="35" selection-end-line="140" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <marker date="1521169656102" expanded="true" signature="6505:7023" ph="..." />
-            <marker date="1521169656102" expanded="true" signature="6628:7000" ph="..." />
-            <marker date="1521169656102" expanded="true" signature="7564:7817" ph="..." />
-            <marker date="1521169656102" expanded="true" signature="7627:7681" ph="..." />
-            <marker date="1521169656102" expanded="true" signature="7744:7798" ph="..." />
-            <marker date="1521169656102" expanded="true" signature="7884:10802" ph="..." />
-            <marker date="1521169656102" expanded="true" signature="7928:7995" ph="..." />
-            <marker date="1521169656102" expanded="true" signature="8097:8146" ph="..." />
-            <marker date="1521169656102" expanded="true" signature="8200:10453" ph="..." />
-            <marker date="1521169656102" expanded="true" signature="8560:9100" ph="..." />
-            <marker date="1521169656102" expanded="true" signature="9280:9480" ph="..." />
-            <marker date="1521169656102" expanded="true" signature="9566:9807" ph="..." />
-            <marker date="1521169656102" expanded="true" signature="9956:10319" ph="..." />
-            <marker date="1521169656102" expanded="true" signature="10373:10430" ph="..." />
-            <marker date="1521169656102" expanded="true" signature="10503:10552" ph="..." />
-          </folding>
+        <state relative-caret-position="444">
+          <caret line="54" column="13" lean-forward="false" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/About/About.css">
+    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/About/About.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="56" column="22" lean-forward="false" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="-121">
+          <caret line="80" column="38" lean-forward="true" selection-start-line="80" selection-start-column="38" selection-end-line="80" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <marker date="1521170266720" expanded="true" signature="6750:7268" ph="..." />
+            <marker date="1521170266720" expanded="true" signature="6873:7245" ph="..." />
+            <marker date="1521170266720" expanded="true" signature="7809:8062" ph="..." />
+            <marker date="1521170266720" expanded="true" signature="7872:7926" ph="..." />
+            <marker date="1521170266720" expanded="true" signature="7989:8043" ph="..." />
+            <marker date="1521170266720" expanded="true" signature="8129:11092" ph="..." />
+            <marker date="1521170266720" expanded="true" signature="8173:8240" ph="..." />
+            <marker date="1521170266720" expanded="true" signature="8342:8391" ph="..." />
+            <marker date="1521170266720" expanded="true" signature="8445:10743" ph="..." />
+            <marker date="1521170266720" expanded="true" signature="8805:9345" ph="..." />
+            <marker date="1521170266720" expanded="true" signature="9525:9770" ph="..." />
+            <marker date="1521170266720" expanded="true" signature="9856:10097" ph="..." />
+            <marker date="1521170266720" expanded="true" signature="10246:10609" ph="..." />
+            <marker date="1521170266720" expanded="true" signature="10663:10720" ph="..." />
+            <marker date="1521170266720" expanded="true" signature="10793:10842" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

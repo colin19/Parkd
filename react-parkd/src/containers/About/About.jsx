@@ -40,6 +40,8 @@ export default class About extends Component{
         this.state = {
             commits: Array(6).fill(0),
             issues: Array(6).fill(0),
+            totalCommit: 0,
+            totalIssues: 0,
         };
     }
 
@@ -68,9 +70,10 @@ export default class About extends Component{
         try {
             const issues = new Array(6);
             issues.fill(0);
+            let nTotalIssues = resultIssue.length;
 
             let i;
-            for(i=0; i<resultIssue.length; i++){
+            for(i=0; i<nTotalIssues; i++){
                 let person = resultIssue[i];
                 let strGit = person.user.login;
                 let personId = GithubId2MemberId[strGit];
@@ -79,7 +82,7 @@ export default class About extends Component{
                 issues[personId] = nIssues;
             }
 
-            this.setState({issues: issues});
+            this.setState({issues: issues, totalIssues: nTotalIssues});
         } catch (error) {
             console.log("Error during updating Github issues");
         }
@@ -89,6 +92,7 @@ export default class About extends Component{
     updateGithubCommit(resultCommit) {
         try{
             const commits = this.state.commits.slice();
+            let nTotalCommit = 0;
 
             let i;
             for(i=0; i<resultCommit.length; i++){
@@ -96,10 +100,12 @@ export default class About extends Component{
                 let nCommit = person.total;
                 let strGit = person.author.login;
                 let personId = GithubId2MemberId[strGit];
+
                 commits[personId] = nCommit;
+                nTotalCommit = nTotalCommit + nCommit;
             }
 
-            this.setState({commits: commits});
+            this.setState({commits: commits, totalCommit: nTotalCommit});
         } catch (error) {
             console.log("Error during updating Github commits");
         }
@@ -182,8 +188,8 @@ export default class About extends Component{
 
                     <h1>Stat</h1>
                     <ul>
-                        <li>total no. of commits: 54</li>
-                        <li>total no. of issues: 8</li>
+                        <li>total no. of commits: {this.state.totalCommit}</li>
+                        <li>total no. of issues: {this.state.totalIssues}</li>
                         <li>total no. of unit tests: 0</li>
                     </ul>
                     <br/>
