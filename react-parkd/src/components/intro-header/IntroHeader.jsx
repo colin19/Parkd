@@ -8,6 +8,8 @@ export default class IntroHeader extends Component{
         super(props);
         this.state = {
             bgUrl: this.props.bgUrl,
+            title: this.props.title,
+            description: this.props.description,
         };
     }
 
@@ -24,8 +26,8 @@ export default class IntroHeader extends Component{
                         <br/>
                     </div>
 
-                    <h1>About Us</h1>
-                    <p>The team behind Parkd.US</p>
+                    <h1>{this.state.title}</h1>
+                    <p>{this.state.description}</p>
 
                     <div className="emptySpace">
                         <br/>
