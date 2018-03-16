@@ -6,6 +6,13 @@ import Footer from '../../components/Footer/Footer';
 import './About.css';
 
 import bgImg from '../../images/about/bg.jpg';
+import iconLin from '../../images/about/lin.png';
+import iconAusten from '../../images/about/austen.png';
+import iconColin from '../../images/about/colin.png';
+import iconJavier from '../../images/about/javier.png';
+import iconDiego from '../../images/about/diego.png';
+import iconGijs from '../../images/about/gijs.png';
+
 
 const aboutPageContent = {
     siteIntroTitle: 'About our site',
@@ -15,7 +22,58 @@ const aboutPageContent = {
     toolsDescription: 'Multiple tools were incorporated into the development of our site. On the backend, we used tools like Postman and python code in order to scrape and organize our data. For this phase of the project, we organized the data into .csv files that the front end team could enter into the website statically. Other tools that were key to our project were GitHub and slack, we used both to maximize our collaboration as a team.',
 };
 
+const teamInfo = [
+    ['Gijs Landwehr', iconGijs, 'Class of 2019', 'Drinks on average 2 gallons of milk a week.', 'Wrote the content on this page, tries and sometimes succeeds in being entertaining.', '0 commits 0 issue 0 unit tests']
+    , ['Austen Castberg', iconAusten, 'Class of 2020', 'Drinks on average 4 gallons of milk a week.', 'Worked on backend.', '0 commits 2 issue 0 unit tests']
+    , ['Colin Hall', iconColin, 'Class of 2019', 'Drinks on average 4 gallons of milk a week.', 'Also worked on backend.', '7 commits 0 issues 0 unit tests']
+    , ['Javier Banda', iconJavier, 'Class of 2019', 'Milk deficient.', 'The third member of the backend team. The frontend people making this page don\'t quite know what that means.', '0 commits 1 issue 0 unit tests']
+    , ['Diego Alcoz', iconDiego, 'Class of 2019', 'Occasional milk drinker.', 'Helped on frontend to put pages together, like this one.', '1 commit 1 issue 0 unit tests']
+    , ['Lin Guan', iconLin, 'Class of 2020', 'Milk deficient. Drink tea everyday', 'Responsible for the overall look and feel of the website. If it looks good, it was Lin. If it looks bad, not Lin.', '21 commits 6 issues 0 unit tests']
+];
+
+
 export default class About extends Component{
+
+    getPersonInfo(person){
+        return (
+                <div className='text-center'>
+                    <img className='team-photo img-circle img-fluid' src={person[1]} alt='img'/>
+                    <div>
+                        <h4>{person[0]}</h4>
+                        <p>{person[2]}</p>
+                        <p>{person[3]}</p>
+                        <p>{person[4]}</p>
+                        <p>{person[5]}</p>
+                    </div>
+                </div>
+        );
+    }
+
+    getTeamMemberInfo() {
+        let members1 = [];
+        let members2 = [];
+        let i;
+        for(i=0; i<teamInfo.length; i++){
+            let person = teamInfo[i];
+            if(i < 3){
+                members1.push(<div key={i} className='col-sm-4'>{this.getPersonInfo(person)}</div>);
+            }else{
+                members2.push(<div key={i} className='col-sm-4'>{this.getPersonInfo(person)}</div>);
+            }
+
+        }
+        return (
+            <div className="info-grid container-fluid">
+                <div id="team-info" className="row team-info">
+                    {members1}
+                </div>
+                <div id="team-info" className="row team-info">
+                    {members2}
+                </div>
+            </div>
+        );
+    }
+
     render(){
         return (
             <div>
@@ -80,13 +138,9 @@ export default class About extends Component{
                 <h1 className="team-photo-header">Group Members</h1>
                 <br/>
                 <br/>
-                <div className="info-grid container-fluid">
-                    <div id="team-info" className="row team-info">
-                    </div>
-                </div>
 
-
-
+                {/* Load team members info */}
+                {this.getTeamMemberInfo()}
 
                 <Footer/>
             </div>
