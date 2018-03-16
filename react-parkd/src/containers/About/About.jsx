@@ -46,9 +46,9 @@ export default class About extends Component{
     }
 
     componentDidMount() {
-        const githubRepo = 'https://api.github.com/repos/GuanSuns/Pacman-MultiAgent';
+        const githubRepo = 'https://api.github.com/repos/colin19/Parkd';
         try{
-            axios.get(githubRepo + '/issues')
+            axios.get(githubRepo + '/issues?state=all')
                 .then(res => {
                     this.updateGithubIssues(res.data);
                 }).catch((error) => {
