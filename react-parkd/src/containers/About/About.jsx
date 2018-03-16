@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 
 import IntroHeader from '../../components/intro-header/IntroHeader';
 import Footer from '../../components/Footer/Footer';
@@ -23,27 +24,100 @@ const aboutPageContent = {
 };
 
 const teamInfo = [
-    ['Gijs Landwehr', iconGijs, 'Class of 2019', 'Drinks on average 2 gallons of milk a week.', 'Wrote the content on this page, tries and sometimes succeeds in being entertaining.', '0 commits 0 issue 0 unit tests']
-    , ['Austen Castberg', iconAusten, 'Class of 2020', 'Drinks on average 4 gallons of milk a week.', 'Worked on backend.', '0 commits 2 issue 0 unit tests']
-    , ['Colin Hall', iconColin, 'Class of 2019', 'Drinks on average 4 gallons of milk a week.', 'Also worked on backend.', '7 commits 0 issues 0 unit tests']
-    , ['Javier Banda', iconJavier, 'Class of 2019', 'Milk deficient.', 'The third member of the backend team. The frontend people making this page don\'t quite know what that means.', '0 commits 1 issue 0 unit tests']
-    , ['Diego Alcoz', iconDiego, 'Class of 2019', 'Occasional milk drinker.', 'Helped on frontend to put pages together, like this one.', '1 commit 1 issue 0 unit tests']
-    , ['Lin Guan', iconLin, 'Class of 2020', 'Milk deficient. Drink tea everyday', 'Responsible for the overall look and feel of the website. If it looks good, it was Lin. If it looks bad, not Lin.', '21 commits 6 issues 0 unit tests']
+    ['Gijs Landwehr', iconGijs, 'Class of 2019', 'Drinks on average 2 gallons of milk a week.', 'Wrote the content on this page, tries and sometimes succeeds in being entertaining.', 'Unit Tests: 0']
+    , ['Austen Castberg', iconAusten, 'Class of 2020', 'Drinks on average 4 gallons of milk a week.', 'Worked on backend.', 'Unit Tests: 0']
+    , ['Colin Hall', iconColin, 'Class of 2019', 'Drinks on average 4 gallons of milk a week.', 'Also worked on backend.', 'Unit Tests: 0']
+    , ['Javier Banda', iconJavier, 'Class of 2019', 'Milk deficient.', 'The third member of the backend team. The frontend people making this page don\'t quite know what that means.', 'Unit Tests: 0']
+    , ['Diego Alcoz', iconDiego, 'Class of 2019', 'Occasional milk drinker.', 'Helped on frontend to put pages together, like this one.', 'Unit Tests: 0']
+    , ['Lin Guan', iconLin, 'Class of 2020', 'Milk deficient. Drink tea everyday', 'Responsible for the overall look and feel of the website. If it looks good, it was Lin. If it looks bad, not Lin.', 'Unit Tests: 0']
 ];
 
+const GithubId2MemberId = {'aecast': 1, 'Diegoisawesome': 4, 'GuanSuns': 5, 'XS2929': 4};
 
 export default class About extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            commits: Array(6).fill(0),
+            issues: Array(6).fill(0),
+        };
+    }
 
-    getPersonInfo(person){
+    componentDidMount() {
+        const githubRepo = 'https://api.github.com/repos/GuanSuns/Pacman-MultiAgent';
+        try{
+            axios.get(githubRepo + '/issues')
+                .then(res => {
+                    this.updateGithubIssues(res.data);
+                }).catch((error) => {
+                    console.log(error)
+                });
+            axios.get(githubRepo + '/stats/contributors')
+                .then(res => {
+                    this.updateGithubCommit(res.data);
+                }).catch((error) => {
+                    console.log(error)
+                });
+        } catch (error){
+            console.log("Error during sending request to Github");
+        }
+
+    }
+
+    updateGithubIssues(resultIssue){
+        try {
+            const issues = new Array(6);
+            issues.fill(0);
+
+            let i;
+            for(i=0; i<resultIssue.length; i++){
+                let person = resultIssue[i];
+                let strGit = person.user.login;
+                let personId = GithubId2MemberId[strGit];
+                let nIssues = issues[personId];
+                nIssues = nIssues + 1;
+                issues[personId] = nIssues;
+            }
+
+            this.setState({issues: issues});
+        } catch (error) {
+            console.log("Error during updating Github issues");
+        }
+
+    }
+
+    updateGithubCommit(resultCommit) {
+        try{
+            const commits = this.state.commits.slice();
+
+            let i;
+            for(i=0; i<resultCommit.length; i++){
+                let person = resultCommit[i];
+                let nCommit = person.total;
+                let strGit = person.author.login;
+                let personId = GithubId2MemberId[strGit];
+                commits[personId] = nCommit;
+            }
+
+            this.setState({commits: commits});
+        } catch (error) {
+            console.log("Error during updating Github commits");
+        }
+
+    }
+
+    getPersonInfo(person, id){
         return (
                 <div className='text-center'>
                     <img className='team-photo img-circle img-fluid' src={person[1]} alt='img'/>
                     <div>
-                        <h4>{person[0]}</h4>
+                        <h5>{person[0]}</h5>
                         <p>{person[2]}</p>
                         <p>{person[3]}</p>
                         <p>{person[4]}</p>
                         <p>{person[5]}</p>
+                        <p>Commits: {this.state.commits[id]}</p>
+                        <p>Issues: {this.state.issues[id]}</p>
                     </div>
                 </div>
         );
@@ -56,9 +130,9 @@ export default class About extends Component{
         for(i=0; i<teamInfo.length; i++){
             let person = teamInfo[i];
             if(i < 3){
-                members1.push(<div key={i} className='col-sm-4'>{this.getPersonInfo(person)}</div>);
+                members1.push(<div key={i} className='col-sm-4'>{this.getPersonInfo(person, i)}</div>);
             }else{
-                members2.push(<div key={i} className='col-sm-4'>{this.getPersonInfo(person)}</div>);
+                members2.push(<div key={i} className='col-sm-4'>{this.getPersonInfo(person, i)}</div>);
             }
 
         }
@@ -77,7 +151,9 @@ export default class About extends Component{
     render(){
         return (
             <div>
-                <IntroHeader bgUrl={bgImg}/>
+                <IntroHeader bgUrl={bgImg}
+                             description={'The team behind Parkd.US'}
+                             title={'About us'}/>
 
                 <div className="sectionDivider">
                     <br/>
