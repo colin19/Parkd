@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93661dad-6193-4528-9ecf-7e412f8d6e30" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/lguan.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/lguan.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/.idea/react-parkd.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/README.md" afterPath="$PROJECT_DIR$/react-parkd/README.md" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/package.json" afterPath="$PROJECT_DIR$/react-parkd/package.json" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/public/index.html" afterPath="$PROJECT_DIR$/react-parkd/public/index.html" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/components/CustomCarousel/CustomCarousel.css" afterPath="$PROJECT_DIR$/react-parkd/src/components/CustomCarousel/CustomCarousel.css" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/components/CustomCarousel/CustomCarousel.jsx" afterPath="$PROJECT_DIR$/react-parkd/src/components/CustomCarousel/CustomCarousel.jsx" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/components/TransparentNav/TransparentNav.css" afterPath="$PROJECT_DIR$/react-parkd/src/components/TransparentNav/TransparentNav.css" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/components/TransparentNav/TransparentNav.jsx" afterPath="$PROJECT_DIR$/react-parkd/src/components/TransparentNav/TransparentNav.jsx" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/containers/About/About.jsx" afterPath="$PROJECT_DIR$/react-parkd/src/containers/About/About.jsx" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/containers/App/App.css" afterPath="$PROJECT_DIR$/react-parkd/src/containers/App/App.css" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/containers/App/App.jsx" afterPath="$PROJECT_DIR$/react-parkd/src/containers/App/App.jsx" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/containers/Home/Home.css" afterPath="$PROJECT_DIR$/react-parkd/src/containers/Home/Home.css" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/containers/Home/Home.jsx" afterPath="$PROJECT_DIR$/react-parkd/src/containers/Home/Home.jsx" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/index.css" afterPath="$PROJECT_DIR$/react-parkd/src/index.css" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/index.js" afterPath="$PROJECT_DIR$/react-parkd/src/index.js" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/yarn.lock" afterPath="$PROJECT_DIR$/react-parkd/yarn.lock" />
-      <change beforePath="$PROJECT_DIR$/static/javascript/parks/parkCards.js" afterPath="$PROJECT_DIR$/static/javascript/parks/parkCards.js" />
+      <change beforePath="$PROJECT_DIR$/react-parkd/src/containers/Food/FoodCards.css" afterPath="$PROJECT_DIR$/react-parkd/src/containers/Food/FoodCards.css" />
+      <change beforePath="$PROJECT_DIR$/react-parkd/src/containers/Food/FoodCards.jsx" afterPath="$PROJECT_DIR$/react-parkd/src/containers/Food/FoodCards.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,8 +20,30 @@
       <file leaf-file-name="TransparentNav.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/react-parkd/src/components/TransparentNav/TransparentNav.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="293">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FoodCards.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Food/FoodCards.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="70" column="51" lean-forward="false" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="51" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FoodCards.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Food/FoodCards.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="16" column="81" lean-forward="true" selection-start-line="16" selection-start-column="81" selection-end-line="16" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -133,8 +135,6 @@
         <option value="$PROJECT_DIR$/react-parkd/src/containers/About/About.css" />
         <option value="$PROJECT_DIR$/react-parkd/src/containers/About/About.jsx" />
         <option value="$PROJECT_DIR$/react-parkd/src/containers/App/App.jsx" />
-        <option value="$PROJECT_DIR$/react-parkd/src/containers/Food/FoodCards.css" />
-        <option value="$PROJECT_DIR$/react-parkd/src/containers/Food/FoodCards.jsx" />
         <option value="$PROJECT_DIR$/react-parkd/src/components/TransparentNav/TransparentNav.jsx" />
         <option value="$PROJECT_DIR$/react-parkd/src/index.js" />
         <option value="$PROJECT_DIR$/react-parkd/public/index.html" />
@@ -145,6 +145,8 @@
         <option value="$PROJECT_DIR$/react-parkd/src/containers/Home/Home.jsx" />
         <option value="$PROJECT_DIR$/react-parkd/src/containers/Home/Home.css" />
         <option value="$PROJECT_DIR$/react-parkd/src/components/TransparentNav/TransparentNav.css" />
+        <option value="$PROJECT_DIR$/react-parkd/src/containers/Food/FoodCards.jsx" />
+        <option value="$PROJECT_DIR$/react-parkd/src/containers/Food/FoodCards.css" />
       </list>
     </option>
   </component>
@@ -221,55 +223,7 @@
               <item name="Parkd" type="462c0819:PsiDirectoryNode" />
               <item name="react-parkd" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="CustomCarousel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Parkd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="react-parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Footer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Parkd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="react-parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="intro-header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Parkd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="react-parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="TransparentNav" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Parkd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="react-parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Parkd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="react-parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="About" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Parkd" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="react-parkd" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="App" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Parkd" type="b2602c69:ProjectViewProjectNode" />
@@ -361,12 +315,12 @@
       <workItem from="1521174160402" duration="57000" />
       <workItem from="1521218175707" duration="11995000" />
       <workItem from="1521236735908" duration="537000" />
-      <workItem from="1521237740272" duration="8852000" />
+      <workItem from="1521237740272" duration="10422000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126820000" />
+    <option name="totallyTimeSpent" value="128390000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="23" width="1596" height="929" extended-state="0" />
@@ -685,14 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Food/FoodCards.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react-parkd/src/components/Footer/Footer.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -770,7 +716,7 @@
         <state relative-caret-position="77">
           <caret line="71" column="41" lean-forward="false" selection-start-line="71" selection-start-column="41" selection-end-line="71" selection-end-column="41" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -796,7 +742,7 @@
         <state relative-caret-position="990">
           <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -809,10 +755,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Food/FoodCards.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="16" column="81" lean-forward="true" selection-start-line="16" selection-start-column="81" selection-end-line="16" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Food/FoodCards.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="26" column="6" lean-forward="true" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+        <state relative-caret-position="319">
+          <caret line="70" column="51" lean-forward="false" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="51" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -821,8 +775,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/react-parkd/src/components/TransparentNav/TransparentNav.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="293">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>

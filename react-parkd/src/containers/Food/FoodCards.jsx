@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import {Button} from 'reactstrap';
+import { Card, Button, CardImg, CardTitle, CardText, CardColumns, CardBody } from 'reactstrap';
 
 import IntroHeader from '../../components/intro-header/IntroHeader';
 import Footer from '../../components/Footer/Footer';
@@ -16,7 +16,31 @@ const localData = [
     [
         '#themightycone'
         , imgThemightycone
-        , 'Yumm! #austin #themightycone <br><br>Likes: 8'
+        , 'Yumm! #austin #themightycone  Likes: 8'
+        , 'photos?id=0'
+    ],
+    [
+        '#themightycone'
+        , imgThemightycone
+        , 'Yumm! #austin #themightycone  Likes: 8'
+        , 'photos?id=0'
+    ],
+    [
+        '#808grinds'    // photo name
+        , imgGrinds     // image
+        , 'I don\'t just eat cookies all day! This heap of meat is the kalua pig from @808grinds and it\'s delicious! their habanero teriyaki sauce is delicious too! <br><br>Likes: 35'
+        , 'photos?id=1'
+    ],
+    [
+        '#808grinds'    // photo name
+        , imgGrinds     // image
+        , 'I don\'t just eat cookies all day! This heap of meat is the kalua pig from @808grinds and it\'s delicious! their habanero teriyaki sauce is delicious too! <br><br>Likes: 35'
+        , 'photos?id=1'
+    ],
+    [
+        '#themightycone'
+        , imgThemightycone
+        , 'Yumm! #austin #themightycone  Likes: 8'
         , 'photos?id=0'
     ],
     [
@@ -39,18 +63,20 @@ export default class FoodCards extends Component {
     getCard(id){
         let data = this.state.data;
         return (
-            <div key={id} className={'shadowCard card'}>
-                <img className={'shadowImg card-img-top img-fluid'} src={data[id][1]} alt={data[id][0]}/>
-                <div className={'card-body'}>
-                    <h4 className={'photoCardTitle card-title'}>{data[id][0]}</h4>
-                    <p className={'photoCardText card-text'}>{data[id][2]}</p>
-                    <Link to={data[id][3]}>
-                        <Button className={"btn btn-info photoCardBtn"} bsStyle="info">
-                            More Info
-                        </Button>
-                    </Link>
-                </div>
-            </div>
+            <Card className={'shadowCard card'}>
+                <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
+                <CardBody>
+                    <CardTitle className={'photoCardTitle'}>{data[id][0]}</CardTitle>
+                    <CardText className={'photoCardText'}>{data[id][2]}</CardText>
+                    <div className='buttonContainer'>
+                        <Link to={data[id][3]}>
+                            <Button className={"btn btn-info photoCardBtn"} bsStyle="info" size={'sm'}>
+                                More Info
+                            </Button>
+                        </Link>
+                    </div>
+                </CardBody>
+            </Card>
         );
     }
 
@@ -74,9 +100,9 @@ export default class FoodCards extends Component {
                     <br/>
                     <br/>
                     <div className="card-container container-fluid">
-                        <div className="card-columns">
+                        <CardColumns>
                             {this.getPhotoCards()}
-                        </div>
+                        </CardColumns>
                     </div>
                 </div>
 
@@ -84,5 +110,4 @@ export default class FoodCards extends Component {
             </div>
         );
     }
-
 }
