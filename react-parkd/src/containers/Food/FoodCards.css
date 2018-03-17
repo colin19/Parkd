@@ -1,0 +1,39 @@
+/*!
+ * Author: Parkd
+ */
+
+.info-grid{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+.card-container{
+    background-color: white;
+}
+
+.shadowCard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    width: 96%;
+}
+
+.shadowImg {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+    border-radius: 5px;
+}
+
+.photoCardTitle{
+    text-align: center;
+    font-family: "Verdana";
+}
+
+.photoCardText{
+    color: #a9a9a9;
+}
+
+.photoCardBtn{
+    border-radius: 28px;
+}

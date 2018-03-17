@@ -33,7 +33,6 @@ function addCards() {
         var parkInfo = data[randomPark];
         html += getParkCard(parkInfo[0], parkInfo[2], parkInfo[1], parkInfo[3]) + '\n';
     }
-
     return html;
 }
 
