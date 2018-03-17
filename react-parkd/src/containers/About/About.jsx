@@ -46,24 +46,27 @@ export default class About extends Component{
     }
 
     componentDidMount() {
+        this.fetchGithubStat();
+    }
+
+    fetchGithubStat(){
         const githubRepo = 'https://api.github.com/repos/colin19/Parkd';
         try{
             axios.get(githubRepo + '/issues?state=all')
                 .then(res => {
                     this.updateGithubIssues(res.data);
                 }).catch((error) => {
-                    console.log(error)
-                });
+                console.log(error)
+            });
             axios.get(githubRepo + '/stats/contributors')
                 .then(res => {
                     this.updateGithubCommit(res.data);
                 }).catch((error) => {
-                    console.log(error)
-                });
+                console.log(error)
+            });
         } catch (error){
             console.log("Error during sending request to Github");
         }
-
     }
 
     updateGithubIssues(resultIssue){
@@ -80,6 +83,11 @@ export default class About extends Component{
                 let nIssues = issues[personId];
                 nIssues = nIssues + 1;
                 issues[personId] = nIssues;
+            }
+
+            if(nTotalIssues === 0){
+                this.fetchGithubStat();
+                return;
             }
 
             this.setState({issues: issues, totalIssues: nTotalIssues});
@@ -103,6 +111,11 @@ export default class About extends Component{
 
                 commits[personId] = nCommit;
                 nTotalCommit = nTotalCommit + nCommit;
+            }
+
+            if(nTotalCommit === 0){
+                this.fetchGithubStat();
+                return;
             }
 
             this.setState({commits: commits, totalCommit: nTotalCommit});
