@@ -14,8 +14,8 @@ import TransparentNav from '../../components/TransparentNav/TransparentNav';
 import CustomCarousel from '../../components/CustomCarousel/CustomCarousel';
 
 const captions = [
-    ['/about', imgPark, 'Explore Parks Around You', 'our website will display an assortment of food trucks and nearby parks in major cities'],
-    ['/about', imgTruck, 'Explore Food Trucks Around You', 'Parkd.US is a cutting edge web service aimed at bringing together the must-visit parks and food trucks in major cities. We staple the venues together with social media pictures, stats, and feeds to capture the social element of where Parkd.US can take you'],
+    ['/parks', imgPark, 'Explore Parks Around You', 'our website will display an assortment of food trucks and nearby parks in major cities'],
+    ['/trucks', imgTruck, 'Explore Food Trucks Around You', 'Parkd.US is a cutting edge web service aimed at bringing together the must-visit parks and food trucks in major cities. We staple the venues together with social media pictures, stats, and feeds to capture the social element of where Parkd.US can take you'],
     ['/photos', imgPhoto, 'Photos on Facebook', 'photos documenting the social media presence of the parks and the cuisine'],
     ['/about', imgUs, 'About Us', 'Lin Guan, Javier Banda, Diego Alcoz, Austen Castberg, Colin Hall & Gijs Landwehr'],
 ];
