@@ -35,6 +35,12 @@ export default class TransparentNav extends Component{
                         <NavItem className={'navbar-item'}>
                             <NavLink href="/photos">Photos</NavLink>
                         </NavItem>
+                        <NavItem className={'navbar-item'}>
+                            <NavLink href="/trucks">Trucks</NavLink>
+                        </NavItem>
+                        <NavItem className={'navbar-item'}>
+                            <NavLink href="/parks">Parks</NavLink>
+                        </NavItem>
                     </Nav>
                 </Collapse>
             </Navbar>
