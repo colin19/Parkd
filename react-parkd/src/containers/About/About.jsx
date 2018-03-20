@@ -42,14 +42,21 @@ export default class About extends Component{
             issues: Array(6).fill(0),
             totalCommit: 0,
             totalIssues: 0,
+            nHttpRequest: 0,
         };
     }
 
     componentDidMount() {
+        this.state.nHttpRequest = 0;
         this.fetchGithubStat();
     }
 
     fetchGithubStat(){
+        // return if exceed the maximum number of requests
+        if(this.state.nHttpRequest > 5){
+            return;
+        }
+
         const githubRepo = 'https://api.github.com/repos/colin19/Parkd';
         try{
             axios.get(githubRepo + '/issues?state=all')
@@ -64,6 +71,8 @@ export default class About extends Component{
                 }).catch((error) => {
                 console.log(error)
             });
+
+            this.state.nHttpRequest += 1;
         } catch (error){
             console.log("Error during sending request to Github");
         }
@@ -128,7 +137,7 @@ export default class About extends Component{
     getPersonInfo(person, id){
         return (
                 <div className='text-center'>
-                    <img className='team-photo img-circle img-fluid' src={person[1]} alt='img'/>
+                    <img className='team-photo rounded-circle img-fluid' src={person[1]} alt='img'/>
                     <div>
                         <h5>{person[0]}</h5>
                         <p>{person[2]}</p>
