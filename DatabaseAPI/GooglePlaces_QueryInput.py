@@ -41,3 +41,18 @@ for j in range(0,len(park_names)):
 	print(" ")
 	print("***** AYYE LMAO I'M A LEGEND ******")
 	print(" ")
+	ParkID = j + 20
+	Name = park_names[j]
+	City = city
+	Address = addresses[j]
+	Rating = ratings[j]
+	PhotoID = 0
+	GooglePlacesID = place_ids[j]
+
+	
+
+
+
+
+
+
