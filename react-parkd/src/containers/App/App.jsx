@@ -7,7 +7,7 @@ import Home from '../../containers/Home/Home';
 import FoodCards from '../../containers/Food/FoodCards';
 import TruckCards from '../../containers/Trucks/TruckCards';
 import ParkCards from '../../containers/Parks/ParkCards';
-
+import TruckDetail from '../../containers/Trucks/TruckDetail';
 
 class App extends Component {
     render() {
@@ -19,6 +19,7 @@ class App extends Component {
                     <Route exact path="/photos" component={FoodCards}/>
                     <Route exact path="/trucks" component={TruckCards}/>
                     <Route exact path="/parks" component={ParkCards}/>
+                    <Route path={"/trucks/detail"} component={TruckDetail}/>
                 </div>
             </Router>
         );

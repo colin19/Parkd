@@ -61,7 +61,7 @@ export default class Home extends Component{
         let carouselCaptions = this.getCaptions();
 
         return (
-            <div>
+            <div className="home-carousel" >
                 <CustomCarousel images={carouselImages} captions={carouselCaptions}/>
                 <TransparentNav/>
             </div>
