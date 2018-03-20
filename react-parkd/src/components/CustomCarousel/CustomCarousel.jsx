@@ -7,6 +7,8 @@ import {
     CarouselCaption
 } from 'reactstrap';
 
+import './CustomCarousel.css';
+
 export default class CustomCarousel extends Component{
     constructor(props) {
         super(props);

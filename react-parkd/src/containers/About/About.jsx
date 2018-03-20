@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Card, CardBody } from 'reactstrap';
 import axios from 'axios';
 
 import IntroHeader from '../../components/intro-header/IntroHeader';
@@ -143,22 +144,22 @@ export default class About extends Component{
 
     getPersonInfo(person, id){
         return (
-                <div className='card h-100'>
-                    <div className='card-body'>
-                        <div className='text-center'>
-                            <img className='team-photo rounded-circle img-fluid' src={person[1]} alt='img'/>
-                        </div>
-                        <div>
-                            <h3>{person[0]}</h3>
-                            <h5>{person[2]}</h5>
-                            <p><strong>Milk stats:</strong> {person[3]}</p>
-                            <p>{person[4]}</p>
-                            <p><strong>Unit tests:</strong> {person[5]}</p>
-                            <p><strong>Commits:</strong> {this.state.commits[id]}</p>
-                            <p><strong>Issues:</strong> {this.state.issues[id]}</p>
-                        </div>
+            <Card className='h-100'>
+            <div className='text-center'>
+                <img className='team-photo rounded-circle img-fluid' src={person[1]} alt='img'/>
+            </div>
+                <CardBody>
+                    <div>
+                        <h3>{person[0]}</h3>
+                        <h5>{person[2]}</h5>
+                        <p><strong>Milk stats:</strong> {person[3]}</p>
+                        <p>{person[4]}</p>
+                        <p><strong>Unit tests:</strong> {person[5]}</p>
+                        <p><strong>Commits:</strong> {this.state.commits[id]}</p>
+                        <p><strong>Issues:</strong> {this.state.issues[id]}</p>
                     </div>
-                </div>
+                </CardBody>
+            </Card>
         );
     }
 
