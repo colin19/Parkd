@@ -32,7 +32,7 @@ const teamInfo = [
     , ['Lin Guan', iconLin, 'Class of 2020', 'Milk deficient. Drink tea everyday', 'Responsible for the overall look and feel of the website. If it looks good, it was Lin. If it looks bad, not Lin.', 'Unit Tests: 0']
 ];
 
-const GithubId2MemberId = {'aecast': 1, 'Diegoisawesome': 4, 'GuanSuns': 5, 'XS2929': 4};
+const GithubId2MemberId = {'aecast': 1, 'colin19': 2, 'jbanda11': 3,'Diegoisawesome': 4, 'GuanSuns': 5, 'XS2929': 4};
 
 export default class About extends Component{
     constructor(props) {
