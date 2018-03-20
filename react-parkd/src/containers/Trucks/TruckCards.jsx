@@ -18,19 +18,19 @@ const localData = [
         '808 Grinds'
         , imgGrinds
         , 'Awesome place to eat in Downtown Portland! <br>815 SW Park Ave, Portland, OR 97205, USA'
-        , 'trucks?id=0'
+        , 'trucks/detail?id=-1'
     ],
     [
         'The Mighty Cone'
         , imgMighty
         , 'THIS PLACE IS DELICIOUS!!! Recommend the chicken cone and the cheese sticks. Mmm! <br>2100 Barton Springs Rd, Austin, TX 78704'
-        , 'trucks?id=1'
+        , 'trucks/detail?id=1'
     ],
     [
         'Pinch'
         , imgPinch
         , 'an urban food lab established in winter 2016 by Yuzhuo Liu <br>518 W 24th St, Austin, TX 78703'
-        , 'trucks?id=2'
+        , 'trucks/detail?id=2'
     ]
 ];
 
@@ -45,14 +45,14 @@ export default class TruckCards extends Component {
     getCard(id){
         let data = this.state.data;
         return (
-            <Card className={'shadowCard card'}>
+            <Card key={id} className={'shadowCard card'}>
                 <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
                 <CardBody>
                     <CardTitle className={'photoCardTitle'}>{data[id][0]}</CardTitle>
                     <CardText className={'photoCardText'}>{data[id][2]}</CardText>
                     <div className='buttonContainer'>
                         <Link to={data[id][3]}>
-                            <Button className={"btn btn-info photoCardBtn"} bsStyle="info" size={'sm'}>
+                            <Button className={"btn btn-info photoCardBtn"} color="info" size={'sm'}>
                                 More Info
                             </Button>
                         </Link>
