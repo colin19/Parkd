@@ -32,7 +32,7 @@ const teamInfo = [
     , ['Lin Guan', iconLin, 'Class of 2020', 'Milk deficient. Drinks tea everyday.', 'Responsible for the overall look and feel of the website. If it looks good, it was Lin. If it looks bad, it wasn\'t.', 0]
 ];
 
-const GithubId2MemberId = {'aecast': 1, 'colin19': 2, 'jbanda11': 3,'dalcoz': 4, 'GuanSuns': 5, 'XS2929': 4};
+const GithubId2MemberId = {'gijsland': 0, 'aecast': 1, 'colin19': 2, 'jbanda11': 3,'dalcoz': 4, 'GuanSuns': 5};
 
 export default class About extends Component{
     constructor(props) {
@@ -149,8 +149,8 @@ export default class About extends Component{
                             <img className='team-photo rounded-circle img-fluid' src={person[1]} alt='img'/>
                         </div>
                         <div>
-                            <h5>{person[0]}</h5>
-                            <p>{person[2]}</p>
+                            <h3>{person[0]}</h3>
+                            <h5>{person[2]}</h5>
                             <p><strong>Milk stats:</strong> {person[3]}</p>
                             <p>{person[4]}</p>
                             <p><strong>Unit tests:</strong> {person[5]}</p>

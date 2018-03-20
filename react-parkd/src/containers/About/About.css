@@ -2,31 +2,14 @@
  * Author: Parkd
  */
 
-.info-grid{
-    position: relative;
-    width: 100%;
-    height: auto;
-    background-color: white;
-}
-
-
-.info-grid{
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-}
-
 .sectionDivider{
     width: 100%;
     height: 42px;
 }
 
 .team-photo {
-    margin-bottom: 1em;
-    width: 200px;
-    height: 200px;
+    padding: 5%;
+    margin-bottom: 5%;
 }
 
 .websiteDescription h1{
@@ -49,12 +32,6 @@
 
 .team-info p{
     color: #515A5A ;
-    font-size: 16px;
-}
-
-.team-info h5{
-    font-size: 20px;
-    font-weight: 600;
 }
 
 .team-photo-header{
