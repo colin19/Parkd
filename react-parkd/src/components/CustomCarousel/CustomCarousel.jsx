@@ -73,7 +73,7 @@ export default class CustomCarousel extends Component{
                     onExited={this.onExited}
                     key={item.src}
                 >
-                    <img className={"CarouselImg"} src={item.src} alt={item.altText} />
+                    <img src={item.src} alt={item.altText} />
                     <CarouselCaption captionText={item.caption}/>
                 </CarouselItem>
             );

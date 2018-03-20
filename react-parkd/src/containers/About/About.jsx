@@ -24,12 +24,12 @@ const aboutPageContent = {
 };
 
 const teamInfo = [
-    ['Gijs Landwehr', iconGijs, 'Class of 2019', 'Drinks on average 2 gallons of milk a week.', 'Wrote the content on this page, tries and sometimes succeeds in being entertaining.', 'Unit Tests: 0']
-    , ['Austen Castberg', iconAusten, 'Class of 2020', 'Drinks on average 4 gallons of milk a week.', 'Worked on backend.', 'Unit Tests: 0']
-    , ['Colin Hall', iconColin, 'Class of 2019', 'Drinks on average 4 gallons of milk a week.', 'Also worked on backend.', 'Unit Tests: 0']
-    , ['Javier Banda', iconJavier, 'Class of 2019', 'Milk deficient.', 'The third member of the backend team. The frontend people making this page don\'t quite know what that means.', 'Unit Tests: 0']
-    , ['Diego Alcoz', iconDiego, 'Class of 2019', 'Occasional milk drinker.', 'Helped on frontend to put pages together, like this one.', 'Unit Tests: 0']
-    , ['Lin Guan', iconLin, 'Class of 2020', 'Milk deficient. Drink tea everyday', 'Responsible for the overall look and feel of the website. If it looks good, it was Lin. If it looks bad, not Lin.', 'Unit Tests: 0']
+    ['Gijs Landwehr', iconGijs, 'Class of 2019', 'Drinks on average 2 gallons of milk a week.', 'Wrote the content on this page, tries and sometimes succeeds in being entertaining.', 0]
+    , ['Austen Castberg', iconAusten, 'Class of 2020', 'Drinks on average 4 gallons of milk a week.', 'Worked on backend.', 0]
+    , ['Colin Hall', iconColin, 'Class of 2019', 'Drinks on average 4 gallons of milk a week.', 'Also worked on backend.', 0]
+    , ['Javier Banda', iconJavier, 'Class of 2019', 'Milk deficient.', 'The third member of the backend team. The frontend people making this page don\'t quite know what that means.', 0]
+    , ['Diego Alcoz', iconDiego, 'Class of 2019', 'Frequent milk drinker.', 'Made things look all prettyful and such.', 0]
+    , ['Lin Guan', iconLin, 'Class of 2020', 'Milk deficient. Drinks tea everyday.', 'Responsible for the overall look and feel of the website. If it looks good, it was Lin. If it looks bad, it wasn\'t.', 0]
 ];
 
 const GithubId2MemberId = {'aecast': 1, 'colin19': 2, 'jbanda11': 3,'dalcoz': 4, 'GuanSuns': 5, 'XS2929': 4};
@@ -47,7 +47,11 @@ export default class About extends Component{
     }
 
     componentDidMount() {
-        this.state.nHttpRequest = 0;
+        //this.state.nHttpRequest = 0;
+        let {nHttpRequest} = this.state;
+        nHttpRequest = 0;
+        this.setState({nHttpRequest});
+
         this.fetchGithubStat();
     }
 
@@ -72,7 +76,10 @@ export default class About extends Component{
                 console.log(error)
             });
 
-            this.state.nHttpRequest += 1;
+            //this.state.nHttpRequest += 1;
+            let {nHttpRequest} = this.state;
+            nHttpRequest += 1;
+            this.setState({nHttpRequest});
         } catch (error){
             console.log("Error during sending request to Github");
         }
@@ -136,41 +143,36 @@ export default class About extends Component{
 
     getPersonInfo(person, id){
         return (
-                <div className='text-center'>
-                    <img className='team-photo rounded-circle img-fluid' src={person[1]} alt='img'/>
-                    <div>
-                        <h5>{person[0]}</h5>
-                        <p>{person[2]}</p>
-                        <p>{person[3]}</p>
-                        <p>{person[4]}</p>
-                        <p>{person[5]}</p>
-                        <p>Commits: {this.state.commits[id]}</p>
-                        <p>Issues: {this.state.issues[id]}</p>
+                <div className='card h-100'>
+                    <div className='card-body'>
+                        <div className='text-center'>
+                            <img className='team-photo rounded-circle img-fluid' src={person[1]} alt='img'/>
+                        </div>
+                        <div>
+                            <h5>{person[0]}</h5>
+                            <p>{person[2]}</p>
+                            <p><strong>Milk stats:</strong> {person[3]}</p>
+                            <p>{person[4]}</p>
+                            <p><strong>Unit tests:</strong> {person[5]}</p>
+                            <p><strong>Commits:</strong> {this.state.commits[id]}</p>
+                            <p><strong>Issues:</strong> {this.state.issues[id]}</p>
+                        </div>
                     </div>
                 </div>
         );
     }
 
     getTeamMemberInfo() {
-        let members1 = [];
-        let members2 = [];
+        let members = [];
         let i;
         for(i=0; i<teamInfo.length; i++){
             let person = teamInfo[i];
-            if(i < 3){
-                members1.push(<div key={i} className='col-sm-4'>{this.getPersonInfo(person, i)}</div>);
-            }else{
-                members2.push(<div key={i} className='col-sm-4'>{this.getPersonInfo(person, i)}</div>);
-            }
-
+            members.push(<div key={i} className='col-sm-6 col-md-4 col-xl-2'>{this.getPersonInfo(person, i)}</div>);
         }
         return (
             <div className="info-grid container-fluid">
                 <div id="team-info" className="row team-info">
-                    {members1}
-                </div>
-                <div id="team-info" className="row team-info">
-                    {members2}
+                    {members}
                 </div>
             </div>
         );
