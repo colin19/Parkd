@@ -5,7 +5,7 @@ import { Card, Button, CardImg, CardTitle, CardText, CardColumns, CardBody } fro
 import IntroHeader from '../../components/intro-header/IntroHeader';
 import Footer from '../../components/Footer/Footer';
 
-import './FoodCards.css';
+import './PhotoCards.css';
 
 import imgBg from '../../images/food/themightycone3.png';
 import imgGrinds from '../../images/food/grinds1.png';
@@ -17,37 +17,37 @@ const localData = [
         '#themightycone'
         , imgThemightycone
         , 'Yumm! #austin #themightycone  Likes: 8'
-        , 'photos?id=0'
+        , 'photos/detail?id=-1'
     ],
     [
         '#themightycone'
         , imgThemightycone
         , 'Yumm! #austin #themightycone  Likes: 8'
-        , 'photos?id=0'
+        , 'photos/detail?id=-1'
     ],
     [
         '#808grinds'    // photo name
         , imgGrinds     // image
         , 'I don\'t just eat cookies all day! This heap of meat is the kalua pig from @808grinds and it\'s delicious! their habanero teriyaki sauce is delicious too! <br><br>Likes: 35'
-        , 'photos?id=1'
+        , 'photos/detail?id=-1'
     ],
     [
         '#808grinds'    // photo name
         , imgGrinds     // image
         , 'I don\'t just eat cookies all day! This heap of meat is the kalua pig from @808grinds and it\'s delicious! their habanero teriyaki sauce is delicious too! <br><br>Likes: 35'
-        , 'photos?id=1'
+        , 'photos/detail?id=-1'
     ],
     [
         '#themightycone'
         , imgThemightycone
         , 'Yumm! #austin #themightycone  Likes: 8'
-        , 'photos?id=0'
+        , 'photos/detail?id=-1'
     ],
     [
         '#808grinds'    // photo name
         , imgGrinds     // image
         , 'I don\'t just eat cookies all day! This heap of meat is the kalua pig from @808grinds and it\'s delicious! their habanero teriyaki sauce is delicious too! <br><br>Likes: 35'
-        , 'photos?id=1'
+        , 'photos/detail?id=-1'
     ],
 ];
 

@@ -18,7 +18,7 @@ const localData = [
     , null  // Phone number
     , '1905 NE Killingsworth St, Portland, OR 97211, USA'
     , 'Open Now'   // Hours
-    , [imgAlberta1, imgAlberta2]
+    , [ [imgAlberta1, 0], [imgAlberta2, 1] ]
     , [
         ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
         , ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
@@ -76,10 +76,16 @@ export default class ParkDetail extends Component {
     }
 
     getHourInfo(){
+        let strHours = this.state.data[4];
+
         return (
             <div className={"basicInfo hourInfo basicDescription"}>
                 <h1>Hours</h1>
-                <p>{this.state.data[4]}</p>
+                <p>
+                    {strHours.split("\n").map((str, i) => {
+                        return <div key={i}>{str}</div>;
+                    })}
+                </p>
             </div>
         )
     }
@@ -107,9 +113,18 @@ export default class ParkDetail extends Component {
     }
 
     getCaption(id){
+        let imgId = this.state.data[5][id][1];
+
         if(id !== this.state.data[5].length - 1){
             return (
-                <div key={id}/>
+                <div key={id}>
+                    <h1><br/><br/><br/><br/></h1>
+                    <Link to={ '/photos/detail?id='+imgId }>
+                        <Button className={'moreBtn'} outline color={"secondary"} size={'lg'}>
+                            Details
+                        </Button>
+                    </Link>
+                </div>
             );
         }
 
@@ -215,11 +230,14 @@ export default class ParkDetail extends Component {
     }
 
     render(){
-        let images = this.state.data[5];
+        let images = [];
+        for(let i=0; i<this.state.data[5].length; i++){
+            images.push(this.state.data[5][i][0]);
+        }
 
         return (
             <div>
-                <IntroHeader bgUrl={this.state.data[5][0]}
+                <IntroHeader bgUrl={this.state.data[5][0][0]}
                              title={this.state.data[0]}
                              description={this.state.data[3]}
                 />

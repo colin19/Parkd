@@ -18,8 +18,8 @@ const localData = [
     , '...Awesome place to eat in Downtown Portland! I got a cheesus (think colossus but with cheese) which is a hamburger with grilled cheese sandwiches replacing the buns. It\'s a lot but it\'s super delicious. Highly recommend for the times you do go to Portland\'s downtown.'
     , '(512) - 820 - 6611'
     , '815 SW Park Ave, Portland, OR 97205, USA'
-    , 'M - F<br>11:30 am - 2:00 pm<br>5:00 pm - 9:00 pm<br>SA - SU<br>5:00 pm - 9:00 pm'
-    , [ imgGrinds1, imgGrinds2, imgGrinds3]
+    , 'M - F\n11:30 am - 2:00 pm\n5:00 pm - 9:00 pm\nSA - SU\n5:00 pm - 9:00 pm'
+    , [ [imgGrinds1, 0], [imgGrinds2, 1], [imgGrinds3, 2] ]
     , 'external_link'
     , [45.5186898, -122.6814688]
     , ['Director Park', '../parks/director.html']
@@ -68,10 +68,16 @@ export default class TruckDetail extends Component {
     }
 
     getHourInfo(){
+        let strHours = this.state.data[4];
+
         return (
             <div className={"basicInfo hourInfo basicDescription"}>
                 <h1>Hours</h1>
-                <p>{this.state.data[4]}</p>
+                <p>
+                    {strHours.split("\n").map((str, i) => {
+                        return <div key={i}>{str}</div>;
+                    })}
+                </p>
             </div>
         )
     }
@@ -109,9 +115,18 @@ export default class TruckDetail extends Component {
     }
 
     getCaption(id){
+        let imgId = this.state.data[5][id][1];
+
         if(id !== this.state.data[5].length - 1){
             return (
-                <div key={id}/>
+                <div key={id}>
+                    <h1><br/><br/><br/><br/></h1>
+                    <Link to={'/photos/detail?id='+imgId}>
+                        <Button className={'moreBtn'} outline color={"secondary"} size={'lg'}>
+                            Details
+                        </Button>
+                    </Link>
+                </div>
             );
         }
 
@@ -138,11 +153,14 @@ export default class TruckDetail extends Component {
     }
 
     render(){
-        let images = this.state.data[5];
+        let images = [];
+        for(let i=0; i<this.state.data[5].length; i++){
+            images.push(this.state.data[5][i][0]);
+        }
 
         return (
             <div>
-                <IntroHeader bgUrl={this.state.data[5][0]}
+                <IntroHeader bgUrl={this.state.data[5][0][0]}
                              title={this.state.data[0]}
                              description={this.state.data[10][0]}
                              />
@@ -162,6 +180,7 @@ export default class TruckDetail extends Component {
                             {/* Location Information */}
                             <Col xs="4">
                                 {this.getParkInfo()}
+                                <br/>
                                 {this.getLocationInfo()}
                             </Col>
                         </Row>

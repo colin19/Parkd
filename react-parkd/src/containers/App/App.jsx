@@ -4,7 +4,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import About from '../../containers/About/About';
 import Home from '../../containers/Home/Home';
-import FoodCards from '../../containers/Food/FoodCards';
+import PhotoCards from '../Photo/PhotoCards';
+import PhotoDetail from '../Photo/PhotoDetail';
 import TruckCards from '../../containers/Trucks/TruckCards';
 import TruckDetail from '../../containers/Trucks/TruckDetail';
 import ParkCards from '../../containers/Parks/ParkCards';
@@ -17,11 +18,12 @@ class App extends Component {
                 <div className="App">
                     <Route exact path={"/"} component={Home}/>
                     <Route exact path="/about" component={About}/>
-                    <Route exact path="/photos" component={FoodCards}/>
+                    <Route exact path="/photos" component={PhotoCards}/>
                     <Route exact path="/trucks" component={TruckCards}/>
                     <Route exact path="/parks" component={ParkCards}/>
                     <Route path={"/trucks/detail"} component={TruckDetail}/>
                     <Route path={"/parks/detail"} component={ParkDetail}/>
+                    <Route path={"/photos/detail"} component={PhotoDetail}/>
                 </div>
             </Router>
         );

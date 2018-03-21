@@ -41,7 +41,7 @@ function getTruckHourInfo(){
 
 function getPhotoTruckInfo(){
     var html = '';
-    html += '<h1>Food Truck</h1>';
+    html += '<h1>Photo Truck</h1>';
     html += '<p><a href="' + photosInfo[0][7][1] + '">' + photosInfo[0][7][0] + '</a></p>';
     return html;
 }
