@@ -15,6 +15,12 @@
     box-shadow:none;
 }
 
+.tintNav {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    background-image:none;
+    box-shadow:none;
+}
+
 .navbar-brand {
     font-size: 30px !important;
     color:#fff !important;

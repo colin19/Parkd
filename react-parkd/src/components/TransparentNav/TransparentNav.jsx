@@ -9,7 +9,8 @@ export default class TransparentNav extends Component{
 
         this.toggle = this.toggle.bind(this);
         this.state = {
-            isOpen: false
+            isOpen: false,
+            isTinted: props.isTinted,
         };
     }
     toggle() {
@@ -19,8 +20,16 @@ export default class TransparentNav extends Component{
     }
 
     render(){
+        let navClassName = 'toTheTop navbar navbar-expand-lg navbar-dark sticky-top';
+        if(this.state.isTinted) {
+            navClassName += ' tintNav'
+        }else{
+            navClassName += 'transparentNav';
+        }
+
+
         return (
-            <Navbar className={'toTheTop transparentNav navbar navbar-expand-lg navbar-dark sticky-top'}>
+            <Navbar className={navClassName}>
                 <NavbarBrand href="/" className={'navbar-brand'}>Parkd.US</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
 

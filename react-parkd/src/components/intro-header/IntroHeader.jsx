@@ -34,7 +34,7 @@ export default class IntroHeader extends Component{
                     </div>
                 </div> {/* intro */}
 
-                <TransparentNav/>
+                <TransparentNav isTinted={false}/>
 
             </intro-header>
         );

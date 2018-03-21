@@ -63,7 +63,7 @@ export default class Home extends Component{
         return (
             <div className="home-carousel" >
                 <CustomCarousel images={carouselImages} captions={carouselCaptions}/>
-                <TransparentNav/>
+                <TransparentNav isTinted={false}/>
             </div>
         );
     }
