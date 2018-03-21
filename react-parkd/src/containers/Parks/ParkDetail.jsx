@@ -2,49 +2,53 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import { Button, Container, Row, Col } from 'reactstrap';
 
-import './TruckDetail.css';
+import './ParkDetail.css';
 
 import CustomCarousel from '../../components/CustomCarousel/CustomCarousel';
 import IntroHeader from '../../components/intro-header/IntroHeader';
 import Footer from '../../components/Footer/Footer';
 import ReactGoogleMap from '../../components/GoogleMap/ReactGoogleMap';
 
-import imgGrinds1 from '../../images/trucks/grinds1.png';
-import imgGrinds2 from '../../images/trucks/grinds2.png';
-import imgGrinds3 from '../../images/trucks/grinds3.png';
+import imgAlberta1 from '../../images/parks/albert-1.png';
+import imgAlberta2 from '../../images/parks/albert-2.png';
 
 const localData = [
-    '808 Grinds'
-    , '...Awesome place to eat in Downtown Portland! I got a cheesus (think colossus but with cheese) which is a hamburger with grilled cheese sandwiches replacing the buns. It\'s a lot but it\'s super delicious. Highly recommend for the times you do go to Portland\'s downtown.'
-    , '(512) - 820 - 6611'
-    , '815 SW Park Ave, Portland, OR 97205, USA'
-    , 'M - F<br>11:30 am - 2:00 pm<br>5:00 pm - 9:00 pm<br>SA - SU<br>5:00 pm - 9:00 pm'
-    , [ imgGrinds1, imgGrinds2, imgGrinds3]
-    , 'external_link'
-    , [45.5186898, -122.6814688]
-    , ['Director Park', '../parks/director.html']
-    , 4.5
-    , ['Review 1', 'Review 2', 'Review 3']
+    'Alberta Park'
+    , 'Alberta Park is a park located in northeast Portland, Oregon. Acquired in 1921, the park includes a basketball court, dog off-leash area, playground, soccer field, softball field and tennis court.'
+    , null  // Phone number
+    , '1905 NE Killingsworth St, Portland, OR 97211, USA'
+    , 'Open Now'   // Hours
+    , [imgAlberta1, imgAlberta2]
+    , [
+        ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
+        , ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
+        , ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
+        , ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
+        , ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
+        ]
+    , 4.4     // Rating
+    , [45.5644753, -122.6451045]
+    , 'external link'
 ];
 
 
-export default class TruckDetail extends Component {
+export default class ParkDetail extends Component {
     constructor(props) {
         super(props);
 
         //read truck id from the query parameter, default is -1
         const queryString = props.location.search;
         const params = new URLSearchParams(queryString);
-        let truckId = params.get('id');
-        if(truckId === null) truckId = -1;
+        let parkId = params.get('id');
+        if(parkId === null) parkId = -1;
 
         // load data
         let data = null;
-        if(truckId === -1 || data === null) data = localData;
+        if(parkId === -1 || data === null) data = localData;
 
         this.state = {
             data: data,
-            truckId: truckId,
+            parkId: parkId,
         };
     }
 
@@ -59,6 +63,10 @@ export default class TruckDetail extends Component {
     }
 
     getPhoneInfo(){
+        if(this.state.data[2] == null){
+            return;
+        }
+
         return (
             <div className={"basicInfo phoneInfo basicDescription"}>
                 <h1>{'Phone'}</h1>
@@ -80,19 +88,9 @@ export default class TruckDetail extends Component {
         return (
             <div className={"basicInfo rateInfo basicDescription"}>
                 <h1>Rating</h1>
-                <p>{this.state.data[9]}</p>
+                <p>{this.state.data[7]}</p>
             </div>
         )
-    }
-
-    getParkInfo(){
-        return (
-            <div className={"parkInfo basicInfo"}>
-                <h3>Nearby Park</h3>
-                <a href={this.state.data[8][1]}>{this.state.data[8][0]}</a>
-            </div>
-        );
-
     }
 
     getLocationInfo(){
@@ -101,8 +99,8 @@ export default class TruckDetail extends Component {
                 <h3>Location</h3>
                 <p>{this.state.data[3]}</p>
                 <ReactGoogleMap isMarkerShown={true}
-                                lng={this.state.data[7][1]}
-                                lat={this.state.data[7][0]}
+                                lng={this.state.data[8][1]}
+                                lat={this.state.data[8][0]}
                                 zoom={15}/>
             </div>
         )
@@ -145,9 +143,9 @@ export default class TruckDetail extends Component {
                 <IntroHeader bgUrl={this.state.data[5][0]}
                              title={this.state.data[0]}
                              description={this.state.data[10][0]}
-                             />
+                />
 
-                <div className={'bodyTruck'}>
+                <div className={'bodyPark'}>
                     <div className="sectionDivider"/>
                     <Container className={'info'}>
                         <Row>
@@ -161,7 +159,6 @@ export default class TruckDetail extends Component {
 
                             {/* Location Information */}
                             <Col xs="4">
-                                {this.getParkInfo()}
                                 {this.getLocationInfo()}
                             </Col>
                         </Row>
@@ -171,7 +168,7 @@ export default class TruckDetail extends Component {
                         <br/>
                     </div>
 
-                    <div className={'truck-detail-carousel'}>
+                    <div className={'park-detail-carousel'}>
                         <h1>Photos</h1>
                         <br/>
                         <CustomCarousel images={images} captions={this.getCaptions()}/>
@@ -187,5 +184,6 @@ export default class TruckDetail extends Component {
         );
     }
 }
+
 
 

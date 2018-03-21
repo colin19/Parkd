@@ -18,19 +18,19 @@ const localData = [
         'Zilker Metropolitan Park'
         , imgZilker
         , 'Rating: 4.7<br>2100 Barton Springs Rd, Austin, TX 78704, USA'
-        , 'parks?id=0'
+        , 'parks/detail?id=-1'
     ],
     [
         'Alberta Park'
         , imgAlberta
         , 'Rating: 4.4<br>1905 NE Killingsworth St, Portland, OR 97211, USA'
-        , 'parks?id=1'
+        , 'parks/detail?id=-1'
     ],
     [
         'Director Park'
         , imgDirector
         , 'Rating: 4.3<br>815 SW Park Ave, Portland, OR 97205, USA'
-        , 'parks?id=1'
+        , 'parks/detail?id=-1'
     ]
 ];
 

@@ -2,13 +2,11 @@
  * Author: Parkd
  */
 
-
-.bodyTruck{
+.bodyPark{
     position: relative;
     width: 100%;
     height: auto;
 }
-
 
 .sectionDivider{
     width: 100%;
@@ -53,18 +51,17 @@
     font-size: 22px;
 }
 
-.phoneInfo p, .hourInfo p, .rateInfo p, .locationInfo p, .mediaFeeds p, .parkInfo p{
+.phoneInfo p, .hourInfo p, .rateInfo p, .locationInfo p, .mediaFeeds p {
     font-size: 18px;
 }
 
-.truck-detail-carousel .carousel{
+.park-detail-carousel .carousel{
     position: relative !important;
     top: 0 !important;
     width: 100% !important;
     height: 680px !important;
 }
 
-.truck-detail-carousel h1{
+.park-detail-carousel h1{
     text-align: center;
 }
-
