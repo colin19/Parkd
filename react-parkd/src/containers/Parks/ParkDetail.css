@@ -55,13 +55,40 @@
     font-size: 18px;
 }
 
-.park-detail-carousel .carousel{
+.park-detail-carousel .carousel {
     position: relative !important;
     top: 0 !important;
     width: 100% !important;
     height: 680px !important;
 }
 
-.park-detail-carousel h1{
+.park-detail-carousel h1 {
     text-align: center;
 }
+
+.nearby-trucks {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+.nearby-trucks .truck-list-content {
+    position: relative;
+    left: 10%;
+    width: 86%;
+    height: auto;
+}
+
+.truck-list-content .truck-list-title h1 {
+    text-align: center;
+}
+
+.nearby-trucks .card {
+    background-color:transparent !important;
+    border-color:transparent !important;
+    background-image:none;
+    box-shadow:none;
+}
+

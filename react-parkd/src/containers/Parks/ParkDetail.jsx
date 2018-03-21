@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import { Button, Container, Row, Col } from 'reactstrap';
+import { Button, Container, Row, Col, CardGroup, Card, CardTitle, CardSubtitle } from 'reactstrap';
 
 import './ParkDetail.css';
 
@@ -135,6 +135,85 @@ export default class ParkDetail extends Component {
         return carouselCaptions;
     }
 
+    getFoodTruckItem(id){
+        let foodTruck = this.state.data[6][id];
+
+        return (
+            <Card key={id}>
+                <Container>
+                    <Row>
+                        <Col xs="6">
+                            <br/>
+                            <Link to={foodTruck[3]}>
+                                <CardTitle>
+                                    {foodTruck[0]}
+                                </CardTitle>
+                            </Link>
+                            <CardSubtitle>
+                                {foodTruck[1]}
+                            </CardSubtitle>
+                        </Col>
+                        <Col xs="6">
+                            <br/>
+                            <h5>{foodTruck[2]}</h5>
+                        </Col>
+                    </Row>
+                </Container>
+            </Card>
+        );
+
+    }
+
+    getFoodTrucksRow(id, n) {
+        let i = id;
+        let cnt = 0;
+        let foodTrucks = this.state.data[6];
+        let foodTrucksItems = [];
+
+        while(i < foodTrucks.length && cnt < n){
+            foodTrucksItems.push(this.getFoodTruckItem(i));
+            i += 1;
+            cnt += 1;
+        }
+
+        while(cnt < n){
+            foodTrucksItems.push(<Card key={i}/>);
+            cnt += 1;
+        }
+
+        return (
+            <CardGroup key={i}>
+                {foodTrucksItems}
+            </CardGroup>
+        );
+    }
+
+    getFoodTrucks(){
+        let foodTrucks = this.state.data[6];
+
+        let foodTrucksRows = [];
+        for(let i = 0; i < foodTrucks.length; i++){
+            if(i%3 === 0){
+                foodTrucksRows.push(this.getFoodTrucksRow(i, 3));
+            }
+        }
+
+        return (
+            <div className={'nearby-trucks'}>
+                <div className={'truck-list-content'}>
+                    <div className={'truck-list-title'}>
+                        <h1>Food Trucks List</h1>
+                    </div>
+                    <br/>
+                    <div className={'trucks-list-grid'}>
+                        {foodTrucksRows}
+                    </div>
+                </div>
+            </div>
+
+        );
+    }
+
     render(){
         let images = this.state.data[5];
 
@@ -142,7 +221,7 @@ export default class ParkDetail extends Component {
             <div>
                 <IntroHeader bgUrl={this.state.data[5][0]}
                              title={this.state.data[0]}
-                             description={this.state.data[10][0]}
+                             description={this.state.data[3]}
                 />
 
                 <div className={'bodyPark'}>
@@ -177,6 +256,11 @@ export default class ParkDetail extends Component {
                     <div className={"sectionDivider"}>
                         <br/>
                     </div>
+                    <div className={"sectionDivider"}>
+                        <br/>
+                    </div>
+
+                    {this.getFoodTrucks()}
                 </div>
 
                 <Footer/>

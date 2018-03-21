@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="93661dad-6193-4528-9ecf-7e412f8d6e30" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/components/CustomCarousel/CustomCarousel.css" afterPath="$PROJECT_DIR$/react-parkd/src/components/CustomCarousel/CustomCarousel.css" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/components/GoogleMap/ReactGoogleMap.jsx" afterPath="$PROJECT_DIR$/react-parkd/src/components/GoogleMap/ReactGoogleMap.jsx" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/containers/App/App.jsx" afterPath="$PROJECT_DIR$/react-parkd/src/containers/App/App.jsx" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/containers/Home/Home.css" afterPath="$PROJECT_DIR$/react-parkd/src/containers/Home/Home.css" />
       <change beforePath="$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkCards.jsx" afterPath="$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkCards.jsx" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/containers/Trucks/TruckDetail.css" afterPath="$PROJECT_DIR$/react-parkd/src/containers/Trucks/TruckDetail.css" />
-      <change beforePath="$PROJECT_DIR$/react-parkd/src/containers/Trucks/TruckDetail.jsx" afterPath="$PROJECT_DIR$/react-parkd/src/containers/Trucks/TruckDetail.jsx" />
-      <change beforePath="$PROJECT_DIR$/static/css/parkDetail.css" afterPath="$PROJECT_DIR$/static/css/parkDetail.css" />
+      <change beforePath="$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkDetail.css" afterPath="$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkDetail.css" />
+      <change beforePath="$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkDetail.jsx" afterPath="$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkDetail.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/App/App.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
-              <caret line="18" column="66" lean-forward="true" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+              <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -51,8 +46,8 @@
       <file leaf-file-name="ParkCards.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkCards.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="31" column="34" lean-forward="false" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+            <state relative-caret-position="279">
+              <caret line="57" column="31" lean-forward="false" selection-start-line="53" selection-start-column="24" selection-end-line="57" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -91,8 +86,8 @@
       <file leaf-file-name="TruckDetail.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Trucks/TruckDetail.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="105" column="40" lean-forward="false" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
+            <state relative-caret-position="233">
+              <caret line="108" column="5" lean-forward="false" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -104,17 +99,17 @@
         <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Trucks/TruckDetail.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="642">
-              <caret line="68" column="1" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="68" selection-end-column="1" />
+              <caret line="68" column="1" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="68" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ParkDetail.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ParkDetail.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkDetail.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="61" column="29" lean-forward="true" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+            <state relative-caret-position="385">
+              <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -123,8 +118,8 @@
       <file leaf-file-name="ParkDetail.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkDetail.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2598">
-              <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+            <state relative-caret-position="257">
+              <caret line="206" column="25" lean-forward="false" selection-start-line="206" selection-start-column="25" selection-end-line="206" selection-end-column="25" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -225,11 +220,11 @@
         <option value="$PROJECT_DIR$/react-parkd/src/components/GoogleMap/ReactGoogleMap.jsx" />
         <option value="$PROJECT_DIR$/react-parkd/src/components/CustomCarousel/CustomCarousel.css" />
         <option value="$PROJECT_DIR$/react-parkd/src/containers/Home/Home.css" />
-        <option value="$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkDetail.css" />
-        <option value="$PROJECT_DIR$/react-parkd/src/containers/Trucks/TruckDetail.jsx" />
-        <option value="$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkDetail.jsx" />
-        <option value="$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkCards.jsx" />
         <option value="$PROJECT_DIR$/react-parkd/src/containers/App/App.jsx" />
+        <option value="$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkCards.jsx" />
+        <option value="$PROJECT_DIR$/react-parkd/src/containers/Trucks/TruckDetail.jsx" />
+        <option value="$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkDetail.css" />
+        <option value="$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkDetail.jsx" />
       </list>
     </option>
   </component>
@@ -464,12 +459,12 @@
       <workItem from="1521236735908" duration="537000" />
       <workItem from="1521237740272" duration="10511000" />
       <workItem from="1521308913456" duration="4278000" />
-      <workItem from="1521483754233" duration="17506000" />
+      <workItem from="1521483754233" duration="21634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150263000" />
+    <option name="totallyTimeSpent" value="154391000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-45" y="26" width="1596" height="929" extended-state="0" />
@@ -866,42 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Trucks/TruckDetail.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="68" column="1" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="68" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Trucks/TruckDetail.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="105" column="40" lean-forward="false" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkDetail.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="61" column="29" lean-forward="true" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkDetail.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2598">
-          <caret line="19" column="27" lean-forward="true" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Trucks/TruckCards.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
@@ -912,21 +871,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkCards.jsx">
+    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/App/App.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="31" column="34" lean-forward="false" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        <state relative-caret-position="312">
+          <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Trucks/TruckDetail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="68" column="1" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="68" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/App/App.jsx">
+    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Trucks/TruckDetail.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="18" column="66" lean-forward="true" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+        <state relative-caret-position="233">
+          <caret line="108" column="5" lean-forward="false" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkCards.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="57" column="31" lean-forward="false" selection-start-line="53" selection-start-column="24" selection-end-line="57" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkDetail.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="206" column="25" lean-forward="false" selection-start-line="206" selection-start-column="25" selection-end-line="206" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-parkd/src/containers/Parks/ParkDetail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

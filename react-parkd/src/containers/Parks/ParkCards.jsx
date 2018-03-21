@@ -45,14 +45,14 @@ export default class ParkCards extends Component {
     getCard(id){
         let data = this.state.data;
         return (
-            <Card className={'shadowCard card'}>
+            <Card key={id} className={'shadowCard card'}>
                 <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
                 <CardBody>
                     <CardTitle className={'photoCardTitle'}>{data[id][0]}</CardTitle>
                     <CardText className={'photoCardText'}>{data[id][2]}</CardText>
                     <div className='buttonContainer'>
                         <Link to={data[id][3]}>
-                            <Button className={"btn btn-info photoCardBtn"} bsStyle="info" size={'sm'}>
+                            <Button className={"btn btn-info photoCardBtn"} color="info" size={'sm'}>
                                 More Info
                             </Button>
                         </Link>
