@@ -1,8 +1,7 @@
 matrix:
   include:
     - language: python
-      python:
-      - "3.6.1"
+      python: "3.6.1"
       install:
       - pip install -r docker/requirements.txt
       script:
