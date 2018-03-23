@@ -14,4 +14,4 @@ matrix:
     - language: node_js
       node_js: 
        - "stable"
-      before_script: cd frontend
+      before_install: cd frontend
