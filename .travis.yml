@@ -7,9 +7,11 @@ matrix:
       script:
       - date
       - ls -al
-      - coverage run --source=.. tests.py
+      - coverage run --source=backend tests.py
       - coverage report
 
     - language: node_js
       node_js: 
        - "stable"
+      script:
+      - npm mocha-test --prefix=frontend
