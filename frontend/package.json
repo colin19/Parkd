@@ -19,9 +19,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "react-test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "mocha-test": "mocha test/.setup.js test/**/*-test.js"
+    "test": "mocha test/.setup.js test/**/*-test.js"
   },
   "devDependencies": {
     "mocha": "^2.4.5",
