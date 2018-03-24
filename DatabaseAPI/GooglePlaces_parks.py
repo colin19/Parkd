@@ -39,5 +39,4 @@ for j in range(0,len(park_names)):
 	print("ratings: " + str(ratings[j]))
 	print("place_id: " + place_ids[j])
 	print(" ")
-	print("***** AYYE LMAO I'M A LEGEND ******")
 	print(" ")
