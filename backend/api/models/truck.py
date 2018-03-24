@@ -21,8 +21,8 @@ class Truck(Base):
     website = Column(Text)
     cuisine = Column(String(64))
 
-    latitude = Column(Float)
-    longitude = Column(Float)
+    latitude = Column(Float(precision='32,12'))
+    longitude = Column(Float(precision='32,12'))
 
     park_id = Column(Integer, ForeignKey('park.id'), nullable=False)
 

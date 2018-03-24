@@ -19,8 +19,8 @@ class Park(Base):
     description = Column(Text)
     website = Column(Text)
 
-    latitude = Column(Float)
-    longitude = Column(Float)
+    latitude = Column(Float(precision='32,12'))
+    longitude = Column(Float(precision='32,12'))
 
     photos = relationship('Park_Photo', back_populates="park", cascade="all,delete")
     trucks = relationship('Truck', back_populates="park", cascade="all,delete")

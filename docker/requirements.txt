@@ -5,3 +5,4 @@ Flask-RESTful==0.3.6
 Flask-Cors==3.0.3
 coverage==4.4.1
 requests==2.9.1
+mysql-connector==2.1.6
