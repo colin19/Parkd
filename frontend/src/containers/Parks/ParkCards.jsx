@@ -48,7 +48,7 @@ export default class ParkCards extends Component {
         const requestURL = 'http://api.parkd.us/park';
         try{
             axios.get(requestURL
-                , { headers: { 'Access-Control-Allow-Origin': '*'} }
+                , { headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'}}
                 )
                 .then(res => {
                     this.updateCards(res.data)

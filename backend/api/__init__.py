@@ -4,6 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.schema import CreateTable
 from sqlalchemy import *
+from flask_cors import CORS
 
 app = flask.Flask(__name__)
 
@@ -42,3 +43,5 @@ from api.controllers import park_api_blueprint, truck_api_blueprint, truck_photo
 app.register_blueprint(truck_api_blueprint)
 app.register_blueprint(park_api_blueprint)
 app.register_blueprint(truck_photo_api_blueprint)
+
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
