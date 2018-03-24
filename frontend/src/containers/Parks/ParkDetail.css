@@ -1,0 +1,87 @@
+/*!
+ * Author: Parkd
+ */
+
+.bodyPark{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.sectionDivider{
+    width: 100%;
+    height: 42px;
+}
+
+.info{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.moreBtn{
+    color: white !important;
+    border-color: white !important;
+    border-radius: 18px !important;
+}
+
+
+.basicInfo p{
+    font-size: 20px;
+    color: #797D7F;
+}
+
+.basicInfoCol{
+    position: relative;
+    top: 0;
+    left: 3.6%;
+    right: 4.6%;
+    width: 90%;
+}
+
+.phoneInfo h1, .hourInfo h1, .rateInfo h1 {
+    font-size: 22px;
+}
+
+.phoneInfo p, .hourInfo p, .rateInfo p, .locationInfo p, .mediaFeeds p {
+    font-size: 18px;
+}
+
+.park-detail-carousel .carousel {
+    position: relative !important;
+    top: 0 !important;
+    width: 100% !important;
+    height: 680px !important;
+}
+
+.park-detail-carousel h1 {
+    text-align: center;
+}
+
+.nearby-trucks {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+
+.nearby-trucks .truck-list-content {
+    position: relative;
+    left: 10%;
+    width: 86%;
+    height: auto;
+}
+
+.truck-list-content .truck-list-title h1 {
+    text-align: center;
+}
+
+.nearby-trucks .card {
+    background-color:transparent !important;
+    border-color:transparent !important;
+    background-image:none;
+    box-shadow:none;
+}
+

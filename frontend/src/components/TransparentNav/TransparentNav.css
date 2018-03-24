@@ -1,0 +1,39 @@
+/*!
+ * Author: Parkd
+ */
+
+.toTheTop{
+    position: absolute !important;
+    width: 100%;
+    top: 0 !important;
+}
+
+.transparentNav {
+    background-color:transparent !important;
+    border-color:transparent;
+    background-image:none;
+    box-shadow:none;
+}
+
+.tintNav {
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    background-image:none;
+    box-shadow:none;
+}
+
+.navbar-brand {
+    font-size: 30px !important;
+    color:#fff !important;
+    margin-left: 10px !important;
+}
+
+.navbar-item {
+    font-size: 20px !important;
+    color:#fff !important;
+}
+
+.navbar-toggle {
+    margin:10px 0;
+    background: #000000 ;
+    color: #ffffff;
+}

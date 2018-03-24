@@ -1,0 +1,17 @@
+matrix:
+  include:
+    - language: python
+      python: "3.6.1"
+      install:
+      - pip install -r docker/requirements.txt
+      before_script: cd backend
+      script:
+      - date
+      - ls -al
+      - coverage run --source=.. tests.py
+      - coverage report
+
+    - language: node_js
+      node_js: 
+       - "stable"
+      before_install: cd frontend

@@ -1,0 +1,44 @@
+{
+  "name": "react-parkd",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "add": "^2.0.6",
+    "axios": "^0.18.0",
+    "bootstrap": "^4.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-google-maps": "^9.4.5",
+    "react-router": "^4.2.0",
+    "react-router-bootstrap": "^0.24.4",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "reactstrap": "^5.0.0-beta.2",
+    "recompose": "^0.26.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "react-test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "test": "cross-env NODE_ENV=development mocha --require ignore-styles test/.setup.js test/**/*-test.js"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      "transform-es2015-modules-commonjs"
+    ]
+  },
+  "devDependencies": {
+    "babel-preset-react-app": "^3.1.1",
+    "chai": "^3.5.0",
+    "cross-env": "^5.1.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "ignore-styles": "^5.0.1",
+    "mocha": "^2.4.5",
+    "react-addons-test-utils": "^0.14.7"
+  }
+}
