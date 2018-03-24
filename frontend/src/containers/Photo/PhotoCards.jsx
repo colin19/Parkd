@@ -8,7 +8,9 @@ import Footer from '../../components/Footer/Footer';
 import './PhotoCards.css';
 
 import imgBg from '../../images/food/themightycone3.png';
-import imgGrinds from '../../images/food/grinds1.png';
+import axios from "axios/index";
+
+/*
 import imgThemightycone from '../../images/food/themightycone1.png';
 
 // pictures and description for the food parks
@@ -16,48 +18,74 @@ const localData = [
     [
         '#themightycone'
         , imgThemightycone
-        , 'Yumm! #austin #themightycone  Likes: 8'
+        , 'Yumm! #austin #themightycone '
         , 'photos/detail?id=-1'
-    ],
-    [
-        '#themightycone'
-        , imgThemightycone
-        , 'Yumm! #austin #themightycone  Likes: 8'
-        , 'photos/detail?id=-1'
-    ],
-    [
-        '#808grinds'    // photo name
-        , imgGrinds     // image
-        , 'I don\'t just eat cookies all day! This heap of meat is the kalua pig from @808grinds and it\'s delicious! their habanero teriyaki sauce is delicious too! <br><br>Likes: 35'
-        , 'photos/detail?id=-1'
-    ],
-    [
-        '#808grinds'    // photo name
-        , imgGrinds     // image
-        , 'I don\'t just eat cookies all day! This heap of meat is the kalua pig from @808grinds and it\'s delicious! their habanero teriyaki sauce is delicious too! <br><br>Likes: 35'
-        , 'photos/detail?id=-1'
-    ],
-    [
-        '#themightycone'
-        , imgThemightycone
-        , 'Yumm! #austin #themightycone  Likes: 8'
-        , 'photos/detail?id=-1'
-    ],
-    [
-        '#808grinds'    // photo name
-        , imgGrinds     // image
-        , 'I don\'t just eat cookies all day! This heap of meat is the kalua pig from @808grinds and it\'s delicious! their habanero teriyaki sauce is delicious too! <br><br>Likes: 35'
-        , 'photos/detail?id=-1'
+        , 8
     ],
 ];
-
+*/
 
 export default class FoodCards extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: localData,
+            data: [],
         };
+    }
+
+    componentDidMount() {
+        this.fetchData();
+    }
+
+    fetchData(){
+        const requestURL = 'http://api.parkd.us/truck_photo';
+        try{
+            axios.get(requestURL)
+                .then(res => {
+                    this.updateCards(res.data)
+                }).catch((error) => {
+                console.log(error)
+            });
+        } catch (error){
+            console.log("Error during fetching trucks data" + error.toString());
+        }
+    }
+
+    updateCards(resData){
+        let data = [];
+
+        try{
+            const photos = resData['objects'];
+            if(photos.length === 0) {
+                throw new Error('empty data');
+            }
+
+            for(let i=0; i<photos.length; i++){
+                const photo = photos[i];
+
+                let photoData = [];
+
+                photoData.push(photo['tag']);    // get tag
+
+                let url = photo['url'];
+                photoData.push(url);
+
+                let description = photo['description'];
+                photoData.push(description);
+
+                let id = photo['id'];
+                photoData.push('photos/detail?id=' + id);
+
+                let likes = photo['likes'];
+                photoData.push(likes);
+
+                data.push(photoData);
+            }
+
+            this.setState({data});
+        } catch (error){
+            console.log("Error during parsing photos data - " + error.toString());
+        }
     }
 
     getCard(id){
@@ -67,7 +95,11 @@ export default class FoodCards extends Component {
                 <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
                 <CardBody>
                     <CardTitle className={'photoCardTitle'}>{data[id][0]}</CardTitle>
-                    <CardText className={'photoCardText'}>{data[id][2]}</CardText>
+                    <CardText className={'photoCardText'}>
+                        {data[id][2]}
+                        <br/>
+                        Likes: {data[id][2]}
+                    </CardText>
                     <div className='buttonContainer'>
                         <Link to={data[id][3]}>
                             <Button className={"btn btn-info photoCardBtn"} bsStyle="info" size={'sm'}>

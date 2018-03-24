@@ -8,57 +8,45 @@ import Footer from '../../components/Footer/Footer';
 import './ParkCards.css';
 
 import imgBg from '../../images/trucks/food-trucks-1.jpg';
-import imgZilker from '../../images/parks/zilker-1.png'
 import imgNo from '../../images/no-image.jpg';
+
 import axios from "axios/index";
 
 
+/*
 const localData = [
     [
         'Zilker Metropolitan Park'
         , imgZilker
-        , 'Rating: 4.7\n2100 Barton Springs Rd, Austin, TX 78704, USA'
+        , 4.7
         , 'parks/detail?id=-1'
+        , '2100 Barton Springs Rd, Austin, TX 78704, USA'
     ],
 ];
+*/
 
 export default class ParkCards extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: localData,
-            nHttpRequest: 0,
+            data: [],
         };
     }
 
     componentDidMount() {
-        let nHttpRequest = this.state.nHttpRequest;
-        nHttpRequest = 0;
-        this.setState({nHttpRequest});
-
         this.fetchData();
     }
 
     fetchData(){
-        // return if exceed the maximum number of requests
-        if(this.state.nHttpRequest > 5){
-            return;
-        }
 
         const requestURL = 'http://api.parkd.us/park';
         try{
-            axios.get(requestURL
-                , { headers: { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'}}
-                )
+            axios.get(requestURL)
                 .then(res => {
                     this.updateCards(res.data)
                 }).catch((error) => {
                 console.log(error)
             });
-
-            let {nHttpRequest} = this.state;
-            nHttpRequest += 1;
-            this.setState({nHttpRequest});
         } catch (error){
             console.log("Error during fetching parks data");
         }
@@ -68,43 +56,39 @@ export default class ParkCards extends Component {
         let data = [];
 
         try{
-            const parks = resData.objects;
+            const parks = resData['objects'];
             if(parks.length === 0) {
                 throw new Error('empty data');
             }
 
             for(let i=0; i<parks.length; i++){
                 const park = parks[i];
+
                 let parkData = [];
 
                 parkData.push(park['name']);    // get name
-                if(park['photos'].length > 0){
+                if(park['photos'].length > 0 && park['photos'][0] != null){
                     parkData.push(park['photos'][0]);   // get image
                 }else{
                     parkData.push(imgNo);
                 }
 
-                let rating = parkData['rating'];  // get rating
-                let address = parkData['address'];   //get address
-                let description = 'Rating: ' + rating.toString() + '\n' + address;
-                parkData.push(description);
 
-                let parkId = parkData['id'];    // get park id
-                parkData.push('parks/detail?id=' + parkId.toString());
+                let rating = park['rating'];  // get rating
+                parkData.push(rating);
+
+                let parkId = park['id'];    // get park id
+                parkData.push('parks/detail?id=' + parkId);
+
+                let address = park['address'];   //get address
+                parkData.push(address);
 
                 data.push(parkData);
             }
 
             this.setState({data});
         } catch (error){
-            console.log("Error during parsing parks data");
-
-            // Try again
-            let {nHttpRequest} = this.state;
-            nHttpRequest += 1;
-            this.setState({nHttpRequest});
-
-            this.fetchData();
+            console.log("Error during parsing parks data - " + error.toString());
         }
     }
 
@@ -115,7 +99,11 @@ export default class ParkCards extends Component {
                 <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
                 <CardBody>
                     <CardTitle className={'photoCardTitle'}>{data[id][0]}</CardTitle>
-                    <CardText className={'photoCardText'}>{data[id][2]}</CardText>
+                    <CardText className={'photoCardText'}>
+                        Rating: {data[id][2]}
+                        <br/>
+                        Address: {data[id][4]}
+                    </CardText>
                     <div className='buttonContainer'>
                         <Link to={data[id][3]}>
                             <Button className={"btn btn-info photoCardBtn"} color="info" size={'sm'}>

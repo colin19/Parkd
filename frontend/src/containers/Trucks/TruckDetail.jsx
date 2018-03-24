@@ -6,9 +6,13 @@ import './TruckDetail.css';
 
 import CustomCarousel from '../../components/CustomCarousel/CustomCarousel';
 import IntroHeader from '../../components/intro-header/IntroHeader';
+import TransparentNav from '../../components/TransparentNav/TransparentNav';
 import Footer from '../../components/Footer/Footer';
 import ReactGoogleMap from '../../components/GoogleMap/ReactGoogleMap';
 
+import axios from "axios/index";
+
+/*
 import imgGrinds1 from '../../images/trucks/grinds1.png';
 import imgGrinds2 from '../../images/trucks/grinds2.png';
 import imgGrinds3 from '../../images/trucks/grinds3.png';
@@ -26,7 +30,7 @@ const localData = [
     , 4.5
     , ['Review 1', 'Review 2', 'Review 3']
 ];
-
+*/
 
 export default class TruckDetail extends Component {
     constructor(props) {
@@ -38,15 +42,94 @@ export default class TruckDetail extends Component {
         let truckId = params.get('id');
         if(truckId === null) truckId = -1;
 
-        // load data
-        let data = null;
-        if(truckId === -1 || data === null) data = localData;
-
         this.state = {
-            data: data,
+            data: [],
             truckId: truckId,
         };
     }
+
+    componentDidMount() {
+        let truckId = this.state.truckId;
+        this.fetchData(truckId);
+    }
+
+    fetchData(truckId){
+        if(truckId === -1) return;
+
+        const requestURL = 'http://api.truckd.us/truck/' + truckId ;
+        try{
+            axios.get(requestURL)
+                .then(res => {
+                    this.updateTruckData(res.data)
+                }).catch((error) => {
+                console.log(error)
+            });
+        } catch (error){
+            console.log("Error during fetching trucks data");
+        }
+    }
+
+    updateTruckData(resData){
+        const truck = resData;
+        let data = [];
+
+        try{
+            data.push(truck['name']);
+
+            let review = truck['reviews'][0]['content'];
+            if(review.length > 300){
+                review = review.substring(0, 300) + ' ...';
+            }
+            data.push(review);
+
+            // no phone number
+            data.push(null);
+
+            let address = truck['address'];   //get address
+            data.push(address);
+
+            // no hours currently
+            data.push(null);
+
+            let photos = [];
+            for(let i=0; i<truck['photos'].length; i++) {
+                let photoData = [];
+                let photo = truck['photos'][i];
+                photoData.push(photo['url']);
+                photoData.push(photo['id']);
+
+                photos.push(photoData);
+            }
+            data.push(photos);
+
+            // no website link
+            data.push(null);
+
+            let latitude = truck['latitude'];
+            let longitude = truck['longitude'];
+            data.push([longitude, latitude]);
+
+
+            let park = truck['park'];   // get park info
+            let parkName = park['name'];
+            let parkId = park['id'];
+            data.push([parkName, 'parks/detail?id=' + parkId]);
+
+            let rating = truck['rating'];  // get rating
+            data.push(rating);
+
+            let reviews = [];
+            for(let i=0; i<truck['reviews'].length; i++) {
+                reviews.push(truck['reviews'][i]['content']);
+            }
+            data.push(reviews);
+
+            this.setState({data});
+        } catch (error){
+            console.log("Error during parsing trucks data - " + error.toString());
+        }
+    }
+
 
     getBasicDescription(){
         return(
@@ -153,6 +236,12 @@ export default class TruckDetail extends Component {
     }
 
     render(){
+        if(this.state.data.length < 1){
+            return (
+                <TransparentNav isTinted={true}/>
+            );
+        }
+
         let images = [];
         for(let i=0; i<this.state.data[5].length; i++){
             images.push(this.state.data[5][i][0]);
@@ -172,8 +261,6 @@ export default class TruckDetail extends Component {
                             {/* Description */}
                             <Col xs="8">
                                 {this.getBasicDescription()}
-                                {this.getPhoneInfo()}
-                                {this.getHourInfo()}
                                 {this.getRatingInfo()}
                             </Col>
 

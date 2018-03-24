@@ -6,12 +6,19 @@ import './ParkDetail.css';
 
 import CustomCarousel from '../../components/CustomCarousel/CustomCarousel';
 import IntroHeader from '../../components/intro-header/IntroHeader';
+import TransparentNav from '../../components/TransparentNav/TransparentNav';
 import Footer from '../../components/Footer/Footer';
 import ReactGoogleMap from '../../components/GoogleMap/ReactGoogleMap';
 
+/*
 import imgAlberta1 from '../../images/parks/albert-1.png';
 import imgAlberta2 from '../../images/parks/albert-2.png';
+import imgNo from '../../images/no-image.jpg';
+*/
 
+import axios from "axios/index";
+
+/*
 const localData = [
     'Alberta Park'
     , 'Alberta Park is a park located in northeast Portland, Oregon. Acquired in 1921, the park includes a basketball court, dog off-leash area, playground, soccer field, softball field and tennis court.'
@@ -25,12 +32,13 @@ const localData = [
         , ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
         , ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
         , ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
-        ]
+    ]
     , 4.4     // Rating
     , [45.5644753, -122.6451045]
     , 'external link'
+    , []  // more reviews
 ];
-
+*/
 
 export default class ParkDetail extends Component {
     constructor(props) {
@@ -42,14 +50,96 @@ export default class ParkDetail extends Component {
         let parkId = params.get('id');
         if(parkId === null) parkId = -1;
 
-        // load data
-        let data = null;
-        if(parkId === -1 || data === null) data = localData;
-
         this.state = {
-            data: data,
+            data: [],
             parkId: parkId,
         };
+    }
+
+    componentDidMount() {
+        let parkId = this.state.parkId;
+        this.fetchData(parkId);
+    }
+
+    fetchData(parkId){
+        if(parkId === -1) return;
+
+        const requestURL = 'http://api.parkd.us/park/' + parkId ;
+        try{
+            axios.get(requestURL)
+                .then(res => {
+                    this.updateParkData(res.data)
+                }).catch((error) => {
+                console.log(error)
+            });
+        } catch (error){
+            console.log("Error during fetching parks data");
+        }
+    }
+
+    updateParkData(resData){
+        const park = resData;
+        let data = [];
+
+        try{
+            data.push(park['name']);
+
+            let review = park['reviews'][0]['content'];
+            if(review.length > 300){
+                review = review.substring(0, 300) + ' ...';
+            }
+            data.push(review);
+
+            // no phone number
+            data.push(null);
+
+            let address = park['address'];   //get address
+            data.push(address);
+
+            // no hours currently
+            data.push(null);
+
+            let photos = [];
+            for(let i=0; i<park['photos'].length; i++) {
+                let photoData = [];
+                let photo = park['photos'][i];
+                photoData.push(photo['url']);
+                photoData.push(photo['id']);
+
+                photos.push(photoData);
+            }
+            data.push(photos);
+
+            let trucks = [];
+            for(let i=0; i<park['trucks'].length; i++) {
+                let truckData = [];
+                let truck = park['trucks'][i];
+
+                truckData.push(truck['name']);
+                truckData.push(truck['address']);
+                truckData.push(truck['rating']);
+                truckData.push('/trucks/detail?id=' + truck['id']);
+
+                trucks.push(truckData);
+            }
+            data.push(trucks);
+
+            let rating = park['rating'];  // get rating
+            data.push(rating);
+
+            let latitude = park['latitude'];
+            let longitude = park['longitude'];
+            data.push([longitude, latitude]);
+
+            // no external link currently
+            data.push(null);
+
+            this.setState({data});
+            this.forceUpdate()
+
+        } catch (error){
+            console.log("Error during parsing parks data - " + error.toString());
+        }
     }
 
     getBasicDescription(){
@@ -223,6 +313,13 @@ export default class ParkDetail extends Component {
     }
 
     render(){
+        if(this.state.data.length < 1) {
+            return (
+                <TransparentNav isTinted={true}/>
+            );
+        }
+
+
         let images = [];
         for(let i=0; i<this.state.data[5].length; i++){
             images.push(this.state.data[5][i][0]);
@@ -242,8 +339,6 @@ export default class ParkDetail extends Component {
                             {/* Description */}
                             <Col xs="8">
                                 {this.getBasicDescription()}
-                                {this.getPhoneInfo()}
-                                {this.getHourInfo()}
                                 {this.getRatingInfo()}
                             </Col>
 
