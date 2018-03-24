@@ -17,6 +17,10 @@ class Truck(Base):
     rating = Column(Float)
     google_id = Column(String(64))
 
+    description = Column(Text)
+    website = Column(Text)
+    cuisine = Column(String(64))
+
     latitude = Column(Float)
     longitude = Column(Float)
 

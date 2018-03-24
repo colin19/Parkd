@@ -1,5 +1,5 @@
 from sqlalchemy.ext.declarative import declared_attr
-from sqlalchemy import ForeignKey, Column, Integer, Text
+from sqlalchemy import ForeignKey, Column, Integer, Text, String
 from sqlalchemy.orm import relationship
 from api import Base
 
@@ -11,6 +11,10 @@ class Park_Photo(Base):
 
     id = Column(Integer, primary_key=True)
     url = Column(Text)
+
+    tag = Column(String(128))
+    description = Column(Text)
+    likes = Column(Integer)
 
     park_id = Column(Integer, ForeignKey('park.id'), nullable=False)
 

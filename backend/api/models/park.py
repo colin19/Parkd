@@ -16,6 +16,8 @@ class Park(Base):
     address = Column(Text)
     rating = Column(Float)
     google_id = Column(String(64))
+    description = Column(Text)
+    website = Column(Text)
 
     latitude = Column(Float)
     longitude = Column(Float)
