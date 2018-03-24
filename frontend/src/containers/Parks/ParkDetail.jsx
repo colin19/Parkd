@@ -113,17 +113,10 @@ export default class ParkDetail extends Component {
     }
 
     getCaption(id){
-        let imgId = this.state.data[5][id][1];
-
         if(id !== this.state.data[5].length - 1){
             return (
                 <div key={id}>
-                    <h1><br/><br/><br/><br/></h1>
-                    <Link to={ '/photos/detail?id='+imgId }>
-                        <Button className={'moreBtn'} outline color={"secondary"} size={'lg'}>
-                            Details
-                        </Button>
-                    </Link>
+                    <br/>
                 </div>
             );
         }

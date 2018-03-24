@@ -37,7 +37,8 @@ print(CreateTable(Park_Review.__table__).compile(engine))
 manager = flask_restless.APIManager(app, session=s)
 
 # Register flask-restless blueprints to instantiate CRUD endpoints
-from api.controllers import park_api_blueprint, truck_api_blueprint
+from api.controllers import park_api_blueprint, truck_api_blueprint, truck_photo_api_blueprint
 
 app.register_blueprint(truck_api_blueprint)
 app.register_blueprint(park_api_blueprint)
+app.register_blueprint(truck_photo_api_blueprint)
