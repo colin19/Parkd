@@ -98,7 +98,8 @@ export default class FoodCards extends Component {
                     <CardText className={'photoCardText'}>
                         {data[id][2]}
                         <br/>
-                        Likes: {data[id][2]}
+                        <br/>
+                        Likes: {data[id][4]}
                     </CardText>
                     <div className='buttonContainer'>
                         <Link to={data[id][3]}>

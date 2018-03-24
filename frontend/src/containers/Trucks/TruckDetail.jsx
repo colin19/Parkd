@@ -56,7 +56,7 @@ export default class TruckDetail extends Component {
     fetchData(truckId){
         if(truckId === -1) return;
 
-        const requestURL = 'http://api.truckd.us/truck/' + truckId ;
+        const requestURL = 'http://api.parkd.us/truck/' + truckId ;
         try{
             axios.get(requestURL)
                 .then(res => {
@@ -77,8 +77,8 @@ export default class TruckDetail extends Component {
             data.push(truck['name']);
 
             let review = truck['reviews'][0]['content'];
-            if(review.length > 300){
-                review = review.substring(0, 300) + ' ...';
+            if(review.length > 180){
+                review = review.substring(0, 180) + ' ...';
             }
             data.push(review);
 
