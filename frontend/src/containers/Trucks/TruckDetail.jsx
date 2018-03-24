@@ -247,9 +247,12 @@ export default class TruckDetail extends Component {
             images.push(this.state.data[5][i][0]);
         }
 
+        let bgImgIndex = images.length - 1;
+        if(bgImgIndex <= 0) bgImgIndex = 0;
+
         return (
             <div>
-                <IntroHeader bgUrl={this.state.data[5][0][0]}
+                <IntroHeader bgUrl={this.state.data[5][bgImgIndex][0]}
                              title={this.state.data[0]}
                              description={this.state.data[10][0]}
                              />

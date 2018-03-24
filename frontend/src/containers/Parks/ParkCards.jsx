@@ -67,8 +67,10 @@ export default class ParkCards extends Component {
                 let parkData = [];
 
                 parkData.push(park['name']);    // get name
-                if(park['photos'].length > 0 && park['photos'][0] != null){
-                    parkData.push(park['photos'][0]);   // get image
+
+                let nPhoto = park['photos'].length;
+                if(park['photos'].length > 0 && park['photos'][nPhoto-1] != null){
+                    parkData.push(park['photos'][nPhoto-1]);   // get image
                 }else{
                     parkData.push(imgNo);
                 }
