@@ -6,7 +6,9 @@ import './PhotoDetail.css';
 import Footer from '../../components/Footer/Footer';
 import TransparentNav from '../../components/TransparentNav/TransparentNav';
 import ReactGoogleMap from '../../components/GoogleMap/ReactGoogleMap';
+import axios from "axios/index";
 
+/*
 import imgFood from '../../images/food/food1.png';
 
 const localData = [
@@ -20,6 +22,7 @@ const localData = [
     , ['808 grinds', '../trucks/detail?id=-1']
     , 8
 ];
+*/
 
 
 export default class PhotoDetail extends Component {
@@ -32,20 +35,72 @@ export default class PhotoDetail extends Component {
         let photoId = params.get('id');
         if(photoId === null) photoId = -1;
 
-        // load data
-        let data = null;
-        if(photoId === -1 || data === null) data = localData;
 
         this.state = {
-            data: data,
+            data: [],
             photoId: photoId,
         };
+    }
+
+    componentDidMount() {
+        let photoId = this.state.photoId;
+        this.fetchData(photoId);
+    }
+
+    fetchData(photoId){
+        if(photoId === -1) return;
+
+        const requestURL = 'http://api.parkd.us/truck_photo/' + photoId ;
+        try{
+            axios.get(requestURL)
+                .then(res => {
+                    this.updateParkData(res.data)
+                }).catch((error) => {
+                console.log(error)
+            });
+        } catch (error){
+            console.log("Error during fetching photo data");
+        }
+    }
+
+    updateParkData(resData){
+        const photo = resData;
+        let data = [];
+
+        try{
+            data.push(photo['tag']);
+            data.push(photo['description']);   //get description
+            data.push(photo['truck']['address']);   // get address
+
+            // no hours currently
+            data.push(null);
+
+            let latitude = photo['truck']['latitude'];
+            let longitude = photo['truck']['longitude'];
+            data.push([longitude, latitude]);
+
+            data.push([photo['url'], photo['id']]);
+
+            let parkId = photo['truck']['park_id'];
+            data.push(['Click to visit Park('+parkId+')', '/parks/detail?id='+parkId]);
+
+            let truckId = photo['truck']['id'];
+            let truckName = photo['truck']['name'];
+            data.push([truckName, '/trucks/detail?id=' + truckId]);
+
+            data.push(photo['likes']);
+
+            this.setState({data});
+
+        } catch (error){
+            console.log("Error during parsing parks data - " + error.toString());
+        }
     }
 
     getBasicDescription(){
         return(
             <div className={"photo-tag-info"}>
-                <h1>{'# ' + this.state.data[0]}</h1>
+                <h1>{' ' + this.state.data[0]}</h1>
                 <br/>
                 <p>{this.state.data[1]}</p>
             </div>
@@ -110,6 +165,12 @@ export default class PhotoDetail extends Component {
     }
 
     render(){
+        if(this.state.data.length < 1){
+            return (
+                <TransparentNav isTinted={true}/>
+            );
+        }
+
         let images = [];
         for(let i=0; i<this.state.data[5].length; i++){
             images.push(this.state.data[5][i][0]);
@@ -130,7 +191,6 @@ export default class PhotoDetail extends Component {
                             <Col xs="8">
                                 {this.getBasicDescription()}
                                 {this.getRatingInfo()}
-                                {this.getHourInfo()}
                                 {this.getParkInfo()}
                             </Col>
 

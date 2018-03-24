@@ -4,7 +4,7 @@
 import json
 import requests
 
-city = 'austin'
+city = 'portland'
 
 url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query=parks+in+' \
 	+ city + '&key=AIzaSyAhABTKAw-LK6_Vh5Vhle7gwBebbpLCHew'
@@ -40,3 +40,18 @@ for j in range(0,len(park_names)):
 	print("place_id: " + place_ids[j])
 	print(" ")
 	print(" ")
+	ParkID = j + 20
+	Name = park_names[j]
+	City = city
+	Address = addresses[j]
+	Rating = ratings[j]
+	PhotoID = 0
+	GooglePlacesID = place_ids[j]
+
+	
+
+
+
+
+
+

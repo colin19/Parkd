@@ -56,7 +56,7 @@ export default class TruckDetail extends Component {
     fetchData(truckId){
         if(truckId === -1) return;
 
-        const requestURL = 'http://api.truckd.us/truck/' + truckId ;
+        const requestURL = 'http://api.parkd.us/truck/' + truckId ;
         try{
             axios.get(requestURL)
                 .then(res => {
@@ -77,8 +77,8 @@ export default class TruckDetail extends Component {
             data.push(truck['name']);
 
             let review = truck['reviews'][0]['content'];
-            if(review.length > 300){
-                review = review.substring(0, 300) + ' ...';
+            if(review.length > 180){
+                review = review.substring(0, 180) + ' ...';
             }
             data.push(review);
 
@@ -247,9 +247,12 @@ export default class TruckDetail extends Component {
             images.push(this.state.data[5][i][0]);
         }
 
+        let bgImgIndex = images.length - 1;
+        if(bgImgIndex <= 0) bgImgIndex = 0;
+
         return (
             <div>
-                <IntroHeader bgUrl={this.state.data[5][0][0]}
+                <IntroHeader bgUrl={this.state.data[5][bgImgIndex][0]}
                              title={this.state.data[0]}
                              description={this.state.data[10][0]}
                              />

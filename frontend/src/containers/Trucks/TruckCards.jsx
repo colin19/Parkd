@@ -85,15 +85,16 @@ export default class TruckCards extends Component {
 
                 truckData.push(truck['name']);    // get name
 
-                if(truck['photos'].length > 0 && truck['photos'][0] != null){
-                    truckData.push(truck['photos'][0]);   // get image
+                let nPhoto = truck['photos'].length;
+                if(truck['photos'].length > 0 && truck['photos'][nPhoto-1] != null){
+                    truckData.push(truck['photos'][nPhoto-1]);   // get image
                 }else{
                     truckData.push(imgNo);
                 }
 
                 let review = truck['reviews'][0]['content'];
-                if(review.length > 60){
-                    review = review.substring(0, 60) + ' ...';
+                if(review.length > 120){
+                    review = review.substring(0, 120) + ' ...';
                 }
                 truckData.push(review);
 

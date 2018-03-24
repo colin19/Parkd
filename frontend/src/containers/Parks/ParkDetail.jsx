@@ -135,7 +135,6 @@ export default class ParkDetail extends Component {
             data.push(null);
 
             this.setState({data});
-            this.forceUpdate()
 
         } catch (error){
             console.log("Error during parsing parks data - " + error.toString());
