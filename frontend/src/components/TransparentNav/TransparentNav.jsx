@@ -3,7 +3,7 @@ import {Navbar, Nav, NavItem, NavbarBrand, NavbarToggler, Collapse, NavLink} fro
 
 import './TransparentNav.css';
 
-export default class TransparentNav extends Component{
+class TransparentNav extends Component{
     constructor(props) {
         super(props);
 
@@ -56,3 +56,5 @@ export default class TransparentNav extends Component{
         )
     }
 }
+
+export default TransparentNav;

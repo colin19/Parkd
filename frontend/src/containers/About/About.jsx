@@ -25,12 +25,12 @@ const aboutPageContent = {
 };
 
 const teamInfo = [
-    ['Gijs Landwehr', iconGijs, 'Class of 2019', 'Drinks on average 2 gallons of milk a week.', 'Wrote the content on this page, tries and sometimes succeeds in being entertaining.', 0]
-    , ['Austen Castberg', iconAusten, 'Class of 2020', 'Drinks on average 4 gallons of milk a week.', 'Worked on backend.', 0]
-    , ['Colin Hall', iconColin, 'Class of 2019', 'Drinks on average 4 gallons of milk a week.', 'Also worked on backend.', 0]
-    , ['Javier Banda', iconJavier, 'Class of 2019', 'Milk deficient.', 'The third member of the backend team. The frontend people making this page don\'t quite know what that means.', 0]
-    , ['Diego Alcoz', iconDiego, 'Class of 2019', 'Frequent milk drinker.', 'Made things look all prettyful and such.', 0]
-    , ['Lin Guan', iconLin, 'Class of 2020', 'Milk deficient. Drinks tea everyday.', 'Responsible for the overall look and feel of the website. If it looks good, it was Lin. If it looks bad, it wasn\'t.', 0]
+    ['Gijs Landwehr', iconGijs, 'Class of 2019', '', 'Another 3rd year CS student from UT Austin. Spends most of his free time teaching and travelling across the state for robotics competition.', 0]
+    , ['Austen Castberg', iconAusten, 'Class of 2020', '', 'Worked on backend.', 0]
+    , ['Colin Hall', iconColin, 'Class of 2019', '', 'A 3rd year computer science major at UT. Has no hobbies. Worked on the backend. Developed UML Diagram.', 6]
+    , ['Javier Banda', iconJavier, 'Class of 2019', '', 'A 3rd year computer science major from the University of Texas. Hobbies include playing basketball and eating lots of food. Worked on the backend of this project. Among other duties, responsible for populating backend database.', 4]
+    , ['Diego Alcoz', iconDiego, 'Class of 2019', '', 'Likes to program in his spare time. What a weirdo. Worked mostly on frontend, but helped with backend stuff when necessary.', 5]
+    , ['Lin Guan', iconLin, 'Class of 2020', '', 'Responsible for the overall look and feel of the website. If it looks good, it was Lin. If it looks bad, it wasn\'t.', 4]
 ];
 
 const GithubId2MemberId = {'gijsland': 0, 'aecast': 1, 'colin19': 2, 'jbanda11': 3,'dalcoz': 4, 'GuanSuns': 5};
@@ -230,8 +230,11 @@ export default class About extends Component{
                     <br/>
                     <h1>Links</h1>
                     <ul>
-                        <li>Parkd Technical Report: <a href="https://www.gitbook.com/book/aecast/parkd-technical-report/details">https://www.gitbook.com/book/aecast/parkd-technical-report/details</a></li>
+                        <li>API Documentation: <a href="https://www.gitbook.com/book/jbanda11/api-documentation/details">https://www.gitbook.com/book/jbanda11/api-documentation/details</a></li>
+                        <li>Parkd Technical Report: <a href="https://www.gitbook.com/book/jbanda11/technical-report/details">https://www.gitbook.com/book/jbanda11/technical-report/details</a></li>
                         <li>Github Repository: <a href="https://github.com/colin19/Parkd">https://github.com/colin19/Parkd</a></li>
+                        <li>Self Critique: <a href="https://www.gitbook.com/book/jbanda11/self-critique/details">https://www.gitbook.com/book/jbanda11/self-critique/details</a></li>
+                        <li>Other Critique: <a href="https://www.gitbook.com/book/jbanda11/other-critique/details">https://www.gitbook.com/book/jbanda11/other-critique/details</a></li>
                     </ul>
 
                     <div className="sectionDivider">

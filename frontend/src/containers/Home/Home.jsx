@@ -21,7 +21,7 @@ const captions = [
 ];
 
 
-export default class Home extends Component{
+class Home extends Component{
     getCarouselImages(){
         let carouselImages = [];
         let i;
@@ -68,3 +68,5 @@ export default class Home extends Component{
         );
     }
 }
+
+export default Home;
