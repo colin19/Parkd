@@ -5,7 +5,7 @@ import ParkCards from '../src/containers/Parks/ParkCards';
 
 
 import React from 'react'
-import { shallow, configure, mount, render } from 'enzyme'
+import { shallow, configure } from 'enzyme'
 import { expect } from 'chai'
 import Adapter from 'enzyme-adapter-react-16';
 import "isomorphic-fetch"
