@@ -225,6 +225,12 @@ export default class About extends Component{
                         <li>Webstorm</li>
                         <li>Bootstrap</li>
                         <li>Flask</li>
+                        <li>Amazon EC2</li>
+                        <li>Route 53</li>
+                        <li>Postman</li>
+                        <li>MySQL Workbook</li>
+                        <li>SQL Alchemy</li>
+                        <li>Axios</li>
                     </ul>
                     <p>{aboutPageContent.toolsDescription}</p>
                     <br/>
