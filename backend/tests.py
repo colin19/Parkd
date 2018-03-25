@@ -19,9 +19,20 @@ class TestModels (TestCase):
         self.app.testing = True
 
     def check_park_0:
-		cur.execute("select name_first, name_last from address")
+		cur.execute("SELECT name from park")
 		data = cur.fetchall()
-		ASSERT(data[0] == "Zilker Metropolitan Park")
+		assert data[0] == "Zilker Metropolitan Park"
+
+	def check_park_count:
+		cur.execute("SELECT count(*) from park")
+		data = cur.fetchall()
+		assert data[0] = 60
+
+	def check_truck_0:
+		cur.execute("SELECT name from truck")
+		data = cur.fetchall()
+		assert data[0] = "Veracruz All Natural Food Truck"
+
 
 if __name__ == '__main__':
     main()
