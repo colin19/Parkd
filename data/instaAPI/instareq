@@ -1,8 +1,0 @@
-import requests
-import json
-
-#Makes a request for the tag using the acess token
-response = requests.get(u'https://api.instagram.com/v1/tags/parks?access_token=numba')
-print(response)
-data = json.loads(response.content.decode('utf-8'))
-print (data)

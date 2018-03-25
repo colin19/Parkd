@@ -27,13 +27,14 @@ from api.models.park_photo import Park_Photo
 
 Base.metadata.create_all()
 
-print('Table Schema: ')
-print(CreateTable(Truck.__table__).compile(engine))
-print(CreateTable(Truck_Photo.__table__).compile(engine))
-print(CreateTable(Truck_Review.__table__).compile(engine))
-print(CreateTable(Park.__table__).compile(engine))
-print(CreateTable(Park_Photo.__table__).compile(engine))
-print(CreateTable(Park_Review.__table__).compile(engine))
+if app.debug:
+    print('Table Schema: ')
+    print(CreateTable(Truck.__table__).compile(engine))
+    print(CreateTable(Truck_Photo.__table__).compile(engine))
+    print(CreateTable(Truck_Review.__table__).compile(engine))
+    print(CreateTable(Park.__table__).compile(engine))
+    print(CreateTable(Park_Photo.__table__).compile(engine))
+    print(CreateTable(Park_Review.__table__).compile(engine))
 
 manager = flask_restless.APIManager(app, session=s)
 
