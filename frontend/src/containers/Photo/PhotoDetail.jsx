@@ -167,7 +167,16 @@ export default class PhotoDetail extends Component {
     render(){
         if(this.state.data.length < 1){
             return (
-                <TransparentNav isTinted={true}/>
+                <div>
+                    <TransparentNav isTinted={true}/>
+
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div className={"loading"}>
+                        <h1>Loading Page ...</h1>
+                    </div>
+                </div>
             );
         }
 

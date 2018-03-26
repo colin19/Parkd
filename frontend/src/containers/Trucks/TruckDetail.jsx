@@ -32,6 +32,8 @@ const localData = [
 ];
 */
 
+import imgNo from '../../images/no-image.jpg';
+
 export default class TruckDetail extends Component {
     constructor(props) {
         super(props);
@@ -98,6 +100,13 @@ export default class TruckDetail extends Component {
                 photoData.push(photo['url']);
                 photoData.push(photo['id']);
 
+                photos.push(photoData);
+            }
+            // handle the case when there is no image
+            if(photos.length === 0){
+                let photoData = [];
+                photoData.push(imgNo);
+                photoData.push(-1);
                 photos.push(photoData);
             }
             data.push(photos);
@@ -202,7 +211,7 @@ export default class TruckDetail extends Component {
     getCaption(id){
         let imgId = this.state.data[5][id][1];
 
-        if(id !== this.state.data[5].length - 1){
+        if(id !== this.state.data[5].length - 1 && imgId !== -1){
             return (
                 <div key={id}>
                     <h1><br/><br/><br/><br/></h1>
@@ -240,7 +249,16 @@ export default class TruckDetail extends Component {
     render(){
         if(this.state.data.length < 1){
             return (
-                <TransparentNav isTinted={true}/>
+                <div>
+                    <TransparentNav isTinted={true}/>
+
+                    <br/>
+                    <br/>
+                    <br/>
+                    <div className={"loading"}>
+                        <h1>Loading Page ...</h1>
+                    </div>
+                </div>
             );
         }
 

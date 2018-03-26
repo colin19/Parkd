@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import { Button, Container, Row, Col, CardGroup, Card, CardTitle, CardSubtitle } from 'reactstrap';
+import axios from "axios/index";
 
 import './ParkDetail.css';
 
@@ -13,10 +14,10 @@ import ReactGoogleMap from '../../components/GoogleMap/ReactGoogleMap';
 /*
 import imgAlberta1 from '../../images/parks/albert-1.png';
 import imgAlberta2 from '../../images/parks/albert-2.png';
-import imgNo from '../../images/no-image.jpg';
 */
 
-import axios from "axios/index";
+import imgNo from '../../images/no-image.jpg';
+
 
 /*
 const localData = [
@@ -106,6 +107,13 @@ export default class ParkDetail extends Component {
                 photoData.push(photo['url']);
                 photoData.push(photo['id']);
 
+                photos.push(photoData);
+            }
+            // handle the case when there is no image for this park
+            if(photos.length === 0){
+                let photoData = [];
+                photoData.push(imgNo);
+                photoData.push(-1);
                 photos.push(photoData);
             }
             data.push(photos);
@@ -212,7 +220,9 @@ export default class ParkDetail extends Component {
     }
 
     getCaption(id){
-        if(id !== this.state.data[5].length - 1){
+        let imgId = this.state.data[5][id][1];
+
+        if(id !== this.state.data[5].length - 1 && imgId !== -1) {
             return (
                 <div key={id}>
                     <br/>
@@ -286,6 +296,7 @@ export default class ParkDetail extends Component {
         while(cnt < n){
             foodTrucksItems.push(<Card key={i}/>);
             cnt += 1;
+            i += 1;
         }
 
         return (
@@ -324,10 +335,19 @@ export default class ParkDetail extends Component {
     render(){
         if(this.state.data.length < 1) {
             return (
-                <TransparentNav isTinted={true}/>
+                <div>
+                    <TransparentNav isTinted={true}/>
+
+                    <div className={"loading"}>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <h1>Loading Page ...</h1>
+                    </div>
+                </div>
+
             );
         }
-
 
         let images = [];
         for(let i=0; i<this.state.data[5].length; i++){
