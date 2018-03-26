@@ -41,3 +41,7 @@
 .buttonContainer{
     text-align:center !important;
 }
+
+.loading {
+    text-align:center;
+}

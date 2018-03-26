@@ -123,6 +123,21 @@ export default class FoodCards extends Component {
     }
 
     render(){
+        if(this.state.data.length === 0){
+            return (
+                <div>
+                    <IntroHeader bgUrl={imgBg}
+                                 description={'Number of likes, Tags, Park/location, Food truck, Date of post'}
+                                 title={'Photos on Social Media'}/>
+
+                    <br/>
+                    <div className={"loading"}>
+                        <h1>Loading Page ...</h1>
+                    </div>
+                </div>
+            );
+        }
+
         return (
             <div>
                 <IntroHeader bgUrl={imgBg}
