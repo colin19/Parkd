@@ -39,7 +39,7 @@ export default class ParkCards extends Component {
 
     fetchData(){
 
-        const requestURL = 'http://api.parkd.us/park';
+        const requestURL = 'http://api.parkd.us/parks';
         try{
             axios.get(requestURL)
                 .then(res => {

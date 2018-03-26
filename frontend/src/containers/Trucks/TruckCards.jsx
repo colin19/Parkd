@@ -56,7 +56,7 @@ export default class TruckCards extends Component {
 
     fetchData(){
 
-        const requestURL = 'http://api.parkd.us/truck';
+        const requestURL = 'http://api.parkd.us/trucks';
         try{
             axios.get(requestURL)
                 .then(res => {
