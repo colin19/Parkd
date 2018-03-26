@@ -5,14 +5,16 @@ from sqlalchemy.orm import sessionmaker, scoped_session
 from sqlalchemy.schema import CreateTable
 from sqlalchemy import *
 from flask_cors import CORS
+from flask_restful import Api
 
 app = flask.Flask(__name__)
+api = Api(app)
 
 # Create our SQLAlchemy DB engine
 engine = create_engine('mysql+mysqlconnector://parkdteam:foodtrucks'
                        + '@parkd-mysql.cthwmo3nyii9.us-east-2.rds.amazonaws.com:3306/parkd_sqlalchemy')
 Session = sessionmaker(bind=engine, autocommit=False, autoflush=False)
-s = scoped_session(Session)
+session = scoped_session(Session)
 
 Base = declarative_base()
 Base.metadata.bind = engine
@@ -35,7 +37,7 @@ print(CreateTable(Park.__table__).compile(engine))
 print(CreateTable(Park_Photo.__table__).compile(engine))
 print(CreateTable(Park_Review.__table__).compile(engine))
 
-manager = flask_restless.APIManager(app, session=s)
+manager = flask_restless.APIManager(app, session=session)
 
 # Register flask-restless blueprints to instantiate CRUD endpoints
 from api.controllers import park_api_blueprint, truck_api_blueprint, truck_photo_api_blueprint
@@ -43,5 +45,9 @@ from api.controllers import park_api_blueprint, truck_api_blueprint, truck_photo
 app.register_blueprint(truck_api_blueprint)
 app.register_blueprint(park_api_blueprint)
 app.register_blueprint(truck_photo_api_blueprint)
+
+# Load Resources
+from api.resources.parkList import ParkList
+api.add_resource(ParkList, '/parks')
 
 cors = CORS(app, resources={r"/*": {"origins": "*"}})

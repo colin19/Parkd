@@ -87,7 +87,7 @@ export default class TruckCards extends Component {
 
                 let nPhoto = truck['photos'].length;
                 if(truck['photos'].length > 0 && truck['photos'][nPhoto-1] != null){
-                    truckData.push(truck['photos'][nPhoto-1]);   // get image
+                    truckData.push(truck['photos'][nPhoto-1]['url']);   // get image
                 }else{
                     truckData.push(imgNo);
                 }

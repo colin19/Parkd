@@ -113,7 +113,7 @@ export default class TruckDetail extends Component {
             let park = truck['park'];   // get park info
             let parkName = park['name'];
             let parkId = park['id'];
-            data.push([parkName, 'parks/detail?id=' + parkId]);
+            data.push([parkName, '/parks/detail?id=' + parkId]);
 
             let rating = truck['rating'];  // get rating
             data.push(rating);

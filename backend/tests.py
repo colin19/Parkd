@@ -26,17 +26,17 @@ class TestModels (TestCase):
 	def check_park_count(self):
 		cur.execute("SELECT count(*) from park")
 		data = cur.fetchall()
-		assert data[0] = 60
+		assert data[0] == 60
 
 	def check_truck_0(self):
 		cur.execute("SELECT name from truck")
 		data = cur.fetchall()
-		assert data[0] = "Veracruz All Natural Food Truck"
+		assert data[0] == "Veracruz All Natural Food Truck"
 
 	def check_truck_photo_9(self):
 		cur.execute("SELECT tag from truck")
 		data = cur.fetchall()
-		assert data[0] = "#themightycone"
+		assert data[0] == "#themightycone"
 
 
 if __name__ == '__main__':
