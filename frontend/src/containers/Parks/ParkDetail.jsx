@@ -54,6 +54,7 @@ export default class ParkDetail extends Component {
         this.state = {
             data: [],
             parkId: parkId,
+            isValid: true
         };
     }
 
@@ -63,7 +64,7 @@ export default class ParkDetail extends Component {
     }
 
     fetchData(parkId){
-        if(parkId === -1) return;
+        // if(parkId === -1) return;
 
         const requestURL = 'http://api.parkd.us/park/' + parkId ;
         try{
@@ -71,7 +72,8 @@ export default class ParkDetail extends Component {
                 .then(res => {
                     this.updateParkData(res.data)
                 }).catch((error) => {
-                console.log(error)
+                    this.setState({isValid:false});
+                    console.log(error)
             });
         } catch (error){
             console.log("Error during fetching parks data");
@@ -333,21 +335,35 @@ export default class ParkDetail extends Component {
     }
 
     render(){
-        if(this.state.data.length < 1) {
+        if(this.state.data.length === 0 && this.state.isValid) {
             return (
                 <div>
                     <TransparentNav isTinted={true}/>
 
                     <div className={"loading"}>
-                        <br/>
-                        <br/>
-                        <br/>
+                        <br/><br/><br/><br/><br/><br/>
                         <h1>Loading Page ...</h1>
                     </div>
                 </div>
 
             );
         }
+
+        if(this.state.data.length === 0 && !this.state.isValid) {
+            return (
+                <div>
+                    <TransparentNav isTinted={true}/>
+
+                    <div className={"loading"}>
+                        <br/><br/><br/><br/><br/><br/>
+                        <h1>Not Found: Invalid Park id</h1>
+                    </div>
+                </div>
+
+            );
+        }
+
+
 
         let images = [];
         for(let i=0; i<this.state.data[5].length; i++){

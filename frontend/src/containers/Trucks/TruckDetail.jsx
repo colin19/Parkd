@@ -47,6 +47,7 @@ export default class TruckDetail extends Component {
         this.state = {
             data: [],
             truckId: truckId,
+            isValid: true,
         };
     }
 
@@ -56,7 +57,7 @@ export default class TruckDetail extends Component {
     }
 
     fetchData(truckId){
-        if(truckId === -1) return;
+        // if(truckId === -1) return;
 
         const requestURL = 'http://api.parkd.us/truck/' + truckId ;
         try{
@@ -64,7 +65,8 @@ export default class TruckDetail extends Component {
                 .then(res => {
                     this.updateTruckData(res.data)
                 }).catch((error) => {
-                console.log(error)
+                    this.setState({isValid:false});
+                    console.log(error)
             });
         } catch (error){
             console.log("Error during fetching trucks data");
@@ -247,16 +249,27 @@ export default class TruckDetail extends Component {
     }
 
     render(){
-        if(this.state.data.length < 1){
+        if(this.state.data.length === 0 && this.state.isValid){
             return (
                 <div>
                     <TransparentNav isTinted={true}/>
 
-                    <br/>
-                    <br/>
-                    <br/>
+                    <br/><br/><br/><br/><br/><br/>
                     <div className={"loading"}>
                         <h1>Loading Page ...</h1>
+                    </div>
+                </div>
+            );
+        }
+
+        if(this.state.data.length === 0 && !this.state.isValid){
+            return (
+                <div>
+                    <TransparentNav isTinted={true}/>
+
+                    <br/><br/><br/><br/><br/><br/>
+                    <div className={"loading"}>
+                        <h1>Not Found: Invalid Truck id</h1>
                     </div>
                 </div>
             );

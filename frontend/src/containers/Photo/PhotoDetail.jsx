@@ -39,6 +39,7 @@ export default class PhotoDetail extends Component {
         this.state = {
             data: [],
             photoId: photoId,
+            isValid: true,
         };
     }
 
@@ -48,7 +49,7 @@ export default class PhotoDetail extends Component {
     }
 
     fetchData(photoId){
-        if(photoId === -1) return;
+        // if(photoId === -1) return;
 
         const requestURL = 'http://api.parkd.us/truck_photo/' + photoId ;
         try{
@@ -56,7 +57,8 @@ export default class PhotoDetail extends Component {
                 .then(res => {
                     this.updateParkData(res.data)
                 }).catch((error) => {
-                console.log(error)
+                    this.setState({isValid:false});
+                    console.log(error);
             });
         } catch (error){
             console.log("Error during fetching photo data");
@@ -165,16 +167,27 @@ export default class PhotoDetail extends Component {
     }
 
     render(){
-        if(this.state.data.length < 1){
+        if(this.state.data.length === 0 && this.state.isValid){
             return (
                 <div>
                     <TransparentNav isTinted={true}/>
 
-                    <br/>
-                    <br/>
-                    <br/>
+                    <br/><br/><br/><br/><br/><br/>
                     <div className={"loading"}>
                         <h1>Loading Page ...</h1>
+                    </div>
+                </div>
+            );
+        }
+
+        if(this.state.data.length === 0 && !this.state.isValid){
+            return (
+                <div>
+                    <TransparentNav isTinted={true}/>
+
+                    <br/><br/><br/><br/><br/><br/>
+                    <div className={"loading"}>
+                        <h1>Not Found: Invalid Photo id</h1>
                     </div>
                 </div>
             );
