@@ -152,7 +152,6 @@ export default class About extends Component{
                     <div>
                         <h3>{person[0]}</h3>
                         <h5>{person[2]}</h5>
-                        <p><strong>Milk stats:</strong> {person[3]}</p>
                         <p>{person[4]}</p>
                         <p><strong>Unit tests:</strong> {person[5]}</p>
                         <p><strong>Commits:</strong> {this.state.commits[id]}</p>
