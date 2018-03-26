@@ -9,7 +9,7 @@ class ParkList(Resource):
     def get(self):
         parks_list = []
 
-        parks = session.query(Park).limit(30).all()
+        parks = session.query(Park).limit(20).all()
         for park in parks:
             parks_list.append(park.to_park_list_item())
 

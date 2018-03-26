@@ -134,6 +134,14 @@ export default class ParkDetail extends Component {
             // no external link currently
             data.push(null);
 
+            let reviews = park['reviews'];
+            let review_list = [];
+            for(let i=0; i<reviews.length; i++){
+                let review_item = reviews[i]['content']
+                review_list.push(review_item);
+            }
+            data.push(review_list);
+
             this.setState({data});
 
         } catch (error){
@@ -142,11 +150,13 @@ export default class ParkDetail extends Component {
     }
 
     getBasicDescription(){
+        let n_review = this.state.data[10].length;
+
         return(
             <div className={"basicInfo basicDescription"}>
                 <h1>{this.state.data[0] + ' is ...'}</h1>
                 <br/>
-                <p>{this.state.data[1]}</p>
+                <p>{this.state.data[10][n_review-1]}</p>
             </div>
         );
     }

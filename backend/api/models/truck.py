@@ -29,3 +29,27 @@ class Truck(Base):
     park = relationship('Park', back_populates="trucks")
     reviews = relationship('Truck_Review', back_populates="truck", cascade="all,delete")
     photos = relationship('Truck_Photo', back_populates="truck", cascade="all,delete")
+
+    def to_truck_list_item(self):
+        photos_list = []
+        photos = self.photos
+        n_photos = len(photos)
+        if n_photos > 0:
+            photo = photos[n_photos-1]
+            photos_list.append({"id": photo.id, "url": photo.url})
+
+        reviews_list = []
+        reviews = self.reviews
+        n_reviews = len(reviews)
+        if n_reviews > 0:
+            review = reviews[n_reviews - 1]
+            reviews_list.append({"id": review.id, "content": review.content})
+
+        return {
+            "address": self.address,
+            "name": self.name,
+            "photos": photos_list,
+            "rating": self.rating,
+            "id": self.id,
+            "reviews": reviews_list
+        }

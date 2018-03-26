@@ -48,6 +48,8 @@ app.register_blueprint(truck_photo_api_blueprint)
 
 # Load Resources
 from api.resources.parkList import ParkList
+from api.resources.truckList import TruckList
 api.add_resource(ParkList, '/parks')
+api.add_resource(TruckList, '/trucks')
 
 cors = CORS(app, resources={r"/*": {"origins": "*"}})

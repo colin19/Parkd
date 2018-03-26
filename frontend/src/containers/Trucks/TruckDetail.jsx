@@ -132,11 +132,13 @@ export default class TruckDetail extends Component {
 
 
     getBasicDescription(){
+        let n_review = this.state.data[10].length;
+
         return(
             <div className={"basicInfo basicDescription"}>
                 <h1>{this.state.data[0] + ' is ...'}</h1>
                 <br/>
-                <p>{this.state.data[1]}</p>
+                <p>{this.state.data[10][n_review-1]}</p>
             </div>
         );
     }
