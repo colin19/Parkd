@@ -37,14 +37,22 @@ export default class ParkCards extends Component {
             citySelectValue: "",
             ratingRange: 0,
             sorting: "",
-            nPage: 3,
+            nPage: 1,
             page: 1,
             keywords: "",
+            currentUrl: 'http://api.parkd.us/park?',
+            currentUrlPageParam: 'page=1',
+            currentUrlQueryParam: '',
         };
     }
 
     componentDidMount() {
-        this.fetchData('http://api.parkd.us/parks');
+        const requestUrl = this.state.currentUrl
+            + this.state.currentUrlPageParam
+            + '&'
+            + this.state.currentUrlQueryParam;
+
+        this.fetchData(requestUrl);
     }
 
     fetchData(requestURL){
@@ -64,6 +72,8 @@ export default class ParkCards extends Component {
         let data = [];
 
         try{
+            const totalPage = resData['total_pages'];
+
             const parks = resData['objects'];
             if(parks.length === 0) {
                 throw new Error('empty data');
@@ -97,7 +107,7 @@ export default class ParkCards extends Component {
                 data.push(parkData);
             }
 
-            this.setState({data});
+            this.setState({data: data, nPage: totalPage});
         } catch (error){
             console.log("Error during parsing parks data - " + error.toString());
         }
@@ -241,11 +251,21 @@ export default class ParkCards extends Component {
     }
 
     handleOnPageBtnClick (pageIndex) {
-        this.setState({page: pageIndex});
+        const currentUrl = this.state.currentUrl;
+        const currentUrlPageParam = 'page=' + pageIndex;
+        const currentUrlQueryParam = this.state.currentUrlQueryParam;
+
+        const requestUrl = currentUrl
+            + currentUrlPageParam
+            + '&'
+            + currentUrlQueryParam;
+
+        this.setState({page: pageIndex, data: []});
+        this.fetchData(requestUrl);
     }
 
     handleOnApplyFilterClick () {
-
+        this.setState({nPage: 1, page: 1, data: []});
     }
 
     render(){
@@ -262,6 +282,8 @@ export default class ParkCards extends Component {
                     <div className={"loading"}>
                         <h1>Loading Page ...</h1>
                     </div>
+
+                    <Footer/>
                 </div>
             );
         }
