@@ -39,7 +39,7 @@ export default class ParkCards extends Component {
             sorting: "",
             nPage: 1,
             page: 1,
-            keywords: "",
+            keywords: [],
             currentUrl: 'http://api.parkd.us/park?',
             currentUrlQueryParam: '',
         };
@@ -264,9 +264,9 @@ export default class ParkCards extends Component {
     }
 
     handleOnApplyFilterClick () {
+        const keywords = this.state.keywords;
         const rating = this.state.ratingRange;
         const cities = this.state.citySelectValue.split(',');
-        const keywords = this.state.keywords.split(',');
         const sortings = this.state.sorting.split(',');
 
         let requestUrl = 'http://api.parkd.us/park?page=1';
@@ -275,7 +275,7 @@ export default class ParkCards extends Component {
 
         queryUrl += '{"name":"rating","op":"ge","val":' + rating + '}';
 
-        if(cities.length > 0){
+        if(this.state.citySelectValue !== "" && cities.length > 0){
             let strCities = ',{"name":"city","op":"in","val":["' + cities[0] + '"';
             for(let i=1; i < cities.length; i++){
                 strCities += ',"' + cities[i] + '"';
@@ -292,11 +292,11 @@ export default class ParkCards extends Component {
                 for(let i=0; i<keywords.length; i++){
                     if(i === 0 && j === 0){
                         queryKeywords += '{"name":"' + queryField[j] + '","op":"like","val":"%';
-                        queryKeywords += keywords[i];
+                        queryKeywords += keywords[i]['value'];
                         queryKeywords += '%"}';
                     } else {
                         queryKeywords += ',{"name":"' + queryField[j] + '","op":"like","val":"%';
-                        queryKeywords += keywords[i];
+                        queryKeywords += keywords[i]['value'];
                         queryKeywords += '%"}';
                     }
                 }
@@ -304,8 +304,27 @@ export default class ParkCards extends Component {
             queryKeywords += ']}';
             queryUrl += queryKeywords;
         }
+        queryUrl += ']}]';
 
-        queryUrl += ']}]}';
+        if(this.state.sorting !== "" && sortings.length > 0){
+            let strSorting = ',"order_by":[';
+            for(let i=0; i < sortings.length; i++){
+                if(i > 0){
+                    strSorting += ',';
+                }
+
+                if(sortings[i] === 'Rating: Low to High'){
+                    strSorting += '{"field":"rating","direction":"asc"}';
+                } else if(sortings[i] === 'Rating: High to Low') {
+                    strSorting += '{"field":"rating","direction":"desc"}';
+                } else if(sortings[i] === 'City Name') {
+                    strSorting += '{"field":"city","direction":"desc"}';
+                }
+            }
+            strSorting += ']';
+            queryUrl += strSorting;
+        }
+        queryUrl += '}';
 
         requestUrl += '&';
         requestUrl += queryUrl;
