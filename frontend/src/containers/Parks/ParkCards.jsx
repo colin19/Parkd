@@ -41,14 +41,13 @@ export default class ParkCards extends Component {
             page: 1,
             keywords: "",
             currentUrl: 'http://api.parkd.us/park?',
-            currentUrlPageParam: 'page=1',
             currentUrlQueryParam: '',
         };
     }
 
     componentDidMount() {
         const requestUrl = this.state.currentUrl
-            + this.state.currentUrlPageParam
+            + 'page=' + this.state.page
             + '&'
             + this.state.currentUrlQueryParam;
 
@@ -265,7 +264,55 @@ export default class ParkCards extends Component {
     }
 
     handleOnApplyFilterClick () {
-        this.setState({nPage: 1, page: 1, data: []});
+        const rating = this.state.ratingRange;
+        const cities = this.state.citySelectValue.split(',');
+        const keywords = this.state.keywords.split(',');
+        const sortings = this.state.sorting.split(',');
+
+        let requestUrl = 'http://api.parkd.us/park?page=1';
+
+        let queryUrl = 'q={"filters":[{"and":[';
+
+        queryUrl += '{"name":"rating","op":"ge","val":' + rating + '}';
+
+        if(cities.length > 0){
+            let strCities = ',{"name":"city","op":"in","val":["' + cities[0] + '"';
+            for(let i=1; i < cities.length; i++){
+                strCities += ',"' + cities[i] + '"';
+            }
+            strCities += ']}';
+            queryUrl += strCities;
+        }
+
+        if(keywords.length > 0){
+            let queryKeywords = ',{"or":[';
+            const queryField = ['city', 'name', 'address'];
+
+            for(let j=0; j<queryField.length; j++){
+                for(let i=0; i<keywords.length; i++){
+                    if(i === 0 && j === 0){
+                        queryKeywords += '{"name":"' + queryField[j] + '","op":"like","val":"%';
+                        queryKeywords += keywords[i];
+                        queryKeywords += '%"}';
+                    } else {
+                        queryKeywords += ',{"name":"' + queryField[j] + '","op":"like","val":"%';
+                        queryKeywords += keywords[i];
+                        queryKeywords += '%"}';
+                    }
+                }
+            }
+            queryKeywords += ']}';
+            queryUrl += queryKeywords;
+        }
+
+        queryUrl += ']}]}';
+
+        requestUrl += '&';
+        requestUrl += queryUrl;
+        console.log(requestUrl);
+
+        this.setState({nPage: 1, page: 1, data: [], currentUrlQueryParam: queryUrl});
+        this.fetchData(requestUrl);
     }
 
     render(){
