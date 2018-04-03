@@ -11,6 +11,7 @@ import './ParkCards.css';
 
 import imgBg from '../../images/trucks/food-trucks-1.jpg';
 import imgNo from '../../images/no-image.jpg';
+import logo from '../../logo.svg';
 
 import axios from "axios/index";
 
@@ -33,6 +34,8 @@ export default class ParkCards extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            isNoResult: false,
+            isLoading: true,
             data: [],
             citySelectValue: "",
             ratingRange: 0,
@@ -60,14 +63,17 @@ export default class ParkCards extends Component {
                 .then(res => {
                     this.updateCards(res.data)
                 }).catch((error) => {
+                this.setState({isLoading: false});
                 console.log(error)
             });
         } catch (error){
+            this.setState({isLoading: false});
             console.log("Error during fetching parks data");
         }
     }
 
     updateCards(resData){
+        this.setState({isLoading: false});
         let data = [];
 
         try{
@@ -106,7 +112,7 @@ export default class ParkCards extends Component {
                 data.push(parkData);
             }
 
-            this.setState({data: data, nPage: totalPage});
+            this.setState({data: data, nPage: totalPage, isNoResult: false});
         } catch (error){
             console.log("Error during parsing parks data - " + error.toString());
         }
@@ -323,14 +329,39 @@ export default class ParkCards extends Component {
         requestUrl += queryUrl;
         console.log(requestUrl);
 
-        this.setState({nPage: 1, page: 1, data: [], currentUrlQueryParam: queryUrl});
+        this.setState({nPage: 1
+            , page: 1
+            , data: []
+            , isLoading: true
+            , currentUrlQueryParam: queryUrl
+            , isNoResult: true});
         this.fetchData(requestUrl);
     }
 
     render(){
         let searchBarConfig = this.getSearchBarConfig();
 
-        if(this.state.data.length === 0){
+        if(this.state.isNoResult && !this.state.isLoading) {
+            return (
+                <div>
+                    <IntroHeader bgUrl={imgBg}
+                                 description={'Location, Photos, Food trucks, Things to do (Dog park, pool, basketball, etc)'}
+                                 title={'Explore Parks Around You'}/>
+                    <br/>
+                    <SearchBar nSelect={4}
+                               config={searchBarConfig}
+                               handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
+
+                    <br/>
+                    <div className={"loading"}>
+                        <br/><br/><br/>
+                        <h1>･({'>'}﹏{'<'})･ Result Not Found</h1>
+                    </div>
+                </div>
+            );
+        }
+
+        if(this.state.data.length === 0 && this.state.isLoading){
             return (
                 <div>
                     <IntroHeader bgUrl={imgBg}
@@ -339,10 +370,26 @@ export default class ParkCards extends Component {
 
                     <br/>
                     <div className={"loading"}>
+                        <img src={logo} className="App-logo" alt="logo" />
+                        <br/>
                         <h1>Loading Page ...</h1>
                     </div>
+                </div>
+            );
+        }
 
-                    <Footer/>
+        if(this.state.data.length === 0 && !this.state.isLoading){
+            return (
+                <div>
+                    <IntroHeader bgUrl={imgBg}
+                                 description={'Location, Photos, Food trucks, Things to do (Dog park, pool, basketball, etc)'}
+                                 title={'Explore Parks Around You'}/>
+
+                    <br/>
+                    <div className={"loading"}>
+                        <br/>
+                        <h1>･({'>'}﹏{'<'})･ Error Loading Page ...</h1>
+                    </div>
                 </div>
             );
         }
