@@ -150,6 +150,7 @@ export default class ParkCards extends Component {
     }
 
     handleRatingSelect(value) {
+        if(value === null) value = 0;
         this.setState({ratingRange: value});
     }
 
@@ -271,61 +272,53 @@ export default class ParkCards extends Component {
 
         let requestUrl = 'http://api.parkd.us/park?page=1';
 
-        let queryUrl = 'q={"filters":[{"and":[';
+        let queryDict = {};
+        let filterCondition = [];
 
-        queryUrl += '{"name":"rating","op":"ge","val":' + rating + '}';
+        // rating filter
+        filterCondition.push({name:"rating", op:"ge", val:rating});
 
+        // city filter
         if(this.state.citySelectValue !== "" && cities.length > 0){
-            let strCities = ',{"name":"city","op":"in","val":["' + cities[0] + '"';
-            for(let i=1; i < cities.length; i++){
-                strCities += ',"' + cities[i] + '"';
-            }
-            strCities += ']}';
-            queryUrl += strCities;
+            let citiesCondition = {name:"city", op:"in", val:cities};
+            filterCondition.push(citiesCondition);
         }
 
+        // keywords filter
         if(keywords.length > 0){
-            let queryKeywords = ',{"or":[';
             const queryField = ['city', 'name', 'address'];
+            let keywordsCondition = [];
 
             for(let j=0; j<queryField.length; j++){
                 for(let i=0; i<keywords.length; i++){
-                    if(i === 0 && j === 0){
-                        queryKeywords += '{"name":"' + queryField[j] + '","op":"like","val":"%';
-                        queryKeywords += keywords[i]['value'];
-                        queryKeywords += '%"}';
-                    } else {
-                        queryKeywords += ',{"name":"' + queryField[j] + '","op":"like","val":"%';
-                        queryKeywords += keywords[i]['value'];
-                        queryKeywords += '%"}';
-                    }
+                    keywordsCondition.push({name: queryField[j], op:"like", val: '%'+keywords[i]['value']+'%'});
                 }
             }
-            queryKeywords += ']}';
-            queryUrl += queryKeywords;
-        }
-        queryUrl += ']}]';
 
+            let keywordsConditionQuery = {or: keywordsCondition};
+            filterCondition.push(keywordsConditionQuery);
+        }
+
+        // dict to json string
+        queryDict["filters"] = [{and: filterCondition}];
+
+        // sorting
         if(this.state.sorting !== "" && sortings.length > 0){
-            let strSorting = ',"order_by":[';
+            let sortingCondition = [];
             for(let i=0; i < sortings.length; i++){
-                if(i > 0){
-                    strSorting += ',';
-                }
-
                 if(sortings[i] === 'Rating: Low to High'){
-                    strSorting += '{"field":"rating","direction":"asc"}';
+                    sortingCondition.push({field:"rating", direction:"asc"});
                 } else if(sortings[i] === 'Rating: High to Low') {
-                    strSorting += '{"field":"rating","direction":"desc"}';
+                    sortingCondition.push({field:"rating", direction:"desc"});
                 } else if(sortings[i] === 'City Name') {
-                    strSorting += '{"field":"city","direction":"desc"}';
+                    sortingCondition.push({field:"city", direction:"desc"});
                 }
             }
-            strSorting += ']';
-            queryUrl += strSorting;
+            queryDict["order_by"] = sortingCondition;
         }
-        queryUrl += '}';
 
+        // generate request url
+        let queryUrl = 'q=' + JSON.stringify(queryDict);
         requestUrl += '&';
         requestUrl += queryUrl;
         console.log(requestUrl);
