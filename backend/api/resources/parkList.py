@@ -1,4 +1,5 @@
 from flask_restful import Resource
+from flask import requ
 
 from api.models.park import Park
 from api import session
@@ -19,6 +20,6 @@ class ParkList(Resource):
             parks_list.append(park.to_park_list_item())
 
         end_time = timeit.default_timer()
-        print(end_time-start_time)
+        print('GET park list time: ' + str(end_time-start_time))
 
         return {"objects": parks_list}
