@@ -60,6 +60,8 @@ export default class ParkCards extends Component {
     }
 
     fetchData(requestURL){
+        requestURL = encodeURI(requestURL);
+        
         try{
             axios.get(requestURL)
                 .then(res => {

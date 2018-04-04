@@ -75,6 +75,8 @@ export default class TruckCards extends Component {
     }
 
     fetchData(requestURL){
+        requestURL = encodeURI(requestURL);
+
         try{
             axios.get(requestURL)
                 .then(res => {
