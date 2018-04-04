@@ -61,7 +61,7 @@ export default class ParkCards extends Component {
 
     fetchData(requestURL){
         requestURL = encodeURI(requestURL);
-        
+
         try{
             axios.get(requestURL)
                 .then(res => {
@@ -180,7 +180,7 @@ export default class ParkCards extends Component {
 
     handleRatingSelect(value) {
         if(value === null) value = 0;
-        this.setState({likeRange: value});
+        this.setState({ratingRange: value});
     }
 
     handleSortingSelect(value) {
