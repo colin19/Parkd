@@ -178,7 +178,7 @@ export default class ParkCards extends Component {
 
     handleRatingSelect(value) {
         if(value === null) value = 0;
-        this.setState({ratingRange: value});
+        this.setState({likeRange: value});
     }
 
     handleSortingSelect(value) {

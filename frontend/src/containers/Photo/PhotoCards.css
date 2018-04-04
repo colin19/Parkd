@@ -25,7 +25,12 @@
     border-radius: 5px !important;
 }
 
+.photoCardTitleContainer{
+    text-align: center;
+}
+
 .photoCardTitle{
+    font-size: 18px;
     text-align: center;
     font-family: "Verdana";
 }
