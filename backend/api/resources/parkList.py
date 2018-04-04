@@ -1,11 +1,10 @@
 from flask_restful import Resource
-from flask import requ
 
 from api.models.park import Park
 from api import session
 
 import timeit
-import sys
+
 
 class ParkList(Resource):
 
