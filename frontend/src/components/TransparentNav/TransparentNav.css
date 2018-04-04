@@ -37,3 +37,28 @@
     background: #000000 ;
     color: #ffffff;
 }
+
+.nav-search{
+    margin-left: 2%;
+    max-width: 20%;
+}
+
+.nav-search  input{
+    background-color: transparent !important;
+    border-radius: 15px;
+    border-color: rgba(113, 125, 126, 0.8);
+    font-size: 15px !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nav-search ::placeholder{
+    color: rgba(255, 255, 255, 0.68) !important;
+}
+
+.nav-search button{
+    background-color: rgba(113, 125, 126, 0.8) !important;
+    border-color: rgba(113, 125, 126, 0.8) !important;
+    border-radius: 15px;
+    font-size: 18px !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+}

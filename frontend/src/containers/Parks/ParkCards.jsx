@@ -153,6 +153,8 @@ export default class ParkCards extends Component {
                         textToHighlight={data[id][4]}
                         />
                     </div>
+
+                    <br/>
                     <div className='buttonContainer'>
                         <Link to={data[id][3]}>
                             <Button className={"btn btn-info photoCardBtn"} color="info" size={'sm'}>

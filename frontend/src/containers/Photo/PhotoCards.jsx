@@ -148,6 +148,8 @@ export default class FoodCards extends Component {
                         <br/>
                         Likes: {data[id][4]}
                     </div>
+
+                    <br/>
                     <div className='buttonContainer'>
                         <Link to={data[id][3]}>
                             <Button className={"btn btn-info photoCardBtn"} color={"info"} size={'sm'}>

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Navbar, Nav, NavItem, NavbarBrand, NavbarToggler, Collapse, NavLink} from 'reactstrap';
+import {Navbar, Nav, NavItem, NavbarBrand, NavbarToggler
+    , Collapse, NavLink, Button, InputGroup, InputGroupAddon, Input} from 'reactstrap';
 
 import './TransparentNav.css';
 
@@ -52,6 +53,13 @@ class TransparentNav extends Component{
                         </NavItem>
                     </Nav>
                 </Collapse>
+
+                <InputGroup className={"nav-search"}>
+                    <Input  placeholder="Keywords" />
+                    <InputGroupAddon addonType="append">
+                        <Button color="secondary">Search</Button>
+                    </InputGroupAddon>
+                </InputGroup>
             </Navbar>
         )
     }
