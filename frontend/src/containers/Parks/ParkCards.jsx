@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import { Card, Button, CardImg, CardTitle, CardText, CardColumns, CardBody } from 'reactstrap';
+import { Card, Button, CardImg, CardColumns, CardBody } from 'reactstrap';
+import Highlighter from 'react-highlight-words';
 
 import IntroHeader from '../../components/intro-header/IntroHeader';
 import PageIndex from '../../components/PageIndex/PageIndex';
@@ -43,6 +44,7 @@ export default class ParkCards extends Component {
             nPage: 1,
             page: 1,
             keywords: [],
+            keywordsList: [],
             currentUrl: 'http://api.parkd.us/park?',
             currentUrlQueryParam: '',
         };
@@ -120,16 +122,35 @@ export default class ParkCards extends Component {
 
     getCard(id){
         let data = this.state.data;
+
         return (
             <Card key={id} className={'shadowCard card'}>
                 <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
                 <CardBody>
-                    <CardTitle className={'photoCardTitle'}>{data[id][0]}</CardTitle>
-                    <CardText className={'photoCardText'}>
+                    <div className={'photoCardTitleContainer'}>
+                        <Highlighter
+                            className={"photoCardTitle"}
+                            unhighlightClassName={'photoCardTitle'}
+                            highlightClassName={'photoCardTitle'}
+                            highlightStyle={{"backgroundColor": "#F9FC48"}}
+                            autoEscape={true}
+                            searchWords={this.state.keywordsList}
+                            textToHighlight={data[id][0]}
+                        />
+                    </div>
+                    <div className={'photoCardText card-text'}>
                         Rating: {data[id][2]}
                         <br/>
-                        Address: {data[id][4]}
-                    </CardText>
+                        Address: <Highlighter
+                        className={"photoCardText"}
+                        unhighlightClassName={'photoCardText'}
+                        highlightClassName={'photoCardText'}
+                        highlightStyle={{"backgroundColor": "#F9FC48"}}
+                        autoEscape={true}
+                        searchWords={this.state.keywordsList}
+                        textToHighlight={data[id][4]}
+                        />
+                    </div>
                     <div className='buttonContainer'>
                         <Link to={data[id][3]}>
                             <Button className={"btn btn-info photoCardBtn"} color="info" size={'sm'}>
@@ -179,7 +200,12 @@ export default class ParkCards extends Component {
     }
 
     handleKeywords(value) {
-        this.setState({keywords: value});
+        let keywordsList = [];
+        for(let i=0; i<value.length; i++){
+            keywordsList.push(value[i]['value']);
+        }
+
+        this.setState({keywords: value, keywordsList: keywordsList});
     }
 
     getSearchBarConfig () {
@@ -266,7 +292,7 @@ export default class ParkCards extends Component {
             + '&'
             + currentUrlQueryParam;
 
-        this.setState({page: pageIndex, data: []});
+        this.setState({page: pageIndex, data: [], isNoResult: true, isLoading: true});
         this.fetchData(requestUrl);
     }
 

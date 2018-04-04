@@ -1,8 +1,7 @@
 import App from '../src/containers/App/App.jsx';
 import Home from '../src/containers/Home/Home.jsx';
 import About from '../src/containers/About/About.jsx';
-import ParkCards from '../src/containers/Parks/ParkCards';
-
+import Footer from "../src/components/Footer/Footer";
 
 import React from 'react'
 import { shallow, configure } from 'enzyme'
@@ -55,6 +54,17 @@ describe('<About />', () => {
     });
 });
 
+
+// Test for component Home
+describe('<Footer />', () => {
+    it('should render successfully', () => {
+        shallow(<Footer />);
+    });
+    it('should render the carousel defined by us', () => {
+        const wrapper = shallow(<Footer />);
+        expect(wrapper.find('.p').exists()).to.eql(true);
+    });
+});
 
 
 
