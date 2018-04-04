@@ -12,7 +12,7 @@ api = Api(app)
 
 # Create our SQLAlchemy DB engine
 engine = create_engine('mysql+mysqlconnector://root:parkd'
-                       + '@localhost:3306/parkd_sqlalchemy')
+                       + '@localhost:3306/parkd_sqlalchemy?charset=utf8mb4')
 Session = sessionmaker(bind=engine, autocommit=False, autoflush=False)
 session = scoped_session(Session)
 
