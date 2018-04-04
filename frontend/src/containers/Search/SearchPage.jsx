@@ -20,8 +20,24 @@ export default class SearchPage extends Component {
     constructor(props) {
         super(props);
 
+        //read truck id from the query parameter, default is -1
+        const queryString = decodeURI(props.location.search);
+        const params = new URLSearchParams(queryString);
+        let isMatchAll = params.get('isMatchAll');
+        if(isMatchAll === null) isMatchAll = 0;
+
+        let keywordsString = params.get('keywords');
+        let keywords = [];
+        if(keywordsString !== null || keywordsString !== "") {
+            keywords = keywordsString.split(" ");
+        }
+
+        let boolMatchAll = true;
+        if(isMatchAll === 0) boolMatchAll = false;
+
         this.state = {
-            isMatchAll: props.isMatchAll,
+            isMatchAll: boolMatchAll,
+            keywords: keywords,
             parkData: {
                 isNoResult: false,
                 isLoading: true,
@@ -56,13 +72,7 @@ export default class SearchPage extends Component {
     }
 
     componentDidMount() {
-        let parkUrl = this.state.parkData.currentUrl + '&' + this.state.parkData.currentUrlQueryParam;
-        let truckUrl = this.state.truckData.currentUrl + '&' + this.state.truckData.currentUrlQueryParam;
-        let photoUrl = this.state.photoData.currentUrl + '&' + this.state.photoData.currentUrlQueryParam;
-
-        this.fetchData(parkUrl, 'park');
-        this.fetchData(truckUrl, 'truck');
-        this.fetchData(photoUrl, 'truck_photo');
+        this.handleSearch();
     }
 
     fetchData(requestURL, dataSource) {
@@ -238,21 +248,6 @@ export default class SearchPage extends Component {
         }
     }
 
-    getCard(id) {
-        return (
-            <br/>
-        );
-    }
-
-    getPhotoCards() {
-        let cards = [];
-        let i;
-        for (i = 0; i < this.state.data.length; i++) {
-            cards.push(this.getCard(i));
-        }
-        return cards;
-    }
-
     handleOnParkPageBtnClick(pageIndex) {
         const currentUrl = this.state.parkData.currentUrl;
         const currentUrlPageParam = 'page=' + pageIndex;
@@ -296,8 +291,8 @@ export default class SearchPage extends Component {
     }
 
     handleParkSearch () {
-        const isMatchAll = this.props.isMatchAll;
-        const keywords = this.props.keywords;
+        const isMatchAll = this.state.isMatchAll;
+        const keywords = this.state.keywords;
 
         let requestUrl = 'http://api.parkd.us/park?page=1';
         let queryDict = {};
@@ -362,8 +357,8 @@ export default class SearchPage extends Component {
     }
 
     handleTruckSearch () {
-        const isMatchAll = this.props.isMatchAll;
-        const keywords = this.props.keywords;
+        const isMatchAll = this.state.isMatchAll;
+        const keywords = this.state.keywords;
 
         let requestUrl = 'http://api.parkd.us/truck?page=1';
         let queryDict = {};
@@ -428,8 +423,8 @@ export default class SearchPage extends Component {
     }
 
     handlePhotoSearch () {
-        const isMatchAll = this.props.isMatchAll;
-        const keywords = this.props.keywords;
+        const isMatchAll = this.state.isMatchAll;
+        const keywords = this.state.keywords;
 
         let requestUrl = 'http://api.parkd.us/truck_photo?page=1';
         let queryDict = {};
@@ -496,10 +491,103 @@ export default class SearchPage extends Component {
     }
 
     handleSearch() {
-        
+        this.handleParkSearch();
+        this.handleTruckSearch();
+        this.handlePhotoSearch();
+    }
+
+    handleParkSortingSelect(value) {
+        let preSoringString = this.state.parkData.sorting;
+        let newSorting = value.split(",");
+
+        // get the last sorting
+        if(newSorting.length > 0){
+            let sorting = newSorting[newSorting.length - 1];
+            // test if there is any conflict
+            if(sorting === 'Rating: Low to High' && newSorting.includes('Rating: High to Low')){
+                value = preSoringString;
+            }else if(sorting === 'Rating: High to Low' && newSorting.includes('Rating: Low to High')){
+                value = preSoringString;
+            }
+        }
+        this.setState({parkData: {sorting: value}});
+    }
+
+    handleTruckSortingSelect(value) {
+        let preSoringString = this.state.truckData.sorting;
+        let newSorting = value.split(",");
+
+        // get the last sorting
+        if(newSorting.length > 0){
+            let sorting = newSorting[newSorting.length - 1];
+            // test if there is any conflict
+            if(sorting === 'Rating: Low to High' && newSorting.includes('Rating: High to Low')){
+                value = preSoringString;
+            }else if(sorting === 'Rating: High to Low' && newSorting.includes('Rating: Low to High')){
+                value = preSoringString;
+            }
+        }
+        this.setState({truckData: {sorting: value}});
+    }
+
+    handlePhotoSortingSelect(value) {
+        let preSoringString = this.state.photoData.sorting;
+        let newSorting = value.split(",");
+
+        // get the last sorting
+        if(newSorting.length > 0){
+            let sorting = newSorting[newSorting.length - 1];
+            // test if there is any conflict
+            if(sorting === 'Likes: Low to High' && newSorting.includes('Likes: High to Low')){
+                value = preSoringString;
+            }else if(sorting === 'Likes: High to Low' && newSorting.includes('Likes: Low to High')){
+                value = preSoringString;
+            }
+        }
+        this.setState({photoData: {sorting: value}});
     }
 
 
+    getCard(id) {
+        return (
+            <br/>
+        );
+    }
+
+    getTruckCards() {
+        let cards = [];
+        let i;
+        for (i = 0; i < this.state.data.length; i++) {
+            cards.push(this.getCard(i));
+        }
+        return cards;
+    }
+
+    getParkCards() {
+        let cards = [];
+        let i;
+        for (i = 0; i < this.state.data.length; i++) {
+            cards.push(this.getCard(i));
+        }
+        return cards;
+    }
+
+    getPhotoCards(){
+
+    }
+
+
+    renderCards(dataSource){
+        if(dataSource === 'truck'){
+            return this.getTruckCards();
+        } else if(dataSource === 'park'){
+            return this.getParkCards();
+        } else if(dataSource === 'truck_photo'){
+            return this.getPhotoCards();
+        } else {
+            return <br/>;
+        }
+    }
 
 
 

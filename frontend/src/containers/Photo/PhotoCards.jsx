@@ -194,7 +194,6 @@ export default class FoodCards extends Component {
                 value = preSoringString;
             }
         }
-
         this.setState({sorting: value});
     }
 
