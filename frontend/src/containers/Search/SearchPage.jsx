@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import { Card, Button, CardImg, CardColumns, CardBody} from 'reactstrap';
+import { Card, Button, CardImg, CardColumns, CardBody, CardDeck} from 'reactstrap';
 import Highlighter from 'react-highlight-words';
 
 import IntroHeader from '../../components/intro-header/IntroHeader';
@@ -36,6 +36,7 @@ export default class SearchPage extends Component {
         if(isMatchAll === 0) boolMatchAll = false;
 
         this.state = {
+            resultPerPage: 8,
             isMatchAll: boolMatchAll,
             keywords: keywords,
             parkData: {
@@ -249,8 +250,8 @@ export default class SearchPage extends Component {
     }
 
     handleOnParkPageBtnClick(pageIndex) {
-        const currentUrl = this.state.parkData.currentUrl;
-        const currentUrlPageParam = 'page=' + pageIndex;
+        const currentUrl = this.state.parkData.currentUrl + 'results_per_page=' + this.state.resultPerPage;
+        const currentUrlPageParam = '&page=' + pageIndex;
         const currentUrlQueryParam = this.state.parkData.currentUrlQueryParam;
 
         const requestUrl = currentUrl
@@ -263,8 +264,8 @@ export default class SearchPage extends Component {
     }
 
     handleOnTruckPageBtnClick(pageIndex) {
-        const currentUrl = this.state.truckData.currentUrl;
-        const currentUrlPageParam = 'page=' + pageIndex;
+        const currentUrl = this.state.truckData.currentUrl + 'results_per_page=' + this.state.resultPerPage;
+        const currentUrlPageParam = '&page=' + pageIndex;
         const currentUrlQueryParam = this.state.truckData.currentUrlQueryParam;
 
         const requestUrl = currentUrl
@@ -277,8 +278,8 @@ export default class SearchPage extends Component {
     }
 
     handleOnPhotoPageBtnClick(pageIndex) {
-        const currentUrl = this.state.parkData.currentUrl;
-        const currentUrlPageParam = 'page=' + pageIndex;
+        const currentUrl = this.state.parkData.currentUrl + 'results_per_page=' + this.state.resultPerPage;
+        const currentUrlPageParam = '&page=' + pageIndex;
         const currentUrlQueryParam = this.state.parkData.currentUrlQueryParam;
 
         const requestUrl = currentUrl
@@ -294,7 +295,7 @@ export default class SearchPage extends Component {
         const isMatchAll = this.state.isMatchAll;
         const keywords = this.state.keywords;
 
-        let requestUrl = 'http://api.parkd.us/park?page=1';
+        let requestUrl = 'http://api.parkd.us/park?results_per_page=' + this.state.resultPerPage + '&';
         let queryDict = {};
 
         if(keywords.length > 0){
@@ -360,7 +361,7 @@ export default class SearchPage extends Component {
         const isMatchAll = this.state.isMatchAll;
         const keywords = this.state.keywords;
 
-        let requestUrl = 'http://api.parkd.us/truck?page=1';
+        let requestUrl = 'http://api.parkd.us/truck?results_per_page=' + this.state.resultPerPage + '&';
         let queryDict = {};
 
         if(keywords.length > 0){
@@ -426,7 +427,7 @@ export default class SearchPage extends Component {
         const isMatchAll = this.state.isMatchAll;
         const keywords = this.state.keywords;
 
-        let requestUrl = 'http://api.parkd.us/truck_photo?page=1';
+        let requestUrl = 'http://api.parkd.us/truck_photo?results_per_page=' + this.state.resultPerPage + '&';
         let queryDict = {};
 
         if(keywords.length > 0){
@@ -511,6 +512,7 @@ export default class SearchPage extends Component {
             }
         }
         this.setState({parkData: {sorting: value}});
+        this.handleParkSearch();
     }
 
     handleTruckSortingSelect(value) {
@@ -528,6 +530,7 @@ export default class SearchPage extends Component {
             }
         }
         this.setState({truckData: {sorting: value}});
+        this.handleTruckSearch();
     }
 
     handlePhotoSortingSelect(value) {
@@ -545,37 +548,267 @@ export default class SearchPage extends Component {
             }
         }
         this.setState({photoData: {sorting: value}});
+        this.handlePhotoSearch();
     }
 
 
-    getCard(id) {
+    getParkCard(id){
+        let data = this.state.parkData.data;
+
         return (
-            <br/>
+            <Card key={id} className={'shadowCard card'}>
+                <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
+                <CardBody>
+                    <div className={'photoCardTitleContainer'}>
+                        <Highlighter
+                            className={"photoCardTitle"}
+                            unhighlightClassName={'photoCardTitle'}
+                            highlightClassName={'photoCardTitle'}
+                            highlightStyle={{"backgroundColor": "#F9FC48"}}
+                            autoEscape={true}
+                            searchWords={this.state.keywordsList}
+                            textToHighlight={data[id][0]}
+                        />
+                    </div>
+                    <div className={'photoCardText card-text'}>
+                        Rating: {data[id][2]}
+                        <br/>
+                        Address: <Highlighter
+                        className={"photoCardText"}
+                        unhighlightClassName={'photoCardText'}
+                        highlightClassName={'photoCardText'}
+                        highlightStyle={{"backgroundColor": "#F9FC48"}}
+                        autoEscape={true}
+                        searchWords={this.state.keywordsList}
+                        textToHighlight={data[id][4]}
+                    />
+                    </div>
+
+                    <br/>
+                    <div className='buttonContainer'>
+                        <Link to={data[id][3]}>
+                            <Button className={"btn btn-info photoCardBtn"} color="info" size={'sm'}>
+                                More Info
+                            </Button>
+                        </Link>
+                    </div>
+                </CardBody>
+            </Card>
+        );
+    }
+
+    getParkCards() {
+        if(this.state.parkData.isNoResult && !this.state.parkData.isLoading) {
+            return (
+                <div className={"loading"}>
+                    <br/><br/><br/>
+                    <h1>･({'>'}﹏{'<'})･ Result Not Found</h1>
+                </div>
+            );
+        } else if (this.state.parkData.data.length === 0 && this.state.parkData.isLoading){
+            return (
+                <div className={"loading"}>
+                    <img src={logo} className="App-logo" alt="logo" />
+                    <br/>
+                    <h1>Fetching Data ...</h1>
+                </div>
+            );
+        } if(this.state.parkData.data.length === 0 && !this.state.parkData.isLoading){
+            return (
+                <div className={"loading"}>
+                    <br/>
+                    <h1>･({'>'}﹏{'<'})･ Error Fetching Data ...</h1>
+                </div>
+            );
+        }
+
+        let cards = [];
+        let cardDecks = [];
+        for (let i = 0; i < this.state.parkData.data.length; i++) {
+            cards.push(this.getParkCard(i));
+            if(i % 4 === 3){
+                cardDecks.push(<CardDeck>{cards}</CardDeck>);
+                cards = [];
+            }
+        }
+        return (
+            <div className={'result-card-decks'}>
+                {cardDecks}
+            </div>
+        );
+    }
+
+    getTruckCard(id) {
+        let data = this.state.truckData.data;
+
+        return (
+            <Card key={id} className={'shadowCard card'}>
+                <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
+                <CardBody>
+                    <div className={'photoCardTitleContainer'}>
+                        <Highlighter
+                            className={"photoCardTitle"}
+                            unhighlightClassName={'photoCardTitle'}
+                            highlightClassName={'photoCardTitle'}
+                            highlightStyle={{"backgroundColor": "#F9FC48"}}
+                            autoEscape={true}
+                            searchWords={this.state.keywordsList}
+                            textToHighlight={data[id][0]}
+                        />
+                    </div>
+                    <div className={'photoCardText card-text'}>
+                        Rating: {data[id][2]}
+                        <br/>
+                        Address: <Highlighter
+                        className={"photoCardText"}
+                        unhighlightClassName={'photoCardText'}
+                        highlightClassName={'photoCardText'}
+                        highlightStyle={{"backgroundColor": "#F9FC48"}}
+                        autoEscape={true}
+                        searchWords={this.state.keywordsList}
+                        textToHighlight={data[id][4]}
+                    />
+                    </div>
+
+                    <br/>
+                    <div className='buttonContainer'>
+                        <Link to={data[id][3]}>
+                            <Button className={"btn btn-info photoCardBtn"} color="info" size={'sm'}>
+                                More Info
+                            </Button>
+                        </Link>
+                    </div>
+                </CardBody>
+            </Card>
         );
     }
 
     getTruckCards() {
-        let cards = [];
-        let i;
-        for (i = 0; i < this.state.data.length; i++) {
-            cards.push(this.getCard(i));
+        if(this.state.truckData.isNoResult && !this.state.truckData.isLoading) {
+            return (
+                <div className={"loading"}>
+                    <br/><br/><br/>
+                    <h1>･({'>'}﹏{'<'})･ Result Not Found</h1>
+                </div>
+            );
+        } else if (this.state.truckData.data.length === 0 && this.state.truckData.isLoading){
+            return (
+                <div className={"loading"}>
+                    <img src={logo} className="App-logo" alt="logo" />
+                    <br/>
+                    <h1>Fetching Data ...</h1>
+                </div>
+            );
+        } if(this.state.truckData.data.length === 0 && !this.state.truckData.isLoading){
+            return (
+                <div className={"loading"}>
+                    <br/>
+                    <h1>･({'>'}﹏{'<'})･ Error Fetching Data ...</h1>
+                </div>
+            );
         }
-        return cards;
-    }
 
-    getParkCards() {
         let cards = [];
-        let i;
-        for (i = 0; i < this.state.data.length; i++) {
-            cards.push(this.getCard(i));
+        let cardDecks = [];
+        for (let i = 0; i < this.state.truckData.data.length; i++) {
+            cards.push(this.getTruckCard(i));
+            if(i % 4 === 3){
+                cardDecks.push(<CardDeck>{cards}</CardDeck>);
+                cards = [];
+            }
         }
-        return cards;
+        return (
+            <div className={'result-card-decks'}>
+                {cardDecks}
+            </div>
+        );
     }
 
-    getPhotoCards(){
+    getPhotoCard(id){
+        let data = this.state.photoData.data;
+        return (
+            <Card key={id} className={'shadowCard card'}>
+                <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
+                <CardBody>
+                    <div className={'photoCardTitleContainer'}>
+                        <Highlighter
+                            className={"photoCardTitle"}
+                            unhighlightClassName={'photoCardTitle'}
+                            highlightClassName={'photoCardTitle'}
+                            highlightStyle={{"backgroundColor": "#F9FC48"}}
+                            autoEscape={true}
+                            searchWords={this.state.keywordsList}
+                            textToHighlight={data[id][0]}
+                        />
+                    </div>
+                    <div className={'photoCardText card-text'}>
+                        <Highlighter
+                            className={"photoCardText"}
+                            unhighlightClassName={'photoCardText'}
+                            highlightClassName={'photoCardText'}
+                            highlightStyle={{"backgroundColor": "#F9FC48"}}
+                            autoEscape={true}
+                            searchWords={this.state.keywordsList}
+                            textToHighlight={data[id][2]}
+                        />
+                        <br/>
+                        <br/>
+                        Likes: {data[id][4]}
+                    </div>
 
+                    <br/>
+                    <div className='buttonContainer'>
+                        <Link to={data[id][3]}>
+                            <Button className={"btn btn-info photoCardBtn"} color={"info"} size={'sm'}>
+                                More Info
+                            </Button>
+                        </Link>
+                    </div>
+                </CardBody>
+            </Card>
+        );
     }
 
+    getPhotoCards() {
+        if(this.state.photoData.isNoResult && !this.state.photoData.isLoading) {
+            return (
+                <div className={"loading"}>
+                    <br/><br/><br/>
+                    <h1>･({'>'}﹏{'<'})･ Result Not Found</h1>
+                </div>
+            );
+        } else if (this.state.photoData.data.length === 0 && this.state.photoData.isLoading){
+            return (
+                <div className={"loading"}>
+                    <img src={logo} className="App-logo" alt="logo" />
+                    <br/>
+                    <h1>Fetching Data ...</h1>
+                </div>
+            );
+        } if(this.state.photoData.data.length === 0 && !this.state.photoData.isLoading){
+            return (
+                <div className={"loading"}>
+                    <br/>
+                    <h1>･({'>'}﹏{'<'})･ Error Fetching Data ...</h1>
+                </div>
+            );
+        }
+
+        let cards = [];
+        let cardDecks = [];
+        for (let i = 0; i < this.state.photoData.data.length; i++) {
+            cards.push(this.getPhotoCard(i));
+            if(i % 4 === 3){
+                cardDecks.push(<CardDeck>{cards}</CardDeck>);
+                cards = [];
+            }
+        }
+        return (
+            <div className={'result-card-decks'}>
+                {cardDecks}
+            </div>
+        );
+    }
 
     renderCards(dataSource){
         if(dataSource === 'truck'){
@@ -589,36 +822,21 @@ export default class SearchPage extends Component {
         }
     }
 
-
-
     render() {
-
-        if (this.state.data.length === 0 && !this.state.isLoading) {
-            return (
-                <div>
-                    <IntroHeader bgUrl={imgBg}
-                                 description={'Number of likes, Tags, Park/location, Food truck, Date of post'}
-                                 title={'Photos on Social Media'}/>
-
-                    <br/>
-                    <div className={"loading"}>
-                        <br/>
-                        <h1>･({'>'}﹏{'<'})･ Error Loading Page ...</h1>
-                    </div>
-                </div>
-            );
-        }
 
         return (
             <div>
                 <IntroHeader bgUrl={imgBg}
-                             description={'Number of likes, Tags, Park/location, Food truck, Date of post'}
-                             title={'Photos on Social Media'}/>
+                             description={'Find interesting results with your keywords'}
+                             title={'Searching'}/>
 
                 <br/>
-                <SearchBar nSelect={4}
-                           config={searchBarConfig}
-                           handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
+
+                <h1>Park <SearchBar nSelect={4}
+                                    config={searchBarConfig}
+                                    handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
+                </h1>
+
 
                 <div className={'info-grid'}>
                     <br/>

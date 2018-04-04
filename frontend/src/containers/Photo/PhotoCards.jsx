@@ -210,6 +210,7 @@ export default class FoodCards extends Component {
         return (
             [
                 {
+                    hasApplyButton: true,
                     createTable: false,
                     removeSelected: true,
                     isMulti: true,
@@ -226,6 +227,7 @@ export default class FoodCards extends Component {
                     placeholder: 'City',
                 },
                 {
+                    hasApplyButton: true,
                     createTable: false,
                     removeSelected: true,
                     isMulti: false,
@@ -252,6 +254,7 @@ export default class FoodCards extends Component {
                     placeholder: 'Likes',
                 },
                 {
+                    hasApplyButton: true,
                     createTable: false,
                     removeSelected: true,
                     isMulti: true,

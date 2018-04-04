@@ -233,6 +233,7 @@ export default class TruckCards extends Component {
         return (
             [
                 {
+                    hasApplyButton: true,
                     createTable: false,
                     removeSelected: true,
                     isMulti: true,
@@ -249,6 +250,7 @@ export default class TruckCards extends Component {
                     placeholder: 'City',
                 },
                 {
+                    hasApplyButton: true,
                     createTable: false,
                     removeSelected: true,
                     isMulti: false,
@@ -272,6 +274,7 @@ export default class TruckCards extends Component {
                     placeholder: 'Rating',
                 },
                 {
+                    hasApplyButton: true,
                     createTable: false,
                     removeSelected: true,
                     isMulti: true,

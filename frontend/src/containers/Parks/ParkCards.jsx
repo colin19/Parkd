@@ -216,6 +216,7 @@ export default class ParkCards extends Component {
         return (
             [
                 {
+                    hasApplyButton: true,
                     createTable: false,
                     removeSelected: true,
                     isMulti: true,
@@ -232,6 +233,7 @@ export default class ParkCards extends Component {
                     placeholder: 'City',
                 },
                 {
+                    hasApplyButton: true,
                     createTable: false,
                     removeSelected: true,
                     isMulti: false,
@@ -255,6 +257,7 @@ export default class ParkCards extends Component {
                     placeholder: 'Rating',
                 },
                 {
+                    hasApplyButton: true,
                     createTable: false,
                     removeSelected: true,
                     isMulti: true,
@@ -271,6 +274,7 @@ export default class ParkCards extends Component {
                     placeholder: 'Sorting',
                 },
                 {
+                    hasApplyButton: true,
                     createTable: true,
                     removeSelected: true,
                     isMulti: true,
