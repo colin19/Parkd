@@ -451,7 +451,6 @@ export default class FoodCards extends Component {
                            nPage={this.state.nPage}
                            handleOnPageBtnClick={this.handleOnPageBtnClick.bind(this)}/>
 
-
                 <Footer/>
             </div>
         );
