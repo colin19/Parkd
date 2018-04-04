@@ -383,6 +383,7 @@ export default class ParkCards extends Component {
                                  title={'Explore Parks Around You'}/>
                     <br/>
                     <SearchBar nSelect={4}
+                               hasApplyButton={true}
                                config={searchBarConfig}
                                handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
 
@@ -436,6 +437,7 @@ export default class ParkCards extends Component {
 
                 <br/>
                 <SearchBar nSelect={4}
+                           hasApplyButton={true}
                            config={searchBarConfig}
                            handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
 

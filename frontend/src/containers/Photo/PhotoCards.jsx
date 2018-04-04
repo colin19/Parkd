@@ -382,6 +382,7 @@ export default class FoodCards extends Component {
                                  title={'Photos on Social Media'}/>
                     <br/>
                     <SearchBar nSelect={4}
+                               hasApplyButton={true}
                                config={searchBarConfig}
                                handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
 
@@ -435,6 +436,7 @@ export default class FoodCards extends Component {
 
                 <br/>
                 <SearchBar nSelect={4}
+                           hasApplyButton={true}
                            config={searchBarConfig}
                            handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
 

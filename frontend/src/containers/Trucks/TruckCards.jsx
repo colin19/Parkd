@@ -399,6 +399,7 @@ export default class TruckCards extends Component {
                                  title={'Explore Food Trucks Around You'}/>
                     <br/>
                     <SearchBar nSelect={4}
+                               hasApplyButton={true}
                                config={searchBarConfig}
                                handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
 
@@ -452,6 +453,7 @@ export default class TruckCards extends Component {
 
                 <br/>
                 <SearchBar nSelect={4}
+                           hasApplyButton={true}
                            config={searchBarConfig}
                            handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
 

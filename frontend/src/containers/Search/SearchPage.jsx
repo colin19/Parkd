@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import { Card, Button, CardImg, CardColumns, CardBody, CardDeck} from 'reactstrap';
+import { Card, Button, CardImg, CardBody, CardDeck} from 'reactstrap';
 import Highlighter from 'react-highlight-words';
 
 import IntroHeader from '../../components/intro-header/IntroHeader';
@@ -632,8 +632,13 @@ export default class SearchPage extends Component {
             }
         }
         return (
-            <div className={'result-card-decks'}>
-                {cardDecks}
+            <div className={'park-results'}>
+                <div className={'result-card-decks'}>
+                    {cardDecks}
+                </div>
+                <PageIndex page={this.state.parkData.page}
+                           nPage={this.state.parkData.nPage}
+                           handleOnPageBtnClick={this.handleOnParkPageBtnClick.bind(this)}/>
             </div>
         );
     }
@@ -718,8 +723,13 @@ export default class SearchPage extends Component {
             }
         }
         return (
-            <div className={'result-card-decks'}>
-                {cardDecks}
+            <div className={'truck-results'}>
+                <div className={'result-card-decks'}>
+                    {cardDecks}
+                </div>
+                <PageIndex page={this.state.truckData.page}
+                           nPage={this.state.truckData.nPage}
+                           handleOnPageBtnClick={this.handleOnTruckPageBtnClick.bind(this)}/>
             </div>
         );
     }
@@ -804,8 +814,13 @@ export default class SearchPage extends Component {
             }
         }
         return (
-            <div className={'result-card-decks'}>
-                {cardDecks}
+            <div className={'photo-results'}>
+                <div className={'result-card-decks'}>
+                    {cardDecks}
+                </div>
+                <PageIndex page={this.state.photoData.page}
+                           nPage={this.state.photoData.nPage}
+                           handleOnPageBtnClick={this.handleOnPhotoPageBtnClick.bind(this)}/>
             </div>
         );
     }
@@ -823,6 +838,60 @@ export default class SearchPage extends Component {
     }
 
     render() {
+        const parkSearchBarConfig = {
+            hasApplyButton: true,
+            createTable: false,
+            removeSelected: true,
+            isMulti: true,
+            disabled: false,
+            stayOpen: false,
+            handleSelect: this.handleParkSortingSelect.bind(this),
+            value: this.state.parkData.sorting,
+            options: [
+                { label: 'Rating: Low to High', value: 'Rating: Low to High' },
+                { label: 'Rating: High to Low', value: 'Rating: High to Low' },
+                { label: 'City Name', value: 'City Name' },
+            ],
+            rtl: false,
+            placeholder: 'Sorting',
+        };
+
+        const truckSearchBarConfig = {
+            hasApplyButton: true,
+            createTable: false,
+            removeSelected: true,
+            isMulti: true,
+            disabled: false,
+            stayOpen: false,
+            handleSelect: this.handleTruckSortingSelect.bind(this),
+            value: this.state.truckData.sorting,
+            options: [
+                { label: 'Rating: Low to High', value: 'Rating: Low to High' },
+                { label: 'Rating: High to Low', value: 'Rating: High to Low' },
+                { label: 'City Name', value: 'City Name' },
+            ],
+            rtl: false,
+            placeholder: 'Sorting',
+        };
+
+        const photoSearchBarConfig = {
+            hasApplyButton: true,
+            createTable: false,
+            removeSelected: true,
+            isMulti: true,
+            disabled: false,
+            stayOpen: false,
+            handleSelect: this.handlePhotoSortingSelect.bind(this),
+            value: this.state.photoData.sorting,
+            options: [
+                { label: 'Likes: Low to High', value: 'Likes: Low to High' },
+                { label: 'Likes: High to Low', value: 'Likes: High to Low' },
+                { label: 'City Name', value: 'City Name' },
+                { label: 'Tag Name', value: 'Tag Name' },
+            ],
+            rtl: false,
+            placeholder: 'Sorting',
+        };
 
         return (
             <div>
@@ -831,27 +900,30 @@ export default class SearchPage extends Component {
                              title={'Searching'}/>
 
                 <br/>
-
-                <h1>Park <SearchBar nSelect={4}
-                                    config={searchBarConfig}
-                                    handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
+                <h1>Trucks <SearchBar nSelect={1}
+                                      hasApplyButton={false}
+                                      config={truckSearchBarConfig}
+                                      handleApplyFilterClick={null}/>
                 </h1>
+                {this.renderCards('truck')}
 
 
-                <div className={'info-grid'}>
-                    <br/>
-                    <br/>
-                    <div className="card-container container-fluid">
-                        <CardColumns>
-                            {this.getPhotoCards()}
-                        </CardColumns>
-                    </div>
-                </div>
+                <br/>
+                <h1>Parks <SearchBar nSelect={1}
+                                    hasApplyButton={false}
+                                    config={parkSearchBarConfig}
+                                    handleApplyFilterClick={null}/>
+                </h1>
+                {this.renderCards('park')}
 
-                <br/><br/><br/>
-                <PageIndex page={this.state.page}
-                           nPage={this.state.nPage}
-                           handleOnPageBtnClick={this.handleOnParkPageBtnClick.bind(this)}/>
+
+                <br/>
+                <h1>Photos on Instagram and Flickr <SearchBar nSelect={1}
+                                    hasApplyButton={false}
+                                    config={photoSearchBarConfig}
+                                    handleApplyFilterClick={null}/>
+                </h1>
+                {this.renderCards('truck_photo')}
 
                 <Footer/>
             </div>
