@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
-from unittest import main, TestCase
-from main import app
+#from unittest import main, TestCase
 import json
+import unittest
+import scraper
+import pymysql
+import requests
+
 
 """
 May have to update the imported files, or modify other aspects of the set up.
@@ -9,55 +13,57 @@ This is a skeleton of some potential tests, it is free to be modified.
 Be sure to check the project rubric for any specific requirements.
 """
 
-conn = pymysql.connect(host='parkd-mysql.cthwmo3nyii9.us-east-2.rds.amazonaws.com',
-                             user='parkdteam',
-                             password='foodtrucks',
-                             db='parkd_sqlalchemy',
-                             charset='utf8mb4',
-                             cursorclass=pymysql.cursors.DictCursor)
-cur = conn.cursor()
+class ScraperTestCase(unittest.TestCase):
 
-class TestModels (TestCase):
+	def setUp(self):
+		self.parsed = scraper.getParkData("Austin")
+		#self.parsed = scraper.getData["Portland"]
+		#self.parsed = scraper.getDate["Seattle"]
+
+		self.parsedTrucks = scraper.getTruckData("Austin")
+
+		self.conn = pymysql.connect(host='34.217.60.78',
+								user='root',
+								password='parkd',
+								db='parkd_sqlalchemy',
+								charset='utf8mb4',
+								cursorclass=pymysql.cursors.DictCursor)
+		self.cur = self.conn.cursor()
+		
 
 	"""
 	For all of these, just check an arbitrary entry in the databae
 	and compare it to the expected output.
-
-	May need to update the arguments to be appropriate, this is just
-	a skeleton
 	"""
 
-    def check_park_id(self):
-    	#Check id of the park
+	#These same functions are executed to extract trucks
 
-	def check_park_name(self): #All of these should be similar and simple
+	def test_park_id(self):
+		#Check id of the park
+		self.assertEqual(str(scraper.getPlace_ids(self.parsed)[0]), "ChIJT-TyHTq1RIYRrV8umxkqGGI")
 
-	def check_park_addresses(self):
+	def test_park_name(self): #All of these should be similar and simple
+		self.assertEqual(scraper.getParkNames(self.parsed)[0], "Zilker Metropolitan Park")
 
-	def check_park_ratings(self):
+	def test_park_addresses(self):
+		self.assertEqual(scraper.getAddresses(self.parsed)[0], "2100 Barton Springs Rd, Austin, TX 78704, USA") #Zilker
 
-	def check_park_longs(self):
+	def test_park_ratings(self):
+		self.assertEqual(scraper.getRatings(self.parsed)[10], 4.7) #Barton Creek Greenbelt
 
-	def check_park_lats(self):
+	def test_park_longs(self):
+		#Mayfield Park and Nature Preserve
+		self.assertEqual(scraper.getLongitudes(self.parsed)[3], 30.3129736)
 
-	def check_truck_adds(self): #Checks teh addresses from our MySQL Database
-		
-	def check_park_adds(self): #Checks teh addresses from our MySQL Database
-
-	def check_truck_id(self):
-    	#Check id of the truck
-
-	def check_truck_name(self):
-
-	def check_truck_addresses(self):
-
-	def check_truck_ratings(self):
-
-	def check_truck_longs(self):
-
-	def check_truck_lats(self):
-
-	def check_getClosestTruck(self):
+	def test_park_lats(self):
+		#Mayfield Park and Nature Preserve
+		self.assertEqual(scraper.getLatitudes(self.parsed)[3], -97.77162000000001)
+	
+	def test_park_adds(self): #Checks teh addresses from our MySQL Database
+		#Mansfield Dam Park in Austin
+		self.assertEqual(scraper.getParkAddresses(self.cur)[18], "700 E Live Oak St, Austin, TX 78704, USA")
 
 if __name__ == '__main__':
-    main()
+		unittest.main()
+
+
