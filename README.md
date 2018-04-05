@@ -9,4 +9,4 @@ Enter the `frontend` directory, install the packages, then run the test suite wi
 ### Backend (unittest)
 Install the Python requirements from `docker/requirements.txt`. Then run `backend/tests.py`.
 ### Backend (Postman)
-Run `newman run Postman.json` from the root.
+Run `Postman.json` with `newman` or similar.
