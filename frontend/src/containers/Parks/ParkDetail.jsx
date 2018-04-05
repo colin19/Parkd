@@ -5,11 +5,11 @@ import axios from "axios/index";
 
 import './ParkDetail.css';
 
-import CustomCarousel from '../../components/CustomCarousel/CustomCarousel';
-import IntroHeader from '../../components/intro-header/IntroHeader';
-import TransparentNav from '../../components/TransparentNav/TransparentNav';
-import Footer from '../../components/Footer/Footer';
-import ReactGoogleMap from '../../components/GoogleMap/ReactGoogleMap';
+import CustomCarousel from '../../components/CustomCarousel/CustomCarousel.jsx';
+import IntroHeader from '../../components/intro-header/IntroHeader.jsx';
+import TransparentNav from '../../components/TransparentNav/TransparentNav.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
+import ReactGoogleMap from '../../components/GoogleMap/ReactGoogleMap.jsx';
 
 /*
 import imgAlberta1 from '../../images/parks/albert-1.png';

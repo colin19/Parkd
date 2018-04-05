@@ -1,13 +1,15 @@
 import App from '../src/containers/App/App.jsx';
 import Home from '../src/containers/Home/Home.jsx';
-import About from '../src/containers/About/About.jsx';
-import Footer from "../src/components/Footer/Footer";
+import Footer from "../src/components/Footer/Footer.jsx";
+import PageIndex from "../src/components/PageIndex/PageIndex.jsx";
+import SearchBar from "../src/components/SearchBar/SearchBar.jsx";
 
-import React from 'react'
-import { shallow, configure } from 'enzyme'
-import { expect } from 'chai'
+
+import React from 'react';
+import { shallow, configure } from 'enzyme';
+import { expect } from 'chai';
 import Adapter from 'enzyme-adapter-react-16';
-import "isomorphic-fetch"
+import "isomorphic-fetch";
 
 configure({ adapter: new Adapter() });
 
@@ -37,32 +39,57 @@ describe('<Home />', () => {
 });
 
 
-// Test for component About
-describe('<About />', () => {
+// Test for component PageIndex
+describe('<PageIndex />', () => {
     it('should render successfully', () => {
-        shallow(<About />);
-    });
-
-    it('should render the website description defined by us', () => {
-        const wrapper = shallow(<About />);
-        expect(wrapper.find('.websiteDescription').exists()).to.eql(true);
-    });
-
-    it('should render the team photos defined by us', () => {
-        const wrapper = shallow(<About />);
-        expect(wrapper.find('.team-photo').exists()).to.eql(true);
+        shallow(<PageIndex page={1}
+                           nPage={1}
+                           handleOnPageBtnClick={void(0)}/>);
     });
 });
 
 
-// Test for component Home
+// Test for component Footer
 describe('<Footer />', () => {
     it('should render successfully', () => {
         shallow(<Footer />);
     });
-    it('should render the carousel defined by us', () => {
+    it('should render the centered text in footer', () => {
         const wrapper = shallow(<Footer />);
-        expect(wrapper.find('.p').exists()).to.eql(true);
+        expect(wrapper.find('.text-center').exists()).to.eql(true);
+    });
+    it('should render several break row', () => {
+        const wrapper = shallow(<Footer />);
+        expect(wrapper.contains(<br/>)).to.eql(true);
+    });
+});
+
+
+// Test for component Search bar
+describe('<SearchBar />', () => {
+    const searchBarConfig = [
+        {
+            createTable: true,
+            removeSelected: true,
+            isMulti: true,
+            disabled: false,
+            stayOpen: false,
+            handleSelect: void(0),
+            value: "",
+            options: [],
+            rtl: false,
+            placeholder: 'Keywords',
+        }
+    ];
+    it('should render successfully with no configuration', () => {
+        shallow(<SearchBar/>);
+    });
+
+    it('should render successfully with configuration', () => {
+        shallow(<SearchBar nSelect={1}
+                           hasApplyButton={true}
+                           config={searchBarConfig}
+                           handleApplyFilterClick={void(0)}/>);
     });
 });
 

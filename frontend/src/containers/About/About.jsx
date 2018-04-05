@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import { Card, CardBody } from 'reactstrap';
 import axios from 'axios';
 
-import IntroHeader from '../../components/intro-header/IntroHeader';
-import Footer from '../../components/Footer/Footer';
+import IntroHeader from '../../components/intro-header/IntroHeader.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
 
 import './About.css';
 

@@ -3,9 +3,9 @@ import { Container, Row, Col } from 'reactstrap';
 
 import './PhotoDetail.css';
 
-import Footer from '../../components/Footer/Footer';
-import TransparentNav from '../../components/TransparentNav/TransparentNav';
-import ReactGoogleMap from '../../components/GoogleMap/ReactGoogleMap';
+import Footer from '../../components/Footer/Footer.jsx';
+import TransparentNav from '../../components/TransparentNav/TransparentNav.jsx';
+import ReactGoogleMap from '../../components/GoogleMap/ReactGoogleMap.jsx';
 import axios from "axios/index";
 
 /*

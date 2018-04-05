@@ -3,10 +3,10 @@ import {Link} from 'react-router-dom';
 import { Card, Button, CardImg, CardBody, CardDeck, Row, Col} from 'reactstrap';
 import Highlighter from 'react-highlight-words';
 
-import IntroHeader from '../../components/intro-header/IntroHeader';
-import Footer from '../../components/Footer/Footer';
-import PageIndex from '../../components/PageIndex/PageIndex';
-import SearchBar from '../../components/SearchBar/SearchBar';
+import IntroHeader from '../../components/intro-header/IntroHeader.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
+import PageIndex from '../../components/PageIndex/PageIndex.jsx';
+import SearchBar from '../../components/SearchBar/SearchBar.jsx';
 
 import './SearchPage.css';
 
@@ -206,6 +206,9 @@ export default class SearchPage extends Component {
 
                 let address = truck['address'];   //get address
                 truckData.push(address);
+
+                let rating = truck['rating'];   // get rating
+                truckData.push(rating);
 
                 data.push(truckData);
             }
@@ -634,6 +637,7 @@ export default class SearchPage extends Component {
                             textToHighlight={data[id][0]}
                         />
                     </div>
+                    <br/>
                     <div className={'photoCardText card-text'}>
                         Rating: {data[id][2]}
                         <br/>
@@ -735,8 +739,9 @@ export default class SearchPage extends Component {
                             textToHighlight={data[id][0]}
                         />
                     </div>
+                    <br/>
                     <div className={'photoCardText card-text'}>
-                        Rating: {data[id][2]}
+                        Rating: {data[id][5]}
                         <br/>
                         Address: <Highlighter
                         className={"photoCardText"}
