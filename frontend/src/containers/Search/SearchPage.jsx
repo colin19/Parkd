@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import { Card, Button, CardImg, CardBody, CardDeck} from 'reactstrap';
+import { Card, Button, CardImg, CardBody, CardDeck, Row, Col} from 'reactstrap';
 import Highlighter from 'react-highlight-words';
 
 import IntroHeader from '../../components/intro-header/IntroHeader';
@@ -8,10 +8,11 @@ import Footer from '../../components/Footer/Footer';
 import PageIndex from '../../components/PageIndex/PageIndex';
 import SearchBar from '../../components/SearchBar/SearchBar';
 
-import './PhotoCards.css';
+import './SearchPage.css';
 
-import imgBg from '../../images/food/themightycone3.png';
+import imgBg from '../../images/search/bg.png';
 import imgNo from '../../images/no-image.jpg';
+import imgNoTruck from '../../images/no-image-truck.png';
 import logo from '../../logo.svg';
 import axios from "axios/index";
 
@@ -36,7 +37,7 @@ export default class SearchPage extends Component {
         if(isMatchAll === 0) boolMatchAll = false;
 
         this.state = {
-            resultPerPage: 8,
+            resultPerPage: 4,
             isMatchAll: boolMatchAll,
             keywords: keywords,
             parkData: {
@@ -65,7 +66,7 @@ export default class SearchPage extends Component {
                 data: [],
                 nPage: 1,
                 page: 1,
-                sorting: [],
+                sorting: "",
                 currentUrl: 'http://api.parkd.us/truck_photo?',
                 currentUrlQueryParam: '',
             },
@@ -95,11 +96,17 @@ export default class SearchPage extends Component {
 
     setLoadingState(state, dataSource){
         if(dataSource === 'truck'){
-            this.setState({truckData: {isLoading: false}});
+            let truckData = this.state.truckData;
+            truckData.isLoading = false;
+            this.setState({truckData: truckData});
         } else if (dataSource === 'park'){
-            this.setState({parkData: {isLoading: false}});
+            let parkData = this.state.parkData;
+            parkData.isLoading = false;
+            this.setState({parkData: parkData});
         } else if( dataSource === 'truck_photo'){
-            this.setState({photoData: {isLoading: false}});
+            let photoData = this.state.photoData;
+            photoData.isLoading = false;
+            this.setState({photoData: photoData});
         }
     }
 
@@ -136,6 +143,7 @@ export default class SearchPage extends Component {
                 photoData.push(url);
 
                 let description = photo['description'];
+                if(description === null) description = "wonderful!";
                 if(description.length > 200) {
                     description = description.substring(0, 200) + ' ...';
                 }
@@ -150,7 +158,12 @@ export default class SearchPage extends Component {
                 data.push(photoData);
             }
 
-            this.setState({photoData: {data: data, nPage: totalPage, isNoResult: false}});
+            let stateData = this.state.photoData;
+            stateData.data = data;
+            stateData.nPage = totalPage;
+            stateData.isNoResult = false;
+
+            this.setState({photoData: stateData});
         } catch (error){
             console.log("Error during parsing photos data - " + error.toString());
         }
@@ -176,11 +189,10 @@ export default class SearchPage extends Component {
                 truckData.push(truck['name']);    // get name
 
                 let nPhoto = truck['photos'].length;
-                if(nPhoto === 0) continue;
                 if(truck['photos'].length > 0 && truck['photos'][nPhoto-1] != null){
                     truckData.push(truck['photos'][nPhoto-1]['url']);   // get image
                 }else{
-                    truckData.push(imgNo);
+                    truckData.push(imgNoTruck);
                 }
 
                 let review = truck['reviews'][0]['content'];
@@ -198,7 +210,12 @@ export default class SearchPage extends Component {
                 data.push(truckData);
             }
 
-            this.setState({truckData: {data: data, nPage: totalPage, isNoResult: false}});
+            let stateData = this.state.truckData;
+            stateData.data = data;
+            stateData.nPage = totalPage;
+            stateData.isNoResult = false;
+
+            this.setState({truckData: stateData});
         } catch (error){
             console.log("Error during parsing trucks data - " + error.toString());
         }
@@ -224,7 +241,6 @@ export default class SearchPage extends Component {
                 parkData.push(park['name']);    // get name
 
                 let nPhoto = park['photos'].length;
-                if(nPhoto === 0) continue;
                 if(park['photos'].length > 0 && park['photos'][nPhoto-1] != null){
                     parkData.push(park['photos'][nPhoto-1]['url']);   // get image
                 }else{
@@ -243,7 +259,12 @@ export default class SearchPage extends Component {
                 data.push(parkData);
             }
 
-            this.setState({parkData: {data: data, nPage: totalPage, isNoResult: false}});
+            let stateData = this.state.parkData;
+            stateData.data = data;
+            stateData.nPage = totalPage;
+            stateData.isNoResult = false;
+
+            this.setState({parkData: stateData});
         } catch (error){
             console.log("Error during parsing parks data - " + error.toString());
         }
@@ -259,7 +280,13 @@ export default class SearchPage extends Component {
             + '&'
             + currentUrlQueryParam;
 
-        this.setState({parkData:{page: pageIndex, data: [], isNoResult: true, isLoading: true}});
+        let stateData = this.state.parkData;
+        stateData.page = pageIndex;
+        stateData.isLoading = true;
+        stateData.isNoResult = true;
+        stateData.data = [];
+
+        this.setState({parkData: stateData});
         this.fetchData(requestUrl, 'park');
     }
 
@@ -273,21 +300,34 @@ export default class SearchPage extends Component {
             + '&'
             + currentUrlQueryParam;
 
-        this.setState({truckData:{page: pageIndex, data: [], isNoResult: true, isLoading: true}});
+        let stateData = this.state.truckData;
+        stateData.page = pageIndex;
+        stateData.isLoading = true;
+        stateData.isNoResult = true;
+        stateData.data = [];
+
+        this.setState({truckData: stateData});
         this.fetchData(requestUrl, 'truck');
     }
 
     handleOnPhotoPageBtnClick(pageIndex) {
-        const currentUrl = this.state.parkData.currentUrl + 'results_per_page=' + this.state.resultPerPage;
+        const currentUrl = this.state.photoData.currentUrl + 'results_per_page=' + this.state.resultPerPage;
         const currentUrlPageParam = '&page=' + pageIndex;
-        const currentUrlQueryParam = this.state.parkData.currentUrlQueryParam;
+        const currentUrlQueryParam = this.state.photoData.currentUrlQueryParam;
 
         const requestUrl = currentUrl
             + currentUrlPageParam
             + '&'
             + currentUrlQueryParam;
 
-        this.setState({photoData:{page: pageIndex, data: [], isNoResult: true, isLoading: true}});
+        let stateData = this.state.photoData;
+        stateData.page = pageIndex;
+        stateData.isLoading = true;
+        stateData.isNoResult = true;
+        stateData.data = [];
+
+        this.setState({photoData: stateData});
+        console.log(requestUrl);
         this.fetchData(requestUrl, 'truck_photo');
     }
 
@@ -295,7 +335,9 @@ export default class SearchPage extends Component {
         const isMatchAll = this.state.isMatchAll;
         const keywords = this.state.keywords;
 
-        let requestUrl = 'http://api.parkd.us/park?results_per_page=' + this.state.resultPerPage + '&';
+
+
+        let requestUrl = 'http://api.parkd.us/park?results_per_page=' + this.state.resultPerPage;
         let queryDict = {};
 
         if(keywords.length > 0){
@@ -306,10 +348,12 @@ export default class SearchPage extends Component {
                 const queryField = ['city', 'name', 'address'];
                 let keywordsCondition = [];
 
-                for(let j=0; j<queryField.length; j++){
-                    for(let i=0; i<keywords.length; i++){
-                        keywordsCondition.push({name: queryField[j], op:"like", val: '%'+keywords[i]['value']+'%'});
+                for(let i=0; i<keywords.length; i++){
+                    let fieldCondition = [];
+                    for(let j=0; j<queryField.length; j++){
+                        fieldCondition.push({name: queryField[j], op:"like", val: '%'+keywords[i]+'%'});
                     }
+                    keywordsCondition.push({or: fieldCondition});
                 }
 
                 let keywordsConditionQuery = {};
@@ -323,7 +367,7 @@ export default class SearchPage extends Component {
             }
 
             // dict to json string
-            queryDict["filters"] = [{and: filterCondition}];
+            queryDict["filters"] = filterCondition;
         }
 
         // sorting
@@ -348,12 +392,15 @@ export default class SearchPage extends Component {
         requestUrl += queryUrl;
         console.log(requestUrl);
 
-        this.setState({parkData: {nPage: 1
-            , page: 1
-            , data: []
-            , isLoading: true
-            , currentUrlQueryParam: queryUrl
-            , isNoResult: true}});
+        let dataState = this.state.parkData;
+        dataState.nPage = 1;
+        dataState.page = 1;
+        dataState.data = [];
+        dataState.isLoading = true;
+        dataState.currentUrlQueryParam = queryUrl;
+        dataState.isNoResult = true;
+        this.setState({parkData: dataState});
+
         this.fetchData(requestUrl, 'park');
     }
 
@@ -361,7 +408,7 @@ export default class SearchPage extends Component {
         const isMatchAll = this.state.isMatchAll;
         const keywords = this.state.keywords;
 
-        let requestUrl = 'http://api.parkd.us/truck?results_per_page=' + this.state.resultPerPage + '&';
+        let requestUrl = 'http://api.parkd.us/truck?results_per_page=' + this.state.resultPerPage;
         let queryDict = {};
 
         if(keywords.length > 0){
@@ -372,10 +419,12 @@ export default class SearchPage extends Component {
                 const queryField = ['city', 'name', 'address'];
                 let keywordsCondition = [];
 
-                for(let j=0; j<queryField.length; j++){
-                    for(let i=0; i<keywords.length; i++){
-                        keywordsCondition.push({name: queryField[j], op:"like", val: '%'+keywords[i]['value']+'%'});
+                for(let i=0; i<keywords.length; i++){
+                    let fieldCondition = [];
+                    for(let j=0; j<queryField.length; j++){
+                        fieldCondition.push({name: queryField[j], op:"like", val: '%'+keywords[i]+'%'});
                     }
+                    keywordsCondition.push({or: fieldCondition});
                 }
 
                 let keywordsConditionQuery = {};
@@ -389,7 +438,7 @@ export default class SearchPage extends Component {
             }
 
             // dict to json string
-            queryDict["filters"] = [{and: filterCondition}];
+            queryDict["filters"] = filterCondition;
         }
 
         // sorting
@@ -414,12 +463,15 @@ export default class SearchPage extends Component {
         requestUrl += queryUrl;
         console.log(requestUrl);
 
-        this.setState({truckData: {nPage: 1
-                , page: 1
-                , data: []
-                , isLoading: true
-                , currentUrlQueryParam: queryUrl
-                , isNoResult: true}});
+        let dataState = this.state.truckData;
+        dataState.nPage = 1;
+        dataState.page = 1;
+        dataState.data = [];
+        dataState.isLoading = true;
+        dataState.currentUrlQueryParam = queryUrl;
+        dataState.isNoResult = true;
+        this.setState({truckData: dataState});
+
         this.fetchData(requestUrl, 'truck');
     }
 
@@ -427,7 +479,7 @@ export default class SearchPage extends Component {
         const isMatchAll = this.state.isMatchAll;
         const keywords = this.state.keywords;
 
-        let requestUrl = 'http://api.parkd.us/truck_photo?results_per_page=' + this.state.resultPerPage + '&';
+        let requestUrl = 'http://api.parkd.us/truck_photo?results_per_page=' + this.state.resultPerPage;
         let queryDict = {};
 
         if(keywords.length > 0){
@@ -438,10 +490,12 @@ export default class SearchPage extends Component {
                 const queryField = ['description', 'tag'];
                 let keywordsCondition = [];
 
-                for(let j=0; j<queryField.length; j++){
-                    for(let i=0; i<keywords.length; i++){
-                        keywordsCondition.push({name: queryField[j], op:"like", val: '%'+keywords[i]['value']+'%'});
+                for(let i=0; i<keywords.length; i++){
+                    let fieldCondition = [];
+                    for(let j=0; j<queryField.length; j++){
+                        fieldCondition.push({name: queryField[j], op:"like", val: '%'+keywords[i]+'%'});
                     }
+                    keywordsCondition.push({or: fieldCondition});
                 }
 
                 let keywordsConditionQuery = {};
@@ -455,7 +509,7 @@ export default class SearchPage extends Component {
             }
 
             // dict to json string
-            queryDict["filters"] = [{and: filterCondition}];
+            queryDict["filters"] = filterCondition;
         }
 
         // sorting
@@ -482,13 +536,16 @@ export default class SearchPage extends Component {
         requestUrl += queryUrl;
         console.log(requestUrl);
 
-        this.setState({photoData: {nPage: 1
-                , page: 1
-                , data: []
-                , isLoading: true
-                , currentUrlQueryParam: queryUrl
-                , isNoResult: true}});
-        this.fetchData(requestUrl, 'truck');
+        let dataState = this.state.photoData;
+        dataState.nPage = 1;
+        dataState.page = 1;
+        dataState.data = [];
+        dataState.isLoading = true;
+        dataState.currentUrlQueryParam = queryUrl;
+        dataState.isNoResult = true;
+        this.setState({photoData: dataState});
+
+        this.fetchData(requestUrl, 'truck_photo');
     }
 
     handleSearch() {
@@ -511,7 +568,10 @@ export default class SearchPage extends Component {
                 value = preSoringString;
             }
         }
-        this.setState({parkData: {sorting: value}});
+
+        let dataState = this.state.parkData;
+        dataState.sorting = value;
+        this.setState({parkData: dataState});
         this.handleParkSearch();
     }
 
@@ -529,7 +589,10 @@ export default class SearchPage extends Component {
                 value = preSoringString;
             }
         }
-        this.setState({truckData: {sorting: value}});
+
+        let dataState = this.state.truckData;
+        dataState.sorting = value;
+        this.setState({truckData: dataState});
         this.handleTruckSearch();
     }
 
@@ -547,7 +610,10 @@ export default class SearchPage extends Component {
                 value = preSoringString;
             }
         }
-        this.setState({photoData: {sorting: value}});
+
+        let dataState = this.state.photoData;
+        dataState.sorting = value;
+        this.setState({photoData: dataState});
         this.handlePhotoSearch();
     }
 
@@ -566,7 +632,7 @@ export default class SearchPage extends Component {
                             highlightClassName={'photoCardTitle'}
                             highlightStyle={{"backgroundColor": "#F9FC48"}}
                             autoEscape={true}
-                            searchWords={this.state.keywordsList}
+                            searchWords={this.state.keywords}
                             textToHighlight={data[id][0]}
                         />
                     </div>
@@ -579,7 +645,7 @@ export default class SearchPage extends Component {
                         highlightClassName={'photoCardText'}
                         highlightStyle={{"backgroundColor": "#F9FC48"}}
                         autoEscape={true}
-                        searchWords={this.state.keywordsList}
+                        searchWords={this.state.keywords}
                         textToHighlight={data[id][4]}
                     />
                     </div>
@@ -627,15 +693,25 @@ export default class SearchPage extends Component {
         for (let i = 0; i < this.state.parkData.data.length; i++) {
             cards.push(this.getParkCard(i));
             if(i % 4 === 3){
-                cardDecks.push(<CardDeck>{cards}</CardDeck>);
+                cardDecks.push(<CardDeck key={i}>{cards}</CardDeck>);
                 cards = [];
             }
         }
+        // the cards in the last decks
+        if(cards.length > 0){
+            let nEmpty = 4-cards.length;
+            for(let j=0; j<nEmpty; j++){
+                cards.push(<Card className={'transparent-card'} key={4-j}/>)
+            }
+            cardDecks.push(<CardDeck key={this.state.truckData.data}>{cards}</CardDeck>);
+        }
+
         return (
-            <div className={'park-results'}>
+            <div className={'results-grid'}>
                 <div className={'result-card-decks'}>
                     {cardDecks}
                 </div>
+                <br/>
                 <PageIndex page={this.state.parkData.page}
                            nPage={this.state.parkData.nPage}
                            handleOnPageBtnClick={this.handleOnParkPageBtnClick.bind(this)}/>
@@ -657,7 +733,7 @@ export default class SearchPage extends Component {
                             highlightClassName={'photoCardTitle'}
                             highlightStyle={{"backgroundColor": "#F9FC48"}}
                             autoEscape={true}
-                            searchWords={this.state.keywordsList}
+                            searchWords={this.state.keywords}
                             textToHighlight={data[id][0]}
                         />
                     </div>
@@ -670,7 +746,7 @@ export default class SearchPage extends Component {
                         highlightClassName={'photoCardText'}
                         highlightStyle={{"backgroundColor": "#F9FC48"}}
                         autoEscape={true}
-                        searchWords={this.state.keywordsList}
+                        searchWords={this.state.keywords}
                         textToHighlight={data[id][4]}
                     />
                     </div>
@@ -718,15 +794,25 @@ export default class SearchPage extends Component {
         for (let i = 0; i < this.state.truckData.data.length; i++) {
             cards.push(this.getTruckCard(i));
             if(i % 4 === 3){
-                cardDecks.push(<CardDeck>{cards}</CardDeck>);
+                cardDecks.push(<CardDeck key={i}>{cards}</CardDeck>);
                 cards = [];
             }
         }
+        // the cards in the last decks
+        if(cards.length > 0){
+            let nEmpty = 4-cards.length;
+            for(let j=0; j<nEmpty; j++){
+                cards.push(<Card className={'transparent-card'} key={4-j}/>)
+            }
+            cardDecks.push(<CardDeck key={this.state.truckData.data}>{cards}</CardDeck>);
+        }
+
         return (
-            <div className={'truck-results'}>
+            <div className={'results-grid'}>
                 <div className={'result-card-decks'}>
                     {cardDecks}
                 </div>
+                <br/>
                 <PageIndex page={this.state.truckData.page}
                            nPage={this.state.truckData.nPage}
                            handleOnPageBtnClick={this.handleOnTruckPageBtnClick.bind(this)}/>
@@ -747,7 +833,7 @@ export default class SearchPage extends Component {
                             highlightClassName={'photoCardTitle'}
                             highlightStyle={{"backgroundColor": "#F9FC48"}}
                             autoEscape={true}
-                            searchWords={this.state.keywordsList}
+                            searchWords={this.state.keywords}
                             textToHighlight={data[id][0]}
                         />
                     </div>
@@ -758,7 +844,7 @@ export default class SearchPage extends Component {
                             highlightClassName={'photoCardText'}
                             highlightStyle={{"backgroundColor": "#F9FC48"}}
                             autoEscape={true}
-                            searchWords={this.state.keywordsList}
+                            searchWords={this.state.keywords}
                             textToHighlight={data[id][2]}
                         />
                         <br/>
@@ -809,15 +895,26 @@ export default class SearchPage extends Component {
         for (let i = 0; i < this.state.photoData.data.length; i++) {
             cards.push(this.getPhotoCard(i));
             if(i % 4 === 3){
-                cardDecks.push(<CardDeck>{cards}</CardDeck>);
+                cardDecks.push(<CardDeck key={i}>{cards}</CardDeck>);
                 cards = [];
             }
         }
+        // the cards in the last decks
+        if(cards.length > 0){
+            let nEmpty = 4-cards.length;
+            for(let j=0; j<nEmpty; j++){
+                cards.push(<Card className={'transparent-card'} key={4-j}/>)
+            }
+            cardDecks.push(<CardDeck key={this.state.truckData.data}>{cards}</CardDeck>);
+        }
+
+
         return (
-            <div className={'photo-results'}>
+            <div className={'results-grid'}>
                 <div className={'result-card-decks'}>
                     {cardDecks}
                 </div>
+                <br/>
                 <PageIndex page={this.state.photoData.page}
                            nPage={this.state.photoData.nPage}
                            handleOnPageBtnClick={this.handleOnPhotoPageBtnClick.bind(this)}/>
@@ -838,7 +935,7 @@ export default class SearchPage extends Component {
     }
 
     render() {
-        const parkSearchBarConfig = {
+        const parkSearchBarConfig = [{
             hasApplyButton: true,
             createTable: false,
             removeSelected: true,
@@ -854,9 +951,9 @@ export default class SearchPage extends Component {
             ],
             rtl: false,
             placeholder: 'Sorting',
-        };
+        }];
 
-        const truckSearchBarConfig = {
+        const truckSearchBarConfig = [{
             hasApplyButton: true,
             createTable: false,
             removeSelected: true,
@@ -872,9 +969,9 @@ export default class SearchPage extends Component {
             ],
             rtl: false,
             placeholder: 'Sorting',
-        };
+        }];
 
-        const photoSearchBarConfig = {
+        const photoSearchBarConfig = [{
             hasApplyButton: true,
             createTable: false,
             removeSelected: true,
@@ -891,7 +988,7 @@ export default class SearchPage extends Component {
             ],
             rtl: false,
             placeholder: 'Sorting',
-        };
+        }];
 
         return (
             <div>
@@ -900,29 +997,55 @@ export default class SearchPage extends Component {
                              title={'Searching'}/>
 
                 <br/>
-                <h1>Trucks <SearchBar nSelect={1}
-                                      hasApplyButton={false}
-                                      config={truckSearchBarConfig}
-                                      handleApplyFilterClick={null}/>
-                </h1>
+                <div className={'result-section'}>
+                    <Row>
+                        <Col xs={1}>
+                            <h3>Trucks </h3>
+                        </Col>
+                        <Col xs={3}>
+                            <SearchBar nSelect={1}
+                                       hasApplyButton={false}
+                                       config={truckSearchBarConfig}
+                                       handleApplyFilterClick={null}/>
+                        </Col>
+                        <Col xl={8}/>
+                    </Row>
+                </div>
                 {this.renderCards('truck')}
 
 
-                <br/>
-                <h1>Parks <SearchBar nSelect={1}
-                                    hasApplyButton={false}
-                                    config={parkSearchBarConfig}
-                                    handleApplyFilterClick={null}/>
-                </h1>
+                <br/><br/><br/>
+                <div className={'result-section'}>
+                    <Row>
+                        <Col xs={1}>
+                            <h3>Parks </h3>
+                        </Col>
+                        <Col xs={3}>
+                            <SearchBar nSelect={1}
+                                       hasApplyButton={false}
+                                       config={parkSearchBarConfig}
+                                       handleApplyFilterClick={null}/>
+                        </Col>
+                        <Col xl={8}/>
+                    </Row>
+                </div>
                 {this.renderCards('park')}
 
-
-                <br/>
-                <h1>Photos on Instagram and Flickr <SearchBar nSelect={1}
-                                    hasApplyButton={false}
-                                    config={photoSearchBarConfig}
-                                    handleApplyFilterClick={null}/>
-                </h1>
+                <br/><br/><br/>
+                <div className={'result-section'}>
+                    <Row>
+                        <Col xs={1}>
+                            <h3>Photos</h3>
+                        </Col>
+                        <Col xs={3}>
+                            <SearchBar nSelect={1}
+                                       hasApplyButton={false}
+                                       config={photoSearchBarConfig}
+                                       handleApplyFilterClick={null}/>
+                        </Col>
+                        <Col xl={8}/>
+                    </Row>
+                </div>
                 {this.renderCards('truck_photo')}
 
                 <Footer/>

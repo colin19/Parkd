@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import {Navbar, Nav, NavItem, NavbarBrand, NavbarToggler
     , Collapse, NavLink, Button, InputGroup, InputGroupAddon, Input} from 'reactstrap';
 
@@ -55,10 +56,14 @@ class TransparentNav extends Component{
                 </Collapse>
 
                 <InputGroup className={"nav-search"}>
-                    <Input  placeholder="Keywords" />
-                    <InputGroupAddon addonType="append">
-                        <Button color="secondary">Search</Button>
+                    <Input placeholder="Keywords" />
+                    <Link to={'/search?isMatchAll=1&keywords=park'}>
+                        <InputGroupAddon addonType="append">
+
+                            <Button color="secondary">Search</Button>
+
                     </InputGroupAddon>
+                    </Link>
                 </InputGroup>
             </Navbar>
         )

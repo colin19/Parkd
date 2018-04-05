@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 import About from '../../containers/About/About';
 import Home from '../../containers/Home/Home';
+import SearchPage from '../../containers/Search/SearchPage';
 import PhotoCards from '../Photo/PhotoCards';
 import PhotoDetail from '../Photo/PhotoDetail';
 import TruckCards from '../../containers/Trucks/TruckCards';
@@ -24,6 +25,7 @@ class App extends Component {
                     <Route path={"/trucks/detail"} component={TruckDetail}/>
                     <Route path={"/parks/detail"} component={ParkDetail}/>
                     <Route path={"/photos/detail"} component={PhotoDetail}/>
+                    <Route path={"/search"} component={SearchPage}/>
                 </div>
             </Router>
         );
