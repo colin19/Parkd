@@ -44,7 +44,7 @@ for j in range(0, 60):
 	sql = "SELECT address FROM truck WHERE id ='%d'"
 	cur.execute(sql % j)
 	for row in cur:
-		truck_addresses.append(row['address'].replace("&", "")) #park address
+		truck_addresses.append(row['address'].replace("&", "")) #truck address
 
 #print("First park: " + park_addresses[0])
 #print("First truck: " + truck_addresses[0])

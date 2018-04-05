@@ -3,6 +3,11 @@ from unittest import main, TestCase
 from main import app
 import json
 
+"""
+May have to update the imported files, or modify other aspects of the set up.
+This is a skeleton of some potential tests, it is free to be modified.
+Be sure to check the project rubric for any specific requirements.
+"""
 
 conn = pymysql.connect(host='parkd-mysql.cthwmo3nyii9.us-east-2.rds.amazonaws.com',
                              user='parkdteam',
@@ -14,30 +19,45 @@ cur = conn.cursor()
 
 class TestModels (TestCase):
 
-    def setUp(self):
-        self.app = app.test_client()
-        self.app.testing = True
+	"""
+	For all of these, just check an arbitrary entry in the databae
+	and compare it to the expected output.
 
-    def check_park_0(self):
-		cur.execute("SELECT name from park")
-		data = cur.fetchall()
-		assert data[0] == "Zilker Metropolitan Park"
+	May need to update the arguments to be appropriate, this is just
+	a skeleton
+	"""
 
-	def check_park_count(self):
-		cur.execute("SELECT count(*) from park")
-		data = cur.fetchall()
-		assert data[0] == 60
+    def check_park_id(self):
+    	#Check id of the park
 
-	def check_truck_0(self):
-		cur.execute("SELECT name from truck")
-		data = cur.fetchall()
-		assert data[0] == "Veracruz All Natural Food Truck"
+	def check_park_name(self): #All of these should be similar and simple
 
-	def check_truck_photo_9(self):
-		cur.execute("SELECT tag from truck")
-		data = cur.fetchall()
-		assert data[0] == "#themightycone"
+	def check_park_addresses(self):
 
+	def check_park_ratings(self):
+
+	def check_park_longs(self):
+
+	def check_park_lats(self):
+
+	def check_truck_adds(self): #Checks teh addresses from our MySQL Database
+		
+	def check_park_adds(self): #Checks teh addresses from our MySQL Database
+
+	def check_truck_id(self):
+    	#Check id of the truck
+
+	def check_truck_name(self):
+
+	def check_truck_addresses(self):
+
+	def check_truck_ratings(self):
+
+	def check_truck_longs(self):
+
+	def check_truck_lats(self):
+
+	def check_getClosestTruck(self):
 
 if __name__ == '__main__':
     main()
