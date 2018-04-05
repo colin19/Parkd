@@ -127,10 +127,14 @@ export default class PhotoDetail extends Component {
     }
 
     getRatingInfo(){
+        let tagName = this.state.data[0];
+
         return (
             <div className={"basicInfo rateInfo basicDescription"}>
                 <h1>Likes</h1>
                 <p>{this.state.data[8]}</p>
+                <h1>External Info</h1>
+                <a href={'https://www.flickr.com/search/?text=' + tagName}>More similar photos on Flickr</a>
             </div>
         )
     }
