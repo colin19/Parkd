@@ -25,12 +25,12 @@ const aboutPageContent = {
 };
 
 const teamInfo = [
-    ['Gijs Landwehr', iconGijs, 'Class of 2019', '', 'Another 3rd year CS student from UT Austin. Spends most of his free time teaching and travelling across the state for robotics competition.', 0]
+    ['Gijs Landwehr', iconGijs, 'Class of 2019', '', 'Another 3rd year CS student from UT Austin. Spends most of his free time teaching and travelling across the state for robotics competition.', 8]
     , ['Austen Castberg', iconAusten, 'Class of 2020', '', 'Worked on backend.', 0]
-    , ['Colin Hall', iconColin, 'Class of 2019', '', 'A 3rd year computer science major at UT. Has no hobbies. Worked on the backend. Developed UML Diagram.', 6]
-    , ['Javier Banda', iconJavier, 'Class of 2019', '', 'A 3rd year computer science major from the University of Texas. Hobbies include playing basketball and eating lots of food. Worked on the backend of this project. Among other duties, responsible for populating backend database.', 4]
-    , ['Diego Alcoz', iconDiego, 'Class of 2019', '', 'Likes to program in his spare time. What a weirdo. Worked mostly on frontend, but helped with backend stuff when necessary.', 5]
-    , ['Lin Guan', iconLin, 'Class of 2020', '', 'Responsible for the overall look and feel of the website. If it looks good, it was Lin. If it looks bad, it wasn\'t.', 4]
+    , ['Colin Hall', iconColin, 'Class of 2019', '', 'A 3rd year computer science major at UT. Has no hobbies. Worked on the backend. Developed UML Diagram.', 22]
+    , ['Javier Banda', iconJavier, 'Class of 2019', '', 'A 3rd year computer science major from the University of Texas. Hobbies include playing basketball and eating lots of food. Worked on the backend of this project. Among other duties, responsible for populating backend database.', 22]
+    , ['Diego Alcoz', iconDiego, 'Class of 2019', '', 'Likes to program in his spare time. What a weirdo. Worked mostly on frontend, but helped with backend stuff when necessary.', 22]
+    , ['Lin Guan', iconLin, 'Class of 2020', '', 'Responsible for the overall look and feel of the website. If it looks good, it was Lin. If it looks bad, it wasn\'t.', 18]
 ];
 
 const GithubId2MemberId = {'gijsland': 0, 'aecast': 1, 'colin19': 2, 'jbanda11': 3,'dalcoz': 4, 'GuanSuns': 5};
