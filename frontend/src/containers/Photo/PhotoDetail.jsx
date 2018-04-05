@@ -128,6 +128,9 @@ export default class PhotoDetail extends Component {
 
     getRatingInfo(){
         let tagName = this.state.data[0];
+        if(tagName.length > 1){
+            tagName = tagName.substring(1, tagName.length);
+        }
 
         return (
             <div className={"basicInfo rateInfo basicDescription"}>
