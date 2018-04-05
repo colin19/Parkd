@@ -207,6 +207,9 @@ export default class SearchPage extends Component {
                 let address = truck['address'];   //get address
                 truckData.push(address);
 
+                let rating = truck['rating'];   // get rating
+                truckData.push(rating);
+
                 data.push(truckData);
             }
 
@@ -634,6 +637,7 @@ export default class SearchPage extends Component {
                             textToHighlight={data[id][0]}
                         />
                     </div>
+                    <br/>
                     <div className={'photoCardText card-text'}>
                         Rating: {data[id][2]}
                         <br/>
@@ -735,8 +739,9 @@ export default class SearchPage extends Component {
                             textToHighlight={data[id][0]}
                         />
                     </div>
+                    <br/>
                     <div className={'photoCardText card-text'}>
-                        Rating: {data[id][2]}
+                        Rating: {data[id][5]}
                         <br/>
                         Address: <Highlighter
                         className={"photoCardText"}

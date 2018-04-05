@@ -140,6 +140,7 @@ export default class ParkCards extends Component {
                             textToHighlight={data[id][0]}
                         />
                     </div>
+                    <br/>
                     <div className={'photoCardText card-text'}>
                         Rating: {data[id][2]}
                         <br/>
