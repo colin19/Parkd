@@ -3,3 +3,18 @@
     width: 98%;
     margin-left: 2%;
 }
+
+.result-section {
+    margin-left: 2%;
+}
+
+.results-grid {
+    margin-top: 1%;
+    margin-left: 2%;
+    width: 96%;
+}
+
+.transparent-card{
+    background-color: transparent !important;
+    border-color: transparent !important;
+}

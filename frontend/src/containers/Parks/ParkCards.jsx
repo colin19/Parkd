@@ -153,6 +153,8 @@ export default class ParkCards extends Component {
                         textToHighlight={data[id][4]}
                         />
                     </div>
+
+                    <br/>
                     <div className='buttonContainer'>
                         <Link to={data[id][3]}>
                             <Button className={"btn btn-info photoCardBtn"} color="info" size={'sm'}>
@@ -214,6 +216,7 @@ export default class ParkCards extends Component {
         return (
             [
                 {
+                    hasApplyButton: true,
                     createTable: false,
                     removeSelected: true,
                     isMulti: true,
@@ -230,6 +233,7 @@ export default class ParkCards extends Component {
                     placeholder: 'City',
                 },
                 {
+                    hasApplyButton: true,
                     createTable: false,
                     removeSelected: true,
                     isMulti: false,
@@ -253,6 +257,7 @@ export default class ParkCards extends Component {
                     placeholder: 'Rating',
                 },
                 {
+                    hasApplyButton: true,
                     createTable: false,
                     removeSelected: true,
                     isMulti: true,
@@ -269,6 +274,7 @@ export default class ParkCards extends Component {
                     placeholder: 'Sorting',
                 },
                 {
+                    hasApplyButton: true,
                     createTable: true,
                     removeSelected: true,
                     isMulti: true,
@@ -377,6 +383,7 @@ export default class ParkCards extends Component {
                                  title={'Explore Parks Around You'}/>
                     <br/>
                     <SearchBar nSelect={4}
+                               hasApplyButton={true}
                                config={searchBarConfig}
                                handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
 
@@ -430,6 +437,7 @@ export default class ParkCards extends Component {
 
                 <br/>
                 <SearchBar nSelect={4}
+                           hasApplyButton={true}
                            config={searchBarConfig}
                            handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
 

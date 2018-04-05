@@ -1,50 +1,66 @@
 import requests
-import json
-	
-	
+import json as jsonlib
+import csv
+from time import sleep
+
 '''
 json is the "result" portion of a google places detail API response
 keys is a single key, or a tuple of keys for multilevel cases such as json['opening_hours']['weekday_text']
 a single key will be converted to a single item tuples
 '''
-def get_detail_for_place(json, keys):
-	name = json["name"]
+def get_detail_for_place(json_response, keys):
+	name = json_response["name"]
 	
-	def get_detail(key):
-		try:
-			return json[key]
-		except KeyError:
-			return 'No ' + key + ' found for place: ' + name
-
 	if type(keys) is not tuple:
-		keys = (keys,)
+		keys = (keys, )
 	
-	for key in keys:
-		json = get_detail(key)
-		
-	if type(json) is list:
-		print('adfafd')
-		json = '\n'.join(json)
+	detail = keys[0]
 	
-	return json
+	try:
+		for key in keys:
+			json_response = json_response[key]
+	except KeyError:
+		return 'No ' + detail + ' found for place ' + name
 		
+	if type(json_response) is list:
+		json_response = '\n'.join(json_response)
+	
+	return json_response
+		
+'''
+Makes a google place detail request given a google place ID.
+'''
 def get_json_for_place(google_id):
 	if type(google_id) is not str:
 		google_id = str(google_id)
 	
-	url = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=' + google_id + '&key=AIzaSyAhABTKAw-LK6_Vh5Vhle7gwBebbpLCHew'
+	url = 'https://maps.googleapis.com/maps/api/place/details/json?placeid=' + google_id + '&key=AIzaSyAKcRX11ISwO6rC3ebHGoWFt953wZ-3ZjU'
+	
 	response = requests.get(url)
-	parsed = json.loads(response.text)
+	parsed = jsonlib.loads(response.text)
 	
 	code = parsed["status"]
 	
 	if code == 'OK':
 		return parsed["result"]
 	else:
-		return code
+		print(code)
+		return -1
 
+park_data = jsonlib.loads(open('Park.json').read())
 		
-park_data = json.loads(open('Park.json').read())
-json = get_json_for_place(park_data[0]['google_id'])
-
-print(get_detail_for_place(json, 'website'))
+with open('data_for_javier.csv', 'w+', newline='', ) as file:
+	datawrite = csv.writer(file, delimiter=',')
+	
+	for park in park_data:
+		id = park['google_id']
+		response = get_json_for_place(id)
+		
+		sleep(0.1)
+		
+		if response == -1:
+			continue
+		hours = get_detail_for_place(response, ('opening_hours', 'weekday_text'))
+		website = get_detail_for_place(response, 'website')
+		
+		datawrite.writerow([id, hours, website])

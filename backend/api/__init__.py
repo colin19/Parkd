@@ -11,7 +11,7 @@ app = flask.Flask(__name__)
 api = Api(app)
 
 # Create our SQLAlchemy DB engine
-engine = create_engine('mysql+mysqlconnector://root:parkd'
+engine = create_engine('mysql+mysqlconnector://root:guanlin25'
                        + '@localhost:3306/parkd_sqlalchemy?charset=utf8mb4')
 Session = sessionmaker(bind=engine, autocommit=False, autoflush=False)
 session = scoped_session(Session)

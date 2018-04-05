@@ -12,6 +12,7 @@ export default class SearchBar extends Component{
         super(props);
 
         this.state = {
+            hasApplyButton: props.hasApplyButton,
             nSelect: props.nSelect,
             config: props.config,
             handleApplyFilterClick: props.handleApplyFilterClick,
@@ -85,15 +86,26 @@ export default class SearchBar extends Component{
 
 
     render () {
-        return (
-            <div className="search-bar">
+        if(this.state.hasApplyButton){
+            return (
+                <div className="search-bar">
                     <Row>
                         {this.renderSelects()}
                         <Col sm={"1"} key={0}>
                             <Button color="primary" onClick={() => this.state.handleApplyFilterClick()}>Apply</Button>
                         </Col>
                     </Row>
-            </div>
-        );
+                </div>
+            );
+        }else{
+            return (
+                <div className="search-bar">
+                    <Row>
+                        {this.renderSelects()}
+                    </Row>
+                </div>
+            );
+        }
+
     }
 }

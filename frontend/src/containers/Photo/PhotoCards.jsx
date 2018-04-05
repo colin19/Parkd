@@ -148,6 +148,8 @@ export default class FoodCards extends Component {
                         <br/>
                         Likes: {data[id][4]}
                     </div>
+
+                    <br/>
                     <div className='buttonContainer'>
                         <Link to={data[id][3]}>
                             <Button className={"btn btn-info photoCardBtn"} color={"info"} size={'sm'}>
@@ -192,7 +194,6 @@ export default class FoodCards extends Component {
                 value = preSoringString;
             }
         }
-
         this.setState({sorting: value});
     }
 
@@ -209,6 +210,7 @@ export default class FoodCards extends Component {
         return (
             [
                 {
+                    hasApplyButton: true,
                     createTable: false,
                     removeSelected: true,
                     isMulti: true,
@@ -225,6 +227,7 @@ export default class FoodCards extends Component {
                     placeholder: 'City',
                 },
                 {
+                    hasApplyButton: true,
                     createTable: false,
                     removeSelected: true,
                     isMulti: false,
@@ -251,6 +254,7 @@ export default class FoodCards extends Component {
                     placeholder: 'Likes',
                 },
                 {
+                    hasApplyButton: true,
                     createTable: false,
                     removeSelected: true,
                     isMulti: true,
@@ -378,6 +382,7 @@ export default class FoodCards extends Component {
                                  title={'Photos on Social Media'}/>
                     <br/>
                     <SearchBar nSelect={4}
+                               hasApplyButton={true}
                                config={searchBarConfig}
                                handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
 
@@ -431,6 +436,7 @@ export default class FoodCards extends Component {
 
                 <br/>
                 <SearchBar nSelect={4}
+                           hasApplyButton={true}
                            config={searchBarConfig}
                            handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
 
@@ -448,7 +454,6 @@ export default class FoodCards extends Component {
                 <PageIndex page={this.state.page}
                            nPage={this.state.nPage}
                            handleOnPageBtnClick={this.handleOnPageBtnClick.bind(this)}/>
-
 
                 <Footer/>
             </div>
