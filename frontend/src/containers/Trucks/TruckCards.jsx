@@ -147,21 +147,21 @@ export default class TruckCards extends Component {
                 <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
                 <CardBody>
                     <div className={'photoCardTitleContainer'}>
-                        <div className={"photoCardTitle"}>
-                            {data[id][0]}
-                        </div>
-                    </div>
-                    <br/>
-                    <div className={'photoCardText card-text'}>
                         <Highlighter
-                            className={"photoCardText"}
-                            unhighlightClassName={'photoCardText'}
-                            highlightClassName={'photoCardText'}
+                            className={"photoCardTitle"}
+                            unhighlightClassName={'photoCardTitle'}
+                            highlightClassName={'photoCardTitle'}
                             highlightStyle={{"backgroundColor": "#F9FC48"}}
                             autoEscape={true}
                             searchWords={this.state.keywordsList}
-                            textToHighlight={data[id][2]}
+                            textToHighlight= {data[id][0]}
                         />
+                    </div>
+                    <br/>
+                    <div className={'photoCardText card-text'}>
+                        <div className={"photoCardText"}>
+                            {data[id][2]}
+                        </div>
                         <br/>
                         <br/>
                         Address: <Highlighter

@@ -9,7 +9,7 @@ export default class PageIndex extends Component {
         super(props);
 
         this.state = {
-            nButton: 3,
+            nButton: 5,
             handleOnPageBtnClick: props.handleOnPageBtnClick,
         }
     }
