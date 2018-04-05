@@ -3,10 +3,10 @@ import {Link} from 'react-router-dom';
 import { Card, Button, CardImg, CardColumns, CardBody } from 'reactstrap';
 import Highlighter from 'react-highlight-words';
 
-import IntroHeader from '../../components/intro-header/IntroHeader';
-import PageIndex from '../../components/PageIndex/PageIndex';
-import SearchBar from '../../components/SearchBar/SearchBar';
-import Footer from '../../components/Footer/Footer';
+import IntroHeader from '../../components/intro-header/IntroHeader.jsx';
+import PageIndex from '../../components/PageIndex/PageIndex.jsx';
+import SearchBar from '../../components/SearchBar/SearchBar.jsx';
+import Footer from '../../components/Footer/Footer.jsx';
 
 import './TruckCards.css';
 

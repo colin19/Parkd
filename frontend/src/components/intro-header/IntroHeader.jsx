@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import TransparentNav from '../TransparentNav/TransparentNav';
+import TransparentNav from '../TransparentNav/TransparentNav.jsx';
 
 import './IntroHeader.css';
 

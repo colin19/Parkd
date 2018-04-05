@@ -10,8 +10,8 @@ import imgPhoto from '../../images/home/photos.jpg';
 
 import './Home.css';
 
-import TransparentNav from '../../components/TransparentNav/TransparentNav';
-import CustomCarousel from '../../components/CustomCarousel/CustomCarousel';
+import TransparentNav from '../../components/TransparentNav/TransparentNav.jsx';
+import CustomCarousel from '../../components/CustomCarousel/CustomCarousel.jsx';
 
 const captions = [
     ['/photos', imgPhoto, 'Photos on Facebook', 'photos documenting the social media presence of the parks and the cuisine'],
