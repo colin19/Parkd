@@ -199,7 +199,7 @@ export default class TruckCards extends Component {
 
     handleRatingSelect(value) {
         if(value === null) value = 0;
-        this.setState({likeRange: value});
+        this.setState({ratingRange: value});
     }
 
     handleSortingSelect(value) {
