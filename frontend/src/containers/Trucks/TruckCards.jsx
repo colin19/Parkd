@@ -163,7 +163,6 @@ export default class TruckCards extends Component {
                             {data[id][2]}
                         </div>
                         <br/>
-                        <br/>
                         Address: <Highlighter
                         className={"photoCardText"}
                         unhighlightClassName={'photoCardText'}
