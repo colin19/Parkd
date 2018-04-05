@@ -180,10 +180,13 @@ export default class TruckDetail extends Component {
     }
 
     getRatingInfo(){
+        let truckName = this.state.data[0];
         return (
             <div className={"basicInfo rateInfo basicDescription"}>
                 <h1>Rating</h1>
                 <p>{this.state.data[9]}</p>
+                <h1>External Info</h1>
+                <a href={'https://www.google.com/search?q=' + truckName}>More info on Google</a>
             </div>
         )
     }

@@ -201,10 +201,14 @@ export default class ParkDetail extends Component {
     }
 
     getRatingInfo(){
+        let parkName = this.state.data[0];
+
         return (
             <div className={"basicInfo rateInfo basicDescription"}>
                 <h1>Rating</h1>
                 <p>{this.state.data[7]}</p>
+                <h1>External Info</h1>
+                <a href={'https://www.google.com/search?q=' + parkName}>More info on Google</a>
             </div>
         )
     }
