@@ -58,7 +58,9 @@ export default class FoodCards extends Component {
     }
 
     fetchData(requestURL){
+        console.log(requestURL);
         requestURL = encodeURI(requestURL);
+        console.log(requestURL);
 
         try{
             axios.get(requestURL)
@@ -360,7 +362,6 @@ export default class FoodCards extends Component {
         let queryUrl = 'q=' + JSON.stringify(queryDict);
         requestUrl += '&';
         requestUrl += queryUrl;
-        console.log(requestUrl);
 
         this.setState({nPage: 1
             , page: 1

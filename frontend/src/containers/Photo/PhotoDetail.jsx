@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import axios from "axios/index";
+import queryString from 'query-string';
 
 import './PhotoDetail.css';
 
 import Footer from '../../components/Footer/Footer.jsx';
 import TransparentNav from '../../components/TransparentNav/TransparentNav.jsx';
 import ReactGoogleMap from '../../components/GoogleMap/ReactGoogleMap.jsx';
-import axios from "axios/index";
+
 
 /*
 import imgFood from '../../images/food/food1.png';
@@ -30,9 +32,9 @@ export default class PhotoDetail extends Component {
         super(props);
 
         //read truck id from the query parameter, default is -1
-        const queryString = props.location.search;
-        const params = new URLSearchParams(queryString);
-        let photoId = params.get('id');
+        const strQuery = decodeURI(props.location.search);
+        const params = queryString.parse(strQuery);
+        let photoId = params['id'];
         if(photoId === null) photoId = -1;
 
 

@@ -11,6 +11,7 @@ import Footer from '../../components/Footer/Footer.jsx';
 import ReactGoogleMap from '../../components/GoogleMap/ReactGoogleMap.jsx';
 
 import axios from "axios/index";
+import queryString from "query-string";
 
 /*
 import imgGrinds1 from '../../images/trucks/grinds1.png';
@@ -39,10 +40,10 @@ export default class TruckDetail extends Component {
         super(props);
 
         //read truck id from the query parameter, default is -1
-        const queryString = props.location.search;
-        const params = new URLSearchParams(queryString);
-        let truckId = params.get('id');
-        if(truckId === null) truckId = -1;
+        const strQuery = decodeURI(props.location.search);
+        const params = queryString.parse(strQuery);
+        let truckId = params['id'];
+        if(truckId === null) truckId = 1;
 
         this.state = {
             data: [],

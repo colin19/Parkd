@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import { Card, Button, CardImg, CardBody, CardDeck, Row, Col} from 'reactstrap';
 import Highlighter from 'react-highlight-words';
+import queryString from 'query-string';
 
 import IntroHeader from '../../components/intro-header/IntroHeader.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
@@ -22,12 +23,12 @@ export default class SearchPage extends Component {
         super(props);
 
         //read truck id from the query parameter, default is -1
-        const queryString = decodeURI(props.location.search);
-        const params = new URLSearchParams(queryString);
-        let isMatchAll = params.get('isMatchAll');
+        const strQuery = decodeURI(props.location.search);
+        const params = queryString.parse(strQuery);
+        let isMatchAll = params['isMatchAll'];
         if(isMatchAll === null) isMatchAll = '0';
 
-        let keywordsString = params.get('keywords');
+        let keywordsString = params['keywords'];
         let keywords = [];
         if(keywordsString !== null || keywordsString !== "") {
             keywords = keywordsString.split(" ");

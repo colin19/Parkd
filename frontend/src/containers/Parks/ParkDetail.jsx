@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import { Button, Container, Row, Col, CardGroup, Card, CardTitle, CardSubtitle } from 'reactstrap';
 import axios from "axios/index";
+import queryString from 'query-string';
 
 import './ParkDetail.css';
 
@@ -46,9 +47,9 @@ export default class ParkDetail extends Component {
         super(props);
 
         //read truck id from the query parameter, default is -1
-        const queryString = props.location.search;
-        const params = new URLSearchParams(queryString);
-        let parkId = params.get('id');
+        const strQuery = decodeURI(props.location.search);
+        const params = queryString.parse(strQuery);
+        let parkId = params['id'];
         if(parkId === null) parkId = -1;
 
         this.state = {

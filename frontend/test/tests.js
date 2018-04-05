@@ -1,6 +1,16 @@
 import App from '../src/containers/App/App.jsx';
 import Home from '../src/containers/Home/Home.jsx';
+import ParkCards from '../src/containers/Parks/ParkCards.jsx';
+import ParkDetail from '../src/containers/Parks/ParkDetail.jsx';
+import TruckCards from '../src/containers/Trucks/TruckCards.jsx';
+import TruckDetail from '../src/containers/Trucks/TruckDetail.jsx';
+import PhotoCards from '../src/containers/Photo/PhotoCards.jsx';
+import PhotoDetail from '../src/containers/Photo/PhotoDetail.jsx';
+import SearchPage from '../src/containers/Search/SearchPage.jsx';
 import Footer from "../src/components/Footer/Footer.jsx";
+import ReactGoogleMap from "../src/components/GoogleMap/ReactGoogleMap.jsx";
+import IntroHeader from "../src/components/intro-header/IntroHeader.jsx";
+import TransparentNav from "../src/components/TransparentNav/TransparentNav.jsx";
 import PageIndex from "../src/components/PageIndex/PageIndex.jsx";
 import SearchBar from "../src/components/SearchBar/SearchBar.jsx";
 
@@ -92,6 +102,123 @@ describe('<SearchBar />', () => {
                            handleApplyFilterClick={void(0)}/>);
     });
 });
+
+// Test for component React Google Map
+describe('<ReactGoogleMap />', () => {
+    it('should render successfully with no configuration', () => {
+        shallow(<ReactGoogleMap/>);
+    });
+
+    it('should render successfully with configuration', () => {
+        shallow(<ReactGoogleMap
+                    isMarkerShown={true}
+                    lat={100} lng={100}
+                    zoom={14}/>);
+    });
+});
+
+// Test for component Intro Header
+describe('<IntroHeader />', () => {
+    it('should render successfully with no configuration', () => {
+        shallow(<IntroHeader/>);
+    });
+
+    it('should render successfully with configuration', () => {
+        shallow(<IntroHeader
+            bgUrl={true}
+            title={'test title'}
+            description={'test description'}/>);
+    });
+    it('should render intro part', () => {
+        const wrapper = shallow(<IntroHeader
+            bgUrl={true}
+            title={'test title'}
+            description={'test description'}/>);
+        expect(wrapper.find('.intro').exists()).to.eql(true);
+    });
+    it('should render title: \'test title\'', () => {
+        const wrapper = shallow(<IntroHeader
+            bgUrl={true}
+            title={'test title'}
+            description={'test description'}/>);
+        expect(wrapper.contains(<h1>{'test title'}</h1>)).to.eql(true);
+    });
+    it('should render description \'test description\'', () => {
+        const wrapper = shallow(<IntroHeader
+            bgUrl={true}
+            title={'test title'}
+            description={'test description'}/>);
+        expect(wrapper.contains(<p>{'test description'}</p>)).to.eql(true);
+    });
+});
+
+// Test for component Transparent Navbar
+describe('<TransparentNav />', () => {
+    it('should render successfully with no configuration', () => {
+        shallow(<TransparentNav/>);
+    });
+});
+
+
+// Test for container (Page) ParkCards
+describe('<ParkCards />', () => {
+    it('should render successfully', () => {
+        shallow(<ParkCards />);
+    });
+});
+
+// Test for container (Page) ParkDetail
+describe('<ParkDetail />', () => {
+    it('should render successfully with id=1', () => {
+        shallow(<ParkDetail location={{search: '?id=1'}}/>);
+    });
+});
+
+// Test for container (Page) Search Page
+describe('<SearchPage />', () => {
+    it('should render successfully with empty keywords', () => {
+        shallow(<SearchPage location={{search: '?isMatchAll=1&keywords='}}/>);
+    });
+    it('should render successfully with keywords', () => {
+        shallow(<SearchPage location={{search: '?isMatchAll=1&keywords=a'}}/>);
+    });
+});
+
+// Test for container (Page) PhotoCards
+describe('<PhotoCards />', () => {
+    it('should render successfully', () => {
+        shallow(<PhotoCards />);
+    });
+});
+
+// Test for container (Page) TruckDetail
+describe('<PhotoDetail />', () => {
+    it('should render successfully with id=1', () => {
+        shallow(<PhotoDetail location={{search: '?id=1'}}/>);
+    });
+    it('should render successfully with no id specified', () => {
+        shallow(<PhotoDetail location={{search: '?'}}/>);
+    });
+});
+
+// Test for container (Page) TruckCards
+describe('<TruckCards />', () => {
+    it('should render successfully', () => {
+        shallow(<TruckCards />);
+    });
+});
+
+// Test for container (Page) TruckDetail
+describe('<TruckDetail />', () => {
+    it('should render successfully with id=1', () => {
+        shallow(<TruckDetail location={{search: '?id=1'}}/>);
+    });
+    it('should render successfully with no id specified', () => {
+        shallow(<TruckDetail location={{search: '?'}}/>);
+    });
+});
+
+
 
 
 
