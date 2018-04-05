@@ -25,7 +25,7 @@ export default class SearchPage extends Component {
         const queryString = decodeURI(props.location.search);
         const params = new URLSearchParams(queryString);
         let isMatchAll = params.get('isMatchAll');
-        if(isMatchAll === null) isMatchAll = 0;
+        if(isMatchAll === null) isMatchAll = '0';
 
         let keywordsString = params.get('keywords');
         let keywords = [];
@@ -34,7 +34,7 @@ export default class SearchPage extends Component {
         }
 
         let boolMatchAll = true;
-        if(isMatchAll === 0) boolMatchAll = false;
+        if(isMatchAll === '0') boolMatchAll = false;
 
         this.state = {
             resultPerPage: 4,
@@ -334,8 +334,6 @@ export default class SearchPage extends Component {
     handleParkSearch () {
         const isMatchAll = this.state.isMatchAll;
         const keywords = this.state.keywords;
-
-
 
         let requestUrl = 'http://api.parkd.us/park?results_per_page=' + this.state.resultPerPage;
         let queryDict = {};
