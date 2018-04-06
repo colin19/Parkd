@@ -192,7 +192,15 @@ export default class FoodCards extends Component {
             // test if there is any conflict
             if(sorting === 'Likes: Low to High' && newSorting.includes('Likes: High to Low')){
                 value = preSoringString;
-            }else if(sorting === 'Likes: High to Low' && newSorting.includes('Likes: Low to High')){
+            } else if(sorting === 'Likes: High to Low' && newSorting.includes('Likes: Low to High')){
+                value = preSoringString;
+            } else if(sorting === 'City Name' && newSorting.includes('City Name A-Z')) {
+                value = preSoringString;
+            } else if(sorting === 'City Name A-Z' && newSorting.includes('City Name')) {
+                value = preSoringString;
+            } else if(sorting === 'Tag Name' && newSorting.includes('Tag Name A-Z')) {
+                value = preSoringString;
+            } else if(sorting === 'Tag Name A-Z' && newSorting.includes('Tag Name')) {
                 value = preSoringString;
             }
         }
@@ -267,7 +275,9 @@ export default class FoodCards extends Component {
                     options: [
                         { label: 'Likes: Low to High', value: 'Likes: Low to High' },
                         { label: 'Likes: High to Low', value: 'Likes: High to Low' },
+                        { label: 'City Name A-Z', value: 'City Name A-Z' },
                         { label: 'City Name', value: 'City Name' },
+                        { label: 'Tag Name A-Z', value: 'Tag Name A-Z' },
                         { label: 'Tag Name', value: 'Tag Name' },
                     ],
                     rtl: false,
@@ -349,8 +359,12 @@ export default class FoodCards extends Component {
                     sortingCondition.push({field:"likes", direction:"asc"});
                 } else if(sortings[i] === 'Likes: High to Low') {
                     sortingCondition.push({field:"likes", direction:"desc"});
+                } else if(sortings[i] === 'City Name A-Z') {
+                    sortingCondition.push({field:"truck__city", direction:"asc"});
                 } else if(sortings[i] === 'City Name') {
                     sortingCondition.push({field:"truck__city", direction:"desc"});
+                } else if(sortings[i] === 'Tag Name A-Z') {
+                    sortingCondition.push({field:"tag", direction:"asc"});
                 } else if(sortings[i] === 'Tag Name') {
                     sortingCondition.push({field:"tag", direction:"desc"});
                 }

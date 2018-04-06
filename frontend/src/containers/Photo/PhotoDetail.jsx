@@ -222,6 +222,7 @@ export default class PhotoDetail extends Component {
                             <Col xs="8">
                                 {this.getBasicDescription()}
                                 {this.getRatingInfo()}
+                                <br/>
                                 {this.getParkInfo()}
                             </Col>
 

@@ -215,7 +215,11 @@ export default class TruckCards extends Component {
             // test if there is any conflict
             if(sorting === 'Rating: Low to High' && newSorting.includes('Rating: High to Low')){
                 value = preSoringString;
-            }else if(sorting === 'Rating: High to Low' && newSorting.includes('Rating: Low to High')){
+            } else if(sorting === 'Rating: High to Low' && newSorting.includes('Rating: Low to High')){
+                value = preSoringString;
+            } else if(sorting === 'City Name' && newSorting.includes('City Name A-Z')) {
+                value = preSoringString;
+            } else if(sorting === 'City Name A-Z' && newSorting.includes('City Name')) {
                 value = preSoringString;
             }
         }
@@ -288,6 +292,7 @@ export default class TruckCards extends Component {
                     options: [
                         { label: 'Rating: Low to High', value: 'Rating: Low to High' },
                         { label: 'Rating: High to Low', value: 'Rating: High to Low' },
+                        { label: 'City Name A-Z', value: 'City Name A-Z' },
                         { label: 'City Name', value: 'City Name' },
                     ],
                     rtl: false,
@@ -369,6 +374,8 @@ export default class TruckCards extends Component {
                     sortingCondition.push({field:"rating", direction:"asc"});
                 } else if(sortings[i] === 'Rating: High to Low') {
                     sortingCondition.push({field:"rating", direction:"desc"});
+                } else if(sortings[i] === 'City Name A-Z') {
+                    sortingCondition.push({field:"city", direction:"asc"});
                 } else if(sortings[i] === 'City Name') {
                     sortingCondition.push({field:"city", direction:"desc"});
                 }
