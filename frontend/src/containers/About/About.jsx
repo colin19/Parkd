@@ -240,6 +240,7 @@ export default class About extends Component{
                         <li>Github Repository: <a href="https://github.com/colin19/Parkd">https://github.com/colin19/Parkd</a></li>
                         <li>Self Critique: <a href="https://www.gitbook.com/book/jbanda11/self-critique/details">https://www.gitbook.com/book/jbanda11/self-critique/details</a></li>
                         <li>Other Critique: <a href="https://www.gitbook.com/book/jbanda11/other-critique/details">https://www.gitbook.com/book/jbanda11/other-critique/details</a></li>
+                        <li>Travis CI: <a href="https://travis-ci.org/colin19/Parkd">https://travis-ci.org/colin19/Parkd</a></li>
                     </ul>
 
                     <div className="sectionDivider">
