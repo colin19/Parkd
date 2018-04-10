@@ -408,6 +408,10 @@ export default class TruckCards extends Component {
                                  description={'Name, Price range, Menu, Description, Cuisine, Park/Location, Photos'}
                                  title={'Explore Food Trucks Around You'}/>
                     <br/>
+                    <SearchBar nSelect={4}
+                               hasApplyButton={true}
+                               config={searchBarConfig}
+                               handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
 
                     <br/>
                     <div className={"loading"}>
@@ -458,6 +462,10 @@ export default class TruckCards extends Component {
                              title={'Explore Food Trucks Around You'}/>
 
                 <br/>
+                <SearchBar nSelect={4}
+                           hasApplyButton={true}
+                           config={searchBarConfig}
+                           handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
 
                 <div className={'info-grid'}>
                     <br/>

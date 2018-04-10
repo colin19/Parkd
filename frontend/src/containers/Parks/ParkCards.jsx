@@ -390,7 +390,11 @@ export default class ParkCards extends Component {
                                  description={'Location, Photos, Food trucks, Things to do (Dog park, pool, basketball, etc)'}
                                  title={'Explore Parks Around You'}/>
                     <br/>
-                    
+                    <SearchBar nSelect={4}
+                               hasApplyButton={true}
+                               config={searchBarConfig}
+                               handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
+
                     <br/>
                     <div className={"loading"}>
                         <br/><br/><br/>
@@ -440,6 +444,10 @@ export default class ParkCards extends Component {
                              title={'Explore Parks Around You'}/>
 
                 <br/>
+                <SearchBar nSelect={4}
+                           hasApplyButton={true}
+                           config={searchBarConfig}
+                           handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
 
                 <div className={'info-grid'}>
                     <br/>
