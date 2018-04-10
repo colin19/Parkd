@@ -88,29 +88,6 @@ class TransparentNav extends Component{
                 </Collapse>
 
 
-                <InputGroup className={"nav-search"}>
-                    <Input value={this.state.inputValue} onChange={this.updateInputValue.bind(this)} placeholder="Keywords" />
-                </InputGroup>
-
-                <div className={"match-drop-down"}>
-                    <Dropdown isOpen={this.state.dropMatchOpen} toggle={this.toggleMatch}>
-                        <DropdownToggle className={"main-button"} caret>
-                            {this.state.matchMethod}
-                        </DropdownToggle>
-                        <DropdownMenu>
-                            <DropdownItem onClick={() => this.onMatchSelect("Match All")}>Match All</DropdownItem>
-                            <DropdownItem onClick={() => this.onMatchSelect("Match OR")}>Match OR</DropdownItem>
-                        </DropdownMenu>
-                    </Dropdown>
-                </div>
-
-                <div className={"search-button"}>
-                    <Link to={'/search?isMatchAll=' + isMatchAll + '&keywords=' + keywordString}>
-                        <Button onClick={() => window.location.reload()} color="secondary">Search</Button>
-                    </Link>
-                </div>
-
-
             </Navbar>
         )
     }

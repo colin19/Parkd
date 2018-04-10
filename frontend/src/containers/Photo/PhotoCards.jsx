@@ -396,10 +396,6 @@ export default class FoodCards extends Component {
                                  description={'Number of likes, Tags, Park/location, Food truck, Date of post'}
                                  title={'Photos on Social Media'}/>
                     <br/>
-                    <SearchBar nSelect={4}
-                               hasApplyButton={true}
-                               config={searchBarConfig}
-                               handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
 
                     <br/>
                     <div className={"loading"}>
@@ -450,10 +446,6 @@ export default class FoodCards extends Component {
                              title={'Photos on Social Media'}/>
 
                 <br/>
-                <SearchBar nSelect={4}
-                           hasApplyButton={true}
-                           config={searchBarConfig}
-                           handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
 
                 <div className={'info-grid'}>
                     <br/>
