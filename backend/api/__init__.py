@@ -11,7 +11,7 @@ app = flask.Flask(__name__)
 api = Api(app)
 
 # Create our SQLAlchemy DB engine
-engine = create_engine('mysql+mysqlconnector://root:guanlin25'
+engine = create_engine('mysql+mysqlconnector://root:parkd'
                        + '@localhost:3306/parkd_sqlalchemy?charset=utf8mb4')
 Session = sessionmaker(bind=engine, autocommit=False, autoflush=False)
 session = scoped_session(Session)
@@ -40,11 +40,12 @@ print(CreateTable(Park_Review.__table__).compile(engine))
 manager = flask_restless.APIManager(app, session=session)
 
 # Register flask-restless blueprints to instantiate CRUD endpoints
-from api.controllers import park_api_blueprint, truck_api_blueprint, truck_photo_api_blueprint
+from api.controllers import park_api_blueprint, truck_api_blueprint, truck_photo_api_blueprint, park_photo_api_blueprint
 
 app.register_blueprint(truck_api_blueprint)
 app.register_blueprint(park_api_blueprint)
 app.register_blueprint(truck_photo_api_blueprint)
+app.register_blueprint(park_photo_api_blueprint)
 
 # Load Resources
 from api.resources.parkList import ParkList
