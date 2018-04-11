@@ -232,7 +232,12 @@ export default class ParkDetail extends Component {
         if(id !== this.state.data[5].length - 1 && imgId !== -1) {
             return (
                 <div key={id}>
-                    <br/>
+                    <h1><br/><br/><br/><br/></h1>
+                    <Link to={'/photos/park/detail?id='+imgId}>
+                        <Button className={'moreBtn'} outline color={"secondary"} size={'lg'}>
+                            Details
+                        </Button>
+                    </Link>
                 </div>
             );
         }

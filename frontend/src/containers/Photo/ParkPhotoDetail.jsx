@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import axios from "axios/index";
 import queryString from 'query-string';
 
-import './PhotoDetail.css';
+import './ParkPhotoDetail.css';
 
 import Footer from '../../components/Footer/Footer.jsx';
 import TransparentNav from '../../components/TransparentNav/TransparentNav.jsx';
@@ -27,7 +27,7 @@ const localData = [
 */
 
 
-export default class PhotoDetail extends Component {
+export default class ParkPhotoDetail extends Component {
     constructor(props) {
         super(props);
 
@@ -42,6 +42,9 @@ export default class PhotoDetail extends Component {
             data: [],
             photoId: photoId,
             isValid: true,
+            truckId: -1,
+            truckName: "",
+            isLoadingTruckInfo: true,
             parkId: -1,
             parkName: "",
             isLoadingParkInfo: true,
@@ -54,28 +57,11 @@ export default class PhotoDetail extends Component {
     }
 
     fetchData(photoId){
-        // if(photoId === -1) return;
-
-        const requestURL = 'http://api.parkd.us/truck_photo/' + photoId ;
+        const requestURL = 'http://api.parkd.us/park_photo/' + photoId ;
         try{
             axios.get(requestURL)
                 .then(res => {
                     this.updateParkData(res.data)
-                }).catch((error) => {
-                    this.setState({isValid:false});
-                    console.log(error);
-            });
-        } catch (error){
-            console.log("Error during fetching photo data");
-        }
-    }
-
-    fetchParkInfo(parkId){
-        const requestURL = 'http://api.parkd.us/park/' + parkId ;
-        try{
-            axios.get(requestURL)
-                .then(res => {
-                    this.updateParkInfo(res.data)
                 }).catch((error) => {
                 this.setState({isValid:false});
                 console.log(error);
@@ -85,11 +71,33 @@ export default class PhotoDetail extends Component {
         }
     }
 
-    updateParkInfo(resData) {
+    fetchTruckInfo(parkId){
+        const requestURL = 'http://api.parkd.us/park/' + parkId ;
         try{
-            let parkName = resData['name'];
-            let parkId = resData['id'];
-            this.setState({isLoadingParkInfo: false, parkName:parkName, parkId: parkId});
+            axios.get(requestURL)
+                .then(res => {
+                    this.updateTruckInfo(res.data)
+                }).catch((error) => {
+                this.setState({isValid:false});
+                console.log(error);
+            });
+        } catch (error){
+            console.log("Error during fetching photo data");
+        }
+    }
+
+    updateTruckInfo(resData) {
+        try{
+            let trucks = resData['trucks'];
+
+            if(trucks.length > 0){
+                let truck = trucks[0];
+                let truckId = truck['id'];
+                let truckName = truck['name'];
+                this.setState({isLoadingTruckInfo: false, truckId:truckId, truckName:truckName});
+            } else {
+                this.setState({isLoadingTruckInfo: false});
+            }
         } catch (error){
             console.log("Error during parsing park-truck photo data - " + error.toString());
         }
@@ -102,31 +110,30 @@ export default class PhotoDetail extends Component {
         try{
             data.push(photo['tag']);
             data.push(photo['description']);   //get description
-            data.push(photo['truck']['address']);   // get address
+            data.push(photo['park']['address']);   // get address
 
             // no hours currently
             data.push(null);
 
-            let latitude = photo['truck']['latitude'];
-            let longitude = photo['truck']['longitude'];
+            let latitude = photo['park']['latitude'];
+            let longitude = photo['park']['longitude'];
             data.push([longitude, latitude]);
 
             data.push([photo['url'], photo['id']]);
 
-            let parkId = photo['truck']['park_id'];
-            data.push(null);
+            let parkId = photo['park']['id'];
+            let parkName = photo['park']['name'];
+            data.push([parkName, '/parks/detail?id='+parkId]);
 
-            let truckId = photo['truck']['id'];
-            let truckName = photo['truck']['name'];
-            data.push([truckName, '/trucks/detail?id=' + truckId]);
+            // fetch truck link later
+            data.push(null);
 
             data.push(photo['likes']);
 
-            this.setState({data});
-
-            this.fetchParkInfo(parkId);
+            this.setState({data: data});
+            this.fetchTruckInfo(parkId);
         } catch (error){
-            console.log("Error during parsing photos data - " + error.toString());
+            console.log("Error during parsing park photo data - " + error.toString());
         }
     }
 
@@ -172,32 +179,39 @@ export default class PhotoDetail extends Component {
     }
 
     getParkInfo(){
-        let parkName = this.state.parkName;
-        let parkId = this.state.parkId;
-
-        if(this.state.isLoadingParkInfo) {
-            return (
-                <div className={"parkInfo basicInfo basicDescription"}>
-                    <h1>Nearby Park</h1>
-                    <p>Loading Park Info</p>
-                </div>
-            );
-        }
-
         return (
             <div className={"parkInfo basicInfo basicDescription"}>
                 <h1>Nearby Park</h1>
-                <a href={'http://parkd.us/parks/detail?id='+parkId}>{parkName}</a>
+                <a href={this.state.data[6][1]}>{this.state.data[6][0]}</a>
             </div>
         );
 
     }
 
     getTruckInfo(){
+        let truckId = this.state.truckId;
+        let truckName = this.state.truckName;
+
+        if(truckId === -1 && this.state.isLoadingTruckInfo) {
+            return (
+                <div className={"truckInfo basicInfo"}>
+                    <h3>Food Truck</h3>
+                    <p>{'Loading Truck Info'}</p>
+                </div>
+            );
+        } else if(truckId === -1 && !this.state.isLoadingTruckInfo){
+            return (
+                <div className={"truckInfo basicInfo"}>
+                    <h3>Food Truck</h3>
+                    <p>{'No nearby food truck'}</p>
+                </div>
+            );
+        }
+
         return (
             <div className={"truckInfo basicInfo"}>
                 <h3>Food Truck</h3>
-                <a href={this.state.data[7][1]}>{this.state.data[7][0]}</a>
+                <a href={'/trucks/detail?id='+truckId}>{truckName}</a>
             </div>
         );
 

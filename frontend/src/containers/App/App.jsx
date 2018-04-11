@@ -7,6 +7,7 @@ import Home from '../../containers/Home/Home.jsx';
 import SearchPage from '../../containers/Search/SearchPage.jsx';
 import PhotoCards from '../Photo/PhotoCards.jsx';
 import PhotoDetail from '../Photo/PhotoDetail.jsx';
+import ParkPhotoDetail from '../Photo/ParkPhotoDetail.jsx';
 import TruckCards from '../../containers/Trucks/TruckCards.jsx';
 import TruckDetail from '../../containers/Trucks/TruckDetail.jsx';
 import ParkCards from '../../containers/Parks/ParkCards.jsx';
@@ -25,6 +26,7 @@ class App extends Component {
                     <Route path={"/trucks/detail"} component={TruckDetail}/>
                     <Route path={"/parks/detail"} component={ParkDetail}/>
                     <Route path={"/photos/detail"} component={PhotoDetail}/>
+                    <Route path={"/photos/park/detail"} component={ParkPhotoDetail}/>
                     <Route path={"/search"} component={SearchPage}/>
                 </div>
             </Router>

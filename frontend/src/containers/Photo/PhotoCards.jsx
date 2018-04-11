@@ -121,6 +121,7 @@ export default class FoodCards extends Component {
 
     getCard(id){
         let data = this.state.data;
+
         return (
             <Card key={id} className={'shadowCard card'}>
                 <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
