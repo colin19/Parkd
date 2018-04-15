@@ -130,6 +130,9 @@ export default class TruckCards extends Component {
                 let address = truck['address'];   //get address
                 truckData.push(address);
 
+                let rating = truck['rating'];   //get rating
+                truckData.push(rating);
+
                 data.push(truckData);
             }
 
@@ -162,6 +165,8 @@ export default class TruckCards extends Component {
                         <div className={"photoCardText"}>
                             {data[id][2]}
                         </div>
+                        <br/>
+                        Rating: {data[id][5]}
                         <br/>
                         Address: <Highlighter
                         className={"photoCardText"}
