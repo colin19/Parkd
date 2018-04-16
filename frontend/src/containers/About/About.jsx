@@ -232,17 +232,17 @@ export default class About extends Component{
                     <br/>
                     <h1>Tools</h1>
                     <ul>
-                        <li>Postman</li>
-                        <li>GitHub and Slack</li>
-                        <li>Webstorm</li>
-                        <li>Bootstrap</li>
-                        <li>Flask</li>
-                        <li>Amazon EC2</li>
-                        <li>Route 53</li>
-                        <li>Postman</li>
-                        <li>MySQL Workbook</li>
-                        <li>SQL Alchemy</li>
-                        <li>Axios</li>
+                        <li>Postman: <a href="https://www.getpostman.com/">https://www.getpostman.com</a></li>
+                        <li>GitHub and Slack: <a href="https://slack.com/">https://slack.com</a></li>
+                        <li>Webstorm: <a href="https://www.jetbrains.com/webstorm/">https://www.jetbrains.com/webstorm</a></li>
+                        <li>Bootstrap: <a href="https://getbootstrap.com/">https://getbootstrap.com</a></li>
+                        <li>Flask: <a href="http://flask.pocoo.org/">http://flask.pocoo.org</a></li>
+                        <li>Amazon EC2: <a href="https://aws.amazon.com/ec2/">https://aws.amazon.com/ec2</a></li>
+                        <li>Route 53: <a href="https://aws.amazon.com/route53/">https://aws.amazon.com/route53</a></li>
+                        <li>MySQL Workbook: <a href="https://dev.mysql.com/doc/workbench/en/">https://dev.mysql.com/doc/workbench/en</a></li>
+                        <li>SQL Alchemy: <a href="https://www.sqlalchemy.org/">https://www.sqlalchemy.org</a></li>
+                        <li>Axios: <a href="https://www.npmjs.com/package/axios">https://www.npmjs.com/package/axios</a></li>
+                        <li>React-Highlight-Words: <a href="https://bvaughn.github.io/react-highlight-words/">https://bvaughn.github.io/react-highlight-words</a></li>
                     </ul>
                     <p>{aboutPageContent.toolsDescription}</p>
                     <br/>
