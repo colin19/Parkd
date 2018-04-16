@@ -256,7 +256,7 @@ export default class ParkCards extends Component {
                         { label: 'Rating > 3', value: 3 },
                         { label: 'Rating > 2', value: 2 },
                         { label: 'Rating > 1', value: 1 },
-                        { label: 'Rating > 0', value: 0 }, 
+                        { label: 'Rating > 0', value: 0 },
                     ],
                     rtl: false,
                     placeholder: 'Rating',

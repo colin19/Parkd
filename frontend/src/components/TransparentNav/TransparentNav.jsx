@@ -18,7 +18,9 @@ class TransparentNav extends Component{
             isOpen: false,
             dropMatchOpen: false,
             isTinted: props.isTinted,
-            matchMethod: "Match OR",
+            matchMethod: "OR",
+            tipMatchAllOpen: true,
+            tipMatchOrOpen: false,
         };
     }
 
@@ -57,7 +59,7 @@ class TransparentNav extends Component{
         let keywordString = encodeURI(this.state.inputValue);
 
         let isMatchAll = 1;
-        if(this.state.matchMethod === "Match OR"){
+        if(this.state.matchMethod === "OR"){
             isMatchAll = 0;
         }
 
@@ -98,8 +100,8 @@ class TransparentNav extends Component{
                             {this.state.matchMethod}
                         </DropdownToggle>
                         <DropdownMenu>
-                            <DropdownItem onClick={() => this.onMatchSelect("Match All")}>Match All</DropdownItem>
-                            <DropdownItem onClick={() => this.onMatchSelect("Match OR")}>Match OR</DropdownItem>
+                            <DropdownItem onClick={() => this.onMatchSelect("OR")}>OR: Match one or more keywords</DropdownItem>
+                            <DropdownItem onClick={() => this.onMatchSelect("AND")}>AND: Match all the keywords</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
                 </div>
@@ -109,7 +111,6 @@ class TransparentNav extends Component{
                         <Button onClick={() => window.location.reload()} color="secondary">Search</Button>
                     </Link>
                 </div>
-
 
             </Navbar>
         )
