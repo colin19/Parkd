@@ -34,6 +34,11 @@
     color: #515A5A ;
 }
 
-.team-photo-header{
+.team-photo-header {
+    text-align: center;
+}
+
+.team-info-grid {
+    width: 90% !important;
     text-align: center;
 }

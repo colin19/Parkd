@@ -164,16 +164,29 @@ export default class About extends Component{
 
     getTeamMemberInfo() {
         let members = [];
+        let rows = [];
         let i;
         for(i=0; i<teamInfo.length; i++){
             let person = teamInfo[i];
-            members.push(<div key={i} className='col-sm-6 col-md-4 col-xl-2'>{this.getPersonInfo(person, i)}</div>);
+            members.push(<div key={i} className='col-xl-4'>{this.getPersonInfo(person, i)}</div>);
+
+            if(i % 3 === 2){
+                rows.push(
+                    <div key={i} id="team-info" className="row team-info">
+                        <br/>
+                    </div>
+                );
+                rows.push(
+                    <div key={i} id="team-info" className="row team-info">
+                        {members}
+                    </div>
+                );
+                members = [];
+            }
         }
         return (
-            <div className="info-grid container-fluid">
-                <div id="team-info" className="row team-info">
-                    {members}
-                </div>
+            <div className="team-info-grid info-grid container">
+                {rows}
             </div>
         );
     }
@@ -201,10 +214,10 @@ export default class About extends Component{
                     <br/>
                     <p>Some data sources:</p>
                     <ul>
-                        <li>Zomato: https://developers.zomato.com/api</li>
-                        <li>Streetfood: http://data.streetfoodapp.com/1.1/schedule/seattle</li>
-                        <li>Google Places: https://maps.googleapis.com/maps/api/place/textsearch/json?query=parks+in+Austin&key=YOUR_API_KEY</li>
-                        <li>Google Maps Distance API: https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=30.2670,-97.7729&destinations=30.2650472,-97.7315725&key=</li>
+                        <li>Zomato: <a href="https://developers.zomato.com/api">https://developers.zomato.com/api</a></li>
+                        <li>Streetfood: <a href="http://data.streetfoodapp.com">http://data.streetfoodapp.com/1.1/schedule/seattle</a></li>
+                        <li>Google Places: <a href="https://developers.google.com/maps/">https://maps.googleapis.com/maps/api/place/textsearch/json?query=parks+in+Austin&key=YOUR_API_KEY</a></li>
+                        <li>Google Maps Distance API: <a href="https://developers.google.com/maps/web-services/">https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=30.2670,-97.7729&destinations=30.2650472,-97.7315725&key=</a></li>
                     </ul>
                     <br/>
                     <p>{aboutPageContent.dataSourceExplanation}</p>
@@ -214,7 +227,7 @@ export default class About extends Component{
                     <ul>
                         <li>total no. of commits: {this.state.totalCommit}</li>
                         <li>total no. of issues: {this.state.totalIssues}</li>
-                        <li>total no. of unit tests: 0</li>
+                        <li>total no. of unit tests: 92</li>
                     </ul>
                     <br/>
                     <h1>Tools</h1>
