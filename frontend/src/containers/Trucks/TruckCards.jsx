@@ -56,6 +56,7 @@ export default class TruckCards extends Component {
             citySelectValue: "",
             ratingRange: 0,
             sorting: "",
+            cuisine: "",
             nPage: 1,
             page: 1,
             keywords: [],
@@ -133,6 +134,9 @@ export default class TruckCards extends Component {
                 let rating = truck['rating'];   //get rating
                 truckData.push(rating);
 
+                let cuisine = truck['cuisine'];   //get cuisine
+                truckData.push(cuisine);
+
                 data.push(truckData);
             }
 
@@ -205,6 +209,10 @@ export default class TruckCards extends Component {
         this.setState({citySelectValue: value});
     }
 
+    handleCuisineSelect(value) {
+        this.setState({cuisine: value});
+    }
+
     handleRatingSelect(value) {
         if(value === null) value = 0;
         this.setState({ratingRange: value});
@@ -260,6 +268,36 @@ export default class TruckCards extends Component {
                     ],
                     rtl: false,
                     placeholder: 'City',
+                },
+                {
+                    hasApplyButton: true,
+                    createTable: false,
+                    removeSelected: true,
+                    isMulti: true,
+                    disabled: false,
+                    stayOpen: false,
+                    handleSelect: this.handleCuisineSelect.bind(this),
+                    value: this.state.cuisine,
+                    options: [
+                        { label: 'Mexican', value: 'Mexican' }, { label: 'Asian', value: 'Asian' },
+                        { label: 'Sandwich', value: 'Sandwich' }, { label: 'Fried Chicken', value: 'Fried Chicken' },
+                        { label: 'Cajun', value: 'Cajun' }, { label: 'Taco', value: 'Taco' },
+                        { label: 'Thai', value: 'Thai' }, { label: 'Italian', value: 'Italian' },
+                        { label: 'Barbecue', value: 'Barbecue' }, { label: 'Seafood', value: 'Seafood' },
+                        { label: 'Japanese', value: 'Japanese' }, { label: 'Chinese', value: 'Chinese' },
+                        { label: 'Brazilian', value: 'Brazilian' }, { label: 'Korean', value: 'Korean' },
+                        { label: 'Mediterranean', value: 'Mediterranean' }, { label: 'Takeout', value: 'Takeout' },
+                        { label: 'Dim Sum', value: 'Dim Sum' }, { label: 'Canadian', value: 'Canadian' },
+                        { label: 'Norwegian', value: 'Norwegian' }, { label: 'Fish & Chips', value: 'Fish & Chips' },
+                        { label: 'Food Court', value: 'Food Court' }, { label: 'Fast Food', value: 'Fast Food' },
+                        { label: 'Vegan', value: 'Vegan' }, { label: 'European', value: 'European' },
+                        { label: 'Pizza', value: 'Pizza' }, { label: 'Indian', value: 'Indian' },
+                        { label: 'Cafe', value: 'Cafe' }, { label: 'Caterer', value: 'Caterer' },
+                        { label: 'Middle Eastern', value: 'Middle Eastern' }, { label: 'Hawaiian', value: 'Hawaiian' },
+                        { label: 'American', value: 'American' }, { label: 'Hamburger', value: 'Hamburger' },
+                    ],
+                    rtl: false,
+                    placeholder: 'Cuisine',
                 },
                 {
                     hasApplyButton: true,
@@ -337,6 +375,7 @@ export default class TruckCards extends Component {
         const rating = this.state.ratingRange;
         const cities = this.state.citySelectValue.split(',');
         const sortings = this.state.sorting.split(',');
+        const cuisines = this.state.cuisine.split(',');
 
         let requestUrl = 'http://api.parkd.us/truck?page=1';
 
@@ -350,6 +389,12 @@ export default class TruckCards extends Component {
         if(this.state.citySelectValue !== "" && cities.length > 0){
             let citiesCondition = {name:"city", op:"in", val:cities};
             filterCondition.push(citiesCondition);
+        }
+
+        // cuisine filter
+        if(this.state.cuisine !== "" && cuisines.length > 0){
+            let cuisineCondition = {name:"cuisine", op:"in", val:cuisines};
+            filterCondition.push(cuisineCondition);
         }
 
         // keywords filter
@@ -412,7 +457,7 @@ export default class TruckCards extends Component {
                                  description={'Name, Price range, Menu, Description, Cuisine, Park/Location, Photos'}
                                  title={'Explore Food Trucks Around You'}/>
                     <br/>
-                    <SearchBar nSelect={4}
+                    <SearchBar nSelect={5}
                                hasApplyButton={true}
                                config={searchBarConfig}
                                handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
@@ -466,7 +511,7 @@ export default class TruckCards extends Component {
                              title={'Explore Food Trucks Around You'}/>
 
                 <br/>
-                <SearchBar nSelect={4}
+                <SearchBar nSelect={5}
                            hasApplyButton={true}
                            config={searchBarConfig}
                            handleApplyFilterClick={this.handleOnApplyFilterClick.bind(this)}/>
