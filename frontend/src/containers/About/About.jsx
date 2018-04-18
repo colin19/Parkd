@@ -187,7 +187,7 @@ export default class About extends Component{
                              title={'About us'}/>
 
                 <Container>
-                <h2 className="mt-4 mb-3 text-center">Group Members</h2>
+                <h2 className="mt-4 mb-3 text-center">The Team</h2>
 
                 {/* Load team members info */}
                 {this.getTeamMemberInfo()}
