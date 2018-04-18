@@ -75,9 +75,6 @@ class TransparentNav extends Component{
                             <NavLink href="/">Home</NavLink>
                         </NavItem>
                         <NavItem className={'navbar-item'}>
-                            <NavLink href="/about">About</NavLink>
-                        </NavItem>
-                        <NavItem className={'navbar-item'}>
                             <NavLink href="/photos">Photos</NavLink>
                         </NavItem>
                         <NavItem className={'navbar-item'}>
@@ -85,6 +82,9 @@ class TransparentNav extends Component{
                         </NavItem>
                         <NavItem className={'navbar-item'}>
                             <NavLink href="/parks">Parks</NavLink>
+                        </NavItem>
+                        <NavItem className={'navbar-item'}>
+                            <NavLink href="/about">About</NavLink>
                         </NavItem>
                     </Nav>
                 </Collapse>
@@ -99,7 +99,7 @@ class TransparentNav extends Component{
                         <DropdownToggle className={"main-button"} caret>
                             {this.state.matchMethod}
                         </DropdownToggle>
-                        <DropdownMenu>
+                        <DropdownMenu right>
                             <DropdownItem onClick={() => this.onMatchSelect("OR")}>OR: Match one or more keywords</DropdownItem>
                             <DropdownItem onClick={() => this.onMatchSelect("AND")}>AND: Match all the keywords</DropdownItem>
                         </DropdownMenu>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Card, CardBody } from 'reactstrap';
+import { Card, CardBody, Container, ListGroup, ListGroupItem } from 'reactstrap';
 import axios from 'axios';
 
 import IntroHeader from '../../components/intro-header/IntroHeader.jsx';
@@ -17,11 +17,14 @@ import iconGijs from '../../images/about/gijs.png';
 
 
 const aboutPageContent = {
-    siteIntroTitle: 'About our site',
-    siteIntro: 'We chose to focus on cities that are notoriously food-truck friendly and walkable. We envision a typical user experience to begin with one of two points of entry, either by scrolling through our parks or scrolling through our food trucks. Then, because of the proximity most trucks have to parks in major cities, consumers are likely to visit a food truck, and then enjoy their food at a park. It is in this assumption that we find our niche. Our users will be able to plan their days out before they leave for lunch or even adjust their plans on the fly as they get hungry. Another advantage our website has is the incorporation of pictures as a third model. In today\'s society, one of the best ways to get someone\'s attention is to mention or incorporate social media into a product. Our trucks and parks will be what brings a user to our site, but it is the aesthetic of the site- the google maps, the images scraped from instagram, and the connection between our models will turn new users into repeat users. Our website provides a service that fills a void in the consumer experience in the era of the food truck.',
-    dataSourceTitle: 'Data Source and Interesting Result of Integrating Disparate data',
-    dataSourceExplanation: 'Our site incorporated data from multiple API. Sometimes in order to fulfill the data requirements for a single truck or park, we\'d have to combine data from multiple API\'s like Google Places, Zomato, Yelp Fusion, and Streetfood. We also used Google Places API to generate a .JSON file of all of the parks in a city, and then we parsed through the list in order to isolate the data we needed. One such data, was the latitude and longitude coordinates which we would compare with those of the food trucks in order to find parks and trucks that are close to each other. This distance calculation was done via the Google Maps Distance API. Finally, we scraped Instagrams RESTful API for the pictures displayed on the pictures tab of our site.',
-    toolsDescription: 'Multiple tools were incorporated into the development of our site. On the backend, we used tools like Postman and python code in order to scrape and organize our data. For this phase of the project, we organized the data into .csv files that the front end team could enter into the website statically. Other tools that were key to our project were GitHub and slack, we used both to maximize our collaboration as a team.',
+    siteIntroTitle: 'About Parkd',
+    siteIntro: 'We chose to focus on cities that are notoriously food-truck friendly and walkable. We envision a typical user experience to begin with one of two points of entry, scrolling through either our parks or food trucks. Because of the proximity most trucks in major cities have to parks, consumers are likely to want to visit a food truck then enjoy their food at a nearby park. This is the niche we fill. With our site, our users are able to plan their days out before they leave for lunch or even adjust their plans on the fly as they change their minds. One advantage our website has is the incorporation of pictures from social media as a third model. In today\'s society, one of the best ways to get someone\'s attention is to mention or incorporate social media into a product. Our major offering of connecting trucks and parks will bring new users to our site, but the aesthetic of the site - the fully-featured maps, the gorgeous images, and the connection between our models - will keep them coming back. Our website provides a service that fills a void in the consumer experience in the era of the domination of food trucks.',
+    dataSourceTitle: 'Data Sources & Integration of Disparate Data',
+    dataSourceExplanation: 'Our site incorporated data from multiple APIs. In order to fulfill the data requirements for a single truck or park, we had to combine data from APIs like Google Places, Zomato, Yelp Fusion, and Streetfood. We used the Google Places API to generate a .JSON file of all of the parks in a city and parsed through the list in order to isolate the data we needed. Some important data were the latitude and longitude coordinates which we would compare with those of the food trucks in order to find parks and trucks that are close to each other; this calculation was done via the Google Maps Distance API. Finally, we scraped Instagram\'s RESTful API for the pictures displayed on the Pictures tab.',
+    statsTitle: 'Stats',
+    toolsTitle: 'Tools',
+    toolsDescription: 'Multiple tools were incorporated into the development of our site. On the backend, we used tools like Postman and Python in order to scrape and organize our data. Other tools that were key to our project were GitHub and Slack; we used both to maximize our collaboration efforts as a team.',
+    linksTitle: 'Links',
 };
 
 const teamInfo = [
@@ -145,9 +148,9 @@ export default class About extends Component{
     getPersonInfo(person, id){
         return (
             <Card className='h-100'>
-            <div className='text-center'>
-                <img className='team-photo rounded-circle img-fluid' src={person[1]} alt='img'/>
-            </div>
+                <div className='text-center'>
+                    <img className='team-photo rounded-circle img-fluid' src={person[1]} alt='img'/>
+                </div>
                 <CardBody>
                     <div>
                         <h3>{person[0]}</h3>
@@ -164,29 +167,14 @@ export default class About extends Component{
 
     getTeamMemberInfo() {
         let members = [];
-        let rows = [];
         let i;
         for(i=0; i<teamInfo.length; i++){
             let person = teamInfo[i];
-            members.push(<div key={i} className='col-xl-4'>{this.getPersonInfo(person, i)}</div>);
-
-            if(i % 3 === 2){
-                rows.push(
-                    <div key={i} id="team-info" className="row team-info">
-                        <br/>
-                    </div>
-                );
-                rows.push(
-                    <div key={i} id="team-info" className="row team-info">
-                        {members}
-                    </div>
-                );
-                members = [];
-            }
+            members.push(<div key={i} className='col-sm-6 col-md-4 py-sm-3'>{this.getPersonInfo(person, i)}</div>);
         }
         return (
-            <div className="team-info-grid info-grid container">
-                {rows}
+            <div id="team-info" className="row team-info justify-content-center">
+                {members}
             </div>
         );
     }
@@ -198,79 +186,58 @@ export default class About extends Component{
                              description={'The team behind Parkd.US'}
                              title={'About us'}/>
 
-                <div className="sectionDivider">
-                    <br/>
-                </div>
-
-                <div className="websiteDescription">
-                    <h1>{aboutPageContent.siteIntroTitle}</h1>
-                    <br/>
-                    <p>{aboutPageContent.siteIntro}</p>
-
-                    <br/>
-                    <br/>
-
-                    <h1>{aboutPageContent.dataSourceTitle}</h1>
-                    <br/>
-                    <p>Some data sources:</p>
-                    <ul>
-                        <li>Zomato: <a href="https://developers.zomato.com/api">https://developers.zomato.com/api</a></li>
-                        <li>Streetfood: <a href="http://data.streetfoodapp.com">http://data.streetfoodapp.com/1.1/schedule/seattle</a></li>
-                        <li>Google Places: <a href="https://developers.google.com/maps/">https://maps.googleapis.com/maps/api/place/textsearch/json?query=parks+in+Austin&key=YOUR_API_KEY</a></li>
-                        <li>Google Maps Distance API: <a href="https://developers.google.com/maps/web-services/">https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=30.2670,-97.7729&destinations=30.2650472,-97.7315725&key=</a></li>
-                    </ul>
-                    <br/>
-                    <p>{aboutPageContent.dataSourceExplanation}</p>
-                    <br/>
-
-                    <h1>Stat</h1>
-                    <ul>
-                        <li>total no. of commits: {this.state.totalCommit}</li>
-                        <li>total no. of issues: {this.state.totalIssues}</li>
-                        <li>total no. of unit tests: 92</li>
-                    </ul>
-                    <br/>
-                    <h1>Tools</h1>
-                    <ul>
-                        <li>Postman: <a href="https://www.getpostman.com/">https://www.getpostman.com</a></li>
-                        <li>GitHub and Slack: <a href="https://slack.com/">https://slack.com</a></li>
-                        <li>Webstorm: <a href="https://www.jetbrains.com/webstorm/">https://www.jetbrains.com/webstorm</a></li>
-                        <li>Bootstrap: <a href="https://getbootstrap.com/">https://getbootstrap.com</a></li>
-                        <li>Flask: <a href="http://flask.pocoo.org/">http://flask.pocoo.org</a></li>
-                        <li>Amazon EC2: <a href="https://aws.amazon.com/ec2/">https://aws.amazon.com/ec2</a></li>
-                        <li>Route 53: <a href="https://aws.amazon.com/route53/">https://aws.amazon.com/route53</a></li>
-                        <li>MySQL Workbook: <a href="https://dev.mysql.com/doc/workbench/en/">https://dev.mysql.com/doc/workbench/en</a></li>
-                        <li>SQL Alchemy: <a href="https://www.sqlalchemy.org/">https://www.sqlalchemy.org</a></li>
-                        <li>Axios: <a href="https://www.npmjs.com/package/axios">https://www.npmjs.com/package/axios</a></li>
-                        <li>React-Highlight-Words: <a href="https://bvaughn.github.io/react-highlight-words/">https://bvaughn.github.io/react-highlight-words</a></li>
-                    </ul>
-                    <p>{aboutPageContent.toolsDescription}</p>
-                    <br/>
-                    <h1>Links</h1>
-                    <ul>
-                        <li>API Documentation: <a href="https://www.gitbook.com/book/jbanda11/api-documentation/details">https://www.gitbook.com/book/jbanda11/api-documentation/details</a></li>
-                        <li>Parkd Technical Report: <a href="https://www.gitbook.com/book/jbanda11/technical-report/details">https://www.gitbook.com/book/jbanda11/technical-report/details</a></li>
-                        <li>Github Repository: <a href="https://github.com/colin19/Parkd">https://github.com/colin19/Parkd</a></li>
-                        <li>Self Critique: <a href="https://www.gitbook.com/book/jbanda11/self-critique/details">https://www.gitbook.com/book/jbanda11/self-critique/details</a></li>
-                        <li>Other Critique: <a href="https://www.gitbook.com/book/jbanda11/other-critique/details">https://www.gitbook.com/book/jbanda11/other-critique/details</a></li>
-                        <li>Travis CI: <a href="https://travis-ci.org/colin19/Parkd">https://travis-ci.org/colin19/Parkd</a></li>
-                    </ul>
-
-                    <div className="sectionDivider">
-                        <br/>
-                    </div>
-                </div>
-
-                <div className="sectionDivider">
-                    <br/>
-                </div>
-                <h1 className="team-photo-header">Group Members</h1>
-                <br/>
-                <br/>
+                <Container>
+                <h2 className="mt-4 mb-3 text-center">Group Members</h2>
 
                 {/* Load team members info */}
                 {this.getTeamMemberInfo()}
 
+                    <h2 className="mt-4 mb-3">{aboutPageContent.siteIntroTitle}</h2>
+                    <p>{aboutPageContent.siteIntro}</p>
+                    <h2 className="mt-4 mb-3">{aboutPageContent.dataSourceTitle}</h2>
+                    <p>Some of our data sources:</p>
+                    <ListGroup>
+                        <ListGroupItem tag="a" href="https://developers.zomato.com/api">Zomato</ListGroupItem>
+                        <ListGroupItem tag="a" href="http://data.streetfoodapp.com">Streetfood</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://developers.google.com/maps/">Google Places</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://developers.google.com/maps/web-services/">Google Maps Distance API</ListGroupItem>
+                    </ListGroup>
+                    <p/>
+                    <p>{aboutPageContent.dataSourceExplanation}</p>
+                    <h2 className="mt-4 mb-3">{aboutPageContent.statsTitle}</h2>
+                    <ListGroup>
+                        <ListGroupItem>total no. of commits: {this.state.totalCommit}</ListGroupItem>
+                        <ListGroupItem>total no. of issues: {this.state.totalIssues}</ListGroupItem>
+                        <ListGroupItem>total no. of unit tests: 92</ListGroupItem>
+                    </ListGroup>
+                    <h2 className="mt-4 mb-3">{aboutPageContent.toolsTitle}</h2>
+                    <ListGroup>
+                        <ListGroupItem tag="a" href="https://www.getpostman.com/">Postman</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://github.com/">GitHub</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://slack.com/">Slack</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://www.jetbrains.com/webstorm/">Webstorm</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://getbootstrap.com/">Bootstrap</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://reactstrap.github.io/">Reactstrap</ListGroupItem>
+                        <ListGroupItem tag="a" href="http://flask.pocoo.org/">Flask</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://aws.amazon.com/ec2/">Amazon EC2</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://aws.amazon.com/route53/">Route 53</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://dev.mysql.com/doc/workbench/en/">MySQL Workbook</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://www.sqlalchemy.org/">SQLAlchemy</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://www.npmjs.com/package/axios">Axios</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://bvaughn.github.io/react-highlight-words/">React-Highlight-Words</ListGroupItem>
+                    </ListGroup>
+                    <p/>
+                    <p>{aboutPageContent.toolsDescription}</p>
+                    <h2 className="mt-4 mb-3">{aboutPageContent.linksTitle}</h2>
+                    <ListGroup>
+                        <ListGroupItem tag="a" href="https://www.gitbook.com/book/jbanda11/api-documentation/details">API Documentation</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://www.gitbook.com/book/jbanda11/technical-report/details">Parkd Technical Report</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://github.com/colin19/Parkd">GitHub Repository</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://www.gitbook.com/book/jbanda11/self-critique/details">Self Critique</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://www.gitbook.com/book/jbanda11/other-critique/details">Other Critique</ListGroupItem>
+                        <ListGroupItem tag="a" href="https://travis-ci.org/colin19/Parkd">Travis CI</ListGroupItem>
+                    </ListGroup>
+                </Container>
                 <Footer/>
             </div>
         );
