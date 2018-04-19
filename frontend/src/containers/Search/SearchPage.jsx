@@ -671,7 +671,7 @@ export default class SearchPage extends Component {
         this.handlePhotoSearch();
     }
 
-
+    /* generate the park card using current data */
     getParkCard(id){
         let data = this.state.parkData.data;
 
@@ -680,6 +680,7 @@ export default class SearchPage extends Component {
                 <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
                 <CardBody>
                     <div className={'photoCardTitleContainer'}>
+                        {/* Card title */}
                         <Highlighter
                             className={"photoCardTitle"}
                             unhighlightClassName={'photoCardTitle'}
@@ -691,9 +692,11 @@ export default class SearchPage extends Component {
                         />
                     </div>
                     <br/>
+                    {/* Card body */}
                     <div className={'photoCardText card-text'}>
                         Rating: {data[id][2]}
                         <br/>
+                        {/* some basic info */}
                         Address: <Highlighter
                         className={"photoCardText"}
                         unhighlightClassName={'photoCardText'}
@@ -718,8 +721,10 @@ export default class SearchPage extends Component {
         );
     }
 
+    /* generate groups of park cards */
     getParkCards() {
         if(this.state.parkData.isNoResult && !this.state.parkData.isLoading) {
+            {/* show Result Not Found if empty data was returned from the API */}
             return (
                 <div className={"loading"}>
                     <br/><br/><br/>
@@ -727,6 +732,7 @@ export default class SearchPage extends Component {
                 </div>
             );
         } else if (this.state.parkData.data.length === 0 && this.state.parkData.isLoading){
+            {/* show loading state when the web page is still fetching data */}
             return (
                 <div className={"loading"}>
                     <img src={logo} className="App-logo" alt="logo" />
@@ -735,6 +741,7 @@ export default class SearchPage extends Component {
                 </div>
             );
         } if(this.state.parkData.data.length === 0 && !this.state.parkData.isLoading){
+            {/* show  Error Fetching Data state when the web page encounters any error */}
             return (
                 <div className={"loading"}>
                     <br/>
