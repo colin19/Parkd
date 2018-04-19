@@ -6,6 +6,12 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap
 
 import './TransparentNav.css';
 
+
+/**
+ * Customized "Transparent" Navbar. The user can set it to semi-transparent
+ * by assigning True to the isTinted property. The navbar contains a search bar which
+ * can be set to "match OR" or "match ALL"
+ */
 class TransparentNav extends Component{
     constructor(props) {
         super(props);
@@ -66,9 +72,11 @@ class TransparentNav extends Component{
 
         return (
             <Navbar className={navClassName}>
+                {/* The brand name on the Nav bar */}
                 <NavbarBrand href="/" className={'navbar-brand'}>Parkd.US</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
 
+                {/* The collapsible navbar items */}
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="ml-auto" navbar>
                         <NavItem className={'navbar-item'}>
@@ -89,7 +97,7 @@ class TransparentNav extends Component{
                     </Nav>
                 </Collapse>
 
-
+                {/* The search bar in the navbar */}
                 <InputGroup className={"nav-search"}>
                     <Input value={this.state.inputValue} onChange={this.updateInputValue.bind(this)} placeholder="Keywords" />
                 </InputGroup>
@@ -106,6 +114,7 @@ class TransparentNav extends Component{
                     </Dropdown>
                 </div>
 
+                {/* The search button */}
                 <div className={"search-button"}>
                     <Link to={'/search?isMatchAll=' + isMatchAll + '&keywords=' + keywordString}>
                         <Button onClick={() => window.location.reload()} color="secondary">Search</Button>

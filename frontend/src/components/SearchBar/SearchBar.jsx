@@ -93,6 +93,7 @@ export default class SearchBar extends Component{
 
 
     render () {
+        // generate the search bar with an apply button
         if(this.state.hasApplyButton){
             return (
                 <div className="search-bar">
@@ -105,6 +106,7 @@ export default class SearchBar extends Component{
                 </div>
             );
         }else{
+            // generate the search bar without an apply button
             return (
                 <div className="search-bar">
                     <Row>

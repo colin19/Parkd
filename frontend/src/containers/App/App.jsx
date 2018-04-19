@@ -13,6 +13,10 @@ import TruckDetail from '../../containers/Trucks/TruckDetail.jsx';
 import ParkCards from '../../containers/Parks/ParkCards.jsx';
 import ParkDetail from '../../containers/Parks/ParkDetail.jsx';
 
+/**
+ * The root component of React
+ * Should add Route element here for new-added components
+ */
 class App extends Component {
     render() {
         return (

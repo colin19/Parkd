@@ -15,7 +15,7 @@ import iconJavier from '../../images/about/javier.png';
 import iconDiego from '../../images/about/diego.png';
 import iconGijs from '../../images/about/gijs.png';
 
-
+// some description of our website used in the About page
 const aboutPageContent = {
     siteIntroTitle: 'About Parkd',
     siteIntro: 'We chose to focus on cities that are notoriously food-truck friendly and walkable. We envision a typical user experience to begin with one of two points of entry, scrolling through either our parks or food trucks. Because of the proximity most trucks in major cities have to parks, consumers are likely to want to visit a food truck then enjoy their food at a nearby park. This is the niche we fill. With our site, our users are able to plan their days out before they leave for lunch or even adjust their plans on the fly as they change their minds. One advantage our website has is the incorporation of pictures from social media as a third model. In today\'s society, one of the best ways to get someone\'s attention is to mention or incorporate social media into a product. Our major offering of connecting trucks and parks will bring new users to our site, but the aesthetic of the site - the fully-featured maps, the gorgeous images, and the connection between our models - will keep them coming back. Our website provides a service that fills a void in the consumer experience in the era of the domination of food trucks.',
@@ -27,6 +27,7 @@ const aboutPageContent = {
     linksTitle: 'Links',
 };
 
+// team member information
 const teamInfo = [
     ['Gijs Landwehr', iconGijs, 'Class of 2019', '', 'Another 3rd year CS student from UT Austin. Spends most of his free time teaching and travelling across the state for robotics competition.', 8]
     , ['Austen Castberg', iconAusten, 'Class of 2020', '', 'Worked on backend.', 0]
@@ -38,6 +39,10 @@ const teamInfo = [
 
 const GithubId2MemberId = {'gijsland': 0, 'aecast': 1, 'colin19': 2, 'jbanda11': 3,'dalcoz': 4, 'GuanSuns': 5};
 
+/**
+ * The About page
+ * It gets the github statistics by GitHub API
+ */
 export default class About extends Component{
     constructor(props) {
         super(props);
@@ -51,7 +56,6 @@ export default class About extends Component{
     }
 
     componentDidMount() {
-        //this.state.nHttpRequest = 0;
         let {nHttpRequest} = this.state;
         nHttpRequest = 0;
         this.setState({nHttpRequest});
@@ -59,6 +63,7 @@ export default class About extends Component{
         this.fetchGithubStat();
     }
 
+    /* Send asynchronous request to Github*/
     fetchGithubStat(){
         // return if exceed the maximum number of requests
         if(this.state.nHttpRequest > 5){
@@ -67,12 +72,14 @@ export default class About extends Component{
 
         const githubRepo = 'https://api.github.com/repos/colin19/Parkd';
         try{
+            // The request for count of issues
             axios.get(githubRepo + '/issues?state=all')
                 .then(res => {
                     this.updateGithubIssues(res.data);
                 }).catch((error) => {
                 console.log(error)
             });
+            // The request for count of contribution
             axios.get(githubRepo + '/stats/contributors')
                 .then(res => {
                     this.updateGithubCommit(res.data);
@@ -89,6 +96,7 @@ export default class About extends Component{
         }
     }
 
+    /* The handler of the issue count response*/
     updateGithubIssues(resultIssue){
         try {
             const issues = new Array(6);
@@ -105,6 +113,7 @@ export default class About extends Component{
                 issues[personId] = nIssues;
             }
 
+            // if it's a failing request, re-send the request again
             if(nTotalIssues === 0){
                 this.fetchGithubStat();
                 return;
@@ -117,6 +126,7 @@ export default class About extends Component{
 
     }
 
+    /* The handler of the commit count response*/
     updateGithubCommit(resultCommit) {
         try{
             const commits = this.state.commits.slice();
@@ -133,6 +143,7 @@ export default class About extends Component{
                 nTotalCommit = nTotalCommit + nCommit;
             }
 
+            // if it's a failing request, re-send the request again
             if(nTotalCommit === 0){
                 this.fetchGithubStat();
                 return;
@@ -145,6 +156,7 @@ export default class About extends Component{
 
     }
 
+    /* Generate the personal info on the About page*/
     getPersonInfo(person, id){
         return (
             <Card className='h-100'>
@@ -165,6 +177,7 @@ export default class About extends Component{
         );
     }
 
+    /* Generate the member info (group of personal info) on the About page*/
     getTeamMemberInfo() {
         let members = [];
         let i;
@@ -187,13 +200,16 @@ export default class About extends Component{
                              title={'About us'}/>
 
                 <Container>
-                <h2 className="mt-4 mb-3 text-center">The Team</h2>
+                    <h2 className="mt-4 mb-3 text-center">The Team</h2>
 
-                {/* Load team members info */}
-                {this.getTeamMemberInfo()}
+                    {/* Load team members info */}
+                    {this.getTeamMemberInfo()}
 
+                    {/* website introduction */}
                     <h2 className="mt-4 mb-3">{aboutPageContent.siteIntroTitle}</h2>
                     <p>{aboutPageContent.siteIntro}</p>
+
+                    {/* data source introduction */}
                     <h2 className="mt-4 mb-3">{aboutPageContent.dataSourceTitle}</h2>
                     <p>Some of our data sources:</p>
                     <ListGroup>
@@ -204,12 +220,16 @@ export default class About extends Component{
                     </ListGroup>
                     <p/>
                     <p>{aboutPageContent.dataSourceExplanation}</p>
+
+                    {/* Github stat */}
                     <h2 className="mt-4 mb-3">{aboutPageContent.statsTitle}</h2>
                     <ListGroup>
                         <ListGroupItem>total no. of commits: {this.state.totalCommit}</ListGroupItem>
                         <ListGroupItem>total no. of issues: {this.state.totalIssues}</ListGroupItem>
                         <ListGroupItem>total no. of unit tests: 92</ListGroupItem>
                     </ListGroup>
+
+                    {/* tools introduction */}
                     <h2 className="mt-4 mb-3">{aboutPageContent.toolsTitle}</h2>
                     <ListGroup>
                         <ListGroupItem tag="a" href="https://www.getpostman.com/">Postman</ListGroupItem>
@@ -228,6 +248,8 @@ export default class About extends Component{
                     </ListGroup>
                     <p/>
                     <p>{aboutPageContent.toolsDescription}</p>
+
+                    {/* links */}
                     <h2 className="mt-4 mb-3">{aboutPageContent.linksTitle}</h2>
                     <ListGroup>
                         <ListGroupItem tag="a" href="https://www.gitbook.com/book/jbanda11/api-documentation/details">API Documentation</ListGroupItem>
