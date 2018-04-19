@@ -11,7 +11,7 @@ Start connection stuff
 
 conn = pymysql.connect(host='34.217.60.78',
 								user='root',
-								password='parkd',
+								password='parkd', #REINSERT PASSWORD WHEN TRYING TO RUN
 								db='parkd_sqlalchemy',
 								charset='utf8mb4',
 								cursorclass=pymysql.cursors.DictCursor)
