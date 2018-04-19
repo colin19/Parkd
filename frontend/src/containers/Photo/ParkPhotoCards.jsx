@@ -322,8 +322,8 @@ export default class ParkPhotoCards extends Component {
 
         // city filter
         if(this.state.citySelectValue !== "" && cities.length > 0){
-            let truckCityQuery = {name:"truck", op:"has", val:{name:"city", op:"in", val:cities}};
-            filterCondition.push(truckCityQuery);
+            let parkCityQuery = {name:"park", op:"has", val:{name:"city", op:"in", val:cities}};
+            filterCondition.push(parkCityQuery);
         }
 
         // keywords filter
@@ -353,9 +353,9 @@ export default class ParkPhotoCards extends Component {
                 } else if(sortings[i] === 'Likes: High to Low') {
                     sortingCondition.push({field:"likes", direction:"desc"});
                 } else if(sortings[i] === 'City Name A-Z') {
-                    sortingCondition.push({field:"truck__city", direction:"asc"});
+                    sortingCondition.push({field:"park__city", direction:"asc"});
                 } else if(sortings[i] === 'City Name') {
-                    sortingCondition.push({field:"truck__city", direction:"desc"});
+                    sortingCondition.push({field:"park__city", direction:"desc"});
                 } else if(sortings[i] === 'Tag Name A-Z') {
                     sortingCondition.push({field:"tag", direction:"asc"});
                 } else if(sortings[i] === 'Tag Name') {
