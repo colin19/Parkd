@@ -6,7 +6,13 @@ import 'react-select/dist/react-select.css';
 
 import './SearchBar.css';
 
-
+/**
+ * Customized SearchBar which can be used as filter bar for each model
+ * The user need to specify the number of "react-select" and the properties of each
+ * select. The props.config is the list of configuration for each react-select,
+ * each config should contain the same attributes as the attributes shown in their
+ * official documentations
+ */
 export default class SearchBar extends Component{
     constructor(props) {
         super(props);
@@ -19,6 +25,7 @@ export default class SearchBar extends Component{
         };
     }
 
+    /* render different type of react-select*/
     renderSelectItem(id) {
         let config = this.props.config[id];
 

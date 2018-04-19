@@ -3,9 +3,10 @@ import { Button, ButtonGroup } from 'reactstrap';
 
 import './PageIndex.css';
 
-
 /**
- * Customized 
+ * Customized page index. In the state, nButton specifies the maximum number
+ * of buttons (indices) in the page index bar. The user need to specify the
+ * on page button click handler.
  */
 export default class PageIndex extends Component {
 
@@ -24,6 +25,7 @@ export default class PageIndex extends Component {
         );
     }
 
+    /* generate button items in the reactstrap ButtonGroup */
     renderButtonGroup() {
         let buttonGroup = [];
         let nButton = this.state.nButton;
@@ -48,6 +50,7 @@ export default class PageIndex extends Component {
         return buttonGroup;
     }
 
+    /* using the reactstrap component ButtonGroup to wrap the index buttons*/
     render() {
         return (
             <div className={'page-index'}>
