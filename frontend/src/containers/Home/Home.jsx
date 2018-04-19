@@ -13,6 +13,7 @@ import './Home.css';
 import TransparentNav from '../../components/TransparentNav/TransparentNav.jsx';
 import CustomCarousel from '../../components/CustomCarousel/CustomCarousel.jsx';
 
+// The caption for each section (each slide)
 const captions = [
     ['/parks', imgPark, 'Explore Nearby Parks', 'Enjoy the great outdoors while you chow down on local cuisine.'],
     ['/trucks', imgTruck, 'Discover Food Trucks Around You', 'Get some delicious food with a beautiful view.'],
