@@ -49,7 +49,7 @@ class ScraperTestCase(unittest.TestCase):
 		self.assertEqual(scraper.getAddresses(self.parsed)[0], "2100 Barton Springs Rd, Austin, TX 78704, USA") #Zilker
 
 	def test_park_ratings(self):
-		self.assertEqual(scraper.getRatings(self.parsed)[10], 4.5)
+		self.assertEqual(scraper.getRatings(self.parsed)[0], 4.7)
 
 	def test_park_longs(self):
 		#Mayfield Park and Nature Preserve
