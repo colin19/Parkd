@@ -4,7 +4,7 @@ import ParkCards from '../src/containers/Parks/ParkCards.jsx';
 import ParkDetail from '../src/containers/Parks/ParkDetail.jsx';
 import TruckCards from '../src/containers/Trucks/TruckCards.jsx';
 import TruckDetail from '../src/containers/Trucks/TruckDetail.jsx';
-import PhotoCards from '../src/containers/Photo/PhotoCards.jsx';
+import TruckPhotoCards from '../src/containers/Photo/TruckPhotoCards.jsx';
 import PhotoDetail from '../src/containers/Photo/PhotoDetail.jsx';
 import SearchPage from '../src/containers/Search/SearchPage.jsx';
 import Footer from "../src/components/Footer/Footer.jsx";
@@ -184,10 +184,10 @@ describe('<SearchPage />', () => {
     });
 });
 
-// Test for container (Page) PhotoCards
-describe('<PhotoCards />', () => {
+// Test for container (Page) TruckPhotoCards
+describe('<TruckPhotoCards />', () => {
     it('should render successfully', () => {
-        shallow(<PhotoCards />);
+        shallow(<TruckPhotoCards />);
     });
 });
 
