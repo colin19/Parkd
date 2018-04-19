@@ -724,7 +724,7 @@ export default class SearchPage extends Component {
     /* generate groups of park cards */
     getParkCards() {
         if(this.state.parkData.isNoResult && !this.state.parkData.isLoading) {
-            {/* show Result Not Found if empty data was returned from the API */}
+            // show Result Not Found if empty data was returned from the API
             return (
                 <div className={"loading"}>
                     <br/><br/><br/>
@@ -732,7 +732,7 @@ export default class SearchPage extends Component {
                 </div>
             );
         } else if (this.state.parkData.data.length === 0 && this.state.parkData.isLoading){
-            {/* show loading state when the web page is still fetching data */}
+            // show loading state when the web page is still fetching data */
             return (
                 <div className={"loading"}>
                     <img src={logo} className="App-logo" alt="logo" />
@@ -741,7 +741,7 @@ export default class SearchPage extends Component {
                 </div>
             );
         } if(this.state.parkData.data.length === 0 && !this.state.parkData.isLoading){
-            {/* show  Error Fetching Data state when the web page encounters any error */}
+            // show  Error Fetching Data state when the web page encounters any error
             return (
                 <div className={"loading"}>
                     <br/>
@@ -781,6 +781,7 @@ export default class SearchPage extends Component {
         );
     }
 
+    /* generate the park card using current data */
     getTruckCard(id) {
         let data = this.state.truckData.data;
 
@@ -789,6 +790,7 @@ export default class SearchPage extends Component {
                 <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
                 <CardBody>
                     <div className={'photoCardTitleContainer'}>
+                        {/* Card title */}
                         <Highlighter
                             className={"photoCardTitle"}
                             unhighlightClassName={'photoCardTitle'}
@@ -800,6 +802,7 @@ export default class SearchPage extends Component {
                         />
                     </div>
                     <br/>
+                    {/* Card body */}
                     <div className={'photoCardText card-text'}>
                         Rating: {data[id][5]}
                         <br/>
@@ -827,8 +830,10 @@ export default class SearchPage extends Component {
         );
     }
 
+    /* generate groups of truck cards */
     getTruckCards() {
         if(this.state.truckData.isNoResult && !this.state.truckData.isLoading) {
+            // show Result Not Found if empty data was returned from the API
             return (
                 <div className={"loading"}>
                     <br/><br/><br/>
@@ -836,6 +841,7 @@ export default class SearchPage extends Component {
                 </div>
             );
         } else if (this.state.truckData.data.length === 0 && this.state.truckData.isLoading){
+            // show Fetching Data if the web page is fetching data
             return (
                 <div className={"loading"}>
                     <img src={logo} className="App-logo" alt="logo" />
@@ -844,6 +850,7 @@ export default class SearchPage extends Component {
                 </div>
             );
         } if(this.state.truckData.data.length === 0 && !this.state.truckData.isLoading){
+            // show Error Fetching Data if the web page encounters any error
             return (
                 <div className={"loading"}>
                     <br/>
@@ -883,12 +890,14 @@ export default class SearchPage extends Component {
         );
     }
 
+    /* generate the photo card using current data */
     getPhotoCard(id){
         let data = this.state.photoData.data;
         return (
             <Card key={id} className={'shadowCard card'}>
                 <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
                 <CardBody>
+                    {/* Card Body */}
                     <div className={'photoCardTitleContainer'}>
                         <Highlighter
                             className={"photoCardTitle"}
@@ -901,6 +910,7 @@ export default class SearchPage extends Component {
                         />
                     </div>
                     <div className={'photoCardText card-text'}>
+                        {/* Card title */}
                         <Highlighter
                             className={"photoCardText"}
                             unhighlightClassName={'photoCardText'}
@@ -916,6 +926,7 @@ export default class SearchPage extends Component {
                     </div>
 
                     <br/>
+                    {/* Card button */}
                     <div className='buttonContainer'>
                         <Link to={data[id][3]}>
                             <Button className={"btn btn-info photoCardBtn"} color={"info"} size={'sm'}>
@@ -928,8 +939,10 @@ export default class SearchPage extends Component {
         );
     }
 
+    /* generate the photo card groups */
     getPhotoCards() {
         if(this.state.photoData.isNoResult && !this.state.photoData.isLoading) {
+            // show Result Not Found if empty data was returned from the API
             return (
                 <div className={"loading"}>
                     <br/><br/><br/>
@@ -937,6 +950,7 @@ export default class SearchPage extends Component {
                 </div>
             );
         } else if (this.state.photoData.data.length === 0 && this.state.photoData.isLoading){
+            // show Fetching Data if the web page is fetching data
             return (
                 <div className={"loading"}>
                     <img src={logo} className="App-logo" alt="logo" />
@@ -945,6 +959,7 @@ export default class SearchPage extends Component {
                 </div>
             );
         } if(this.state.photoData.data.length === 0 && !this.state.photoData.isLoading){
+            // show Error Fetching Data if the web page encounters any error
             return (
                 <div className={"loading"}>
                     <br/>
@@ -998,6 +1013,7 @@ export default class SearchPage extends Component {
     }
 
     render() {
+        // the configuration of the search bar for each section
         const parkSearchBarConfig = [{
             hasApplyButton: true,
             createTable: false,
@@ -1060,6 +1076,7 @@ export default class SearchPage extends Component {
                              title={'Searching'}/>
 
                 <br/>
+                {/* The section header and search (filter) bar */}
                 <div className={'result-section'}>
                     <Row>
                         <Col xs={1}>
@@ -1078,6 +1095,7 @@ export default class SearchPage extends Component {
 
 
                 <br/><br/><br/>
+                {/* The section header and search (filter) bar */}
                 <div className={'result-section'}>
                     <Row>
                         <Col xs={1}>
@@ -1095,6 +1113,7 @@ export default class SearchPage extends Component {
                 {this.renderCards('park')}
 
                 <br/><br/><br/>
+                {/* The section header and search (filter) bar */}
                 <div className={'result-section'}>
                     <Row>
                         <Col xs={1}>
