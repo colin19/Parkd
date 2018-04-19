@@ -76,6 +76,7 @@ class FirefoxTestCase(unittest.TestCase):
         driver = self.driver
         driver.find_element_by_link_text('Photos').click()
         assert "Photos" in driver.find_element_by_tag_name('h1').text
+        time.sleep(2)
         filters = driver.find_elements_by_class_name('Select')
         filters[0].click()
         filters[0].find_element_by_tag_name('input').send_keys("Austin" + Keys.RETURN)
@@ -86,9 +87,10 @@ class FirefoxTestCase(unittest.TestCase):
         filters[3].click()
         filters[3].find_element_by_tag_name('input').send_keys("rabbit" + Keys.RETURN)
         driver.find_element_by_css_selector('.search-bar button').click()
+        time.sleep(2)
         cards = driver.find_elements_by_css_selector(".photoCardTitle .photoCardTitle")
-        assert len(cards) == 1
-        assert cards[0].text == "#lukesinsideout"
+        assert len(cards) == 7
+        assert cards[0].text == "# lukesinsideout"
 
     def test_trucks_basic_match(self):
         driver = self.driver
@@ -107,17 +109,19 @@ class FirefoxTestCase(unittest.TestCase):
         filters[0].click()
         filters[0].find_element_by_tag_name('input').send_keys("Austin" + Keys.RETURN)
         filters[1].click()
-        filters[1].find_element_by_css_selector('.Select-option[id*="-option-9"]').click()
+        filters[1].find_element_by_css_selector('.Select-option[id*="-option-6"]').click()
         filters[2].click()
-        filters[2].find_element_by_css_selector('.Select-option[id*="-option-1"]').click()
+        filters[2].find_element_by_css_selector('.Select-option[id*="-option-0"]').click()
         filters[3].click()
-        filters[3].find_element_by_tag_name('input').send_keys("Thai" + Keys.RETURN)
+        filters[3].find_element_by_css_selector('.Select-option[id*="-option-1"]').click()
+        filters[4].click()
+        filters[4].find_element_by_tag_name('input').send_keys("street" + Keys.RETURN)
         driver.find_element_by_css_selector('.search-bar button').click()
         title_parts = driver.find_elements_by_css_selector(".photoCardTitle .photoCardTitle")
         assert len(title_parts) == 3
-        assert "DEE DEE - Northern" == title_parts[0].text
-        assert "Thai" == title_parts[1].text
-        assert "Street Food" == title_parts[2].text
+        assert "DEE DEE - Northern Thai" == title_parts[0].text
+        assert "Street" == title_parts[1].text
+        assert "Food" == title_parts[2].text
 
     def test_parks_basic_match(self):
         driver = self.driver
@@ -136,7 +140,7 @@ class FirefoxTestCase(unittest.TestCase):
         filters[0].click()
         filters[0].find_element_by_tag_name('input').send_keys("Austin" + Keys.RETURN)
         filters[1].click()
-        filters[1].find_element_by_css_selector('.Select-option[id*="-option-8"]').click()
+        filters[1].find_element_by_css_selector('.Select-option[id*="-option-1"]').click()
         filters[2].click()
         filters[2].find_element_by_css_selector('.Select-option[id*="-option-1"]').click()
         filters[3].click()
