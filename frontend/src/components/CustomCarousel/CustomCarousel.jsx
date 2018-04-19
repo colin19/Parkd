@@ -9,6 +9,11 @@ import {
 
 import './CustomCarousel.css';
 
+
+/**
+ * Customized Carousel which supports embedding button and text in the captions
+ * The default setting is fulfilling the screen.
+ */
 export default class CustomCarousel extends Component{
     constructor(props) {
         super(props);
@@ -45,11 +50,13 @@ export default class CustomCarousel extends Component{
         this.setState({ activeIndex: nextIndex });
     }
 
+    /* index change handler*/
     goToIndex(newIndex) {
         if (this.animating) return;
         this.setState({ activeIndex: newIndex });
     }
 
+    /* generate each slide in the carousel */
     getItems(){
         let items = [];
         for(let i=0; i<this.state.images.length; i++){
@@ -68,6 +75,7 @@ export default class CustomCarousel extends Component{
 
         const { activeIndex } = this.state;
 
+        // Create each slides
         const slides = items.map((item) => {
             return (
                 <CarouselItem

@@ -3,6 +3,12 @@ import TransparentNav from '../TransparentNav/TransparentNav.jsx';
 
 import './IntroHeader.css';
 
+/**
+ * Customized Header with introduction on it
+ * Each header description contains one line of title (larger font size)
+ *  and one line of subtitle (smaller font size)
+ * It also has a transparent navbar at the top.
+ */
 export default class IntroHeader extends Component{
     constructor(props) {
         super(props);
@@ -14,6 +20,7 @@ export default class IntroHeader extends Component{
     }
 
     render(){
+        // set the background image style (tinted)
         let introBgStyle = {
             background: 'linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(' + this.state.bgUrl + ')',
             backgroundSize: 'cover'

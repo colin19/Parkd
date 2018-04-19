@@ -3,6 +3,10 @@ import { Button, ButtonGroup } from 'reactstrap';
 
 import './PageIndex.css';
 
+
+/**
+ * Customized 
+ */
 export default class PageIndex extends Component {
 
     constructor(props) {
