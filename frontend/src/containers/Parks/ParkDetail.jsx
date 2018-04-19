@@ -12,35 +12,9 @@ import TransparentNav from '../../components/TransparentNav/TransparentNav.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
 import ReactGoogleMap from '../../components/GoogleMap/ReactGoogleMap.jsx';
 
-/*
-import imgAlberta1 from '../../images/parks/albert-1.png';
-import imgAlberta2 from '../../images/parks/albert-2.png';
-*/
 
 import imgNo from '../../images/no-image.jpg';
 
-
-/*
-const localData = [
-    'Alberta Park'
-    , 'Alberta Park is a park located in northeast Portland, Oregon. Acquired in 1921, the park includes a basketball court, dog off-leash area, playground, soccer field, softball field and tennis court.'
-    , null  // Phone number
-    , '1905 NE Killingsworth St, Portland, OR 97211, USA'
-    , 'Open Now'   // Hours
-    , [ [imgAlberta1, 0], [imgAlberta2, 1] ]
-    , [
-        ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
-        , ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
-        , ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
-        , ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
-        , ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
-    ]
-    , 4.4     // Rating
-    , [45.5644753, -122.6451045]
-    , 'external link'
-    , []  // more reviews
-];
-*/
 
 export default class ParkDetail extends Component {
     constructor(props) {

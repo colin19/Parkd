@@ -16,21 +16,10 @@ import logo from '../../logo.svg';
 
 import axios from "axios/index";
 
-
-// Data for local testing
-/*
-const localData = [
-    [
-        'Zilker Metropolitan Park'
-        , imgZilker
-        , 4.7
-        , 'parks/detail?id=-1'
-        , '2100 Barton Springs Rd, Austin, TX 78704, USA'
-    ],
-];
-*/
-
-
+/**
+ * The Park model page
+ * It display all the park cards in a reactstrap CardColumns
+ */
 export default class ParkCards extends Component {
     constructor(props) {
         super(props);
@@ -50,6 +39,7 @@ export default class ParkCards extends Component {
         };
     }
 
+    /* send request to fetch data when the page is loaded */
     componentDidMount() {
         const requestUrl = this.state.currentUrl
             + 'page=' + this.state.page
@@ -63,6 +53,7 @@ export default class ParkCards extends Component {
         requestURL = encodeURI(requestURL);
 
         try{
+            // initiate asynchronous network requests
             axios.get(requestURL)
                 .then(res => {
                     this.updateCards(res.data)
@@ -76,11 +67,13 @@ export default class ParkCards extends Component {
         }
     }
 
+    /* update park data using the response from the server */
     updateCards(resData){
         this.setState({isLoading: false});
         let data = [];
 
         try{
+            // get total page count
             const totalPage = resData['total_pages'];
 
             const parks = resData['objects'];
@@ -100,9 +93,9 @@ export default class ParkCards extends Component {
                 if(park['photos'].length > 0 && park['photos'][nPhoto-1] != null){
                     parkData.push(park['photos'][nPhoto-1]['url']);   // get image
                 }else{
+                    // handle the case when there is no image available for the park
                     parkData.push(imgNo);
                 }
-
 
                 let rating = park['rating'];  // get rating
                 parkData.push(rating);
@@ -122,6 +115,7 @@ export default class ParkCards extends Component {
         }
     }
 
+    /* Generate the card using the data */
     getCard(id){
         let data = this.state.data;
 
@@ -129,6 +123,7 @@ export default class ParkCards extends Component {
             <Card key={id} className={'shadowCard card'}>
                 <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
                 <CardBody>
+                    {/* Card title */}
                     <div className={'photoCardTitleContainer'}>
                         <Highlighter
                             className={"photoCardTitle"}
@@ -141,6 +136,7 @@ export default class ParkCards extends Component {
                         />
                     </div>
                     <br/>
+                    {/* Card body */}
                     <div className={'photoCardText card-text'}>
                         Rating: {data[id][2]}
                         <br/>
@@ -155,6 +151,7 @@ export default class ParkCards extends Component {
                         />
                     </div>
 
+                    {/* The 'More Info Button' */}
                     <br/>
                     <div className='buttonContainer'>
                         <Link to={data[id][3]}>
@@ -168,6 +165,7 @@ export default class ParkCards extends Component {
         );
     }
 
+    /* Generate the photo cards group */
     getPhotoCards() {
         let cards = [];
         let i;
@@ -177,15 +175,18 @@ export default class ParkCards extends Component {
         return cards;
     }
 
+    /* handle the city filter condition changes */
     handleCitySelect(value) {
         this.setState({citySelectValue: value});
     }
 
+    /* handle the rating filter condition changes */
     handleRatingSelect(value) {
         if(value === null) value = 0;
         this.setState({ratingRange: value});
     }
 
+    /* handle the sorting condition changes */
     handleSortingSelect(value) {
         let preSoringString = this.state.sorting;
         let newSorting = value.split(",");
@@ -208,6 +209,7 @@ export default class ParkCards extends Component {
         this.setState({sorting: value});
     }
 
+    /* handle the input event of the keywords Input */
     handleKeywords(value) {
         let keywordsList = [];
         for(let i=0; i<value.length; i++){
@@ -217,6 +219,7 @@ export default class ParkCards extends Component {
         this.setState({keywords: value, keywordsList: keywordsList});
     }
 
+    /* The search (filter) bar configuration */
     getSearchBarConfig () {
         return (
             [
@@ -296,6 +299,7 @@ export default class ParkCards extends Component {
         );
     }
 
+    /* handle page index (page change) onClick event */
     handleOnPageBtnClick (pageIndex) {
         const currentUrl = this.state.currentUrl;
         const currentUrlPageParam = 'page=' + pageIndex;
@@ -310,6 +314,7 @@ export default class ParkCards extends Component {
         this.fetchData(requestUrl);
     }
 
+    /* handle the Apply button onClick event and generate the new query string */
     handleOnApplyFilterClick () {
         const keywords = this.state.keywords;
         const rating = this.state.ratingRange;
@@ -383,6 +388,7 @@ export default class ParkCards extends Component {
     render(){
         let searchBarConfig = this.getSearchBarConfig();
 
+        // handle the case when no result is found
         if(this.state.isNoResult && !this.state.isLoading) {
             return (
                 <div>
@@ -404,6 +410,7 @@ export default class ParkCards extends Component {
             );
         }
 
+        // handle the case when the web page is loading the data
         if(this.state.data.length === 0 && this.state.isLoading){
             return (
                 <div>
@@ -421,6 +428,7 @@ export default class ParkCards extends Component {
             );
         }
 
+        // handle the case when the web page encounters any error
         if(this.state.data.length === 0 && !this.state.isLoading){
             return (
                 <div>
@@ -437,6 +445,7 @@ export default class ParkCards extends Component {
             );
         }
 
+        // display the results (grid view)
         return (
             <div>
                 <IntroHeader bgUrl={imgBg}
