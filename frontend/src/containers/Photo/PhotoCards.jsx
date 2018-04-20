@@ -7,6 +7,11 @@ import TruckPhotoCards from './TruckPhotoCards.jsx';
 
 import imgBg from '../../images/food/themightycone3.png';
 
+
+/**
+ * The Photo model page
+ * It contains Truck Photo Cards and Park Photo Cards
+ */
 export default class PhotoCards extends Component {
     render(){
         return (

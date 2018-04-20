@@ -13,28 +13,12 @@ import ReactGoogleMap from '../../components/GoogleMap/ReactGoogleMap.jsx';
 import axios from "axios/index";
 import queryString from "query-string";
 
-/*
-import imgGrinds1 from '../../images/trucks/grinds1.png';
-import imgGrinds2 from '../../images/trucks/grinds2.png';
-import imgGrinds3 from '../../images/trucks/grinds3.png';
-
-const localData = [
-    '808 Grinds'
-    , '...Awesome place to eat in Downtown Portland! I got a cheesus (think colossus but with cheese) which is a hamburger with grilled cheese sandwiches replacing the buns. It\'s a lot but it\'s super delicious. Highly recommend for the times you do go to Portland\'s downtown.'
-    , '(512) - 820 - 6611'
-    , '815 SW Park Ave, Portland, OR 97205, USA'
-    , 'M - F\n11:30 am - 2:00 pm\n5:00 pm - 9:00 pm\nSA - SU\n5:00 pm - 9:00 pm'
-    , [ [imgGrinds1, 0], [imgGrinds2, 1], [imgGrinds3, 2] ]
-    , 'external_link'
-    , [45.5186898, -122.6814688]
-    , ['Director Park', '../parks/director.html']
-    , 4.5
-    , ['Review 1', 'Review 2', 'Review 3']
-];
-*/
-
 import imgNo from '../../images/no-image.jpg';
 
+/**
+ * The Truck Detail page
+ * It display all the detail information of a park
+ */
 export default class TruckDetail extends Component {
     constructor(props) {
         super(props);
@@ -52,14 +36,13 @@ export default class TruckDetail extends Component {
         };
     }
 
+    /* send asynchronous request to the server */
     componentDidMount() {
         let truckId = this.state.truckId;
         this.fetchData(truckId);
     }
 
     fetchData(truckId){
-        // if(truckId === -1) return;
-
         const requestURL = 'http://api.parkd.us/truck/' + truckId ;
         try{
             axios.get(requestURL)
@@ -74,6 +57,7 @@ export default class TruckDetail extends Component {
         }
     }
 
+    /* update the truck data using the data returned by the server */
     updateTruckData(resData){
         const truck = resData;
         let data = [];
@@ -142,7 +126,7 @@ export default class TruckDetail extends Component {
         }
     }
 
-
+    /* generate the description of the truck */
     getBasicDescription(){
         let n_review = this.state.data[10].length;
 
@@ -155,6 +139,7 @@ export default class TruckDetail extends Component {
         );
     }
 
+    /* currently we don't have the phone number for the truck */
     getPhoneInfo(){
         return (
             <div className={"basicInfo phoneInfo basicDescription"}>
@@ -164,6 +149,7 @@ export default class TruckDetail extends Component {
         );
     }
 
+    /* we might add hour info into our database later */
     getHourInfo(){
         let strHours = this.state.data[4];
 
@@ -179,6 +165,7 @@ export default class TruckDetail extends Component {
         )
     }
 
+    /* generate the rating info */
     getRatingInfo(){
         let truckName = this.state.data[0];
         return (
@@ -191,6 +178,7 @@ export default class TruckDetail extends Component {
         )
     }
 
+    /* generate the nearby park info */
     getParkInfo(){
         return (
             <div className={"parkInfo basicInfo"}>
@@ -201,6 +189,7 @@ export default class TruckDetail extends Component {
 
     }
 
+    /* generate the location info */
     getLocationInfo(){
         return (
             <div className={"locationInfo basicInfo"}>
@@ -214,9 +203,11 @@ export default class TruckDetail extends Component {
         )
     }
 
+    /* generate the caption of each photo in the carousel */
     getCaption(id){
         let imgId = this.state.data[5][id][1];
 
+        // if it is the last photo, add 'Explore More' button in the caption
         if(id !== this.state.data[5].length - 1 && imgId !== -1){
             return (
                 <div key={id}>
@@ -243,6 +234,7 @@ export default class TruckDetail extends Component {
         );
     }
 
+    /* generate captions for photos in carousel */
     getCaptions(){
         let carouselCaptions = [];
         let i;
@@ -253,6 +245,7 @@ export default class TruckDetail extends Component {
     }
 
     render(){
+        // handle the case when the web page is still loading
         if(this.state.data.length === 0 && this.state.isValid){
             return (
                 <div>
@@ -265,7 +258,7 @@ export default class TruckDetail extends Component {
                 </div>
             );
         }
-
+        // handle the case when the truck id is invalid
         if(this.state.data.length === 0 && !this.state.isValid){
             return (
                 <div>
@@ -279,6 +272,7 @@ export default class TruckDetail extends Component {
             );
         }
 
+        // prepare the images for photos carousel
         let images = [];
         for(let i=0; i<this.state.data[5].length; i++){
             images.push(this.state.data[5][i][0]);

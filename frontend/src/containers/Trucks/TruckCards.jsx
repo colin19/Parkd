@@ -15,37 +15,11 @@ import imgNo from '../../images/no-image.jpg';
 import axios from "axios/index";
 import logo from '../../logo.svg';
 
-/*
 
-import imgGrinds from '../../images/trucks/grinds1.png';
-import imgMighty from '../../images/trucks/themightycone1.png';
-import imgPinch from '../../images/trucks/pinch1.png';
-
-const localData = [
-    [
-        '808 Grinds'
-        , imgGrinds
-        , 'Awesome place to eat in Downtown Portland!'
-        , 'trucks/detail?id=-1'
-        , '815 SW Park Ave, Portland, OR 97205, USA
-    ],
-    [
-        'The Mighty Cone'
-        , imgMighty
-        , 'THIS PLACE IS DELICIOUS!!! Recommend the chicken cone and the cheese sticks. Mmm!'
-        , 'trucks/detail?id=1'
-        , '2100 Barton Springs Rd, Austin, TX 78704'
-    ],
-    [
-        'Pinch'
-        , imgPinch
-        , 'an urban food lab established in winter 2016 by Yuzhuo Liu'
-        , 'trucks/detail?id=2'
-        , '518 W 24th St, Austin, TX 78703'
-    ]
-];
-*/
-
+/**
+ * The Truck model page
+ * It display all the truck cards in a reactstrap CardColumns
+ */
 export default class TruckCards extends Component {
     constructor(props) {
         super(props);
@@ -66,6 +40,7 @@ export default class TruckCards extends Component {
         };
     }
 
+    /* send request to fetch data when the page is loaded */
     componentDidMount() {
         const requestUrl = this.state.currentUrl
             + 'page=' + this.state.page
@@ -79,6 +54,7 @@ export default class TruckCards extends Component {
         requestURL = encodeURI(requestURL);
 
         try{
+            // initiate asynchronous network requests
             axios.get(requestURL)
                 .then(res => {
                     this.updateCards(res.data)
@@ -92,11 +68,13 @@ export default class TruckCards extends Component {
         }
     }
 
+    /* update park data using the response from the server */
     updateCards(resData){
         this.setState({isLoading: false});
         let data = [];
 
         try{
+            // get total page count
             const totalPage = resData['total_pages'];
 
             const trucks = resData['objects'];
@@ -146,6 +124,7 @@ export default class TruckCards extends Component {
         }
     }
 
+    /* Generate the card using the data */
     getCard(id){
         let data = this.state.data;
 
@@ -153,6 +132,7 @@ export default class TruckCards extends Component {
             <Card key={id} className={'shadowCard card'}>
                 <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
                 <CardBody>
+                    {/* Card title */}
                     <div className={'photoCardTitleContainer'}>
                         <Highlighter
                             className={"photoCardTitle"}
@@ -165,6 +145,7 @@ export default class TruckCards extends Component {
                         />
                     </div>
                     <br/>
+                    {/* Card body */}
                     <div className={'photoCardText card-text'}>
                         <div className={"photoCardText"}>
                             {data[id][2]}
@@ -184,6 +165,7 @@ export default class TruckCards extends Component {
                     </div>
 
                     <br/>
+                    {/* The 'More Info Button' */}
                     <div className='buttonContainer'>
                         <Link to={data[id][3]}>
                             <Button className={"btn btn-info photoCardBtn"} color="info" size={'sm'}>
@@ -196,6 +178,7 @@ export default class TruckCards extends Component {
         );
     }
 
+    /* Generate the photo cards group */
     getPhotoCards() {
         let cards = [];
         let i;
@@ -205,19 +188,23 @@ export default class TruckCards extends Component {
         return cards;
     }
 
+    /* handle the city filter condition changes */
     handleCitySelect(value) {
         this.setState({citySelectValue: value});
     }
 
+    /* handle the cuisine filter condition changes */
     handleCuisineSelect(value) {
         this.setState({cuisine: value});
     }
 
+    /* handle the rating filter condition changes */
     handleRatingSelect(value) {
         if(value === null) value = 0;
         this.setState({ratingRange: value});
     }
 
+    /* handle the sorting condition changes */
     handleSortingSelect(value) {
         let preSoringString = this.state.sorting;
         let newSorting = value.split(",");
@@ -240,6 +227,7 @@ export default class TruckCards extends Component {
         this.setState({sorting: value});
     }
 
+    /* handle the input event of the keywords Input */
     handleKeywords(value) {
         let keywordsList = [];
         for(let i=0; i<value.length; i++){
@@ -249,6 +237,7 @@ export default class TruckCards extends Component {
         this.setState({keywords: value, keywordsList: keywordsList});
     }
 
+    /* The search (filter) bar configuration */
     getSearchBarConfig () {
         return (
             [
@@ -356,6 +345,7 @@ export default class TruckCards extends Component {
         );
     }
 
+    /* handle page index (page change) onClick event */
     handleOnPageBtnClick (pageIndex) {
         const currentUrl = this.state.currentUrl;
         const currentUrlPageParam = 'page=' + pageIndex;
@@ -370,6 +360,7 @@ export default class TruckCards extends Component {
         this.fetchData(requestUrl);
     }
 
+    /* handle the Apply button onClick event and generate the new query string */
     handleOnApplyFilterClick () {
         const keywords = this.state.keywords;
         const rating = this.state.ratingRange;
@@ -450,6 +441,7 @@ export default class TruckCards extends Component {
     render(){
         let searchBarConfig = this.getSearchBarConfig();
 
+        // handle the case when no result is found
         if(this.state.isNoResult && !this.state.isLoading) {
             return (
                 <div>
@@ -471,6 +463,7 @@ export default class TruckCards extends Component {
             );
         }
 
+        // handle the case when the web page is loading the data
         if(this.state.data.length === 0 && this.state.isLoading){
             return (
                 <div>
@@ -488,6 +481,7 @@ export default class TruckCards extends Component {
             );
         }
 
+        // handle the case when the web page encounters any error
         if(this.state.data.length === 0 && !this.state.isLoading){
             return (
                 <div>
@@ -504,6 +498,7 @@ export default class TruckCards extends Component {
             );
         }
 
+        // display the results (grid view)
         return (
             <div>
                 <IntroHeader bgUrl={imgBg}
