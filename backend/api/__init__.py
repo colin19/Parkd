@@ -29,6 +29,7 @@ from api.models.park_photo import Park_Photo
 
 Base.metadata.create_all()
 
+# display the table schema
 print('Table Schema: ')
 print(CreateTable(Truck.__table__).compile(engine))
 print(CreateTable(Truck_Photo.__table__).compile(engine))
@@ -41,7 +42,7 @@ manager = flask_restless.APIManager(app, session=session)
 
 # Register flask-restless blueprints to instantiate CRUD endpoints
 from api.controllers import park_api_blueprint, truck_api_blueprint, truck_photo_api_blueprint, park_photo_api_blueprint
-
+# Register flask-restless blueprints to instantiate CRUD endpoints
 app.register_blueprint(truck_api_blueprint)
 app.register_blueprint(park_api_blueprint)
 app.register_blueprint(truck_photo_api_blueprint)
@@ -53,4 +54,5 @@ from api.resources.truckList import TruckList
 api.add_resource(ParkList, '/parks')
 api.add_resource(TruckList, '/trucks')
 
+# add CORS support
 cors = CORS(app, resources={r"/*": {"origins": "*"}})

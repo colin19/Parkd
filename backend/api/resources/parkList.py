@@ -7,6 +7,9 @@ import timeit
 
 
 class ParkList(Resource):
+    """
+    A Resource return a lighter list of all the park
+    """
 
     # define the GET method
     def get(self):
@@ -14,6 +17,7 @@ class ParkList(Resource):
 
         parks_list = []
 
+        # add all the parks basic info into the list
         parks = session.query(Park).limit(20).all()
         for park in parks:
             parks_list.append(park.to_park_list_item())

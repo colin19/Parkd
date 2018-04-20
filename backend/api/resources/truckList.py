@@ -5,6 +5,9 @@ from api import session
 
 
 class TruckList(Resource):
+    """
+        A Resource return a lighter list of all the truck
+    """
 
     # define the GET method
     def get(self):

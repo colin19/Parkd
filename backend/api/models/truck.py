@@ -5,6 +5,10 @@ from api import Base
 
 
 class Truck(Base):
+    """
+        The Truck model
+    """
+
     @declared_attr
     def __tablename__(self):
         return 'truck'
@@ -26,10 +30,14 @@ class Truck(Base):
 
     park_id = Column(Integer, ForeignKey('park.id'), nullable=False)
 
+    # define the relationship to park (many-to-one)
     park = relationship('Park', back_populates="trucks")
+    # define the relationship to truck_review (one-to-many)
     reviews = relationship('Truck_Review', back_populates="truck", cascade="all,delete")
+    # define the relationship to truck_photo (one-to-many)
     photos = relationship('Truck_Photo', back_populates="truck", cascade="all,delete")
 
+    # the helper function used in truckList resource
     def to_truck_list_item(self):
         photos_list = []
         photos = self.photos

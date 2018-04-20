@@ -5,6 +5,10 @@ from api import Base
 
 
 class Truck_Photo(Base):
+    """
+        The Truck_Photo model
+    """
+
     @declared_attr
     def __tablename__(self):
         return 'truck_photo'
@@ -15,7 +19,7 @@ class Truck_Photo(Base):
     tag = Column(String(128))
     description = Column(Text)
     likes = Column(Integer)
-
     truck_id = Column(Integer, ForeignKey('truck.id'), nullable=False)
 
+    # define the truck-truck_photo relation (one-to-many)
     truck = relationship('Truck', back_populates='photos')

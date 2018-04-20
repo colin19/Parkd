@@ -5,6 +5,10 @@ from api import Base
 
 
 class Park(Base):
+    """
+        The Park model
+    """
+
     @declared_attr
     def __tablename__(self):
         # API endpoint will take the form '/api/__tablename__'
@@ -22,10 +26,14 @@ class Park(Base):
     latitude = Column(Float(precision='32,12'))
     longitude = Column(Float(precision='32,12'))
 
+    # define the relationship to park_photo (one-to-many)
     photos = relationship('Park_Photo', back_populates="park", cascade="all,delete")
+    # define the relationship to truck (one-to-many)
     trucks = relationship('Truck', back_populates="park", cascade="all,delete")
+    # define the relationship to park_review (one-to-many)
     reviews = relationship('Park_Review', back_populates="park", cascade="all,delete")
 
+    # the helper function used in parkList resource
     def to_park_list_item(self):
         photos_list = []
         photos = self.photos
