@@ -3,7 +3,7 @@
 
 GithubID = colin19
 RepoName = Parkd
-SHA      = dbbe2cf88ec17a8b6330344c3c09d978317ed951
+SHA      = a34fe9f8f85b3ec171cfa78c41de81748ae2cb3d
 
 .PHONY: githubid reponame sha github issues stories uml selenium frontend backend postman website report apidoc self other default
 
