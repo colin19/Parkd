@@ -18,6 +18,11 @@ import logo from '../../logo.svg';
 import axios from "axios/index";
 
 
+/**
+ * SearchPage: The page displays the searching results
+ * The SearchPage class handles three asynchronous network requests, one for
+ * truck models, one for park models and one for food photos
+ */
 export default class SearchPage extends Component {
     constructor(props) {
         super(props);
@@ -75,9 +80,11 @@ export default class SearchPage extends Component {
     }
 
     componentDidMount() {
+        // send request when the page is loaded
         this.handleSearch();
     }
 
+    /* fetch data from different dataSource*/
     fetchData(requestURL, dataSource) {
         requestURL = encodeURI(requestURL);
 
@@ -95,6 +102,9 @@ export default class SearchPage extends Component {
         }
     }
 
+    /* set loading state. Loading state is used to distinguish
+     * "no data" and "loading data" state
+     */
     setLoadingState(state, dataSource){
         if(dataSource === 'truck'){
             let truckData = this.state.truckData;
@@ -111,6 +121,7 @@ export default class SearchPage extends Component {
         }
     }
 
+    /* the handler of the response */
     updateCards(resData, dataSource){
         if(dataSource === 'truck'){
             this.updateTruckCards(resData);
@@ -121,11 +132,14 @@ export default class SearchPage extends Component {
         }
     }
 
+    /* update the current photo data */
     updatePhotoCards(resData) {
+        // set isLoading to false
         this.setLoadingState(false, 'truck_photo');
         let data = [];
 
         try{
+            // get the total number of pages
             const totalPage = resData['total_pages'];
 
             const photos = resData['objects'];
@@ -140,21 +154,22 @@ export default class SearchPage extends Component {
 
                 photoData.push(photo['tag']);    // get tag
 
-                let url = photo['url'];
+                let url = photo['url'];     // get url
                 photoData.push(url);
 
                 let description = photo['description'];
                 if(description === null) description = "wonderful!";
+                // if the description is too long, only show the first 200 characters
                 if(description.length > 200) {
                     description = description.substring(0, 200) + ' ...';
                 }
-                photoData.push(description);
+                photoData.push(description); // get description
 
                 let id = photo['id'];
-                photoData.push('photos/detail?id=' + id);
+                photoData.push('photos/detail?id=' + id);   // get photo id
 
                 let likes = photo['likes'];
-                photoData.push(likes);
+                photoData.push(likes);  // get the number of likes
 
                 data.push(photoData);
             }
@@ -170,11 +185,14 @@ export default class SearchPage extends Component {
         }
     }
 
+    /* update the current truck data */
     updateTruckCards(resData) {
+        // set isLoading to false
         this.setLoadingState(false, 'truck');
         let data = [];
 
         try{
+            // get the total number of pages
             const totalPage = resData['total_pages'];
 
             const trucks = resData['objects'];
@@ -193,6 +211,7 @@ export default class SearchPage extends Component {
                 if(truck['photos'].length > 0 && truck['photos'][nPhoto-1] != null){
                     truckData.push(truck['photos'][nPhoto-1]['url']);   // get image
                 }else{
+                    // handle the case when there is no image of this truck
                     truckData.push(imgNoTruck);
                 }
 
@@ -225,7 +244,9 @@ export default class SearchPage extends Component {
         }
     }
 
+    /* update the current park data */
     updateParkCards(resData) {
+        // set isLoading to false
         this.setLoadingState(false, 'park');
         let data = [];
 
@@ -268,13 +289,16 @@ export default class SearchPage extends Component {
             stateData.nPage = totalPage;
             stateData.isNoResult = false;
 
+            // update park state data
             this.setState({parkData: stateData});
         } catch (error){
             console.log("Error during parsing parks data - " + error.toString());
         }
     }
 
+    /* handle the page changing for park section */
     handleOnParkPageBtnClick(pageIndex) {
+        // use the current filter conditions
         const currentUrl = this.state.parkData.currentUrl + 'results_per_page=' + this.state.resultPerPage;
         const currentUrlPageParam = '&page=' + pageIndex;
         const currentUrlQueryParam = this.state.parkData.currentUrlQueryParam;
@@ -291,10 +315,13 @@ export default class SearchPage extends Component {
         stateData.data = [];
 
         this.setState({parkData: stateData});
+        // call fetch data to get the data for the specified page
         this.fetchData(requestUrl, 'park');
     }
 
+    /* handle the page changing for truck section */
     handleOnTruckPageBtnClick(pageIndex) {
+        // use the current filter conditions
         const currentUrl = this.state.truckData.currentUrl + 'results_per_page=' + this.state.resultPerPage;
         const currentUrlPageParam = '&page=' + pageIndex;
         const currentUrlQueryParam = this.state.truckData.currentUrlQueryParam;
@@ -311,10 +338,13 @@ export default class SearchPage extends Component {
         stateData.data = [];
 
         this.setState({truckData: stateData});
+        // call fetch data to get the data for the specified page
         this.fetchData(requestUrl, 'truck');
     }
 
+    /* handle the page changing for truck section */
     handleOnPhotoPageBtnClick(pageIndex) {
+        // use the current filter conditions
         const currentUrl = this.state.photoData.currentUrl + 'results_per_page=' + this.state.resultPerPage;
         const currentUrlPageParam = '&page=' + pageIndex;
         const currentUrlQueryParam = this.state.photoData.currentUrlQueryParam;
@@ -331,10 +361,14 @@ export default class SearchPage extends Component {
         stateData.data = [];
 
         this.setState({photoData: stateData});
-        console.log(requestUrl);
+        // call fetch data to get the data for the specified page
         this.fetchData(requestUrl, 'truck_photo');
     }
 
+    /* the handler of parkSearchButton onClick event.
+     * It generates new query string based on the conditions selected by user
+     * and initialize the request
+     * */
     handleParkSearch () {
         const isMatchAll = this.state.isMatchAll;
         const keywords = this.state.keywords;
@@ -350,6 +384,7 @@ export default class SearchPage extends Component {
                 const queryField = ['city', 'name', 'address'];
                 let keywordsCondition = [];
 
+                // add keywords filtering for each filed
                 for(let i=0; i<keywords.length; i++){
                     let fieldCondition = [];
                     for(let j=0; j<queryField.length; j++){
@@ -358,6 +393,7 @@ export default class SearchPage extends Component {
                     keywordsCondition.push({or: fieldCondition});
                 }
 
+                // handle different matching condition
                 let keywordsConditionQuery = {};
                 if(isMatchAll){
                     keywordsConditionQuery = {and: keywordsCondition};
@@ -394,6 +430,7 @@ export default class SearchPage extends Component {
         requestUrl += queryUrl;
         console.log(requestUrl);
 
+        // re-initialize the park data
         let dataState = this.state.parkData;
         dataState.nPage = 1;
         dataState.page = 1;
@@ -406,6 +443,10 @@ export default class SearchPage extends Component {
         this.fetchData(requestUrl, 'park');
     }
 
+    /* the handler of truckSearchButton onClick event.
+     * It generates new query string based on the conditions selected by user
+     * and initialize the request
+     * */
     handleTruckSearch () {
         const isMatchAll = this.state.isMatchAll;
         const keywords = this.state.keywords;
@@ -421,6 +462,7 @@ export default class SearchPage extends Component {
                 const queryField = ['city', 'name', 'address'];
                 let keywordsCondition = [];
 
+                // add keyword filtering to each
                 for(let i=0; i<keywords.length; i++){
                     let fieldCondition = [];
                     for(let j=0; j<queryField.length; j++){
@@ -429,6 +471,7 @@ export default class SearchPage extends Component {
                     keywordsCondition.push({or: fieldCondition});
                 }
 
+                // handle different matching condition
                 let keywordsConditionQuery = {};
                 if(isMatchAll){
                     keywordsConditionQuery = {and: keywordsCondition};
@@ -465,6 +508,7 @@ export default class SearchPage extends Component {
         requestUrl += queryUrl;
         console.log(requestUrl);
 
+        // re-initialize the data
         let dataState = this.state.truckData;
         dataState.nPage = 1;
         dataState.page = 1;
@@ -477,6 +521,10 @@ export default class SearchPage extends Component {
         this.fetchData(requestUrl, 'truck');
     }
 
+    /* the handler of photoSearchButton onClick event.
+     * It generates new query string based on the conditions selected by user
+     * and initialize the request
+     * */
     handlePhotoSearch () {
         const isMatchAll = this.state.isMatchAll;
         const keywords = this.state.keywords;
@@ -538,6 +586,7 @@ export default class SearchPage extends Component {
         requestUrl += queryUrl;
         console.log(requestUrl);
 
+        // re-initialize the data
         let dataState = this.state.photoData;
         dataState.nPage = 1;
         dataState.page = 1;
@@ -546,7 +595,7 @@ export default class SearchPage extends Component {
         dataState.currentUrlQueryParam = queryUrl;
         dataState.isNoResult = true;
         this.setState({photoData: dataState});
-
+        // send request to get the new data
         this.fetchData(requestUrl, 'truck_photo');
     }
 
@@ -556,6 +605,7 @@ export default class SearchPage extends Component {
         this.handlePhotoSearch();
     }
 
+    /* the handler for park soring conditions changes*/
     handleParkSortingSelect(value) {
         let preSoringString = this.state.parkData.sorting;
         let newSorting = value.split(",");
@@ -577,6 +627,7 @@ export default class SearchPage extends Component {
         this.handleParkSearch();
     }
 
+    /* the handler for truck soring conditions changes*/
     handleTruckSortingSelect(value) {
         let preSoringString = this.state.truckData.sorting;
         let newSorting = value.split(",");
@@ -598,6 +649,7 @@ export default class SearchPage extends Component {
         this.handleTruckSearch();
     }
 
+    /* the handler for photo soring conditions changes*/
     handlePhotoSortingSelect(value) {
         let preSoringString = this.state.photoData.sorting;
         let newSorting = value.split(",");
@@ -619,7 +671,7 @@ export default class SearchPage extends Component {
         this.handlePhotoSearch();
     }
 
-
+    /* generate the park card using current data */
     getParkCard(id){
         let data = this.state.parkData.data;
 
@@ -628,6 +680,7 @@ export default class SearchPage extends Component {
                 <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
                 <CardBody>
                     <div className={'photoCardTitleContainer'}>
+                        {/* Card title */}
                         <Highlighter
                             className={"photoCardTitle"}
                             unhighlightClassName={'photoCardTitle'}
@@ -639,9 +692,11 @@ export default class SearchPage extends Component {
                         />
                     </div>
                     <br/>
+                    {/* Card body */}
                     <div className={'photoCardText card-text'}>
                         Rating: {data[id][2]}
                         <br/>
+                        {/* some basic info */}
                         Address: <Highlighter
                         className={"photoCardText"}
                         unhighlightClassName={'photoCardText'}
@@ -666,8 +721,10 @@ export default class SearchPage extends Component {
         );
     }
 
+    /* generate groups of park cards */
     getParkCards() {
         if(this.state.parkData.isNoResult && !this.state.parkData.isLoading) {
+            // show Result Not Found if empty data was returned from the API
             return (
                 <div className={"loading"}>
                     <br/><br/><br/>
@@ -675,6 +732,7 @@ export default class SearchPage extends Component {
                 </div>
             );
         } else if (this.state.parkData.data.length === 0 && this.state.parkData.isLoading){
+            // show loading state when the web page is still fetching data */
             return (
                 <div className={"loading"}>
                     <img src={logo} className="App-logo" alt="logo" />
@@ -683,6 +741,7 @@ export default class SearchPage extends Component {
                 </div>
             );
         } if(this.state.parkData.data.length === 0 && !this.state.parkData.isLoading){
+            // show  Error Fetching Data state when the web page encounters any error
             return (
                 <div className={"loading"}>
                     <br/>
@@ -722,6 +781,7 @@ export default class SearchPage extends Component {
         );
     }
 
+    /* generate the park card using current data */
     getTruckCard(id) {
         let data = this.state.truckData.data;
 
@@ -730,6 +790,7 @@ export default class SearchPage extends Component {
                 <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
                 <CardBody>
                     <div className={'photoCardTitleContainer'}>
+                        {/* Card title */}
                         <Highlighter
                             className={"photoCardTitle"}
                             unhighlightClassName={'photoCardTitle'}
@@ -741,6 +802,7 @@ export default class SearchPage extends Component {
                         />
                     </div>
                     <br/>
+                    {/* Card body */}
                     <div className={'photoCardText card-text'}>
                         Rating: {data[id][5]}
                         <br/>
@@ -768,8 +830,10 @@ export default class SearchPage extends Component {
         );
     }
 
+    /* generate groups of truck cards */
     getTruckCards() {
         if(this.state.truckData.isNoResult && !this.state.truckData.isLoading) {
+            // show Result Not Found if empty data was returned from the API
             return (
                 <div className={"loading"}>
                     <br/><br/><br/>
@@ -777,6 +841,7 @@ export default class SearchPage extends Component {
                 </div>
             );
         } else if (this.state.truckData.data.length === 0 && this.state.truckData.isLoading){
+            // show Fetching Data if the web page is fetching data
             return (
                 <div className={"loading"}>
                     <img src={logo} className="App-logo" alt="logo" />
@@ -785,6 +850,7 @@ export default class SearchPage extends Component {
                 </div>
             );
         } if(this.state.truckData.data.length === 0 && !this.state.truckData.isLoading){
+            // show Error Fetching Data if the web page encounters any error
             return (
                 <div className={"loading"}>
                     <br/>
@@ -824,12 +890,14 @@ export default class SearchPage extends Component {
         );
     }
 
+    /* generate the photo card using current data */
     getPhotoCard(id){
         let data = this.state.photoData.data;
         return (
             <Card key={id} className={'shadowCard card'}>
                 <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
                 <CardBody>
+                    {/* Card Body */}
                     <div className={'photoCardTitleContainer'}>
                         <Highlighter
                             className={"photoCardTitle"}
@@ -842,6 +910,7 @@ export default class SearchPage extends Component {
                         />
                     </div>
                     <div className={'photoCardText card-text'}>
+                        {/* Card title */}
                         <Highlighter
                             className={"photoCardText"}
                             unhighlightClassName={'photoCardText'}
@@ -857,6 +926,7 @@ export default class SearchPage extends Component {
                     </div>
 
                     <br/>
+                    {/* Card button */}
                     <div className='buttonContainer'>
                         <Link to={data[id][3]}>
                             <Button className={"btn btn-info photoCardBtn"} color={"info"} size={'sm'}>
@@ -869,8 +939,10 @@ export default class SearchPage extends Component {
         );
     }
 
+    /* generate the photo card groups */
     getPhotoCards() {
         if(this.state.photoData.isNoResult && !this.state.photoData.isLoading) {
+            // show Result Not Found if empty data was returned from the API
             return (
                 <div className={"loading"}>
                     <br/><br/><br/>
@@ -878,6 +950,7 @@ export default class SearchPage extends Component {
                 </div>
             );
         } else if (this.state.photoData.data.length === 0 && this.state.photoData.isLoading){
+            // show Fetching Data if the web page is fetching data
             return (
                 <div className={"loading"}>
                     <img src={logo} className="App-logo" alt="logo" />
@@ -886,6 +959,7 @@ export default class SearchPage extends Component {
                 </div>
             );
         } if(this.state.photoData.data.length === 0 && !this.state.photoData.isLoading){
+            // show Error Fetching Data if the web page encounters any error
             return (
                 <div className={"loading"}>
                     <br/>
@@ -939,6 +1013,7 @@ export default class SearchPage extends Component {
     }
 
     render() {
+        // the configuration of the search bar for each section
         const parkSearchBarConfig = [{
             hasApplyButton: true,
             createTable: false,
@@ -1001,6 +1076,7 @@ export default class SearchPage extends Component {
                              title={'Searching'}/>
 
                 <br/>
+                {/* The section header and search (filter) bar */}
                 <div className={'result-section'}>
                     <Row>
                         <Col xs={1}>
@@ -1019,6 +1095,7 @@ export default class SearchPage extends Component {
 
 
                 <br/><br/><br/>
+                {/* The section header and search (filter) bar */}
                 <div className={'result-section'}>
                     <Row>
                         <Col xs={1}>
@@ -1036,6 +1113,7 @@ export default class SearchPage extends Component {
                 {this.renderCards('park')}
 
                 <br/><br/><br/>
+                {/* The section header and search (filter) bar */}
                 <div className={'result-section'}>
                     <Row>
                         <Col xs={1}>

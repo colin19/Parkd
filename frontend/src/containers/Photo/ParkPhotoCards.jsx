@@ -11,7 +11,10 @@ import './PhotoCards.css';
 import logo from '../../logo.svg';
 import axios from "axios/index";
 
-
+/**
+ * The Park Photo model page
+ * It display all the park photo cards in a reactstrap CardColumns
+ */
 export default class ParkPhotoCards extends Component {
     constructor(props) {
         super(props);
@@ -32,6 +35,7 @@ export default class ParkPhotoCards extends Component {
         };
     }
 
+    /* send request to fetch data when the page is loaded */
     componentDidMount() {
         const requestUrl = this.state.currentUrl
             + 'results_per_page=' + this.state.resultPerPage
@@ -49,6 +53,7 @@ export default class ParkPhotoCards extends Component {
         console.log(requestURL);
 
         try{
+            // initiate asynchronous network requests
             axios.get(requestURL)
                 .then(res => {
                     this.updateCards(res.data)
@@ -62,11 +67,13 @@ export default class ParkPhotoCards extends Component {
         }
     }
 
+    /* update park photo data using the response from the server */
     updateCards(resData){
         this.setState({isLoading: false});
         let data = [];
 
         try{
+            // get total page count
             const totalPage = resData['total_pages'];
 
             const photos = resData['objects'];
@@ -86,14 +93,15 @@ export default class ParkPhotoCards extends Component {
 
                 let description = photo['description'];
                 if(description.length > 200) {
+                    // if the description is longer than 200 characters
                     description = description.substring(0, 200) + ' ...';
                 }
                 photoData.push(description);
 
-                let id = photo['id'];
+                let id = photo['id'];    // id
                 photoData.push('photos/park/detail?id=' + id);
 
-                let likes = photo['likes'];
+                let likes = photo['likes'];    // likes
                 photoData.push(likes);
 
                 data.push(photoData);
@@ -105,6 +113,7 @@ export default class ParkPhotoCards extends Component {
         }
     }
 
+    /* Generate the card using the data */
     getCard(id){
         let data = this.state.data;
 
@@ -112,6 +121,7 @@ export default class ParkPhotoCards extends Component {
             <Card key={id} className={'shadowCard card'}>
                 <CardImg top width="100%" className={'shadowImg'} src={data[id][1]} alt={data[id][0]}/>
                 <CardBody>
+                    {/* Card title */}
                     <div className={'photoCardTitleContainer'}>
                         <Highlighter
                             className={"photoCardTitle"}
@@ -123,6 +133,7 @@ export default class ParkPhotoCards extends Component {
                             textToHighlight={data[id][0]}
                         />
                     </div>
+                    {/* Card body */}
                     <div className={'photoCardText card-text'}>
                         <br/>
                         <Highlighter
@@ -139,6 +150,7 @@ export default class ParkPhotoCards extends Component {
                         Likes: {data[id][4]}
                     </div>
 
+                    {/* The 'More Info Button' */}
                     <br/>
                     <div className='buttonContainer'>
                         <Link to={data[id][3]}>
@@ -152,6 +164,7 @@ export default class ParkPhotoCards extends Component {
         );
     }
 
+    /* Generate the photo cards group */
     getPhotoCards() {
         let cards = [];
         let i;
@@ -161,15 +174,18 @@ export default class ParkPhotoCards extends Component {
         return cards;
     }
 
+    /* handle the city filter condition changes */
     handleCitySelect(value) {
         this.setState({citySelectValue: value});
     }
 
+    /* handle the like filter condition changes */
     handleLikeSelect(value) {
         if(value === null) value = 0;
         this.setState({likeRange: value});
     }
 
+    /* handle the sorting condition changes */
     handleSortingSelect(value) {
         let preSoringString = this.state.sorting;
         let newSorting = value.split(",");
@@ -195,6 +211,7 @@ export default class ParkPhotoCards extends Component {
         this.setState({sorting: value});
     }
 
+    /* handle the input event of the keywords Input */
     handleKeywords(value) {
         let keywordsList = [];
         for(let i=0; i<value.length; i++){
@@ -204,6 +221,7 @@ export default class ParkPhotoCards extends Component {
         this.setState({keywords: value, keywordsList: keywordsList});
     }
 
+    /* The search (filter) bar configuration */
     getSearchBarConfig () {
         return (
             [
@@ -287,6 +305,7 @@ export default class ParkPhotoCards extends Component {
         );
     }
 
+    /* handle page index (page change) onClick event */
     handleOnPageBtnClick (pageIndex) {
         const currentUrl = this.state.currentUrl;
         const currentUrlPageParam = 'results_per_page='
@@ -304,6 +323,7 @@ export default class ParkPhotoCards extends Component {
         this.fetchData(requestUrl);
     }
 
+    /* handle the Apply button onClick event and generate the new query string */
     handleOnApplyFilterClick () {
         const keywords = this.state.keywords;
         const likes = this.state.likeRange;
@@ -382,6 +402,7 @@ export default class ParkPhotoCards extends Component {
     render(){
         let searchBarConfig = this.getSearchBarConfig();
 
+        // handle the case when no result is found
         if(this.state.isNoResult && !this.state.isLoading) {
             return (
                 <div>
@@ -400,6 +421,7 @@ export default class ParkPhotoCards extends Component {
             );
         }
 
+        // handle the case when the web page is loading the data
         if(this.state.data.length === 0 && this.state.isLoading){
             return (
                 <div>
@@ -413,6 +435,7 @@ export default class ParkPhotoCards extends Component {
             );
         }
 
+        // handle the case when the web page encounters any error
         if(this.state.data.length === 0 && !this.state.isLoading){
             return (
                 <div>
@@ -425,6 +448,7 @@ export default class ParkPhotoCards extends Component {
             );
         }
 
+        // display the results (grid view)
         return (
             <div>
                 <br/>

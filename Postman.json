@@ -71,7 +71,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "9ea6653c-374d-499a-9fd6-ed37bd495409",
+						"id": "a8cff540-5ea2-435f-9ebb-7e9b46381ff6",
 						"type": "text/javascript",
 						"exec": [
 							"",
@@ -89,6 +89,20 @@
 							"    pm.expect(jsonData.objects[0].name).to.eql(\"Zilker Metropolitan Park\");",
 							"});",
 							"",
+							"pm.test(\"park search keyword bbq park or second park photos check \", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[1].photos[0].id).to.eql(3);",
+							"});",
+							"",
+							"pm.test(\"park search keyword bbq park or second park review check\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[1].reviews[0].id).to.eql(3);",
+							"});",
+							"",
+							"pm.test(\"park search keyword bbq park or second park trucks check\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[1].trucks[0].city).to.eql(\"Austin\");",
+							"});",
 							"",
 							""
 						]
@@ -366,7 +380,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "835609c0-4072-4019-b846-fc6fd0f95ed6",
+						"id": "a808a880-4594-4c91-a975-0052f51ead3f",
 						"type": "text/javascript",
 						"exec": [
 							"",
@@ -383,6 +397,17 @@
 							"    var jsonData = pm.response.json();",
 							"    pm.expect(jsonData.objects[0].name).to.eql(\"Occidental Park Food Truck Pod\");",
 							"});",
+							"",
+							"pm.test(\"truck search keyword bbq park or first truck park check\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[0].park.rating).to.eql(4.6);",
+							"});",
+							"",
+							"pm.test(\"truck search keyword bbq park or first truck reviews check\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[0].reviews[0].truck_id).to.eql(53);",
+							"});",
+							"",
 							"",
 							"",
 							""
@@ -648,7 +673,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d2e33a84-be77-479d-821d-6acd316093ce",
+						"id": "5c05edd8-5001-4a6f-b1fc-760a8281a952",
 						"type": "text/javascript",
 						"exec": [
 							"",
@@ -665,6 +690,17 @@
 							"    var jsonData = pm.response.json();",
 							"    pm.expect(jsonData.objects[0].description).to.eql(\"@mightycone is one of my fav spots! (Featured on Diners, Drive-Ins, and Dives!) Deliciously fried chicken, shrimp, or avocado in a tortilla cone, topped with slaw and their special sauce. The Picnic Park is the perfect place to hit up multiple food trucks on a sunny Sunday like today \");",
 							"});",
+							"",
+							"pm.test(\"truck photo search keyword bbq park or second photo likes check \", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[1].likes).to.eql(87);",
+							"});",
+							"",
+							"pm.test(\"truck photo search keyword bbq park or second photo truck check \", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[1].truck.city).to.eql(\"Portland\");",
+							"});",
+							"",
 							"",
 							"",
 							""
@@ -701,6 +737,74 @@
 					]
 				},
 				"description": "get details of a specified truck photo"
+			},
+			"response": []
+		},
+		{
+			"name": "get truck photo search filtered",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fc04c47c-10e3-4b2d-b596-8e351180adf7",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"truck photo filted likes > 0 city Seattle order by likes check\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[0].truck.city).to.eql(\"Seattle\");",
+							"});",
+							"",
+							"pm.test(\"truck photo filted likes > 0 city Seattle order by likes check likes order\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[1].likes).to.eql(159145);",
+							"});",
+							"",
+							"pm.test(\"truck photo filted likes > 0 city Seattle order by likes check likes order\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[2].likes).to.eql(72638);",
+							"});",
+							"",
+							"pm.test(\"truck photo filted likes > 0 city Seattle order by likes check all likes >= 4.8\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.objects[19].likes).to.eql(1041);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://api.parkd.us/truck_photo?page=1&q={\"filters\":[{\"and\":[{\"name\":\"likes\",\"op\":\"ge\",\"val\":10},{\"name\":\"truck\",\"op\":\"has\",\"val\":{\"name\":\"city\",\"op\":\"in\",\"val\":[\"Seattle\"]}}]}],\"order_by\":[{\"field\":\"likes\",\"direction\":\"desc\"}]}",
+					"protocol": "http",
+					"host": [
+						"api",
+						"parkd",
+						"us"
+					],
+					"path": [
+						"truck_photo"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true
+						},
+						{
+							"key": "q",
+							"value": "{\"filters\":[{\"and\":[{\"name\":\"likes\",\"op\":\"ge\",\"val\":10},{\"name\":\"truck\",\"op\":\"has\",\"val\":{\"name\":\"city\",\"op\":\"in\",\"val\":[\"Seattle\"]}}]}],\"order_by\":[{\"field\":\"likes\",\"direction\":\"desc\"}]}",
+							"equals": true
+						}
+					]
+				},
+				"description": "Get the details of a specified park"
 			},
 			"response": []
 		},
@@ -951,7 +1055,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "309c619b-e078-4ee1-b1b9-3c13d4a7e87d",
+						"id": "b197f844-c5af-4e16-98bf-e7fd6e4e631e",
 						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",

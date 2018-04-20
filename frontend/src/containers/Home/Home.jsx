@@ -22,7 +22,13 @@ const captions = [
 ];
 
 
+/**
+ * The Home page of Parkd
+ * It consists of a transparent nav bar at the top
+ * and a carousel fulfilling the screen
+ */
 class Home extends Component{
+    /* Load the background image of each section */
     getCarouselImages(){
         let carouselImages = [];
         let i;
@@ -32,6 +38,7 @@ class Home extends Component{
         return carouselImages;
     }
 
+    /* Load the caption of each section */
     getCaption(id){
         return (
             <div key={10+id}>
@@ -48,6 +55,7 @@ class Home extends Component{
         );
     }
 
+    /* Load the captions of all the sections */
     getCaptions(){
         let carouselCaptions = [];
         let i;
@@ -69,5 +77,3 @@ class Home extends Component{
         );
     }
 }
-
-export default Home;

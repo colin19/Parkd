@@ -12,36 +12,13 @@ import TransparentNav from '../../components/TransparentNav/TransparentNav.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
 import ReactGoogleMap from '../../components/GoogleMap/ReactGoogleMap.jsx';
 
-/*
-import imgAlberta1 from '../../images/parks/albert-1.png';
-import imgAlberta2 from '../../images/parks/albert-2.png';
-*/
 
 import imgNo from '../../images/no-image.jpg';
 
-
-/*
-const localData = [
-    'Alberta Park'
-    , 'Alberta Park is a park located in northeast Portland, Oregon. Acquired in 1921, the park includes a basketball court, dog off-leash area, playground, soccer field, softball field and tennis court.'
-    , null  // Phone number
-    , '1905 NE Killingsworth St, Portland, OR 97211, USA'
-    , 'Open Now'   // Hours
-    , [ [imgAlberta1, 0], [imgAlberta2, 1] ]
-    , [
-        ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
-        , ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
-        , ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
-        , ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
-        , ['808 Grinds', 'Hawaiian' , '$', '/trucks/detail?id=-1']
-    ]
-    , 4.4     // Rating
-    , [45.5644753, -122.6451045]
-    , 'external link'
-    , []  // more reviews
-];
-*/
-
+/**
+ * The Park Detail page
+ * It display all the detail information of a park
+ */
 export default class ParkDetail extends Component {
     constructor(props) {
         super(props);
@@ -64,9 +41,8 @@ export default class ParkDetail extends Component {
         this.fetchData(parkId);
     }
 
+    /* send asynchronous request to the server */
     fetchData(parkId){
-        // if(parkId === -1) return;
-
         const requestURL = 'http://api.parkd.us/park/' + parkId ;
         try{
             axios.get(requestURL)
@@ -81,6 +57,7 @@ export default class ParkDetail extends Component {
         }
     }
 
+    /* update the park data using the data returned by the server */
     updateParkData(resData){
         const park = resData;
         let data = [];
@@ -89,6 +66,7 @@ export default class ParkDetail extends Component {
             data.push(park['name']);
 
             let review = park['reviews'][0]['content'];
+            // if the review is too long, only use the first 300 characters
             if(review.length > 300){
                 review = review.substring(0, 300) + ' ...';
             }
@@ -103,6 +81,7 @@ export default class ParkDetail extends Component {
             // no hours currently
             data.push(null);
 
+            // get photo list
             let photos = [];
             for(let i=0; i<park['photos'].length; i++) {
                 let photoData = [];
@@ -121,6 +100,7 @@ export default class ParkDetail extends Component {
             }
             data.push(photos);
 
+            // get the truck list
             let trucks = [];
             for(let i=0; i<park['trucks'].length; i++) {
                 let truckData = [];
@@ -160,6 +140,7 @@ export default class ParkDetail extends Component {
         }
     }
 
+    /* generate the description of the park */
     getBasicDescription(){
         let n_review = this.state.data[10].length;
 
@@ -172,6 +153,7 @@ export default class ParkDetail extends Component {
         );
     }
 
+    /* currently we don't have the phone number for the park */
     getPhoneInfo(){
         if(this.state.data[2] == null){
             return;
@@ -185,6 +167,7 @@ export default class ParkDetail extends Component {
         );
     }
 
+    /* we might add hour info into our database later */
     getHourInfo(){
         let strHours = this.state.data[4];
 
@@ -200,6 +183,7 @@ export default class ParkDetail extends Component {
         )
     }
 
+    /* generate the rating info */
     getRatingInfo(){
         let parkName = this.state.data[0];
 
@@ -213,6 +197,7 @@ export default class ParkDetail extends Component {
         )
     }
 
+    /* generate the location info */
     getLocationInfo(){
         return (
             <div className={"locationInfo basicInfo"}>
@@ -226,9 +211,11 @@ export default class ParkDetail extends Component {
         )
     }
 
+    /* generate the caption of each photo in the carousel */
     getCaption(id){
         let imgId = this.state.data[5][id][1];
 
+        // if it is the last photo, add 'Explore More' button in the caption
         if(id !== this.state.data[5].length - 1 && imgId !== -1) {
             return (
                 <div key={id}>
@@ -255,6 +242,7 @@ export default class ParkDetail extends Component {
         );
     }
 
+    /* generate captions for photos in carousel */
     getCaptions(){
         let carouselCaptions = [];
         let i;
@@ -264,6 +252,7 @@ export default class ParkDetail extends Component {
         return carouselCaptions;
     }
 
+    /* generate food truck items in the food truck list */
     getFoodTruckItem(id){
         let foodTruck = this.state.data[6][id];
 
@@ -293,6 +282,7 @@ export default class ParkDetail extends Component {
 
     }
 
+    /* generate a row of food trucks (n food truck per row)*/
     getFoodTrucksRow(id, n) {
         let i = id;
         let cnt = 0;
@@ -305,6 +295,7 @@ export default class ParkDetail extends Component {
             cnt += 1;
         }
 
+        // add empty card to the rest position in a raw
         while(cnt < n){
             foodTrucksItems.push(<Card key={i}/>);
             cnt += 1;
@@ -318,12 +309,14 @@ export default class ParkDetail extends Component {
         );
     }
 
+    /* generate rows of food trucks */
     getFoodTrucks(){
         let foodTrucks = this.state.data[6];
 
         let foodTrucksRows = [];
         for(let i = 0; i < foodTrucks.length; i++){
             if(i%3 === 0){
+                // set 3 food trucks per row
                 foodTrucksRows.push(this.getFoodTrucksRow(i, 3));
             }
         }
@@ -345,6 +338,7 @@ export default class ParkDetail extends Component {
     }
 
     render(){
+        // handle the case when the web page is still loading
         if(this.state.data.length === 0 && this.state.isValid) {
             return (
                 <div>
@@ -358,7 +352,7 @@ export default class ParkDetail extends Component {
 
             );
         }
-
+        // handle the case when the park id is invalid
         if(this.state.data.length === 0 && !this.state.isValid) {
             return (
                 <div>
@@ -373,8 +367,7 @@ export default class ParkDetail extends Component {
             );
         }
 
-
-
+        // prepare the images for photos carousel
         let images = [];
         for(let i=0; i<this.state.data[5].length; i++){
             images.push(this.state.data[5][i][0]);
