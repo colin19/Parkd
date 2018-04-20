@@ -25,7 +25,11 @@ issues:
 
 # make stories  - prints link to current phase's stories
 stories:
+<<<<<<< HEAD
 	@echo "http://www.github.com/${GithubID}/${RepoName}/issues"
+=======
+	@echo "http://www.github.com/${GithubID}/${RepoName}/projects/1"
+>>>>>>> 24f7da3f78d4d29d62e20da2fd6b6ad8a89451b8
 
 # make uml      - prints link to uml diagram
 uml:
@@ -46,7 +50,11 @@ backend:
 postman:
 	newman run Postman.json
 
+<<<<<<< HEAD
 # make website  - prints link to a website
+=======
+# make website  - prints link to website
+>>>>>>> 24f7da3f78d4d29d62e20da2fd6b6ad8a89451b8
 website:
 	@echo "http://parkd.us/"
 
