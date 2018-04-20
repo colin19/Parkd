@@ -5,6 +5,11 @@ GithubID = colin19
 RepoName = Parkd
 SHA      = ourSHA
 
+.PHONY: githubid reponame sha github issues stories uml selenium frontend backend postman website report apidoc self other default
+
+default:
+	@echo "Please specify a command."
+
 githubid:
 	@echo "${GithubID}"
 
