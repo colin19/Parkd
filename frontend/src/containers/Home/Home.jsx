@@ -27,7 +27,7 @@ const captions = [
  * It consists of a transparent nav bar at the top
  * and a carousel fulfilling the screen
  */
-class Home extends Component{
+export default class Home extends Component{
     /* Load the background image of each section */
     getCarouselImages(){
         let carouselImages = [];

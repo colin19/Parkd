@@ -4,7 +4,9 @@ import ParkCards from '../src/containers/Parks/ParkCards.jsx';
 import ParkDetail from '../src/containers/Parks/ParkDetail.jsx';
 import TruckCards from '../src/containers/Trucks/TruckCards.jsx';
 import TruckDetail from '../src/containers/Trucks/TruckDetail.jsx';
+import PhotoCards from '../src/containers/Photo/PhotoCards.jsx';
 import TruckPhotoCards from '../src/containers/Photo/TruckPhotoCards.jsx';
+import ParkPhotoCards from '../src/containers/Photo/ParkPhotoCards.jsx';
 import PhotoDetail from '../src/containers/Photo/PhotoDetail.jsx';
 import SearchPage from '../src/containers/Search/SearchPage.jsx';
 import Footer from "../src/components/Footer/Footer.jsx";
@@ -13,6 +15,7 @@ import IntroHeader from "../src/components/intro-header/IntroHeader.jsx";
 import TransparentNav from "../src/components/TransparentNav/TransparentNav.jsx";
 import PageIndex from "../src/components/PageIndex/PageIndex.jsx";
 import SearchBar from "../src/components/SearchBar/SearchBar.jsx";
+
 
 
 import React from 'react';
@@ -188,6 +191,20 @@ describe('<SearchPage />', () => {
 describe('<TruckPhotoCards />', () => {
     it('should render successfully', () => {
         shallow(<TruckPhotoCards />);
+    });
+});
+
+// Test for container (Page) ParkPhotoCards
+describe('<ParkPhotoCards />', () => {
+    it('should render successfully', () => {
+        shallow(<ParkPhotoCards />);
+    });
+});
+
+// Test for container (Page) PhotoCards
+describe('<PhotoCards />', () => {
+    it('should render successfully', () => {
+        shallow(<PhotoCards />);
     });
 });
 
