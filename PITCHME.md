@@ -1,6 +1,6 @@
-# Flux 
+# Parkd.US 
 
-An application architecture for React
+Because food trucks and parks were made for each other
 
 ---
 
