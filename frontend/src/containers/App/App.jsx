@@ -12,6 +12,7 @@ import TruckCards from '../../containers/Trucks/TruckCards.jsx';
 import TruckDetail from '../../containers/Trucks/TruckDetail.jsx';
 import ParkCards from '../../containers/Parks/ParkCards.jsx';
 import ParkDetail from '../../containers/Parks/ParkDetail.jsx';
+import BubbleChart from '../../containers/Visualization/BubbleChart.jsx';
 
 /**
  * The root component of React
@@ -32,6 +33,7 @@ class App extends Component {
                     <Route path={"/photos/detail"} component={PhotoDetail}/>
                     <Route path={"/photos/park/detail"} component={ParkPhotoDetail}/>
                     <Route path={"/search"} component={SearchPage}/>
+                    <Route path={"/visual"} component={BubbleChart}/>
                 </div>
             </Router>
         );

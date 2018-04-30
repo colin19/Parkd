@@ -28,6 +28,7 @@
     "react-scripts": "1.1.1",
     "react-select": "^1.2.1",
     "react-text-highlighting": "0.0.5",
+    "react-vis": "^1.9.2",
     "reactstrap": "5.0.0-beta",
     "recompose": "^0.26.0",
     "sinon": "^4.4.8"
