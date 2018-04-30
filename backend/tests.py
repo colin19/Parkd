@@ -53,11 +53,11 @@ class ScraperTestCase(unittest.TestCase):
 
 	def test_park_longs(self):
 		#Mayfield Park and Nature Preserve
-		self.assertEqual(scraper.getLongitudes(self.parsed)[3], 30.3431711)
+		self.assertEqual(scraper.getLongitudes(self.parsed)[3], 30.3129736)
 
 	def test_park_lats(self):
 		#Mayfield Park and Nature Preserve
-		self.assertEqual(scraper.getLatitudes(self.parsed)[3], -97.8355145)
+		self.assertEqual(scraper.getLatitudes(self.parsed)[3], -97.77162000000001)
 	
 	def test_park_adds(self): #Checks teh addresses from our MySQL Database
 		#Mansfield Dam Park in Austin
