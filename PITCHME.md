@@ -7,16 +7,16 @@
 ## The Team
 - Gijs Landwehr |
   + backend, data cleaning |
-- Austen Castberg |
-  + Hosting |
+- Lin Guan |
+  + front-end, filtering, and tests |
 - Colin Hall |
   + Postman Testing, UML diagram |
 - Javier Banda |
   + backend, scraping, documentation and tests |
 - Diego Alcoz |
   + front-end and tests |
-- Lin Guan |
-  + front-end, filtering, and tests |
+- Austen Castberg |
+  + Hosting |
 
 ---
 

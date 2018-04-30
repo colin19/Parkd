@@ -99,7 +99,7 @@ export default class BubbleVisualization extends Component {
                              title={'Visualization'}/>
                 <br/><br/>
 
-                <svg width="800" height="800"></svg>
+                <svg width="680" height="680"></svg>
 
                 <Footer/>
             </div>

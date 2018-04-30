@@ -258,7 +258,7 @@ export default class About extends Component{
                         <ListGroupItem tag="a" href="https://www.gitbook.com/book/jbanda11/self-critique/details">Self Critique</ListGroupItem>
                         <ListGroupItem tag="a" href="https://www.gitbook.com/book/jbanda11/other-critique/details">Other Critique</ListGroupItem>
                         <ListGroupItem tag="a" href="https://travis-ci.org/colin19/Parkd">Travis CI</ListGroupItem>
-                        <ListGroupItem tag="a" href="https://parkd.us/visual">Data Visualization</ListGroupItem>
+                        <ListGroupItem tag="a" href="parkd.us/visual">Data Visualization</ListGroupItem>
                     </ListGroup>
                 </Container>
                 <Footer/>
