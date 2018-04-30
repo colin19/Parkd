@@ -30,17 +30,17 @@
 +++
 
 #### Mocha Tests
-![Mocha]()
+![Image](GitPitch_images/MochaTests.png)
 
 +++
 
 #### Selenium Tests
-![Selenium]()
+![Image](GitPitch_images/SeleniumTests.png)
 
 +++
 
 #### Postman Tests
-![Postman]()
+![Image](GitPitch_images/PostmanTests.png)
 
 ---
 
@@ -109,4 +109,4 @@
 
 ---
 
-## [Visualization](https://pleaseworkD3)
+## [Visualization](http://parkd.us/visual)
