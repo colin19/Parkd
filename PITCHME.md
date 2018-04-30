@@ -109,4 +109,4 @@
 
 ---
 
-## [Visualization](https://parkd.us/visual)
+## [Visualization](http://parkd.us/visual)
