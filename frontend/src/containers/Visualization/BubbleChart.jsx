@@ -93,13 +93,26 @@ export default class BubbleVisualization extends Component {
 
     render() {
         return (
-            <div className={'svg-container'}>
+            <div>
                 <IntroHeader bgUrl={imgBg}
                              description={'Data Visualization of group Home SWEet Home'}
                              title={'Visualization'}/>
                 <br/><br/>
 
-                <svg width="680" height="680"></svg>
+                <ul className={'visual-desp-list'}>
+                    <li>We use Zoomable Circle Packing to show the hierarchy of the data of HomeSweHome.</li>
+                    <li>The outer circles group the parks by different city.</li>
+                    <li>Each shelters is assigned to its nearby parks.</li>
+                    <li>The user can click on any package to zoom in or out.</li>
+                    <li>The user can click on any package to zoom in or out.</li>
+                    <li>With this Zoomable Circle Packing plot, we can easily find that there are much more parks in Houston than other cities.</li>
+                    <li>We can also see the distribution of dogs in different shelters by zooming in into a specific park or city</li>
+                </ul>
+
+                <br/>
+                <div className={'svg-container'}>
+                    <svg width="680" height="680"></svg>
+                </div>
 
                 <Footer/>
             </div>
