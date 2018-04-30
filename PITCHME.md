@@ -25,7 +25,7 @@
 +++
 
 #### Backend Tests
-![Image](![Image](GitPitch_images/BackendTests.png))
+(![Image](GitPitch_images/BackendTests.png))
 
 +++
 
